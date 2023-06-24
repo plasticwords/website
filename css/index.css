@@ -1,0 +1,40 @@
+html {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1500px;
+}
+
+body {
+  background-image: url("../img/index.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: black;
+  margin: 0 auto;
+}
+
+a.link-div {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/*==============================
+  RESPONSIVE DESIGN: TABLET
+==============================*/
+@media screen and (max-width: 992px) {
+  body {
+    background-image: url("../img/index-tablet.jpg");
+  }
+}
+
+/*==============================
+  RESPONSIVE DESIGN: PHONE
+==============================*/
+@media screen and (max-width: 576px) {
+  body {
+    background-image: url("../img/index-mobile.jpg");
+  }
+}

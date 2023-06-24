@@ -1,0 +1,297 @@
+html {
+  background: #fdf2e0;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 4vh;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1500px;
+  margin-top: 5vh;
+  font-family: Georgia, "Times New Roman", serif;
+  display: flex;
+}
+
+/*==============================
+  NAVIGATION BAR
+  ==============================*/
+.space-left {
+  width: 20%;
+  flex-direction: column;
+}
+
+.nav-container {
+  float: right;
+  margin: 0 20% 0 2vw;
+}
+
+.nav-logo {
+  /* Scalable with min size of 22px. Used to be 26px. */
+  font-size: calc(1.375rem + 0.2vw);
+  margin-bottom: 5vh;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  list-style: none;
+  padding: 1.5% 0 1.5% 0;
+}
+
+.nav-links-text {
+  color: black;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.nav-links-text:hover {
+  font-weight: bold;
+}
+
+#current-page {
+  border-bottom: 1px solid #000;
+  padding-bottom: 1px;
+}
+
+#current-page:hover {
+  font-weight: normal;
+}
+
+.nav-links-books {
+  margin-left: 10%;
+}
+
+#ek-link:hover {
+  margin-left: 0%;
+}
+
+.social {
+  color: black;
+  padding-top: 8%;
+}
+
+/*==============================
+MOBILE/BURGER CSS
+===============================*/
+.mobile-header {
+  display: none;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease-in;
+}
+
+/*==============================
+  MAIN CONTENT
+==============================*/
+.main-container {
+  width: 60%;
+}
+
+.title {
+  font-size: 1.25rem;
+  margin-bottom: 3%;
+}
+
+.picture {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project_ek {
+  width: 60%;
+  padding: 6% 1vw 0 0;
+}
+
+.project_sote {
+  width: 40%;
+}
+
+.project-picture {
+  max-width: 100%;
+  display: block;
+}
+
+.project-picture:hover {
+  opacity: 0.95;
+}
+
+.project-text {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.project-text:hover {
+  color: gray;
+}
+
+/*==============================
+  EMPTY SPACE ON THE RIGHT
+==============================*/
+.space-right {
+  width: 20%;
+}
+
+/*==============================
+  RESPONSIVE DESIGN: TABLET
+==============================*/
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 13px;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .space-left {
+    width: 0%;
+  }
+
+  .main-container {
+    width: 100%;
+    margin: 1vh 2vh 2vh 2vh;
+  }
+
+  .space-right {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+    font-size: 1.625rem;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+  }
+
+  .mobile-book-links {
+    display: none;
+  }
+
+  .title {
+    margin-top: 4%;
+  }
+
+  /*==============================
+  RESPONSIVE MOBILE/BURGER
+==============================*/
+  .burger {
+    display: block;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: 0px;
+    height: 100%;
+    top: 0;
+    background-color: #a51f26;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    opacity: 0.95;
+  }
+
+  .nav-links li {
+    opacity: 1;
+  }
+
+  .nav-links-text {
+    font-size: 1.75rem;
+    color: #fff9e5;
+  }
+
+  #current-page {
+    border-bottom: 2px solid #fff9e5;
+    padding-bottom: 1px;
+  }
+
+  .social {
+    color: #fff9e5;
+    padding: 2% 0 5vh 0;
+    font-size: 1.75rem;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: #fff9e5;
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: #fff9e5;
+  }
+}
+
+/*==============================
+  RESPONSIVE DESIGN: PHONE
+==============================*/
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+    margin-top: 4vh;
+  }
+
+  .main-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .picture {
+    flex-direction: column;
+  }
+
+  .project_ek {
+    width: 100%;
+    padding-top: 2%;
+    margin-bottom: 5%;
+  }
+
+  .project_sote {
+    width: 70%;
+    margin-right: 10%;
+    align-self: flex-end;
+  }
+
+  .project-text {
+    font-size: 1.25rem;
+  }
+}
