@@ -1,0 +1,42 @@
+html {
+    background-color: white;
+}
+
+  .chessboard {
+    width: 1000px;
+    height: 1000px;
+    display: grid;
+    /* grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr); */
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    
+  }
+
+  .chessboard .square:nth-child(odd) {
+    background-color: pink;
+    
+  }
+
+  .chessboard .square:nth-child(even) {
+    background-color: blue;
+    
+  }
+
+  .chessboard .square {
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .hovering:hover {
+    opacity: 25%;
+    transition: opacity 0.3s ease;
+    cursor: not-allowed;
+  }
+
+  .branding {
+    color: red;
+  }
+
+ 

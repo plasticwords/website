@@ -1,0 +1,133 @@
+/*==============================
+  MAIN CONTENT: took this section from book_projects.css
+==============================*/
+
+html {
+    /* background: #fdf2e0; */
+    background: #F3F2EE;
+    background: #F3F2EE;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 4vh;
+  }
+  
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+    margin-top: 5vh;
+    font-family: Georgia, "Times New Roman", serif;
+    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: monospace;
+    /* font: roboto mono; */
+    /* display: flex; */
+    color: #7C7C81;
+  }
+
+  /*==============================
+  MAIN CONTENT
+==============================*/
+
+/* .main-container {
+  width: 60%;
+} */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-gap: 10px;
+    
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+  
+  .menu {
+    /* background-color: lightblue; */
+    /* border: 1px black solid; */
+    writing-mode: vertical-lr;
+    /* transform-origin: bottom left;
+    transform: rotate(90deg); */
+    margin-left: 10%;
+    font-size: 1.5rem;
+  }
+
+.link-div {
+  opacity: 50%;
+}
+
+  .menu a {
+    text-decoration: none;
+    color: #7C7C81;
+  }
+
+  .menu a:hover {
+    color: #B450B0;
+  }
+
+  #active-page {
+    color: #B450B0;
+    opacity: 100%;
+  }
+
+.text {
+  /* background-color: lightblue; */
+    /* border: 1px black solid; */
+    /* width: 60%; */
+    font-size: 1.25rem;
+}
+
+.title {
+  background-color: white;
+  /* background-color: #B450B0; */
+  width: 70%;
+  padding-left: 1%;
+  margin-left: -1%;
+  padding-right: 1%;
+  margin-right: -1%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  border-radius: 7.5px;
+/* want to target just the text */
+  opacity: 40%;
+}
+
+
+.social {
+  color: #7C7C81;
+  /* padding-top: 8%; */
+}
+
+  .branding {
+    display: flex;
+    justify-content: space-between;
+    color: fuchsia;
+    font-size: 1.5rem;
+    /* background-color: lightblue; */
+    /* border: 1px black solid; */
+    writing-mode: vertical-rl;
+    margin-right: 10%;
+    /* justify-self: end; */
+    /* transform-origin: top left;
+    transform: rotate(90deg); */
+  }
+
+.branding img {
+  height: auto;
+  width: 25%;
+}
+
+  .gradient-text {
+    background-image: linear-gradient(100deg, #B450B0, #180ACE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .logo {
+   display: inline-block; 
+  }

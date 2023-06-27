@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>services</title>
+  <link rel="stylesheet" type="text/css" href="css/playhere_servicesJS.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+    // window.addEventListener('DOMContentLoaded', () => {
+    //   const box1 = document.getElementById('box1');
+    //   const detail1 = document.getElementById('detail1');
+
+    //   box1.addEventListener('click', () => {
+    //     detail1.style.display = detail1.style.display === 'none' ? 'block' : 'none';
+    //   });
+    // });
+
+
+    // window.addEventListener('DOMContentLoaded', () => {
+    //   const box2 = document.getElementById('box2');
+    //   const detail2 = document.getElementById('detail2');
+
+    //   box2.addEventListener('click', () => {
+    //     detail2.style.display = detail1.style.display === 'none' ? 'block' : 'none';
+    //   });
+    // });
+
+
+    // this JS works, it's a copy of the code below, but no colouring include:
+  //  window.addEventListener('DOMContentLoaded', () => {
+  //     const boxes = document.querySelectorAll('.services-offering > div[id^="box"]');
+  //     const details = document.querySelectorAll('.services-detail > div[id^="detail"]');
+
+  //     const hideAllDetails = () => {
+  //       details.forEach(detail => {
+  //         detail.style.display = 'none';
+  //       });
+  //     };
+
+  //     boxes.forEach((box, index) => {
+  //       box.addEventListener('click', () => {
+  //         hideAllDetails();
+  //         details[index].style.display = 'block';
+  //       });
+  //     });
+  //   });
+
+
+  window.addEventListener('DOMContentLoaded', () => {
+  const boxes = document.querySelectorAll('.services-offering > div[id^="box"]');
+  const details = document.querySelectorAll('.services-detail > div[id^="detail"]');
+
+  const hideAllDetails = () => {
+    details.forEach(detail => {
+      detail.style.display = 'none';
+    });
+  };
+
+  const resetBoxColors = () => {
+    boxes.forEach(box => {
+      box.style.color = '#7C7C81';
+    });
+  };
+
+  boxes.forEach((box, index) => {
+    box.addEventListener('click', () => {
+      hideAllDetails();
+      resetBoxColors();
+
+      box.style.color = '#B450B0';
+      details[index].style.display = 'block';
+    });
+  });
+});
+
+  </script>
+
+</head>
+<body>
+  
+  <p>Welcome to the Plastic Words services page.</p>
+
+  <p>Crammingintoomuchinfoisexhausting
+  Isn’t it?
+  Give your words space to breathe.
+  Let the brain do the rest.
+  How can we help you tell your story? >>></p>
+
+  <div class="services-offering">
+    <div class="item1" id="box1">- Digital housekeeping</div>
+    <div class="item2" id="box2">- Digital Assets & Templates</div>
+    <div class="item3" id="box3">- Corporate storytelling</div>
+    <div class="item4" id="box4">∟ Storytelling and marketing</div>
+    <div class="item5" id="box5">∟ Sales quote and proposal template text</div>
+    <div class="item6" id="box6">∟ Social media and creative copywriting</div>
+
+  </div>
+  <p></p>
+  <div class="services-detail">
+
+    <div class="item1" id="detail1">1. Every word written about your company reflects your brand, products, and services. Partner with us to define your corporate narrative and engage your audiences with information that is valuable to them.</div>
+
+    <div class="item2" id="detail2">2. Every word written about your company reflects your brand, products, and services. Partner with us to define your corporate narrative and engage your audiences with information that is valuable to them.</div>
+
+    <div class="item3" id="detail3">3. Every word written about your company reflects your brand, products, and services. Partner with us to define your corporate narrative and engage your audiences with information that is valuable to them.</div>
+
+    <div class="item4" id="detail4">4. Every word written about your company reflects your brand, products, and services. Partner with us to define your corporate narrative and engage your audiences with information that is valuable to them.</div>
+
+    <div class="item5" id="detail5">5. Every word written about your company reflects your brand, products, and services. Partner with us to define your corporate narrative and engage your audiences with information that is valuable to them.</div>
+
+    <div class="item6" id="detail6">6. Every word written about your company reflects your brand, products, and services. Partner with us to define your corporate narrative and engage your audiences with information that is valuable to them.</div>
+
+  </div>
+  
+</body>
+</html>

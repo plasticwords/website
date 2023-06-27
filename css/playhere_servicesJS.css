@@ -1,0 +1,63 @@
+html {
+    background-color: white;
+}
+
+#detail1 {
+    display: none;
+}
+
+#detail2 {
+    display: none;
+}
+
+#detail3 {
+    display: none;
+}
+
+#detail4 {
+    display: none;
+}
+
+#detail5 {
+    display: none;
+}
+
+#detail6 {
+    display: none;
+}
+
+.item-detail {
+    display: none;
+  }
+
+  /* change cursors on hover: */
+
+#box1 {
+    cursor: help;
+}
+
+#box2 {
+    cursor: wait;
+}
+
+#box3 {
+    cursor: crosshair;
+}
+
+#box4 {
+    cursor: not-allowed;
+}
+
+#box5 {
+    cursor: zoom-in;
+}
+
+#box6 {
+    cursor: grab;
+    /* cursor: alias; */
+}
+
+  
+
+
+  

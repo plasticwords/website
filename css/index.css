@@ -20,7 +20,17 @@ a.link-div {
   display: block;
   height: 100%;
   width: 100%;
+  text-decoration: none;
+  color: black;
 }
+
+/* a:hover {
+  color: fuchsia;
+} */
+
+/* a:active {
+  color: yellow;
+} */
 
 /*==============================
   RESPONSIVE DESIGN: TABLET
