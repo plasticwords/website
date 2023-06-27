@@ -80,12 +80,14 @@ html {
     /* border: 1px black solid; */
     /* width: 60%; */
     font-size: 1.25rem;
+    border-bottom: lightgray 1px solid;
+    width: 70%;
 }
 
 .title {
   background-color: white;
   /* background-color: #B450B0; */
-  width: 70%;
+  /* width: 70%; */
   padding-left: 1%;
   margin-left: -1%;
   padding-right: 1%;
@@ -94,7 +96,10 @@ html {
   padding-bottom: 0.5%;
   border-radius: 7.5px;
 /* want to target just the text */
-  opacity: 40%;
+  /* opacity: 40%; */
+  opacity: 80%;
+  color: lightgray;
+  border: lightgray 1px solid;
 }
 
 
