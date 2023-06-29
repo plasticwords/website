@@ -51,6 +51,8 @@ html {
     /* background-color: lightblue; */
     /* border: 1px black solid; */
     writing-mode: vertical-lr;
+    /* writing-mode: vertical-rl; */
+    text-orientation: upright;
     /* transform-origin: bottom left;
     transform: rotate(90deg); */
     margin-left: 10%;

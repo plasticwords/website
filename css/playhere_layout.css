@@ -1,5 +1,9 @@
 html {
     background-color: red;
+
+    /* HOW DO I USE THIS. Opacity built into rgba, picture in background:
+    background: transparent url (something.png);
+    background-color: rgba (0, 0, 0, 0.5) none; */
 }
 
 /* ==========
@@ -12,23 +16,28 @@ flex
   }
   
   .item {
-    flex: 1;
+    /* flex: 1; */
     background-color: lightblue;
     padding: 10px;
     margin: 5px;
   }
 
-  /* #box2 {
-    margin-right: 10%;
-    margin-left: 10%;
-  } */
-
-  .box2 {
-    width: 50%;
+  #box1 {
+    width: 10%;
+    background-color: yellow;
   }
 
-  .box3 {
+  #box2 {
+    width: 40%;
+    background-color: aqua;
+    /* you can achieve the layout with flexbox but it's hacky and obscure. */
+    margin-right: auto;
+    margin-left: 5%;
+  }
+
+  #box3 {
     width: 10%;
+    background-color: hotpink;
   }
 
   /* ==========
