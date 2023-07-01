@@ -1,0 +1,45 @@
+/*==============================
+  RESPONSIVE DESIGN: PHONE 
+  - Version 2 for contact page. 
+  - This code uses grid-area to lay things out instead of seperating the responsive menu from the main desktop site (in the html). 
+  - Make sure to comment out "responsive menu" section in html of contact page. 
+  - The other options works and passes the elegance test though. So will use that. (There's no 100% "right" way in coding.)
+==============================*/
+@media (max-width: 768px) {
+  
+  .container {
+    width: 100%;
+  }
+  
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px, auto);
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas: 
+      /* "menu-area"   */
+      "branding-area"
+      "text-area";
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .text {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .branding {
+    display: flex;
+  }
+
+  .branding img {
+    width: auto;
+    height: 7vh;
+  }
+
+  .gradient-text {
+    display: none;
+  }
+}

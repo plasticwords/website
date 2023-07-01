@@ -23,10 +23,14 @@ html {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
+    /* grid-auto-rows: minmax(100px, auto); */
     grid-gap: 10px;
+    grid-template-areas: 
+    "menu-area text-area branding-area";
   }
   
   .menu {
+    grid-area: menu-area;
     writing-mode: vertical-lr;
     margin-left: 10%;
     font-size: 1.5rem;
@@ -52,6 +56,7 @@ html {
   }
 
   .text {
+    grid-area: text-area;
     font-size: 1.25rem;
     border-bottom: lightgray 1px solid;
     width: 70%;
@@ -81,6 +86,7 @@ html {
 }
 
 .branding {
+  grid-area: branding-area;
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
@@ -99,3 +105,77 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
+.responsive-menu {
+  display: none;
+}
+
+/*==============================
+  RESPONSIVE DESIGN: PHONE
+==============================*/
+@media (max-width: 768px) {
+  
+  .container {
+    margin-top: 2vh;
+  }
+
+  .grid-container {
+    padding-top: 3vh;
+    border-top: lightgray 1px solid;
+    grid-template-columns: 1fr;    
+    grid-template-areas: 
+      /* "menu-area"   */
+      /* "branding-area" */
+      /* "responsive-menu" */
+      "text-area";
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .text {
+    width: 90%;
+    margin: 0 auto;
+    /* margin: 5% auto; */
+    border-bottom: none;
+  }
+
+  .branding {
+    display: none;
+  }
+
+  .responsive-menu {
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content:space-between;
+    margin: 0 auto;
+    padding-bottom: 1.5vh;
+    /* padding-bottom: 2vh; */
+    align-items: center;
+    /* grid-area: responsive-menu; */
+  }
+
+  .responsive-menu img {
+    height: 5vh;
+    /* max-height: 100%;  */
+  }
+
+  /* .burger {
+    background-color: lightgray;
+  } */
+
+  .burger div {
+    width: 25px;
+    /* width: 20px; */
+    height: 3px;
+    /* height: 5px; */
+    background-color: lightgray;
+    /* background-color: gray; */
+    /* background-color: #F3F2EE; */
+    border: 1px solid gray;
+    margin: 3px;
+    /* margin: 5px; */
+    transition: all 0.3s ease-in;
+  }
+}
