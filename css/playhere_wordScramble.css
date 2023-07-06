@@ -1,0 +1,71 @@
+html {
+    background-color: #F3F2EE;
+    font-size: 48px;
+}
+
+/* .moving-text {
+    transform: translate(-50%, -50%);
+    color: blue;
+    transition: transform 0.3s;
+}
+
+.container:hover .moving-text {
+    transform: translate(-50%, -50%) rotate(20deg);
+} */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.moving-text {
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+    transition: all 0.3s;
+}
+
+.container:hover .moving-text {
+    animation: scramble 0.3s;
+}
+
+@keyframes scramble {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        content: "blogs";
+    }
+}
+
+
+/* try 2 */
+
+.quote:hover .update, .quote .orig {
+    display: none;
+  }
+
+  .quote:hover .orig {
+    display: inline-block;
+    color: #B450B0;
+  }
+
+  .quote .update {
+    color: rgba(124, 124, 129, 0.5);
+    /* font-weight: bold; */
+    /* text-decoration: line-through; */
+  }
+  
+  .quote .orig {
+    color: rgba(124, 124, 129, 0.5);
+    /* font-style: italic; */
+  }
+  
+
+  

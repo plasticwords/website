@@ -105,6 +105,7 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
+/* change name of class to responsive-header */
 .responsive-menu {
   display: none;
 }
@@ -120,7 +121,7 @@ html {
 
   .grid-container {
     padding-top: 3vh;
-    border-top: lightgray 1px solid;
+    /* border-top: red 1px solid; */
     grid-template-columns: 1fr;    
     grid-template-areas: 
       /* "menu-area"   */
@@ -129,15 +130,16 @@ html {
       "text-area";
   }
 
-  .menu {
+  /* .menu {
     display: none;
-  }
+  } */
 
   .text {
     width: 90%;
     margin: 0 auto;
     /* margin: 5% auto; */
     border-bottom: none;
+    z-index: 0;
   }
 
   .branding {
@@ -145,19 +147,30 @@ html {
   }
 
   .responsive-menu {
-    width: 85%;
+    /* width: 85%; */
+    width: 100%;
     height: auto;
     display: flex;
+    /* grid-area: responsive-menu; */
     justify-content:space-between;
+    padding-left: 7.5%;
+    border-bottom: 1px solid lightgray;
     margin: 0 auto;
     padding-bottom: 1.5vh;
     /* padding-bottom: 2vh; */
     align-items: center;
-    /* grid-area: responsive-menu; */
+    /* CROSS POSITIONING:  */
+    z-index: 2;
+    position: relative;
+  }
+
+  .responsive-logo {
+    padding-right: 15%;
   }
 
   .responsive-menu img {
     height: 5vh;
+    /* margin-right: 15vw; */
     /* max-height: 100%;  */
   }
 
@@ -177,5 +190,97 @@ html {
     margin: 3px;
     /* margin: 5px; */
     transition: all 0.3s ease-in;
+    /* CROSS POSITIONING:  */
+    /* z-index: 2;
+    position: relative; */
+  }
+
+    /*==============================
+    RESPONSIVE MOBILE/BURGER - copied from books page
+  ==============================*/
+  /* .burger {
+    display: block;
+  } */
+
+  /* .nav-logo {
+    display: none;
+  } */
+
+  .menu {
+    position: fixed;
+    right: 0px;
+    height: 80%;
+    /* height: 100%; */
+    /* margin-top: 15%; */
+    top: 0;
+    /* background-color: #a51f26; */
+    background-color: #F3F2EE;
+    /* background-color: #B450B0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    /* opacity: 0.95; */
+    writing-mode: horizontal-tb;
+    font-size: 1.75rem;
+    z-index: 1;
+    /* border-top: 1px solid red; */
+  }
+
+  .menu a {
+    color: rgba(124, 124, 129, 1);
+    /* color: #F3F2EE; */
+  }
+
+  #active-page {
+    border-bottom: 1px solid rgba(180, 80, 176, 1);
+    /* border-bottom: 2px solid #F3F2EE; */
+    /* color: #F3F2EE; */
+    padding-bottom: 1px;
+  }
+
+  .menu-blnc-elements {
+    display: none;
+  }
+
+  /* .nav-links li {
+    opacity: 1;
+  } */
+
+  /* .nav-links-text {
+    font-size: 1.75rem;
+    color: #fff9e5;
+  } */
+
+  /* #current-page {
+    border-bottom: 2px solid #fff9e5;
+    padding-bottom: 1px;
+  } */
+
+  /* .social {
+    color: #fff9e5;
+    padding: 2% 0 5vh 0;
+    font-size: 1.75rem;
+  } */
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: #fff9e5;
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: #fff9e5;
   }
 }

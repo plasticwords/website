@@ -1,0 +1,238 @@
+html {
+    background-color: #F3F2EE;
+    font-size: 16px;
+    font-family: monospace;
+    color: gray;
+}
+
+.container {
+    display: flex;
+    /* border: 1px solid black; */
+    align-items: center;
+    height: 95vh;
+    font-size: 1rem;
+}
+      
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 7fr 1fr 1fr 1fr; 
+    /* grid-auto-rows: auto; */
+    row-gap: 5vh;
+    grid-template-areas: 
+    "explaining-text"
+    "text-area"
+    "pink-sq"
+    "blue-sq"
+    "instructions";
+    padding: 0 15% 0 15%;
+    /* padding: 0 10% 0 10%; */
+    /* border: 1px solid red; */
+    /* margin-top: 10%; */
+    /* border:  */
+    
+}
+
+.instructions {
+    grid-area: instructions;
+    /* background-color: lightgrey; */
+    /* border: 1px solid black; */
+    border-top: 1px solid gray;
+    /* background-color: white; */
+    padding: 1%;
+    font-size: 1.25rem;
+    /* background-image: linear-gradient(0deg, fuchsia, #180ACE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: #B450B0;
+    /* background: white; */
+    background-image: linear-gradient(0deg, fuchsia, #180ACE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.explaining-text {
+/* border: 1px solid gray; */
+grid-area: explaining-text;
+align-self: end;
+/* height: 5vh; */
+}
+
+.explaining-text span {
+    display: none;
+}
+
+.grid-text {
+    grid-area: text-area;
+    /* padding: 0 7.5% 0 7.5%; */
+    align-self: end;
+    /* padding-bottom: 5%; */
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    align-items: end;
+    /* align-self: flex-end; */
+    border-top: 1px solid grey;
+    /* border-top: 1px solid lightgrey; */
+    padding-top: 50px;
+    /* padding-top: 20px; */
+    border-bottom: 1px solid grey;
+    /* border-bottom: 1px solid lightgrey; */
+    padding-bottom: 50px;
+    /* padding-bottom: 20px; */
+}
+
+.text div {
+    width: 50%;
+    /* border: 1px solid black; */
+}
+
+.before {
+    margin-right: 3.5%;
+    /* margin-right: 2.5%; */
+}
+
+.after {
+    /* display: grid;
+    grid-template-rows: 1fr 1fr; */
+    /* flex-direction: column; */
+    margin-left: 3.5%;
+    /* margin-left: 2.5%; */
+    /* display: flex;
+    justify-content: space-between;
+    flex-direction: column; */
+}
+
+.grid-pink {
+    grid-area: pink-sq;
+    /* padding: 0 7.5% 0 7.5%; */
+    /* border: 1px solid red; */
+}
+
+.pink {
+    display: flex;  
+    justify-content: space-between;   
+}
+
+.pink div {
+    cursor: grab;
+}
+
+/* 
+Make a grid with three rows: 5fr 1fr 1fr 
+Then each row is its own flexbox*/
+.pink-sq {
+    background-color: #B450B0;
+    /* width: 5%; Set the width to 50% of the viewport width */
+    /* padding-bottom: 5%;  Set the padding-bottom to 50% of the viewport width to maintain a square shape */
+    /* 
+    height: 100px;
+    width: 100px;
+    height: 5%;  */
+    height: 60px;
+    width: 60px;
+    opacity: .8;
+    border: 1px solid black;
+}
+
+.pink-sq:hover {
+    opacity: .1;
+}
+
+.grid-blue {
+    grid-area: blue-sq;
+    /* padding: 0 7.5% 0 7.5%; */
+    /* border: 1px solid red; */
+}
+
+.blue {
+    display: flex;
+    justify-content: space-between;
+    /* width: 100vw;
+    height: auto; */
+}
+
+.blue div {
+    /* cursor: grab; */
+}
+
+.blue-sq {
+    background-color: navy;
+    /* width: 5%;
+    padding-bottom: 5%;  */
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+}
+
+.blue-sq:hover {
+    transform: scale(1.25);
+}
+
+.gray-sq {
+   background-color: gray;
+   height: 60px;
+   width: 60px;
+   border: 1px solid black;
+}
+
+.light-gray-sq {
+    background-color: lightgray;
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+ }
+
+ .light-gray-sq:hover {
+    transform: rotate(90deg);
+ }
+
+ .black-sq {
+    background-color: black;
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    color: white;
+ }
+
+ .black-sq:hover {
+    opacity: .5;
+ }
+
+ /* .pink-sq-text {
+    color: red;
+ } */
+
+
+
+ /* button {
+    background: white;
+    color: black;
+    cursor: pointer;
+} */
+
+/* .box {
+  width:100px;
+  height:100px;
+  background:grey;
+  margin:10px;
+} */
+
+.explain-text {
+    opacity: 0;
+    text-align: right;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+    display: none;
+}
+
+.coloured-text {
+  color:#B450B0; 
+  opacity: 1; 
+  display: inline;
+}
+
+
+
