@@ -106,3 +106,16 @@ flex
     #ffd8a8;
     #d9480f;
     */
+
+     /* 
+ .chessboard .square:nth-child(odd) {
+    background-color: pink;
+    transition: opacity 0.3s ease;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    background-color: lightcoral;
+    background-color: lightblue;
+    background-color: gray;
+    background-color: beige;
+  }
+  */
