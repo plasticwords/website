@@ -45,7 +45,7 @@ html {
   }
 
   .menu a:hover {
-    color: rgba(180, 80, 176, 0.85);
+    /* color: rgba(180, 80, 176, 0.85); */
     /* color: #B450B0;
     opacity: 85%; */
   }
@@ -110,6 +110,36 @@ html {
   display: none;
 }
 
+.scrambled-menu .update { 
+  display: none;
+}
+
+.scrambled-menu:hover .update { 
+  display: inline-block; 
+  /* transition: all 2s ease-out; */
+  /* color: rgba(124, 124, 129, 0.5); */
+  color: rgba(180, 80, 176, 0.85);
+}
+
+.scrambled-menu:hover .original { 
+  display: none; 
+}
+
+/* .scrambled-menu { 
+  font-style: italic;
+  color: #B450B0;
+  font-weight: bold;
+} */
+
+  /* 
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  transition: transform 0.3s; 
+  transform: translate(-50%, -50%) rotate(20deg);
+  animation: scramble 0.3s;
+  @keyframes scramble
+  */
+
 /*==============================
   RESPONSIVE DESIGN: PHONE
 ==============================*/
@@ -145,6 +175,22 @@ html {
   .branding {
     display: none;
   }
+
+  .scrambled-menu .update { 
+    display: inline-block;
+  }
+  
+  /* .scrambled-menu:hover .update { 
+    display: inline-block; 
+  } */
+  
+  /* .scrambled-menu:hover .original { 
+    display: none; 
+  }  */
+
+  .scrambled-menu .original { 
+    display: none; 
+  } 
 
   .responsive-menu {
     /* width: 85%; */
