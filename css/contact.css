@@ -248,10 +248,6 @@ html {
     display: block;
   } */
 
-  /* .nav-logo {
-    display: none;
-  } */
-
   .menu {
     position: fixed;
     right: 0px;
@@ -283,6 +279,7 @@ html {
 
   #active-page {
     border-bottom: 1px solid rgba(180, 80, 176, 1);
+    /* border-bottom: 2px solid #fff9e5; */
     /* border-bottom: 2px solid #F3F2EE; */
     /* color: #F3F2EE; */
     padding-bottom: 1px;
@@ -291,20 +288,6 @@ html {
   .menu-blnc-elements {
     display: none;
   }
-
-  /* .nav-links li {
-    opacity: 1;
-  } */
-
-  /* .nav-links-text {
-    font-size: 1.75rem;
-    color: #fff9e5;
-  } */
-
-  /* #current-page {
-    border-bottom: 2px solid #fff9e5;
-    padding-bottom: 1px;
-  } */
 
   /* .social {
     color: #fff9e5;
