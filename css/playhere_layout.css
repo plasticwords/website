@@ -1,9 +1,23 @@
 html {
     background-color: #fdf2e0;
-
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1500px;
     /* HOW DO I USE THIS. Opacity built into rgba, picture in background:
     background: transparent url (something.png);
     background-color: rgba (0, 0, 0, 0.5) none; */
+}
+
+body {
+  background-image: url("../img/index.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: black;
+  background-color: #F3F2EE;
+  margin: 0 auto;
 }
 
 /* ==========
@@ -95,6 +109,25 @@ flex
     background-color: red;
   }
   
+  /*==============================
+  RESPONSIVE DESIGN: TABLET
+==============================*/
+@media screen and (max-width: 992px) {
+  body {
+    background-image: url("../img/index-tablet.jpg");
+  }
+}
+
+/*==============================
+  RESPONSIVE DESIGN: PHONE
+==============================*/
+@media screen and (max-width: 576px) {
+  body {
+    background-image: url("../img/index-mobile.jpg");
+  }
+}
+
+  
     /* 
     box-sizing: border-box;
     margin: 0 auto;
@@ -117,5 +150,15 @@ flex
     background-color: lightblue;
     background-color: gray;
     background-color: beige;
+  }
+  */
+
+  /* 
+  a.link-div {  
+  }
+  a:hover {
+  }
+  a:active {
+    color: yellow;
   }
   */
