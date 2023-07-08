@@ -110,6 +110,10 @@ html {
   display: none;
 }
 
+.scrambled-menu:hover .original { 
+  display: none; 
+}
+
 .scrambled-menu .update { 
   display: none;
 }
@@ -119,10 +123,6 @@ html {
   /* transition: all 2s ease-out; */
   /* color: rgba(124, 124, 129, 0.5); */
   color: rgba(180, 80, 176, 0.85);
-}
-
-.scrambled-menu:hover .original { 
-  display: none; 
 }
 
 /* .scrambled-menu { 
