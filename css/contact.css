@@ -53,6 +53,8 @@ html {
   #active-page {
     color: #B450B0;
     opacity: 100%;
+    /* border-left: 1px solid #B450B0;  */
+    /* padding: 5px; */
   }
 
   .text {
