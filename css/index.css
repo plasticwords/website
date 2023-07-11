@@ -108,6 +108,7 @@ align-self: end;
 .after a:active {
     color: green;
     border: 3px solid red;
+    border-top: 5px solid yellow;
    }
 
 .grid-pink {
