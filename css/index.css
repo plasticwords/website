@@ -105,6 +105,11 @@ align-self: end;
     flex-direction: column; */
 }
 
+.after a:active {
+    color: green;
+    border: 3px solid red;
+   }
+
 .grid-pink {
     grid-area: pink-sq;
     /* padding: 0 7.5% 0 7.5%; */

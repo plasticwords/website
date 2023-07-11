@@ -1,5 +1,7 @@
 html {
+    /* background: transparent url("/img/portrait_1500.jpg"); */ 
     background: #F3F2EE;
+    /* background-color: #F3F2EE; */
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -12,11 +14,22 @@ html {
     max-width: 1500px;
     margin-top: 5vh;
     font-family: monospace;
+    /* font-family: Georgia, "Times New Roman", serif; */
     /* color: gray; */
     color: #7C7C81;
+    /* color: rgba(0, 0, 0, 0.5);  */
   }
 
-  /*==============================
+
+/*==============================
+NAVIGATION BAR
+==============================*/
+
+/*==============================
+MOBILE/BURGER CSS
+===============================*/
+
+/*==============================
   MAIN CONTENT
 ==============================*/
 
@@ -92,6 +105,8 @@ html {
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
+  /* Responsive with min. size of 22px (16px * 1.375). Used to be 26px. 
+  font-size: calc(1.375rem + 0.2vw); */
   writing-mode: vertical-rl;
   margin-right: 10%;
 }
@@ -107,7 +122,7 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
-/* change name of class to responsive-header */
+/* change name of class to responsive/mobile-header */
 .responsive-menu {
   display: none;
 }
@@ -123,6 +138,7 @@ html {
 .scrambled-menu:hover .update { 
   display: inline-block; 
   /* transition: all 2s ease-out; */
+  /* transition: all 0.3s ease-in; */
   /* color: rgba(124, 124, 129, 0.5); */
   color: rgba(180, 80, 176, 0.85);
 }
@@ -143,17 +159,119 @@ html {
   */
 
 /*==============================
+  RESPONSIVE DESIGN: TABLET
+==============================*/
+@media screen and (max-width: 992px) {
+  
+/* Currently no menu until next breakpoint. 
+Fix this by just moving responsive-menu from mobile design to here. 
+May have to change main containers too. 
+Font size. */
+
+html {
+  overflow-x: hidden;
+}
+
+.container {
+  /* width: 80%; */
+}
+
+.grid-container {
+  /* width: 90%;
+  margin: auto; /* auto margin will centre the content */
+  /* margin: 1vh 2vh 2vh 2vh; */
+}
+
+  /*==============================
+    RESPONSIVE MOBILE/BURGER - copied from books page css
+  ==============================*/
+  /* .burger {
+    display: block;
+  } */
+
+  .menu {
+    position: fixed;
+    right: 0px;
+    height: 80%;
+    /* height: 100%; */
+    /* margin-top: 15%; */
+    top: 0;
+    /* background-color: #a51f26; */
+    background-color: #F3F2EE;
+    /* background-color: #B450B0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    /* opacity: 0.95; */
+    writing-mode: horizontal-tb;
+    font-size: 1.75rem;
+    z-index: 1;
+    /* border-top: 1px solid red; */
+  }
+
+  .menu a {
+    color: rgba(124, 124, 129, 1);
+    /* color: #F3F2EE; */
+  }
+
+  #active-page {
+    border-bottom: 1px solid rgba(180, 80, 176, 1);
+    /* border-bottom: 2px solid #fff9e5; */
+    /* border-bottom: 2px solid #F3F2EE; */
+    /* color: #F3F2EE; */
+    padding-bottom: 1px;
+  }
+
+  .menu-blnc-elements {
+    display: none;
+  }
+
+  /* .social {
+    color: #fff9e5;
+    padding: 2% 0 5vh 0;
+    font-size: 1.75rem;
+  } */
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: #fff9e5;
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: #fff9e5;
+  }
+}
+
+/*==============================
   RESPONSIVE DESIGN: PHONE
 ==============================*/
+/* @media screen and (max-width: 576px) */
 @media (max-width: 768px) {
   
   .container {
+    /* width: 90%; */
     margin-top: 2vh;
+    /* margin-top: 4vh; */
   }
 
   .grid-container {
     padding-top: 3vh;
     /* border-top: red 1px solid; */
+    /* margin: 0;
+    padding: 0; */
     grid-template-columns: 1fr;    
     grid-template-areas: 
       /* "menu-area"   */
@@ -241,77 +359,5 @@ html {
     /* CROSS POSITIONING:  */
     /* z-index: 2;
     position: relative; */
-  }
-
-    /*==============================
-    RESPONSIVE MOBILE/BURGER - copied from books page
-  ==============================*/
-  /* .burger {
-    display: block;
-  } */
-
-  .menu {
-    position: fixed;
-    right: 0px;
-    height: 80%;
-    /* height: 100%; */
-    /* margin-top: 15%; */
-    top: 0;
-    /* background-color: #a51f26; */
-    background-color: #F3F2EE;
-    /* background-color: #B450B0; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-    /* opacity: 0.95; */
-    writing-mode: horizontal-tb;
-    font-size: 1.75rem;
-    z-index: 1;
-    /* border-top: 1px solid red; */
-  }
-
-  .menu a {
-    color: rgba(124, 124, 129, 1);
-    /* color: #F3F2EE; */
-  }
-
-  #active-page {
-    border-bottom: 1px solid rgba(180, 80, 176, 1);
-    /* border-bottom: 2px solid #fff9e5; */
-    /* border-bottom: 2px solid #F3F2EE; */
-    /* color: #F3F2EE; */
-    padding-bottom: 1px;
-  }
-
-  .menu-blnc-elements {
-    display: none;
-  }
-
-  /* .social {
-    color: #fff9e5;
-    padding: 2% 0 5vh 0;
-    font-size: 1.75rem;
-  } */
-
-  .nav-active {
-    transform: translateX(0%);
-  }
-
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-    background-color: #fff9e5;
-  }
-
-  .toggle .line2 {
-    opacity: 0;
-  }
-
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-    background-color: #fff9e5;
   }
 }
