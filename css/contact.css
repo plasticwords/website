@@ -85,6 +85,7 @@ MOBILE/BURGER CSS
 
 .social {
   color: #7C7C81;
+  color: red;
 }
 
 .branding {
@@ -193,7 +194,8 @@ html {
 }
 
 .responsive-menu img {
-  height: 5vh;
+  height: 4vh;
+  width: auto;
 }
 
 .burger div {
