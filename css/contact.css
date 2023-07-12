@@ -276,7 +276,6 @@ MOBILE/BURGER CSS
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
     background-color: lightgray;
-    background-color: red;
     /* background-color: #fff9e5; */
   }
 
