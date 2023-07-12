@@ -201,8 +201,6 @@ MOBILE/BURGER CSS
 
   .responsive-menu {
     width: 92.5%;
-    /* width: 100%; */
-    /* width: 85%; */
     padding-left: 7.5%;
     height: auto;
     display: flex;
@@ -242,10 +240,8 @@ MOBILE/BURGER CSS
     position: fixed;
     right: 0px;
     top: 0;
-    height: 80%;
-    /* height: 100%; */
+    height: 100%;
     background-color: #F3F2EE;
-    /* background-color: #B450B0; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -253,7 +249,7 @@ MOBILE/BURGER CSS
     width: 100%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
-    /* opacity: 0.95; */
+    opacity: 0.95;
     writing-mode: horizontal-tb;
     font-size: 1.75rem;
     z-index: 1;
