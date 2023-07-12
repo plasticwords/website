@@ -83,6 +83,13 @@ MOBILE/BURGER CSS
   opacity: 80%;
 }
 
+.phone {
+  text-decoration: none;
+  /* color: rgba(124, 124, 129, 0.5); */
+  color: red;
+}
+
+
 .social {
   color: #7C7C81;
 }
