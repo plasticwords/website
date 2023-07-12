@@ -249,6 +249,7 @@ html {
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
     background-color: lightgray;
+    background-color: red;
     /* background-color: #fff9e5; */
   }
 
@@ -278,6 +279,10 @@ html {
     /* width: 100%;
     margin: auto; */
   }
+
+.social {
+  font-size: 1.25rem;
+}
 }
 
 /*
