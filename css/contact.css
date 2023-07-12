@@ -85,7 +85,7 @@ MOBILE/BURGER CSS
 
 .social {
   color: #7C7C81;
-  color: red;
+  /* color: red; */
 }
 
 .branding {
@@ -100,11 +100,10 @@ MOBILE/BURGER CSS
 }
 
 .branding img {
-  height: auto;
   /* max-height: 25%; */
-  width: 25%;
-  height: fit-content;
-  max-height: 100%;
+  /* width: 25%; */
+  width: 4vw;
+  height: auto;
 }
 
 .gradient-text {
