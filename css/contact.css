@@ -249,7 +249,7 @@ html {
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
     background-color: lightgray;
-    background-color: red;
+    /* background-color: red; */
     /* background-color: #fff9e5; */
   }
 
@@ -281,7 +281,7 @@ html {
   }
 
 .social {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 }
 
