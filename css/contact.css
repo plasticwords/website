@@ -158,7 +158,6 @@ html {
   /* margin: auto; */
   /* margin: 1vh 2vh 2vh 2vh; */
   padding-top: 3vh;
-  /* margin: auto; */
   grid-template-columns: 1fr;    
   grid-template-areas: 
     "text-area";
@@ -261,7 +260,7 @@ html {
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
     background-color: lightgray;
-    background-color: green;
+    background-color: red;
     /* background-color: #fff9e5; */
   }
 
