@@ -163,11 +163,14 @@ MOBILE/BURGER CSS
   html {
     overflow-x: hidden;
     /* font-size: 13px; */
+    margin: auto;
+    width: 100%;
   }
 
   .container {
     /* width: 90%; */
     margin-top: 2vh;
+    
   }
 
   .grid-container {
@@ -277,6 +280,7 @@ MOBILE/BURGER CSS
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
     background-color: lightgray;
+    background-color: red;
     /* background-color: #fff9e5; */
   }
 
