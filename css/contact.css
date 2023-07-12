@@ -136,7 +136,6 @@ MOBILE/BURGER CSS
 
 html {
   overflow-x: hidden;
-  /* font-size: 13px; */
 }
   
 .container {
@@ -268,6 +267,10 @@ html {
   RESPONSIVE DESIGN: PHONE
 ==============================*/
 @media screen and (max-width: 576px) {
+
+html {
+  font-size: 14px;
+}
 
   .container {
     width: 100%;
