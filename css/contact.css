@@ -163,14 +163,13 @@ MOBILE/BURGER CSS
   html {
     overflow-x: hidden;
     /* font-size: 13px; */
-    margin: auto;
-    width: 100%;
   }
 
   .container {
     /* width: 90%; */
     margin-top: 2vh;
-    
+    /* width: 100%;
+    margin: auto; */
   }
 
   .grid-container {
@@ -201,12 +200,13 @@ MOBILE/BURGER CSS
   } 
 
   .responsive-menu {
-    width: 100%;
+    width: 92.5%;
+    /* width: 100%; */
     /* width: 85%; */
+    padding-left: 7.5%;
     height: auto;
     display: flex;
     justify-content:space-between;
-    padding-left: 7.5%;
     border-bottom: 1px solid lightgray;
     margin: 0 auto;
     padding-bottom: 1.5vh;
@@ -218,7 +218,7 @@ MOBILE/BURGER CSS
   }
 
   .responsive-logo {
-    padding-right: 15%;
+    padding-right: 7.5%;
   }
 
   .responsive-menu img {
