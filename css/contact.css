@@ -83,12 +83,6 @@ MOBILE/BURGER CSS
   opacity: 80%;
 }
 
-/* .phone a {
-  text-decoration: none;
-  color: rgba(124, 124, 129, 0.5);
-} */
-
-
 .social {
   color: #7C7C81;
 }
@@ -137,16 +131,6 @@ MOBILE/BURGER CSS
 
 /*==============================
   RESPONSIVE DESIGN: TABLET
-  ---
-  > I'll keep the tablet breakpoint for now. 
-  > I may change container widths later on. 
-  > But the overall structure would be mostly constant through all devices.
-  > Old mobile breakpoint was: (max-width: 768px)
-  ---
-  Could also add an animation to the scrambled menu if you have time. for example:
-  - @keyframes scramble
-  - animation: scramble 0.3s;
-  - transform: translate(-50%, -50%) rotate(20deg);
 ==============================*/
 @media screen and (max-width: 992px) {
 
@@ -266,7 +250,6 @@ html {
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
     background-color: lightgray;
-    background-color: red;
     /* background-color: #fff9e5; */
   }
 
