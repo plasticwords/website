@@ -1,7 +1,6 @@
 html {
     /* background: transparent url("/img/portrait_1500.jpg"); */ 
     background: #F3F2EE;
-    /* background-color: #F3F2EE; */
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -14,10 +13,7 @@ html {
     max-width: 1500px;
     margin-top: 5vh;
     font-family: monospace;
-    /* font-family: Georgia, "Times New Roman", serif; */
-    /* color: gray; */
     color: #7C7C81;
-    /* color: rgba(0, 0, 0, 0.5);  */
   }
 
 
@@ -57,17 +53,9 @@ MOBILE/BURGER CSS
     opacity: 50%; */
   }
 
-  .menu a:hover {
-    /* color: rgba(180, 80, 176, 0.85); */
-    /* color: #B450B0;
-    opacity: 85%; */
-  }
-
   #active-page {
     color: #B450B0;
     opacity: 100%;
-    /* border-left: 1px solid #B450B0;  */
-    /* padding: 5px; */
   }
 
   .text {
@@ -80,7 +68,6 @@ MOBILE/BURGER CSS
 .title {
   background-color: white;
   opacity: 80%;
-  /* background-color: black; */
   padding-left: 1%;
   padding-top: 0.5%;
   padding-right: 1%;
@@ -136,158 +123,64 @@ MOBILE/BURGER CSS
 }
 
 .scrambled-menu:hover .update { 
-  display: inline-block; 
-  /* transition: all 2s ease-out; */
-  /* transition: all 0.3s ease-in; */
-  /* color: rgba(124, 124, 129, 0.5); */
+  display: inline-block;
   color: rgba(180, 80, 176, 0.85);
+  /* color: #B450B0;
+  opacity: 85%; */
 }
-
-/* .scrambled-menu { 
-  font-style: italic;
-  color: #B450B0;
-  font-weight: bold;
-} */
-
-  /* 
-  transform: translate(-50%, -50%);
-  transition: all 0.3s;
-  transition: transform 0.3s; 
-  transform: translate(-50%, -50%) rotate(20deg);
-  animation: scramble 0.3s;
-  @keyframes scramble
-  */
 
 /*==============================
   RESPONSIVE DESIGN: TABLET
-==============================*/
+  ---
+  > I'll keep the tablet breakpoint for now. 
+  > I may change container widths later on. 
+  > But the overall structure would be mostly constant through all devices.
+  > Original mobile breakpoint was: (max-width: 576px)
+  ---
+  Could also add an animation to the scrambled menu if you have time. for example:
+  - @keyframes scramble
+  - animation: scramble 0.3s;
+  - transform: translate(-50%, -50%) rotate(20deg);
+==============================
 @media screen and (max-width: 992px) {
-  
-/* Currently no menu until next breakpoint. 
-Fix this by just moving responsive-menu from mobile design to here. 
-May have to change main containers too. 
-Font size. */
-
-html {
-  overflow-x: hidden;
-}
 
 .container {
-  /* width: 80%; */
+  width: 80%;
 }
 
 .grid-container {
-  /* width: 90%;
-  margin: auto; /* auto margin will centre the content */
-  /* margin: 1vh 2vh 2vh 2vh; */
-}
-
-  /*==============================
-    RESPONSIVE MOBILE/BURGER - copied from books page css
-  ==============================*/
-  /* .burger {
-    display: block;
-  } */
-
-  .menu {
-    position: fixed;
-    right: 0px;
-    height: 80%;
-    /* height: 100%; */
-    /* margin-top: 15%; */
-    top: 0;
-    /* background-color: #a51f26; */
-    background-color: #F3F2EE;
-    /* background-color: #B450B0; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-    /* opacity: 0.95; */
-    writing-mode: horizontal-tb;
-    font-size: 1.75rem;
-    z-index: 1;
-    /* border-top: 1px solid red; */
-  }
-
-  .menu a {
-    color: rgba(124, 124, 129, 1);
-    /* color: #F3F2EE; */
-  }
-
-  #active-page {
-    border-bottom: 1px solid rgba(180, 80, 176, 1);
-    /* border-bottom: 2px solid #fff9e5; */
-    /* border-bottom: 2px solid #F3F2EE; */
-    /* color: #F3F2EE; */
-    padding-bottom: 1px;
-  }
-
-  .menu-blnc-elements {
-    display: none;
-  }
-
-  /* .social {
-    color: #fff9e5;
-    padding: 2% 0 5vh 0;
-    font-size: 1.75rem;
-  } */
-
-  .nav-active {
-    transform: translateX(0%);
-  }
-
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-    background-color: #fff9e5;
-  }
-
-  .toggle .line2 {
-    opacity: 0;
-  }
-
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-    background-color: #fff9e5;
-  }
-}
+  width: 90%;
+  margin: auto; -auto margin will centre the content-
+  margin: 1vh 2vh 2vh 2vh;
+} 
+}*/
 
 /*==============================
   RESPONSIVE DESIGN: PHONE
 ==============================*/
-/* @media screen and (max-width: 576px) */
-@media (max-width: 768px) {
-  
+@media screen and (max-width: 768px) {
+
+  html {
+    overflow-x: hidden;
+    /* font-size: 13px; */
+  }
+
   .container {
     /* width: 90%; */
     margin-top: 2vh;
-    /* margin-top: 4vh; */
   }
 
   .grid-container {
     padding-top: 3vh;
-    /* border-top: red 1px solid; */
-    /* margin: 0;
-    padding: 0; */
+    /* margin: auto; */
     grid-template-columns: 1fr;    
     grid-template-areas: 
-      /* "menu-area"   */
-      /* "branding-area" */
-      /* "responsive-menu" */
       "text-area";
   }
-
-  /* .menu {
-    display: none;
-  } */
 
   .text {
     width: 90%;
     margin: 0 auto;
-    /* margin: 5% auto; */
     border-bottom: none;
     z-index: 0;
   }
@@ -300,24 +193,15 @@ html {
     display: inline-block;
   }
   
-  /* .scrambled-menu:hover .update { 
-    display: inline-block; 
-  } */
-  
-  /* .scrambled-menu:hover .original { 
-    display: none; 
-  }  */
-
   .scrambled-menu .original { 
     display: none; 
   } 
 
   .responsive-menu {
-    /* width: 85%; */
     width: 100%;
+    /* width: 85%; */
     height: auto;
     display: flex;
-    /* grid-area: responsive-menu; */
     justify-content:space-between;
     padding-left: 7.5%;
     border-bottom: 1px solid lightgray;
@@ -336,29 +220,74 @@ html {
 
   .responsive-menu img {
     height: 5vh;
-    /* margin-right: 15vw; */
-    /* max-height: 100%;  */
   }
-
-  /* .burger {
-    background-color: lightgray;
-  } */
 
   .burger div {
     width: 25px;
-    /* width: 20px; */
     height: 3px;
-    /* height: 5px; */
     background-color: lightgray;
-    /* background-color: gray; */
     /* background-color: #F3F2EE; */
     border: 1px solid gray;
     margin: 3px;
-    /* margin: 5px; */
     transition: all 0.3s ease-in;
-    /* CROSS POSITIONING:  */
-    /* z-index: 2;
-    position: relative; */
+  }
+
+/*==============================
+    RESPONSIVE MOBILE/BURGER
+  ==============================*/
+  .menu {
+    position: fixed;
+    right: 0px;
+    top: 0;
+    height: 80%;
+    /* height: 100%; */
+    background-color: #F3F2EE;
+    /* background-color: #B450B0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    /* opacity: 0.95; */
+    writing-mode: horizontal-tb;
+    font-size: 1.75rem;
+    z-index: 1;
+    /* padding: 2% 0 5vh 0; */
+  }
+
+  .menu a {
+    color: rgba(124, 124, 129, 1);
+  }
+
+  #active-page {
+    border-bottom: 1px solid rgba(180, 80, 176, 1);
+    padding-bottom: 1px;
+  }
+
+  .menu-blnc-elements {
+    display: none;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    background-color: lightgray;
+    /* background-color: #fff9e5; */
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    background-color: lightgray;
+    /* background-color: #fff9e5; */
   }
 }
 
