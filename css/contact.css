@@ -141,7 +141,7 @@ MOBILE/BURGER CSS
   - @keyframes scramble
   - animation: scramble 0.3s;
   - transform: translate(-50%, -50%) rotate(20deg);
-==============================
+==============================*/
 @media screen and (max-width: 992px) {
 
 .container {
@@ -149,11 +149,11 @@ MOBILE/BURGER CSS
 }
 
 .grid-container {
-  width: 90%;
-  margin: auto; -auto margin will centre the content-
-  margin: 1vh 2vh 2vh 2vh;
+  width: 100%;
+  /* margin: auto; */
+  /* margin: 1vh 2vh 2vh 2vh; */
 } 
-}*/
+}
 
 /*==============================
   RESPONSIVE DESIGN: PHONE
@@ -166,7 +166,7 @@ MOBILE/BURGER CSS
   }
 
   .container {
-    /* width: 90%; */
+    width: 100%;
     margin-top: 2vh;
     /* width: 100%;
     margin: auto; */
@@ -276,6 +276,7 @@ MOBILE/BURGER CSS
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
     background-color: lightgray;
+    background-color: red;
     /* background-color: #fff9e5; */
   }
 
