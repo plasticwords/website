@@ -135,7 +135,7 @@ MOBILE/BURGER CSS
   > I'll keep the tablet breakpoint for now. 
   > I may change container widths later on. 
   > But the overall structure would be mostly constant through all devices.
-  > Original mobile breakpoint was: (max-width: 576px)
+  > Old mobile breakpoint was: (max-width: 768px)
   ---
   Could also add an animation to the scrambled menu if you have time. for example:
   - @keyframes scramble
@@ -144,6 +144,11 @@ MOBILE/BURGER CSS
 ==============================*/
 @media screen and (max-width: 992px) {
 
+html {
+  overflow-x: hidden;
+  /* font-size: 13px; */
+}
+  
 .container {
   width: 80%;
 }
@@ -152,86 +157,66 @@ MOBILE/BURGER CSS
   width: 100%;
   /* margin: auto; */
   /* margin: 1vh 2vh 2vh 2vh; */
-} 
+  padding-top: 3vh;
+  /* margin: auto; */
+  grid-template-columns: 1fr;    
+  grid-template-areas: 
+    "text-area";
 }
 
-/*==============================
-  RESPONSIVE DESIGN: PHONE
-==============================*/
-@media screen and (max-width: 768px) {
+.text {
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: none;
+  z-index: 0;
+  /* padding-right: 10%; */
+}
 
-  html {
-    overflow-x: hidden;
-    /* font-size: 13px; */
-  }
+.branding {
+  display: none;
+}
 
-  .container {
-    width: 100%;
-    margin-top: 4vh;
-    /* width: 100%;
-    margin: auto; */
-  }
+.scrambled-menu .update { 
+  display: inline-block;
+}
 
-  .grid-container {
-    padding-top: 3vh;
-    /* margin: auto; */
-    grid-template-columns: 1fr;    
-    grid-template-areas: 
-      "text-area";
-  }
+.scrambled-menu .original { 
+  display: none; 
+} 
 
-  .text {
-    width: 90%;
-    margin: 0 auto;
-    border-bottom: none;
-    z-index: 0;
-  }
+.responsive-menu {
+  width: 92.5%;
+  padding-left: 7.5%;
+  height: auto;
+  display: flex;
+  justify-content:space-between;
+  border-bottom: 1px solid lightgray;
+  margin: 0 auto;
+  padding-bottom: 1.5vh;
+  /* padding-bottom: 2vh; */
+  align-items: center;
+  /* CROSS POSITIONING:  */
+  z-index: 2;
+  position: relative;
+}
 
-  .branding {
-    display: none;
-  }
+.responsive-logo {
+  padding-right: 7.5%;
+}
 
-  .scrambled-menu .update { 
-    display: inline-block;
-  }
-  
-  .scrambled-menu .original { 
-    display: none; 
-  } 
+.responsive-menu img {
+  height: 5vh;
+}
 
-  .responsive-menu {
-    width: 92.5%;
-    padding-left: 7.5%;
-    height: auto;
-    display: flex;
-    justify-content:space-between;
-    border-bottom: 1px solid lightgray;
-    margin: 0 auto;
-    padding-bottom: 1.5vh;
-    /* padding-bottom: 2vh; */
-    align-items: center;
-    /* CROSS POSITIONING:  */
-    z-index: 2;
-    position: relative;
-  }
-
-  .responsive-logo {
-    padding-right: 7.5%;
-  }
-
-  .responsive-menu img {
-    height: 5vh;
-  }
-
-  .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: lightgray;
-    /* background-color: #F3F2EE; */
-    border: 1px solid gray;
-    margin: 3px;
-    transition: all 0.3s ease-in;
-  }
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: lightgray;
+  /* background-color: #F3F2EE; */
+  border: 1px solid gray;
+  margin: 3px;
+  transition: all 0.3s ease-in;
+}
 
 /*==============================
     RESPONSIVE MOBILE/BURGER
@@ -276,7 +261,7 @@ MOBILE/BURGER CSS
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
     background-color: lightgray;
-    background-color: red;
+    background-color: green;
     /* background-color: #fff9e5; */
   }
 
@@ -291,6 +276,18 @@ MOBILE/BURGER CSS
   }
 }
 
+/*==============================
+  RESPONSIVE DESIGN: PHONE
+==============================*/
+@media screen and (max-width: 576px) {
+
+  .container {
+    width: 100%;
+    margin-top: 4vh;
+    /* width: 100%;
+    margin: auto; */
+  }
+}
 
 /*
 ==============================
