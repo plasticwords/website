@@ -99,7 +99,7 @@ MOBILE/BURGER CSS
 }
 
 .branding img {
-  width: 4vw;
+  width: 3vw;
   height: auto;
 }
 
@@ -283,6 +283,10 @@ html {
 
 .social {
   font-size: 1.75rem;
+}
+
+.responsive-menu img {
+  height: 5vh;
 }
 }
 
