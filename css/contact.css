@@ -79,9 +79,56 @@ MOBILE/BURGER CSS
 }
 
 #title-text {
-  color: lightgray;
-  opacity: 80%;
+  color: #7C7C81;
+  /* color: lightgray; */
+  /* opacity: 80%; */
 }
+
+.mode {
+  float: right;
+  cursor: pointer;
+  padding-right: 5px;
+  /* padding-right: 1%; */
+}
+
+.mode i:hover {
+  opacity: 0.5;
+}
+
+/* .dark-mode-text {
+  font-size: 0.5rem;
+  writing-mode: vertical-rl;
+  text-align: center;
+} */
+
+.branding span {
+  /* display: none; */
+  font-size: 1rem;
+  writing-mode: horizontal-tb;
+  text-align: right;
+  /* font-size: 1.5rem; */
+  /* font-size: 0.625rem; */
+  margin-left: -15vw;
+  color: #7D8590;
+  /* color: #B450B0; */
+  /* color: #7C7C81; */
+  /* background-image: linear-gradient(0deg, fuchsia, #180ACE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  /* border-bottom: 1px solid #B450B0;
+  border-right: 0.25px solid #B450B0;
+  padding: 0 5px 5px 0; */
+}
+
+/* .dark-mode-instruct {} */
+
+/* .dark-logo {
+  display: none;
+}
+
+.light-logo {
+  display: block;
+} */
 
 .social {
   color: #7C7C81;
@@ -104,9 +151,10 @@ MOBILE/BURGER CSS
 }
 
 .gradient-text {
-  background-image: linear-gradient(0deg, fuchsia, #180ACE);
+  color: #B450B0;
+  /* background-image: linear-gradient(0deg, fuchsia, #180ACE);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 /* change name of class to responsive/mobile-header */
@@ -155,9 +203,21 @@ html {
 .text {
   width: 90%;
   margin: 0 auto;
-  border-bottom: none;
+  /* border-bottom: none; */
   z-index: 0;
+  padding-bottom: 5vh;
+  /* padding-bottom: 125vh; will hide border */
   /* padding-right: 10%; */
+}
+
+.mode {
+  display: none;
+}
+
+.responsive-mode {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #B450B0;
 }
 
 .branding {
@@ -199,12 +259,17 @@ html {
 
 .burger div {
   width: 25px;
-  height: 3px;
-  background-color: lightgray;
+  height: 4px;
+  background: #B450B0;
+  /* background-color: #7d8590; */
   /* background-color: #F3F2EE; */
-  border: 1px solid gray;
-  margin: 3px;
+  margin: 4px;
+  /* margin: 3px; */
   transition: all 0.3s ease-in;
+  /* v2: */
+  /* height: 3px;
+  background-color: lightgray;
+  border: 1px solid gray; */
 }
 
 /*==============================
@@ -249,8 +314,8 @@ html {
 
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
-    background-color: lightgray;
-    /* background-color: red; */
+    background: #B450B0;
+    /* background-color: lightgray; */
     /* background-color: #fff9e5; */
   }
 
@@ -260,7 +325,8 @@ html {
 
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-    background-color: lightgray;
+    background: #B450B0;
+    /* background-color: lightgray; */
     /* background-color: #fff9e5; */
   }
 }

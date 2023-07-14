@@ -33,7 +33,7 @@
   </head>
 
   <body class="container">
-    
+
     <!-- Responsive header: -->
     <section class="responsive-menu">
       <div class="burger">
@@ -41,7 +41,13 @@
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
-      <div class="responsive-logo"><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></div></a>
+      
+      <span class="responsive-mode">
+        <span class="light-mode-responsive"><i class="fas fa-certificate"></i></span> |  
+        <span class="dark-mode-responsive"><i class="fas fa-moon"></i></span>
+      </span>
+
+      <div class="responsive-logo"><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></a></div>
     </section>
 
 <!--==============================
@@ -57,13 +63,30 @@
           <span class="menu-blnc-elements">/</span>        
         <a href="playhere_servicesJS.html"><span class="scrambled-menu"><span class="update">services</span><span class="original">servcies</span></span></a> 
           <span class="menu-blnc-elements">/</span>        
-        <a href="index.html"><span class="scrambled-menu"><span class="update">blog</span><span class="original">bgol</span></span></a> 
+        <a href="index.html"><span class="scrambled-menu"><span class="update">blog</span><span class="original">bgol</span></a> 
       </section>
-    
+
         <section class="text">
           <div class="title">
-            <span id="title-text">write, phone, visit, stalk</span><br>
+            <span id="title-text">write, phone, visit, stalk</span>
+            <span class="mode">
+              <span class="light-mode">
+                <i class="fas fa-certificate"></i>
+                <!-- <i class="fas fa-atom"></i> -->
+              </span> |  
+              <span class="dark-mode"> 
+                <!-- <span class="dark-mode-text">dark</span> -->
+                <i class="fas fa-moon"></i> 
+                <!-- <i class="fas fa-yin-yang"></i>  -->
+              </span>
+            </span>
+            <!-- <br> -->
+            <!-- <i class="fas fa-star-and-crescent"></i> -->
+            <!-- <i class="fas fa-star"></i> -->
+            <!-- <i class="fas fa-sun"></i> -->
+            <!-- <i class="fas fa-cloud-sun"></i> -->  
           </div>
+
           <p>E: create@plasticwords.com.au <br>
           P: 0400 555 666 <br>
           51 St George Tce, Perth, W.A.</p>
@@ -77,13 +100,26 @@
 
       <section class="branding">
         <div><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></a></div>
+        
+        <!-- <div class="light-logo"><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></a></div> -->
+
+        <!-- <div class="dark-logo"><a href="index.html"><img src="img/plasticWordsLogo_dark.png" alt="Plastic Words logo"></a></div> -->
+        
+          <span class="dark-mode-instruct" style="display: none;">there creeps thy dark,<br>illumined by our night /</span>
+          <span class="light-mode-instruct" style="display: none;">whilst the sun/dark grows mild,<br>make thy darkness/rays be as light</span>
+        
         <div class="gradient-text">Plastic <br> Words</div>
-        <div><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></a></div> 
+
+        <!-- <div class="light-logo"><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></a></div>  -->
+
+        <!-- <div class="dark-logo"><a href="index.html"><img src="img/plasticWordsLogo_dark.png" alt="Plastic Words logo"></a></div>  -->
       </section>
 
     </main>
 
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/darkMode.js"></script>
+
   </body>
 </html>
 
