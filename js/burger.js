@@ -3,10 +3,10 @@ const navSlide = () => {
   const nav = document.querySelector(".menu");
 
   burger.addEventListener("click", () => {
-    // Toggle  Nav
+    // Toggle  nav:
     nav.classList.toggle("nav-active");
 
-    // Burger animate
+    // Animate burger:
     burger.classList.toggle("toggle");
   });
 };

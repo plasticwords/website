@@ -1,7 +1,7 @@
 // ? Simplify in chatGPT && Keep dark mode activated when move through site - burger menu JS may help, this line of code may also help:
 // if (darkButton.classList.contains('active'))
 
-// implement dark mode:
+// Implement dark mode:
 const darkButton = document.querySelector('.dark-mode');
 const darkButtonResponsive = document.querySelector('.dark-mode-responsive');
 const darkBackground = document.querySelector('html');
@@ -17,23 +17,23 @@ const darkModeInstruct = document.querySelector('.dark-mode-instruct');
 // darkButton.addEventListener('click', () => {  
 function enableDarkMode() {
   darkBackground.style.background = '#0D1117'; // dark charcoal black
-  darkTitle.style.background = '#010409'; // dark navy blue
+  darkTitle.style.background = '#010409'; // very dark navy blue
   darkTitle.style.border = 'none';
   darkTitleText.style.color = '#7d8590'; // light silver
-  darkMainText.style.color = '#7d8590'; // light silver
-  darkMainTextBorder.style.borderBottom = '#010409 1px solid'; // dark navy blue
-  darkResponsiveMenu.style.background = '#0D1117'; // dark charcoal black
-  darkResponsiveBorder.style.borderBottom = '#010409 1px solid'; // dark navy blue  
-  // loop for social icons:
+  darkMainText.style.color = '#7d8590';
+  darkMainTextBorder.style.borderBottom = '#010409 1px solid';
+  darkResponsiveMenu.style.background = '#0D1117';
+  darkResponsiveBorder.style.borderBottom = '#010409 1px solid';
+  // Loop for social icons:
   darkSocial.forEach(icon => {
-      icon.style.color = '#7d8590'; // light silver
+      icon.style.color = '#7d8590';
     });
   }
 
 darkButton.addEventListener('click', enableDarkMode);
 darkButtonResponsive.addEventListener('click', enableDarkMode);
 
-// display dark mode instructions:
+// Display dark mode instructions:
 darkButton.addEventListener('mouseover', () => {
   darkModeInstruct.style.display = 'inline-block';
 });
@@ -42,7 +42,7 @@ darkButton.addEventListener('mouseout', () => {
   darkModeInstruct.style.display = 'none';
 });
 
-// implement light mode:
+// Implement light mode:
 const lightButton = document.querySelector('.light-mode');
 const lightButtonResponsive = document.querySelector('.light-mode-responsive');
 const lightBackground = document.querySelector('html');
@@ -65,7 +65,7 @@ function enableLightMode() {
   lightMainTextBorder.style.borderBottom = 'lightgray 1px solid';
   lightResponsiveMenu.style.background = '#F3F2EE';
   lightResponsiveBorder.style.borderBottom = '1px solid lightgray';
-  // loop for social icons:
+  // Loop for social icons:
   lightSocial.forEach(icon => {
       icon.style.color = '#7C7C81';
     });
@@ -74,7 +74,7 @@ function enableLightMode() {
 lightButton.addEventListener('click', enableLightMode);
 lightButtonResponsive.addEventListener('click', enableLightMode);
 
-// display light mode instructions:
+// Display light mode instructions:
 lightButton.addEventListener('mouseover', () => {  
   lightModeInstruct.style.display = 'inline-block';
 });

@@ -45,6 +45,21 @@
     opacity: 100%;
   }
 
+  .scrambled-menu:hover .original {
+    display: none; 
+  }
+
+  .scrambled-menu .update {
+    display: none;
+  }
+
+  .scrambled-menu:hover .update {
+    display: inline-block;
+    color: rgba(180, 80, 176, 0.85);
+    /* color: #B450B0;
+    opacity: 85%; */
+  }
+
   .text {
     grid-area: text-area;
     font-size: 1.25rem;
@@ -55,7 +70,6 @@
 
   .title {
     background-color: white;
-    opacity: 80%;
     padding-left: 1%;
     padding-top: 0.5%;
     padding-right: 1%;
@@ -67,27 +81,18 @@
   }
 
   #title-text {
-    color: #7C7C81;
-    opacity: 0.8;
+    opacity: 0.65;
   }
 
   .mode {
     float: right;
     cursor: pointer;
     padding-right: 5px;
+    opacity: 0.8;
   }
 
   .mode i:hover {
-    opacity: 0.5;
-  }
-
-  .branding span {  
-    writing-mode: horizontal-tb;
-    text-align: right;
-    font-size: 1rem;
-    margin-left: -25vw;
-    color: #7D8590;
-    /* color: #B450B0; */
+    opacity: 0.4;
   }
 
   .social {
@@ -110,26 +115,20 @@
     height: auto;
   }
 
+  .branding span {  
+    writing-mode: horizontal-tb;
+    text-align: right;
+    font-size: 1rem;
+    margin-left: -25vw;
+    color: #7D8590;
+    /* color: #B450B0; */
+  }
+
   .gradient-text {
     color: #B450B0;
     /* background-image: linear-gradient(0deg, fuchsia, #180ACE);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
-  }
-
-  .scrambled-menu:hover .original {
-    display: none; 
-  }
-
-  .scrambled-menu .update {
-    display: none;
-  }
-
-  .scrambled-menu:hover .update {
-    display: inline-block;
-    color: rgba(180, 80, 176, 0.85);
-    /* color: #B450B0;
-    opacity: 85%; */
   }
 
   .responsive-header {
@@ -156,6 +155,48 @@
       "text-area";
   }
 
+  .responsive-header {
+    width: 92.5%;
+    padding-left: 7.5%;
+    padding-bottom: 1.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    /* Make header top layer in document:  */
+    z-index: 2;
+    position: relative;
+  }
+
+  .responsive-logo {
+    padding-right: 7.5%;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 4px;
+    margin: 4px;
+    background: #B450B0;
+    transition: all 0.3s ease-in;
+  }
+
+  .scrambled-menu .update { 
+    display: inline-block;
+  }
+
+  .scrambled-menu .original { 
+    display: none; 
+  } 
+
+  .responsive-mode {
+    font-size: 1.25rem;
+  }
+
+  .responsive-header img {
+    height: 4vh;
+    width: auto;
+  }
+
   .text {
     width: 90%;
     margin: 0 auto;
@@ -168,52 +209,8 @@
     display: none;
   }
 
-  .responsive-mode {
-    font-size: 1.25rem;
-  }
-
   .branding {
     display: none;
-  }
-
-  .scrambled-menu .update { 
-    display: inline-block;
-  }
-
-  .scrambled-menu .original { 
-    display: none; 
-  } 
-
-  .responsive-header {
-    width: 92.5%;
-    padding-left: 7.5%;
-    height: auto;
-    display: flex;
-    justify-content:space-between;
-    border-bottom: 1px solid lightgray;
-    margin: 0 auto;
-    padding-bottom: 1.5vh;
-    align-items: center;
-    /* Make header top layer in document:  */
-    z-index: 2;
-    position: relative;
-  }
-
-  .responsive-logo {
-    padding-right: 7.5%;
-  }
-
-  .responsive-header img {
-    height: 4vh;
-    width: auto;
-  }
-
-  .burger div {
-    width: 25px;
-    height: 4px;
-    background: #B450B0;
-    margin: 4px;
-    transition: all 0.3s ease-in;
   }
 
 /* Responsive burger menu: */
@@ -282,11 +279,11 @@
     margin-top: 4vh;
   }
 
-  .social {
-    font-size: 1.75rem;
-  }
-
   .responsive-header img {
     height: 6vh;
   }
+
+  .social {
+    font-size: 1.75rem;
+  } 
 }
