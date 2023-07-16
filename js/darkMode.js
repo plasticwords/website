@@ -10,7 +10,7 @@ const darkTitleText = document.getElementById('title-text');
 const darkMainText = document.querySelector('.container');
 const darkMainTextBorder = document.querySelector('.text');
 const darkResponsiveMenu = document.querySelector('.menu');
-const darkResponsiveBorder = document.querySelector('.responsive-menu');
+const darkResponsiveBorder = document.querySelector('.responsive-header');
 const darkSocial = document.querySelectorAll('.social i');
 const darkModeInstruct = document.querySelector('.dark-mode-instruct');
 
@@ -51,7 +51,7 @@ const lightTitleText = document.getElementById('title-text');
 const lightMainText = document.querySelector('.container');
 const lightMainTextBorder = document.querySelector('.text');
 const lightResponsiveMenu = document.querySelector('.menu');
-const lightResponsiveBorder = document.querySelector('.responsive-menu');
+const lightResponsiveBorder = document.querySelector('.responsive-header');
 const lightSocial = document.querySelectorAll('.social i');
 const lightModeInstruct = document.querySelector('.light-mode-instruct');
 

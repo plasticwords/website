@@ -7,8 +7,7 @@
     rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
     integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
-    crossorigin="anonymous"
-  />
+    crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="ie-edge" />
@@ -35,82 +34,55 @@
   <body class="container">
 
     <!-- Responsive header: -->
-    <section class="responsive-menu">
+    <header class="responsive-header">
       <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
-      
-      <span class="responsive-mode">
-        <span class="light-mode-responsive"><i class="fas fa-certificate"></i></span> |  
-        <span class="dark-mode-responsive"><i class="fas fa-moon"></i></span>
-      </span>
-
+      <div class="responsive-mode">
+        <span class="light-mode-responsive"><i class="fas fa-certificate"></i></span> | <span class="dark-mode-responsive"><i class="fas fa-moon"></i></span>
+      </div>
       <div class="responsive-logo"><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></a></div>
-    </section>
+    </header>
 
     <!-- Main content and navigation: -->
-    <main class="grid-container">
+    <div class="grid-container">
 
-      <section class="menu">                
-        <a href="contact.html" id="active-page">contact</a> 
-          <span class="menu-blnc-elements">/</span>
-        <a href="index.html"><span class="scrambled-menu"><span class="update">about</span><span class="original">aoubt</span></span></a> 
-          <span class="menu-blnc-elements">/</span>        
-        <a href="playhere_servicesJS.html"><span class="scrambled-menu"><span class="update">services</span><span class="original">servcies</span></span></a> 
-          <span class="menu-blnc-elements">/</span>        
-        <a href="index.html"><span class="scrambled-menu"><span class="update">blog</span><span class="original">bgol</span></a> 
-      </section>
+      <nav class="menu">                
+        <a href="contact.html" id="active-page">contact</a><span class="menu-blnc-elements"> /</span>
+        <a href="index.html"><span class="scrambled-menu"><span class="update">about</span><span class="original">aoubt</span></span></a><span class="menu-blnc-elements"> /</span>
+        <a href="playhere_servicesJS.html"><span class="scrambled-menu"><span class="update">services</span><span class="original">servcies</span></span></a><span class="menu-blnc-elements"> /</span>
+        <a href="index.html"><span class="scrambled-menu"><span class="update">blog</span><span class="original">bgol</span></span></a>
+      </nav>
 
-        <section class="text">
-          <div class="title">
-            <span id="title-text">write, phone, visit, stalk</span>
-            <span class="mode">
-              <span class="light-mode">
-                <i class="fas fa-certificate"></i>
-              </span> |  
-              <span class="dark-mode"> 
-                <i class="fas fa-moon"></i> 
-              </span>
-            </span>
-          </div>
-
-          <p>E: create@plasticwords.com.au <br>
-          P: 0400 555 666 <br>
-          51 St George Tce, Perth, W.A.</p>
-          <div class="social">
-            <p><a href="https://www.facebook.com/timothyrobinsonblog" target="_blank" class="social"><i class="fab fa-facebook"></i></a><br>
-            <a href="https://www.instagram.com/timothyrobinsonblog" target="_blank" class="social"><i class="fab fa-instagram"></i></a><br>
-            <a href="https://www.linkedin.com/in/timothyrobinson7" target="_blank" class="social"><i class="fab fa-linkedin"></i></a></p>
-          </div>
-          @Plastic_Words
-        </section>
+      <main class="text">
+        <div class="title">
+          <span id="title-text">write, phone, visit, stalk</span>
+          <span class="mode"><span class="light-mode"><i class="fas fa-certificate"></i></span> | <span class="dark-mode"><i class="fas fa-moon"></i></span></span>
+        </div>
+        <p>E: create@plasticwords.com.au <br>
+        P: 0400 555 666 <br>
+        51 St George Tce, Perth, W.A.</p>
+        <div class="social">
+          <p><a href="https://www.facebook.com/timothyrobinsonblog" target="_blank" class="social"><i class="fab fa-facebook"></i></a><br>
+          <a href="https://www.instagram.com/timothyrobinsonblog" target="_blank" class="social"><i class="fab fa-instagram"></i></a><br>
+          <a href="https://www.linkedin.com/in/timothyrobinson7" target="_blank" class="social"><i class="fab fa-linkedin"></i></a></p>
+        </div>
+        <p>@Plastic_Words</p>
+      </main>
 
       <section class="branding">
         <div><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></a></div>
-          <span class="dark-mode-instruct" style="display: none;">there creeps thy dark,<br>illumined by our night /</span>
-          <span class="light-mode-instruct" style="display: none;">whilst the sun/dark grows mild,<br>make thy darkness/rays be as light</span>
+        <span class="dark-mode-instruct" style="display: none;">there creeps thy dark,<br>illumined by our night /</span>
+        <span class="light-mode-instruct" style="display: none;">whilst the sun/dark grows mild,<br>make thy darkness/rays be as light</span>
         <div class="gradient-text">Plastic <br> Words</div>
       </section>
-    </main>
+
+    </div>
+
       <script type="text/javascript" src="js/burger.js"></script>
       <script type="text/javascript" src="js/darkMode.js"></script>
+      
   </body>
 </html>
-
-
-<!-- 
-MAYBE look up how to layout html usimg semantic html "best practices" on ChatGPT. Here's a start:
-<header></header>
-<h1></h1>
-<aside></aside>
-<nav></nav>
-<ul></ul>
-<div></div>
-<li></li>
-<main></main>
-<section></section>
-<article></article>
-<footer></footer>
--->    
