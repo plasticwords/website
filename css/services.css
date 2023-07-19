@@ -62,8 +62,8 @@
 
   .text {
     grid-area: text-area;
-    font-size: 1.25rem;
-    /* font-size: 1rem; */
+    /* font-size: 1.25rem; */
+    font-size: 1rem;
     border-bottom: lightgray 1px solid;
     width: 70%;
   }
@@ -78,6 +78,7 @@
     margin-right: -1%;
     border-radius: 7.5px;
     border: lightgray 1px solid;
+    font-size: 1.25rem;
   }
 
   #title-text {
@@ -95,8 +96,18 @@
     opacity: 0.4;
   }
 
+  footer {
+    font-size: 1rem;
+    border-top: lightgray 1px solid;
+  }
+
   .social {
     color: #7C7C81;
+    font-size: 1.25rem;
+  }
+
+  footer span {
+    float: right;
   }
 
   .branding {
@@ -134,6 +145,67 @@
   .responsive-header {
     display: none;
   }
+
+
+/* New code for Service page */
+
+#detail1 {
+  display: none;
+}
+
+#detail2 {
+  display: none;
+}
+
+#detail3 {
+  display: none;
+}
+
+#detail4 {
+  display: none;
+}
+
+#detail5 {
+  display: none;
+}
+
+#detail6 {
+  display: none;
+}
+
+.item-detail {
+  display: none;
+}
+
+/* change cursors on hover: */
+
+#box1 {
+  cursor: help;
+}
+
+#box2 {
+  cursor: wait;
+}
+
+#box3 {
+  cursor: crosshair;
+}
+
+#box4 {
+  cursor: not-allowed;
+}
+
+#box5 {
+  cursor: zoom-in;
+}
+
+#box6 {
+  cursor: grab;
+  /* cursor: alias; */
+}
+
+/* End of new code for Service page */
+
 
 /* Responsive design - Tablet: */
 
