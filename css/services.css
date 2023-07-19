@@ -64,8 +64,11 @@
     grid-area: text-area;
     /* font-size: 1.25rem; */
     font-size: 1rem;
-    border-bottom: lightgray 1px solid;
+    /* border-bottom: lightgray 1px solid; */
     width: 70%;
+    /* height: 90vh;
+    display: flex;
+    flex-direction: column; */
   }
 
   .title {
@@ -99,6 +102,13 @@
   footer {
     font-size: 1rem;
     border-top: lightgray 1px solid;
+    /* position: absolute;
+    bottom: 0; */
+    margin-top: 35vh;
+    /* margin-top: 25vh; */
+    /* margin-bottom: 4vh; */
+    /* justify-content: end;
+    align-self: flex-end */
   }
 
   .social {
@@ -149,7 +159,11 @@
 
 /* New code for Service page */
 
-#detail1 {
+.detail {
+  display: none;
+}
+
+/* #detail1 {
   display: none;
 }
 
@@ -175,12 +189,24 @@
 
 .item-detail {
   display: none;
-}
+} */
 
 /* change cursors on hover: */
 
-#box1 {
-  cursor: help;
+.service {
+  /* cursor: grab; */
+  cursor: zoom-in;
+  /* cursor: help; */
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.service:hover {
+  opacity: 0.5;
+}
+
+/* #box1 {
+  cursor: grab;  
 }
 
 #box2 {
@@ -200,9 +226,10 @@
 }
 
 #box6 {
-  cursor: grab;
-  /* cursor: alias; */
-}
+  cursor: help;
+  cursor: alias;
+} */
+
 
 /* End of new code for Service page */
 
