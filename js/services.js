@@ -64,3 +64,34 @@
       });
     });
   });
+
+
+  // Cleaning up JS (from index page):
+
+for (let i = 5; i <= 16; i++) {
+  const box = document.querySelector(`.box${i}`);
+  const edit = document.querySelector(`.box${i}-edit`);
+  const reason = document.querySelector(`.box${i}-reason`);
+  const instructions = document.querySelector('.instructions');
+
+  box.addEventListener('mouseover', () => {
+    edit.style.background = '#B450B0';
+    reason.style.display = 'block';
+    reason.style.color = 'black';
+    reason.style.border = '1px solid black';
+    reason.style.padding = '1%';
+    reason.style.background = 'white';
+    instructions.style.opacity = '0.75';
+    // reason.style.transition = 'all 10s ease-out';
+    // transition: all 2s ease-out;
+    // transition: all 0.3s ease-in;
+    // transition: all 0.3s;
+    // transition: transform 0.3s;
+  });
+
+  box.addEventListener('mouseout', () => {
+    edit.style.background = 'none';
+    reason.style.display = 'none';
+    // instructions.style.opacity = '1';
+  });
+}
