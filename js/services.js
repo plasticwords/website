@@ -106,8 +106,8 @@
       serviceDetail.forEach(detail => {
         detail.style.display = 'none';
       });
-      serviceTitle.forEach(detail => {
-        detail.style.color = '#7C7C81';
+      serviceTitle.forEach(title => {
+        title.style.color = '#7C7C81';
       });
     };
 
@@ -118,12 +118,12 @@
         // serviceDetail.style.display = 'block';
         serviceDetail[i].style.display = 'block';
         serviceDetail[i].style.border = '3px solid black';
-        // serviceDetail[index].style.border = '3px solid #B450B0'; 
+        // serviceDetail[i].style.border = '3px solid #B450B0'; 
         serviceDetail[i].style.color = 'black';
-        // serviceDetail[index].style.color = '#B450B0';
+        // serviceDetail[i].style.color = '#B450B0';
         serviceDetail[i].style.padding = '3%'
         serviceDetail[i].style.background = 'rgba(180, 80, 176, 0.1)';
-        // serviceDetail[index].style.background = 'rgba(0, 0, 0, 0.075)';
+        // serviceDetail[i].style.background = 'rgba(0, 0, 0, 0.075)';
         
       });
     });

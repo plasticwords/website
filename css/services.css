@@ -159,77 +159,29 @@
 
 /* New code for Service page */
 
-.detail {
-  display: none;
+.service-title {
+  padding-bottom: 2vh;
 }
 
-/* #detail1 {
-  display: none;
-}
-
-#detail2 {
-  display: none;
-}
-
-#detail3 {
-  display: none;
-}
-
-#detail4 {
-  display: none;
-}
-
-#detail5 {
-  display: none;
-}
-
-#detail6 {
-  display: none;
-}
-
-.item-detail {
-  display: none;
-} */
-
-/* change cursors on hover: */
-
-.service {
+.service-title span {
   /* cursor: grab; */
-  cursor: zoom-in;
   /* cursor: help; */
+  cursor: zoom-in;
+  /* cursor: wait;
+  cursor: crosshair;
+  cursor: not-allowed;
+  cursor: alias; */
   text-decoration: underline;
   font-style: italic;
 }
 
-.service:hover {
+.service-title span:hover {
   opacity: 0.5;
 }
 
-/* #box1 {
-  cursor: grab;  
-}
-
-#box2 {
-  cursor: wait;
-}
-
-#box3 {
-  cursor: crosshair;
-}
-
-#box4 {
-  cursor: not-allowed;
-}
-
-#box5 {
-  cursor: zoom-in;
-}
-
-#box6 {
-  cursor: help;
-  cursor: alias;
-} */
-
+.service-detail div {
+  display: none;
+ }
 
 /* End of new code for Service page */
 
