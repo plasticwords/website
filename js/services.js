@@ -8,6 +8,7 @@
     // });
 
     // window.addEventListener('DOMContentLoaded', () => {
+    // window.addEventListener('DOMContentLoaded', () => {
     //   const box2 = document.getElementById('box2');
     //   const detail2 = document.getElementById('detail2');
 
@@ -97,7 +98,6 @@
 
   // ORIGINAL JAVASCRIPT. Back where I started. This works well, just need to understand what it's doing.
 
-  // window.addEventListener('DOMContentLoaded', () => {
     const serviceTitle = document.querySelectorAll('.service-title > div[id^="title"]');
     const serviceDetail = document.querySelectorAll('.service-detail > div[id^="detail"]');
 
@@ -108,23 +108,30 @@
       });
       serviceTitle.forEach(title => {
         title.style.color = '#7C7C81';
+        title.style.opacity = '0.65';
       });
     };
 
     // display and style service offerings detail, call prior function
-    serviceTitle.forEach((title, i) => {
-      title.addEventListener('click', () => {
+    serviceTitle.forEach((detail, i) => {
+      detail.addEventListener('click', () => {
         resetServiceTitles();
-        // serviceDetail.style.display = 'block';
+        serviceTitle[i].style.color = '#B450B0';
+        serviceTitle[i].style.opacity = '1';
+        serviceTitle[i].style.fontWeight = 'bold';
         serviceDetail[i].style.display = 'block';
-        serviceDetail[i].style.border = '3px solid black';
-        // serviceDetail[i].style.border = '3px solid #B450B0'; 
-        serviceDetail[i].style.color = 'black';
-        // serviceDetail[i].style.color = '#B450B0';
+        serviceDetail[i].style.border = '3px solid #7d8590';
+        // serviceDetail[i].style.border = '3px solid black';
+        // serviceDetail[i].style.border = '2px solid #B450B0'; 
+        serviceDetail[i].style.color = '#B450B0';
+        // serviceDetail[i].style.color = '#7C7C81';
+        // serviceDetail[i].style.color = '#7d8590';
+        // serviceDetail[i].style.color = 'black'; 
         serviceDetail[i].style.padding = '3%'
-        serviceDetail[i].style.background = 'rgba(180, 80, 176, 0.1)';
+        // serviceDetail[i].style.fontWeight = 'bold';    
+        // serviceDetail[i].style.borderRadius = '25px'; // loop through elements in NodeList to have this in dark mode
+        // serviceDetail[i].style.borderRadius = '50px';
         // serviceDetail[i].style.background = 'rgba(0, 0, 0, 0.075)';
-        
+        // serviceDetail[i].style.background = 'rgba(180, 80, 176, 0.1)';
       });
     });
-  
