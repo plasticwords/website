@@ -20,9 +20,12 @@
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 9fr 1.5fr;
+    height: 100vh;
     grid-gap: 10px;
     grid-template-areas: 
-    "menu-area text-area branding-area";
+    "menu-area text-area branding-area"
+    "...       footer    ...";
   }
   
   .menu {
@@ -64,7 +67,7 @@
     grid-area: text-area;
     font-size: 1.25rem;
     /* font-size: 1rem; */
-    border-bottom: lightgray 1px solid;
+    /* border-bottom: lightgray 1px solid; */
     width: 70%;
   }
 
@@ -97,6 +100,37 @@
 
   .social {
     color: #7C7C81;
+  }
+
+  .footer {
+    font-size: 1rem;
+    border-top: 1px solid lightgray;
+    grid-area: footer;
+    /* position: absolute;
+    bottom: 0; */
+    /* margin-top: 35vh; */
+    /* margin-top: 25vh; */
+    /* margin-bottom: 4vh; */
+    /* justify-content: end;
+    align-self: flex-end */
+    width: 70%;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #7C7C81;
+  }
+
+  footer a:hover {
+    opacity: 0.5;
+  }
+
+  .footer-social-link {
+    text-decoration: underline;
+  }
+
+  .footer-wording {
+    float: right;
   }
 
   .branding {
@@ -150,9 +184,11 @@
   .grid-container {
     width: 100%;
     padding-top: 3vh;
-    grid-template-columns: 1fr;    
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-      "text-area";
+      "text-area"
+      "footer";
   }
 
   .responsive-header {
@@ -212,6 +248,17 @@
   .branding {
     display: none;
   }
+
+  .footer {
+    width: 100%;
+    /* justify-content: center; */
+    /* display: none; */
+  }
+
+  /* .footer-wording {
+    float: left;
+    display: block;
+  }   */
 
 /* Responsive burger menu: */
 
@@ -286,4 +333,14 @@
   .social {
     font-size: 1.75rem;
   } 
+
+  .footer {
+    width: 90%;
+    margin: auto;
+  }
+
+  .footer-wording {
+    /* float: left; */
+    padding-top: 1vh;
+  }  
 }

@@ -219,7 +219,7 @@
   .grid-container {
     width: 100%;
     padding-top: 3vh;
-    grid-template-columns: 1fr;    
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
       "text-area"
@@ -369,10 +369,6 @@
     width: 90%;
     margin: auto;
   }
-
-  /* .social {
-    font-size: 1.75rem;
-  }  */
 
   .footer-wording {
     /* float: left; */
