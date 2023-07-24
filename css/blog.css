@@ -99,7 +99,7 @@
     opacity: 0.4;
   }
 
-  footer {
+  .footer {
     font-size: 1rem;
     /* border-top: lightgray 1px solid; */
     grid-area: footer;
