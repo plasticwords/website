@@ -390,7 +390,7 @@
   padding-top: 0;
   border-radius: 0;
   border: none;
-  height: 200px;
+  height: 175px;
   font-size: 0.9rem;
 }
 
@@ -399,7 +399,7 @@
 }
 
 .scrollbar {
-  height: 150px;
+  height: 175px;
 }
 
 /* End of responsive About sections */
