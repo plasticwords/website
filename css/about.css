@@ -374,12 +374,12 @@
 /* Start of resposnive code added for About section: */
 
 .biography-container {
-  grid-template-columns: 1fr 1.5fr;
+  /* grid-template-columns: 1fr 1.5fr; */
   /* column-gap: 1%; */
 }
 
 .biography-text {
-  padding: 0 10px 0 0;
+  padding: 0 5px 0 0;
 }
 
 .biography-text:hover {
