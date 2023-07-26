@@ -375,6 +375,11 @@
 
 .biography-container {
   grid-template-columns: 1fr 2fr;
+  /* column-gap: 1%; */
+}
+
+.biography-text {
+  padding: 0;
 }
 
 .biography-text:hover {
