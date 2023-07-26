@@ -374,7 +374,7 @@
 /* Start of resposnive code added for About section: */
 
 
-/* .biography-container {
+.biography-container {
   grid-template-columns: 1fr;
 }
 
@@ -382,7 +382,7 @@
   grid-template-areas:
   "picture-area"   
   "text-area";  
-} */
+}
 
 .biography-text:hover {
   cursor: none;
