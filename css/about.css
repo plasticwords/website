@@ -398,6 +398,10 @@
   align-self: center; 
 }
 
+.scrollbar {
+  height: 150px;
+}
+
 /* End of responsive About sections */
 
   .branding {
