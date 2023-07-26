@@ -380,6 +380,7 @@
 
 .biography-text {
   padding: 0 5px 0 0;
+  color: red;
 }
 
 .biography-text:hover {
@@ -390,7 +391,7 @@
   padding-top: 0;
   border-radius: 0;
   border: none;
-  height: 175px;
+  height: 150px;
   font-size: 0.9rem;
 }
 
@@ -399,7 +400,7 @@
 }
 
 .scrollbar {
-  height: 175px;
+  height: 150px;
 }
 
 /* End of responsive About sections */
