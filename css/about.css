@@ -373,15 +373,8 @@
 
 /* Start of resposnive code added for About section: */
 
-
 .biography-container {
-  grid-template-columns: 1fr;
-}
-
-.biography-grid-layout {
-  grid-template-areas:
-  "picture-area"   
-  "text-area";  
+  grid-template-columns: 1fr 2fr;
 }
 
 .biography-text:hover {
