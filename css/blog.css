@@ -13,6 +13,7 @@
     margin-top: 5vh;
     font-family: monospace;
     color: #7C7C81;
+    /* color: black; */
   }
 
 /* Main content and navigation: */
@@ -67,7 +68,7 @@
     grid-area: text-area;
     /* font-size: 1.25rem; */
     font-size: 1.25rem;
-    border-bottom: lightgray 1px solid;
+    /* border-bottom: lightgray 1px solid; */
     width: 70%;
     /* width: 75%; */
   }
@@ -101,7 +102,7 @@
 
   .footer {
     font-size: 1rem;
-    /* border-top: lightgray 1px solid; */
+    border-top: 1px solid lightgray;
     grid-area: footer;
     width: 70%;
   }
@@ -110,7 +111,7 @@
     color: #7C7C81;
     font-size: 1.25rem;
   } */
-  
+
   footer a {
     text-decoration: none;
     color: #7C7C81;
@@ -183,7 +184,7 @@
   .biography-container {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
-    border-top: lightgray 1px solid;
+    border-top: 1px solid lightgray;
     column-gap: 2.5%;
     padding-top: 2.5vh;
     padding-bottom: 2.5vh;
@@ -204,29 +205,34 @@
     /* font-size: 0.8rem; */
     /* font-size: 1rem; */
     align-self: center;   
-    margin-left: 3%; 
+    margin-left: 1%;
+    /* margin-left: 3%; */
     /* margin-bottom: 25px; */
-    padding: 0 20px;
+    padding: 0 17.5px 0 15px;
     /* padding: 0 10px; */
-    border-left: 1px solid lightgrey;  
+    /* padding: 0 20px; */
+    /* border-left: 1px solid lightgrey; // not working for dark mode  */
     /* border-top: 1px solid lightgrey; */
     /* border-bottom: 1px solid lightgray;  */
   }
 
   .biography-text:hover {
     cursor: s-resize;
-    margin-right: -15vw;
+    margin-right: -17.5vw;
     transition: all 0.5s ease-in;
     text-align: justify;
-    background: rgba(0, 0, 0, 0.1);
+    /* background: rgba(0, 0, 0, 0.1); // i like this, but it's not working for dark mode */
     /* background: rgba(180, 80, 176, 0.15); */
-    color: black;
+    /* color: black; */
     padding-top: 1vh;
-    border-radius: 2.5%;
-    border: 1px solid black;
-    height: 210px;
+    border-radius: 1%;
+    /* border-radius: 2.5%; */
+    border: 2.5px solid #7C7C81;
     /* border: 2px solid rgba(180, 80, 176, 0.85); */
     /* border: 2px solid darkgrey; */
+    /* border: 1px solid black; */
+    height: 210px;
+    font-size: 1rem;
   }
 
   .biography-grid-layout {
@@ -356,6 +362,31 @@
     display: none;
   }
 
+/* Start of responsive code added for About section: */
+
+/* .biography-text {
+  padding: 0 5px 0 0;
+} */
+
+.biography-text:hover {
+  cursor: auto;
+  margin-right: 0;
+  transition: none;
+  text-align: left;
+  padding-top: 0;
+  border: none;
+  border-radius: 0;
+  height: 175px;
+  font-size: 0.9rem;
+  height: 200px;
+}
+
+.picture-grid-placement {
+  align-self: center; 
+}
+
+/* End of responsive About sections */
+
   .branding {
     display: none;
   }
@@ -439,6 +470,14 @@
 
   .responsive-header img {
     height: 6vh;
+  }
+
+  .biography-text {
+    padding: 0 5px 0 0;
+  }  
+
+  .scrollbar {
+    height: 175px;
   }
 
   .footer {
