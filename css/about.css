@@ -373,28 +373,25 @@
 
 /* Start of responsive code added for About section: */
 
-.biography-text {
+/* .biography-text {
   padding: 0 5px 0 0;
-}
+} */
 
 .biography-text:hover {
-  cursor: none;
+  cursor: auto;
   margin-right: 0;
   transition: none;
   text-align: left;
   padding-top: 0;
-  border-radius: 0;
   border: none;
+  border-radius: 0;
   height: 175px;
   font-size: 0.9rem;
+  height: 200px;
 }
 
 .picture-grid-placement {
   align-self: center; 
-}
-
-.scrollbar {
-  height: 175px;
 }
 
 /* End of responsive About sections */
@@ -482,6 +479,14 @@
 
   .responsive-header img {
     height: 6vh;
+  }
+
+  .biography-text {
+    padding: 0 5px 0 0;
+  }  
+
+  .scrollbar {
+    height: 175px;
   }
 
   .footer {
