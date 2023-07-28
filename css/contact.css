@@ -181,11 +181,11 @@
   html {
     overflow-x: hidden;
     /* overflow-y: hidden; */
+    overflow-y: visible;
   }
   
   .container {
     width: 80%;
-    color: red;
   }
 
   .grid-container {
