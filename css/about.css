@@ -137,7 +137,7 @@
 
   .footer-wording {
     float: right;
-    font-family: cambria;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   .branding {
@@ -207,19 +207,6 @@
     height: auto;
   }
 
-  .biography-name {
-    font-size: 1.25rem;
-    /* font-size: 1.2rem; */
-    font-family: cambria;
-    text-align: left;
-    font-weight: bold;
-  }
-
-  .biography-title {
-    font-size: 0.8rem;
-    font-weight: normal;
-  }
-
   .biography-text {  
     font-size: 0.9rem;
     /* font-size: 0.8rem; */
@@ -255,6 +242,19 @@
     /* border: 1px solid black; */
     height: 210px;
     font-size: 1rem;
+  }
+
+  .biography-name {
+    font-size: 1.25rem;
+    /* font-size: 1.2rem; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .biography-title {
+    font-size: 0.8rem;
+    font-weight: normal;
   }
 
   .biography-grid-layout {

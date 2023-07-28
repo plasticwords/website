@@ -3,7 +3,7 @@
     font-size: 16px;
     margin: 0;
     padding: 0;
-    padding-bottom: 4vh;
+    /* padding-bottom: 4vh; */
   }
   
   .container {
@@ -22,7 +22,9 @@
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 9fr 1.5fr;
-    height: 100vh;
+    height: 95vh; /* container fills screen without any overflow */
+    /* height: 100vh; */
+    /* margin-top: 5vh; */
     grid-gap: 10px;
     grid-template-areas: 
     "menu-area text-area branding-area"
@@ -66,8 +68,8 @@
 
   .text {
     grid-area: text-area;
-    /* font-size: 1.25rem; */
     font-size: 1.25rem;
+    /* font-size: 1rem; */
     /* border-bottom: lightgray 1px solid; */
     width: 70%;
     /* width: 75%; */
@@ -105,6 +107,7 @@
     border-top: 1px solid lightgray;
     grid-area: footer;
     width: 70%;
+    margin-top: 5vh;
   }
 
   /* .social {
@@ -127,6 +130,7 @@
 
   .footer-wording {
     float: right;
+    font-family: cambria;
   }
 
   .branding {
@@ -152,6 +156,7 @@
     margin-left: -25vw;
     color: #7D8590;
     /* color: #B450B0; */
+    font-family: cambria;
   }
 
   .gradient-text {
@@ -175,29 +180,24 @@
     /* text-align: justify; */
   }
 
-  .about-introduction {
+  /* .about-introduction {
     text-align: justify;
     font-size: 1rem;
     padding: 1.5vh 0 2vh 0;
-  }
+  } */
 
-  .biography-container {
+  .blog-container {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
-    border-top: 1px solid lightgray;
+    /* border-top: 1px solid lightgray; */
     column-gap: 2.5%;
-    padding-top: 2.5vh;
+    /* padding-top: 2.5vh; */
     padding-bottom: 2.5vh;
   }
 
-  .biography-container img {
+  .blog-container img {
     width: 100%;
     height: auto;
-  }
-
-  .biography-name {
-    font-size: 1.2rem;
-    text-align: left;
   }
 
   .biography-text {  
@@ -208,7 +208,8 @@
     margin-left: 1%;
     /* margin-left: 3%; */
     /* margin-bottom: 25px; */
-    padding: 0 17.5px 0 15px;
+    padding: 0 0 0 15px;
+    /* padding: 0 17.5px 0 15px; */
     /* padding: 0 10px; */
     /* padding: 0 20px; */
     /* border-left: 1px solid lightgrey; // not working for dark mode  */
@@ -217,22 +218,49 @@
   }
 
   .biography-text:hover {
-    cursor: s-resize;
-    margin-right: -17.5vw;
-    transition: all 0.5s ease-in;
-    text-align: justify;
+    cursor: grab;
+    /* cursor: s-resize; */
+    /* margin-right: -17.5vw; */
+    /* transition: all 0.5s ease-in; */
+    /* text-align: justify; */
     /* background: rgba(0, 0, 0, 0.1); // i like this, but it's not working for dark mode */
     /* background: rgba(180, 80, 176, 0.15); */
     /* color: black; */
-    padding-top: 1vh;
-    border-radius: 1%;
+    /* padding-top: 1vh; */
+    /* border-radius: 1%; */
     /* border-radius: 2.5%; */
-    border: 2.5px solid #7C7C81;
+    /* border: 2.5px solid #7C7C81; */
     /* border: 2px solid rgba(180, 80, 176, 0.85); */
     /* border: 2px solid darkgrey; */
     /* border: 1px solid black; */
-    height: 210px;
-    font-size: 1rem;
+    /* height: 210px;
+    font-size: 1rem; */
+  }
+
+  .biography-name {
+    font-size: 1.25rem;
+    /* font-size: 1.2rem; */
+    font-family: cambria;
+    text-align: left;
+    font-weight: bold;
+    font-style: italic;
+    /* border-bottom: 1px solid lightgray; 
+    padding-bottom: 10px; */
+  }
+
+  .blog-summary {
+    border-bottom: 1px solid lightgray; 
+    padding-bottom: 10px;
+    text-align: justify;
+  }
+
+  .blog-date {
+    font-size: 0.8rem;
+    font-family: cambria;
+    font-weight: normal;
+    /* color: lightgray;
+    color: black; */
+    font-style: italic;
   }
 
   .biography-grid-layout {
@@ -249,39 +277,40 @@
   }
 
   /* may be able to move these properties to .biography-text & delete this class */
-  .scrollbar {
+  /* DELETE THESE CLASSES from <article> in blog.html */
+  /* .scrollbar {
     float: left;
-    height: 200px;
+    height: 200px; */
     /* height: 250px; */
-    overflow-y: scroll;
+    /* overflow-y: scroll;
     overflow-x: hidden;
-  }
+  } */
   
-  .scrollbar-style::-webkit-scrollbar {
-    width: 12px;
+  /* .scrollbar-style::-webkit-scrollbar {
+    width: 12px; */
     /* width: 8px; */
     /* background-color: #F5F5F5;
     background-color: white; */
-  }
+  /* } */
 
-  .scrollbar-style::-webkit-scrollbar-track {
+  /* .scrollbar-style::-webkit-scrollbar-track { */
     /* -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3); */
-    background: rgba(255, 255, 255, 0.8);
+    /* background: rgba(255, 255, 255, 0.8); */
     /* background: white; */
     /* background-color: #F5F5F5; */
-    border: 1px solid rgba(0,0,0,0.1);
+    /* border: 1px solid rgba(0,0,0,0.1);
     border-radius: 10px;
-  }
+  } */
   
-  .scrollbar-style::-webkit-scrollbar-thumb {
+  /* .scrollbar-style::-webkit-scrollbar-thumb { */
     /* -webkit-box-shadow: inset 0 0 6px lightgrey; */
-    background: rgba(124, 124, 129, 0.75);
+    /* background: rgba(124, 124, 129, 0.75); */
     /* background: rgba(124, 124, 129, 1); */
     /* background: rgba(180, 80, 176, 0.5); */
-    border: 3px solid transparent;
+    /* border: 3px solid transparent;
     background-clip: content-box;
     border-radius: 10px; 
-  }
+  }  */
 
 /* End of About section */
 
@@ -292,6 +321,7 @@
 
   html {
     overflow-x: hidden;
+    overflow-y: hidden;
   }
   
   .container {
@@ -300,6 +330,7 @@
 
   .grid-container {
     width: 100%;
+    height: 85vh;
     padding-top: 3vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -368,7 +399,7 @@
   padding: 0 5px 0 0;
 } */
 
-.biography-text:hover {
+/* .biography-text:hover {
   cursor: auto;
   margin-right: 0;
   transition: none;
@@ -379,7 +410,7 @@
   height: 175px;
   font-size: 0.9rem;
   height: 200px;
-}
+} */
 
 .picture-grid-placement {
   align-self: center; 
@@ -393,6 +424,7 @@
 
   .footer {
     width: 100%;
+    padding-bottom: 4vh;
     /* justify-content: center; */
     /* display: none; */
   }
@@ -465,7 +497,7 @@
 
   .container {
     width: 100%;
-    margin-top: 4vh;
+    /* margin-top: 4vh; */
   }
 
   .responsive-header img {
@@ -476,9 +508,9 @@
     padding: 0 5px 0 0;
   }  
 
-  .scrollbar {
+  /* .scrollbar {
     height: 175px;
-  }
+  } */
 
   .footer {
     width: 90%;

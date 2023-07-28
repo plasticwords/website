@@ -16,6 +16,7 @@ const darkResponsiveBorder = document.querySelector('.responsive-header');
 const darkFooterSocial = document.querySelectorAll('.footer-social-link')
 const darkSocial = document.querySelectorAll('.social i'); // only for "Contact" page
 const darkBiography = document.querySelectorAll('.biography-container'); // only for "About" page
+const darkBlogSummary = document.querySelector('.blog-summary'); // only for "Blog" page
 const darkModeInstruct = document.querySelector('.dark-mode-instruct');
 
 // darkButton.addEventListener('click', () => {  
@@ -29,6 +30,7 @@ function enableDarkMode() {
   darkFooter.style.borderTop = '1.5px solid rgba(255, 255, 255, 0.075)';
   darkResponsiveMenu.style.background = '#0D1117';
   darkResponsiveBorder.style.borderBottom = '1.5px solid rgba(255, 255, 255, 0.075)';
+  darkBlogSummary.style.borderBottom = '1.5px solid rgba(255, 255, 255, 0.075)';
   // Loop for social text link in footer:
   darkFooterSocial.forEach(word => {
       word.style.color = '#7d8590';
@@ -71,6 +73,7 @@ const lightResponsiveBorder = document.querySelector('.responsive-header');
 const lightFooterSocial = document.querySelectorAll('.footer-social-link')
 const lightSocial = document.querySelectorAll('.social i'); // only for "Contact" page
 const lightBiographyText = document.querySelectorAll('.biography-container'); // only for "About" page
+const lightBlogSummary = document.querySelector('.blog-summary'); // only for "Blog" page
 const lightModeInstruct = document.querySelector('.light-mode-instruct');
 
 // lightButton.addEventListener('click', () => {  
@@ -84,6 +87,7 @@ function enableLightMode() {
   lightFooter.style.borderTop = 'lightgray 1px solid';
   lightResponsiveMenu.style.background = '#F3F2EE';
   lightResponsiveBorder.style.borderBottom = '1px solid lightgray';
+  lightBlogSummary.style.borderBottom = '1px solid lightgray';
   // Loop for social text link in footer:
   lightFooterSocial.forEach(word => {
       word.style.color = '#7C7C81';
@@ -95,8 +99,8 @@ function enableLightMode() {
   // Loop for border around biography's: 
   lightBiographyText.forEach(item => {
     // 
-    item.style.borderTop = '1px solid lightgray';
-  });
+      item.style.borderTop = '1px solid lightgray';
+    });
   }
 
 lightButton.addEventListener('click', enableLightMode);
