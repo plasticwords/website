@@ -131,6 +131,7 @@
 
   .footer-wording {
     float: right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   .branding {
@@ -156,6 +157,7 @@
     margin-left: -25vw;
     color: #7D8590;
     /* color: #B450B0; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   .gradient-text {

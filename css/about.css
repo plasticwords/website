@@ -137,6 +137,7 @@
 
   .footer-wording {
     float: right;
+    font-family: cambria;
   }
 
   .branding {
@@ -162,6 +163,7 @@
     margin-left: -25vw;
     color: #7D8590;
     /* color: #B450B0; */
+    font-family: cambria;
   }
 
   .gradient-text {
@@ -206,8 +208,16 @@
   }
 
   .biography-name {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    /* font-size: 1.2rem; */
+    font-family: cambria;
     text-align: left;
+    font-weight: bold;
+  }
+
+  .biography-title {
+    font-size: 0.8rem;
+    font-weight: normal;
   }
 
   .biography-text {  
