@@ -3,7 +3,7 @@
     font-size: 16px;
     margin: 0;
     padding: 0;
-    padding-bottom: 4vh;
+    /* padding-bottom: 4vh; */
   }
   
   .container {
@@ -22,7 +22,9 @@
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 9fr 1.5fr;
-    height: 100vh;
+    height: 95vh; /* container fills screen without any overflow */
+    /* height: 100vh; */
+    /* margin-top: 5vh; */
     grid-gap: 10px;
     grid-template-areas: 
     "menu-area text-area branding-area"
@@ -66,8 +68,8 @@
 
   .text {
     grid-area: text-area;
-    /* font-size: 1.25rem; */
     font-size: 1.25rem;
+    /* font-size: 1rem; */
     /* border-bottom: lightgray 1px solid; */
     width: 70%;
     /* width: 75%; */
@@ -115,6 +117,7 @@
     /* justify-content: end;
     align-self: flex-end */
     width: 70%;
+    /* margin-top: 5vh; */
   }
 
   /* .social {
@@ -163,7 +166,7 @@
     margin-left: -25vw;
     color: #7D8590;
     /* color: #B450B0; */
-    font-family: cambria;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   .gradient-text {
@@ -322,6 +325,7 @@
 
   .grid-container {
     width: 100%;
+    height: 85vh;
     padding-top: 3vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -415,6 +419,7 @@
 
   .footer {
     width: 100%;
+    padding-bottom: 4vh;
     /* justify-content: center; */
     /* display: none; */
   }

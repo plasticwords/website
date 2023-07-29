@@ -180,6 +180,11 @@
     /* text-align: justify; */
   }
 
+  .flex-container a {
+    text-decoration: none;
+    color: #7C7C81;
+  }
+
   /* .about-introduction {
     text-align: justify;
     font-size: 1rem;
@@ -217,8 +222,10 @@
     /* border-bottom: 1px solid lightgray;  */
   }
 
-  .biography-text:hover {
-    cursor: grab;
+  /* .biography-text:hover { */
+    /* cursor: pointer;
+    opacity: 0.5; */
+    /* cursor: grab; */
     /* cursor: s-resize; */
     /* margin-right: -17.5vw; */
     /* transition: all 0.5s ease-in; */
@@ -235,7 +242,7 @@
     /* border: 1px solid black; */
     /* height: 210px;
     font-size: 1rem; */
-  }
+  /* } */
 
   .biography-name {
     font-size: 1.25rem;
@@ -252,6 +259,11 @@
     border-bottom: 1px solid lightgray; 
     padding-bottom: 10px;
     text-align: justify;
+  }
+
+  .biography-name:hover, .blog-summary:hover {
+    cursor: pointer;
+    opacity: 0.5;
   }
 
   .blog-date {
