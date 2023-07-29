@@ -1,4 +1,4 @@
-// ? Simplify in chatGPT && Keep dark mode activated when move through site - burger menu JS may help, this line of code may also help:
+// ? Simplify in chatGPT && Keep dark mode activated when move through site (I this is called persistence) -- burger menu JS may help, this line of code may also help:
 // if (darkButton.classList.contains('active'))
 // will probably have to use a toggle system in dark mode
 

@@ -41,7 +41,8 @@
 
   .menu a {
     text-decoration: none;
-    color: rgba(124, 124, 129, 0.5);
+    color: rgba(124, 124, 129, 0.25);
+    /* color: rgba(124, 124, 129, 0.5); */
     /* color: #7C7C81;
     opacity: 50%; */
   }
@@ -49,6 +50,8 @@
   #active-page {
     color: #B450B0;
     opacity: 100%;
+    writing-mode: horizontal-tb;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
   }
 
   .scrambled-menu:hover .original {
@@ -264,6 +267,7 @@
   .biography-name:hover, .blog-summary:hover {
     cursor: pointer;
     opacity: 0.5;
+    color: #B450B0;
   }
 
   .blog-date {
