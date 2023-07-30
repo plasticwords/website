@@ -2,7 +2,7 @@
 // if (darkButton.classList.contains('active'))
 // will probably have to use a toggle system in dark mode
 
-// Implement dark mode:
+// Implementing dark mode:
 const darkButton = document.querySelector('.dark-mode');
 const darkButtonResponsive = document.querySelector('.dark-mode-responsive');
 const darkBackground = document.querySelector('html');
@@ -30,7 +30,6 @@ function enableDarkMode() {
   darkFooter.style.borderTop = '1.5px solid rgba(255, 255, 255, 0.075)';
   darkResponsiveMenu.style.background = '#0D1117';
   darkResponsiveBorder.style.borderBottom = '1.5px solid rgba(255, 255, 255, 0.075)';
-  darkBlogSummary.style.borderBottom = '1.5px solid rgba(255, 255, 255, 0.075)';
   // Loop for social text link in footer:
   darkFooterSocial.forEach(word => {
       word.style.color = '#7d8590';
@@ -44,6 +43,7 @@ function enableDarkMode() {
       // item.style.borderTop = '2px solid #010409';
       item.style.borderTop = '1.5px solid rgba(255, 255, 255, 0.075)';
     });
+  darkBlogSummary.style.borderBottom = '1.5px solid rgba(255, 255, 255, 0.075)';
   }
 
 darkButton.addEventListener('click', enableDarkMode);
@@ -72,7 +72,7 @@ const lightResponsiveMenu = document.querySelector('.menu');
 const lightResponsiveBorder = document.querySelector('.responsive-header');
 const lightFooterSocial = document.querySelectorAll('.footer-social-link')
 const lightSocial = document.querySelectorAll('.social i'); // only for "Contact" page
-const lightBiographyText = document.querySelectorAll('.biography-container'); // only for "About" page
+const lightBiography = document.querySelectorAll('.biography-container'); // only for "About" page
 const lightBlogSummary = document.querySelector('.blog-summary'); // only for "Blog" page
 const lightModeInstruct = document.querySelector('.light-mode-instruct');
 
@@ -87,7 +87,6 @@ function enableLightMode() {
   lightFooter.style.borderTop = 'lightgray 1px solid';
   lightResponsiveMenu.style.background = '#F3F2EE';
   lightResponsiveBorder.style.borderBottom = '1px solid lightgray';
-  lightBlogSummary.style.borderBottom = '1px solid lightgray';
   // Loop for social text link in footer:
   lightFooterSocial.forEach(word => {
       word.style.color = '#7C7C81';
@@ -97,10 +96,11 @@ function enableLightMode() {
       icon.style.color = '#7C7C81';
     });  
   // Loop for border around biography's: 
-  lightBiographyText.forEach(item => {
-    // 
+  lightBiography.forEach(item => {
+      // 
       item.style.borderTop = '1px solid lightgray';
     });
+  lightBlogSummary.style.borderBottom = '1px solid lightgray';
   }
 
 lightButton.addEventListener('click', enableLightMode);

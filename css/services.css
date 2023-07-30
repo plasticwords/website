@@ -54,7 +54,8 @@
 
   .menu a {
     text-decoration: none;
-    color: rgba(124, 124, 129, 0.5);
+    color: rgba(124, 124, 129, 0.25);
+    /* color: rgba(124, 124, 129, 0.5); */
     /* color: #7C7C81;
     opacity: 50%; */
   }
@@ -62,6 +63,9 @@
   #active-page {
     color: #B450B0;
     opacity: 100%;
+    writing-mode: horizontal-tb;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 2.5vw;
   }
 
   .scrambled-menu:hover .original {
@@ -74,7 +78,7 @@
 
   .scrambled-menu:hover .update {
     display: inline-block;
-    color: rgba(180, 80, 176, 0.85);
+    color: rgba(180, 80, 176, 0.8);
     /* color: #B450B0;
     opacity: 85%; */
   }
@@ -339,11 +343,13 @@
   #active-page {
     border-bottom: 1px solid rgba(180, 80, 176, 1);
     padding-bottom: 1px;
+    font-family: monospace;
+    width: fit-content;
   }
 
-  .menu-blnc-elements {
+  /* .menu-blnc-elements {
     display: none;
-  }
+  } */
 
   .nav-active {
     transform: translateX(0%);
