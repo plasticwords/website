@@ -16,6 +16,7 @@ const darkResponsiveBorder = document.querySelector('.responsive-header');
 const darkFooterSocial = document.querySelectorAll('.footer-social-link')
 const darkSocial = document.querySelectorAll('.social i'); // only for "Contact" page
 const darkBiography = document.querySelectorAll('.biography-container'); // only for "About" page
+const darkBlogName = document.querySelector('.blog-name'); // only for "Blog" page
 const darkBlogSummary = document.querySelector('.blog-summary'); // only for "Blog" page
 const darkModeInstruct = document.querySelector('.dark-mode-instruct');
 
@@ -43,6 +44,21 @@ function enableDarkMode() {
       // item.style.borderTop = '2px solid #010409';
       item.style.borderTop = '1.5px solid rgba(255, 255, 255, 0.075)';
     });
+  // Change colour of anchor link in "Blogs" page:
+  darkBlogName.addEventListener('mouseover', () => {
+      darkBlogName.style.color = '#B450B0';
+    });
+  darkBlogName.addEventListener('mouseout', () => {
+      darkBlogName.style.color = '#7d8590';
+    });
+  darkBlogSummary.addEventListener('mouseover', () => {
+      darkBlogSummary.style.color = '#B450B0';
+    });
+  darkBlogSummary.addEventListener('mouseout', () => {
+      darkBlogSummary.style.color = '#7d8590';
+    });    
+  darkBlogName.style.color = '#7d8590';
+  darkBlogSummary.style.color = '#7d8590';
   darkBlogSummary.style.borderBottom = '1.5px solid rgba(255, 255, 255, 0.075)';
   }
 
@@ -56,6 +72,16 @@ darkButton.addEventListener('mouseover', () => {
 
 darkButton.addEventListener('mouseout', () => { 
   darkModeInstruct.style.display = 'none';
+});
+  // Touch event for tablet touchscreen:
+darkButton.addEventListener('touchstart', () => {
+  darkModeInstruct.style.display = 'inline-block';
+});
+
+darkButton.addEventListener('touchend', () => { 
+    setTimeout(() => {
+  darkModeInstruct.style.display = 'none';
+  }, 3000); // 3000 milliseconds = 3 seconds
 });
 
 
@@ -73,6 +99,7 @@ const lightResponsiveBorder = document.querySelector('.responsive-header');
 const lightFooterSocial = document.querySelectorAll('.footer-social-link')
 const lightSocial = document.querySelectorAll('.social i'); // only for "Contact" page
 const lightBiography = document.querySelectorAll('.biography-container'); // only for "About" page
+const lightBlogName = document.querySelector('.blog-name'); // only for "Blog" page
 const lightBlogSummary = document.querySelector('.blog-summary'); // only for "Blog" page
 const lightModeInstruct = document.querySelector('.light-mode-instruct');
 
@@ -100,6 +127,21 @@ function enableLightMode() {
       // 
       item.style.borderTop = '1px solid lightgray';
     });
+  // Change colour of anchor link in "Blogs" page:
+  lightBlogName.addEventListener('mouseover', () => {
+      lightBlogName.style.color = '#B450B0';
+    });
+  lightBlogName.addEventListener('mouseout', () => {
+      lightBlogName.style.color = '#7C7C81';
+    });
+  lightBlogSummary.addEventListener('mouseover', () => {
+      lightBlogSummary.style.color = '#B450B0';
+    });
+  lightBlogSummary.addEventListener('mouseout', () => {
+      lightBlogSummary.style.color = '#7C7C81';
+    });
+  lightBlogName.style.color = '#7C7C81';
+  lightBlogSummary.style.color = '#7C7C81';
   lightBlogSummary.style.borderBottom = '1px solid lightgray';
   }
 
@@ -144,3 +186,12 @@ lightButton.addEventListener('mouseout', () => {
   // darkScrollbar.forEach(item => {
   //     item.style.background = '#010409';
   //   }); 
+
+  // 4. Tried changing colour of social links in footer on hover. Working fine, but don't have time to implement properly. Here's what I did, added to loop in dark mode:
+
+  // word.addEventListener('mouseover', () => {
+  //   word.style.color = '#B450B0';
+  // });
+  // word.addEventListener('mouseout', () => {
+  //   word.style.color = '#7d8590';
+  // });

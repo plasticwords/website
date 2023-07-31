@@ -411,9 +411,9 @@
   padding-top: 0;
   border: none;
   border-radius: 0;
-  height: 175px;
   font-size: 0.9rem;
   height: 200px;
+  /* height: 175px; */
 }
 
 .picture-grid-placement {
@@ -445,8 +445,10 @@
     right: 0;
     top: 0;
     z-index: 1;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    /* height: 100%; */
+    width: 100vw;
+    /* width: 100%; */
     background-color: #F3F2EE;
     display: flex;
     flex-direction: column;
@@ -456,7 +458,7 @@
     transition: transform 0.5s ease-in;
     writing-mode: horizontal-tb;
     font-size: 1.75rem;
-    margin-top: -7.5vh;
+    /* margin-top: -7.5vh; wanted to push the text up, but not working */
   }
 
   .menu a {
@@ -493,7 +495,7 @@
   }
 }
 
-/* Responsive design - Phone: */
+/* Responsive design - phone:: */
 
   @media screen and (max-width: 576px) {
 
@@ -515,6 +517,10 @@
   }  
 
   .scrollbar {
+    height: 175px;
+  }
+
+  .biography-text:hover {
     height: 175px;
   }
 
