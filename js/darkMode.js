@@ -69,18 +69,14 @@ darkButtonResponsive.addEventListener('click', enableDarkMode);
 darkButton.addEventListener('mouseover', () => {
   darkModeInstruct.style.display = 'inline-block';
 });
-
 darkButton.addEventListener('mouseout', () => { 
   darkModeInstruct.style.display = 'none';
 });
-  // Touch event for tablet touchscreen:
-darkButton.addEventListener('touchstart', () => {
+// Touch event for tablet touchscreen:
+darkButton.addEventListener('onclick', () => {
   darkModeInstruct.style.display = 'inline-block';
-});
-
-darkButton.addEventListener('touchend', () => { 
-    setTimeout(() => {
-  darkModeInstruct.style.display = 'none';
+  setTimeout(() => {
+    darkModeInstruct.style.display = 'none';
   }, 3000); // 3000 milliseconds = 3 seconds
 });
 
@@ -152,9 +148,15 @@ lightButtonResponsive.addEventListener('click', enableLightMode);
 lightButton.addEventListener('mouseover', () => {  
   lightModeInstruct.style.display = 'inline-block';
 });
-
 lightButton.addEventListener('mouseout', () => {  
   lightModeInstruct.style.display = 'none';
+});
+// Touch event for tablet touchscreen:
+lightButton.addEventListener('onclick', () => {
+  lightModeInstruct.style.display = 'inline-block';
+  setTimeout(() => {
+    lightModeInstruct.style.display = 'none';
+  }, 3000); // 3000 milliseconds = 3 seconds
 });
 
 
