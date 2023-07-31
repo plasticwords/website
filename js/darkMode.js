@@ -73,7 +73,7 @@ darkButton.addEventListener('mouseout', () => {
   darkModeInstruct.style.display = 'none';
 });
 // Touch event for tablet touchscreen:
-darkButton.addEventListener('onclick', () => {
+darkButton.addEventListener('touchstart', () => {
   darkModeInstruct.style.display = 'inline-block';
   setTimeout(() => {
     darkModeInstruct.style.display = 'none';
@@ -152,7 +152,7 @@ lightButton.addEventListener('mouseout', () => {
   lightModeInstruct.style.display = 'none';
 });
 // Touch event for tablet touchscreen:
-lightButton.addEventListener('onclick', () => {
+lightButton.addEventListener('touchstart', () => {
   lightModeInstruct.style.display = 'inline-block';
   setTimeout(() => {
     lightModeInstruct.style.display = 'none';
