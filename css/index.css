@@ -2,7 +2,8 @@ html {
     background-color: #F3F2EE;
     font-size: 16px;
     font-family: monospace;
-    color: gray;
+    /* color: gray; */
+    color: #7C7C81;
 }
 
 .container {
@@ -11,7 +12,6 @@ html {
     align-items: center;
     height: 95vh;
     font-size: 1rem;
-
 }
       
 .grid-container {
@@ -49,6 +49,11 @@ html {
   -webkit-text-fill-color: transparent; */
 }
 
+/* .instructions img {
+    height: 3vh;
+    width: auto;
+} */
+
 .explaining-text {
 /* border: 1px solid gray; */
 grid-area: explaining-text;
@@ -81,7 +86,8 @@ align-self: end;
     /* border-bottom: 1px solid lightgrey; */
     padding-bottom: 50px;
     /* padding-bottom: 20px; */
-    font-size: 0.85rem;
+    /* font-size: 0.85rem; */
+    font-size: 1rem;
 }
 
 .text div {
@@ -139,13 +145,22 @@ Then each row is its own flexbox*/
     height: 5%;  */
     height: 60px;
     width: 60px;
-    opacity: .8;
+    /* opacity: 0.8; */
+    opacity: 0.65;
     border: 1px solid black;
+    /* color: #F3F2EE; */
+    color: #B450B0;
+    transition: all 0.5s;
+    word-wrap: break-word;
 }
 
 .pink-sq:hover {
-    /* opacity: .1; */
-    transform: scale(1.25);
+    /* opacity: 0.1; */
+    transform: rotate(45deg) scale(1.1);
+    /* transform: scale(1.25); */
+    cursor: pointer;
+    /* background-color: #F3F2EE; */
+    color: black;
 }
 
 .grid-blue {
@@ -166,16 +181,26 @@ Then each row is its own flexbox*/
 }
 
 .blue-sq {
-    background-color: navy;
+    /* background-color: navy; */
+    background-color: #7289DA;
     /* width: 5%;
     padding-bottom: 5%;  */
     height: 60px;
     width: 60px;
     border: 1px solid black;
+    /* color: #F3F2EE; */
+    color: #7289DA;
+    transition: all 0.3s;
+    word-wrap: break-word;
 }
 
 .blue-sq:hover {
-    transform: scale(1.25);
+    /* transform: scale(1.25); */
+    transform: rotate(45deg) scale(1.1);
+    /* transform: scale(1.25); */
+    cursor: pointer;
+    /* background-color: #F3F2EE; */
+    color: black;
 }
 
 .gray-sq {
@@ -190,6 +215,7 @@ Then each row is its own flexbox*/
     height: 60px;
     width: 60px;
     border: 1px solid black;
+    /* border: 2px solid #B450B0; */
  }
 
  .light-gray-sq:hover {
@@ -197,15 +223,44 @@ Then each row is its own flexbox*/
  }
 
  .black-sq {
-    background-color: black;
+    /* background-color: black; */
     height: 60px;
     width: 60px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     color: white;
+    /* background-color: #B450B0;    */
+ }
+
+ .black-sq img {
+    height: 65px;
+    width: auto;
+    justify-self: center;
+    align-items: center;    
  }
 
  .black-sq:hover {
     opacity: .5;
+ }
+
+.box1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black; 
+    background-color: white; 
+    font-size: 1.5rem; 
+    opacity: 1; 
+    text-align: left; 
+    font-weight: bold; 
+    padding: 15px; 
+    margin: 0 -30px -15px 0;
+}
+
+ .test {
+    background-color: #f7bfbe;
+    background-color: #AA98A9;
+    opacity: 1; 
+    background-color: #efbbcc;
+    background-color: #2A3439;
+    background-color: #4C516D;
  }
 
  /* .pink-sq-text {
