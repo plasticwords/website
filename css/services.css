@@ -3,7 +3,7 @@
     font-size: 16px;
     margin: 0;
     padding: 0;
-    padding-bottom: 4vh;
+    /* padding-bottom: 4vh; */
   }
   
   .container {
@@ -17,7 +17,7 @@
 
 /* Main content and navigation: */
 
-.test {
+/* .test {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
   font-size: 1.5rem; 
   align-items: center;
@@ -31,13 +31,15 @@
 .test2 {
   text-align: center;
   font-size: 2.5rem;
-}
+} */
 
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 9fr 1.5fr;
-    height: 100vh;
+    height: 95vh; /* container fills screen without any overflow */
+    /* height: 100vh; */
+    /* margin-top: 5vh; */
     grid-gap: 10px;
     grid-template-areas: 
     "menu-area text-area branding-area"
@@ -134,6 +136,7 @@
     /* justify-content: end;
     align-self: flex-end */
     width: 70%;
+    margin-top: 5vh;
   }
 
   /* .social {
@@ -156,6 +159,7 @@
 
   .footer-wording {
     float: right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   .branding {
@@ -181,6 +185,7 @@
     margin-left: -25vw;
     color: #7D8590;
     /* color: #B450B0; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   .gradient-text {
@@ -194,31 +199,57 @@
     display: none;
   }
 
-
 /* New code for Services page */
 
+.service-intro {
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  text-align: justify;
+  font-size: 1.15rem;
+  /* font-size: 1.2rem; */
+}
+
+/* .service-intro:hover {
+  opacity: 1;
+} */
+
 .service-title {
-  padding-bottom: 2vh;
+  padding-bottom: 0.5vh;
+  /* padding-bottom: 2vh; */
+  /* margin-bottom: 2vh; */
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
 }
 
 .service-title span {
   /* cursor: grab; */
   /* cursor: help; */
-  cursor: zoom-in;
+  /* cursor: zoom-in; */
   /* cursor: wait;
   cursor: crosshair;
   cursor: not-allowed;
   cursor: alias; */
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   /* font-style: italic; */
+  font-size: 1.25rem;
 }
 
 .service-title span:hover {
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  color: #B450B0;
+  cursor: pointer;
 }
+
+/* .title-bullet-point {
+  font-size: 1rem; 
+  font-family: monospace;
+} */
 
 .service-detail div {
   display: none;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  text-align: justify;
+  /* margin: 0 5% 0 5%; */
  }
 
 /* End of new code for Service page */
@@ -238,6 +269,7 @@
 
   .grid-container {
     width: 100%;
+    height: 85vh;
     padding-top: 3vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -306,6 +338,7 @@
 
   .footer {
     width: 100%;
+    padding-bottom: 4vh;
     /* justify-content: center; */
     /* display: none; */
   }
@@ -382,7 +415,7 @@
 
   .container {
     width: 100%;
-    margin-top: 4vh;
+    /* margin-top: 4vh; */
   }
 
   .responsive-header img {

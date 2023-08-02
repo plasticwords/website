@@ -100,16 +100,26 @@
 
     const serviceTitle = document.querySelectorAll('.service-title > div[id^="title"]');
     const serviceDetail = document.querySelectorAll('.service-detail > div[id^="detail"]');
+    // const serviceIntro = document.querySelectorAll('.service-intro');
+    const serviceTitleBorder = document.querySelector('.service-title');
 
-    // loop to hide all service offerings title:
+    // loop to hide all services offerings title:
     const resetServiceTitles = () => {
       serviceDetail.forEach(detail => {
         detail.style.display = 'none';
       });
       serviceTitle.forEach(title => {
         title.style.color = '#7C7C81';
-        title.style.opacity = '0.65';
+        // title.style.opacity = '0.65';
+        // title.style.opacity = '0.25';
+        title.style.opacity = '0.35';
+        title.style.fontWeight = 'normal';
       });
+      // serviceIntro.forEach(intro => {
+        // intro.style.opacity = '0.25';
+        // intro.style.opacity = '0.8';
+      // });
+      serviceTitleBorder.style.borderBottom = 'none';
     };
 
     // display and style service offerings detail, call prior function
@@ -120,14 +130,22 @@
         serviceTitle[i].style.opacity = '1';
         serviceTitle[i].style.fontWeight = 'bold';
         serviceDetail[i].style.display = 'block';
-        serviceDetail[i].style.border = '3px solid #7d8590';
+        // serviceDetail[i].style.borderLeft = '1px solid #7d8590';
+        // serviceDetail[i].style.borderRight = '1px solid #7d8590';
+        serviceDetail[i].style.borderBottom = '1px solid #7d8590';
+        serviceDetail[i].style.borderTop = '1px solid #7d8590';
+        // serviceDetail[i].style.borderBottom = '1px solid lightgray';
+        // serviceDetail[i].style.borderTop = '1px solid lightgray';
+        // serviceDetail[i].style.borderBottom = '1px solid #B450B0';
+        // serviceDetail[i].style.borderTop = '1px solid #B450B0';
         // serviceDetail[i].style.border = '3px solid black';
         // serviceDetail[i].style.border = '2px solid #B450B0'; 
-        serviceDetail[i].style.color = '#B450B0';
+        // serviceDetail[i].style.color = '#B450B0';
         // serviceDetail[i].style.color = '#7C7C81';
         // serviceDetail[i].style.color = '#7d8590';
         // serviceDetail[i].style.color = 'black'; 
-        serviceDetail[i].style.padding = '3%'
+        serviceDetail[i].style.padding = '3% 15% 3% 15%'
+        // serviceDetail[i].style.padding = '3%'
         // serviceDetail[i].style.fontWeight = 'bold';    
         // serviceDetail[i].style.borderRadius = '25px'; // loop through elements in NodeList to have this in dark mode
         // serviceDetail[i].style.borderRadius = '50px';
@@ -135,3 +153,11 @@
         // serviceDetail[i].style.background = 'rgba(180, 80, 176, 0.1)';
       });
     });
+
+    // serviceIntro.addEventListener('mouseover', () => {
+    //   serviceIntro.style.color = 'red';
+    // });
+
+    // const serviceTitleBullet = document.querySelector('.title-bullet-point');
+    //   serviceTitleBullet.style.color = '#7C7C81';
+    //   serviceTitleBullet.style.opacity = '1';
