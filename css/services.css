@@ -216,8 +216,10 @@
   padding-bottom: 0.5vh;
   /* padding-bottom: 2vh; */
   /* margin-bottom: 2vh; */
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
+  /* border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray; */
+  border-top: 1px solid #7d8590;
+  border-bottom: 1px solid #7d8590;
 }
 
 .service-title span {
