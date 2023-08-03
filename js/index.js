@@ -99,102 +99,107 @@ button.addEventListener("mouseout", buttonMouseOut);
 
 // Box 1: could use click event instead
 
-const box1 = document.querySelector('.box1');
-const edit1 = document.querySelector('.box1-edit');
-const reason1 = document.querySelector('.box1-reason');
+// const box1 = document.querySelector('.box1');
+// const edit1 = document.querySelector('.box1-edit');
+// const reason1 = document.querySelector('.box1-reason');
 
-box1.addEventListener('mouseover', () => {
-  edit1.style.background = 'navy';
-  reason1.style.display = 'block';
-  reason1.style.color = 'black';
-  reason1.style.border = '1px solid black';
-  reason1.style.padding = '1%';
-  reason1.style.background = 'white';
-});
+// box1.addEventListener('mouseover', () => {
+//   edit1.style.background = 'navy';
+//   reason1.style.display = 'block';
+//   reason1.style.color = 'black';
+//   reason1.style.border = '1px solid black';
+//   reason1.style.padding = '1%';
+//   reason1.style.background = 'white';
+// });
 
-box1.addEventListener('mouseout', () => {
-  edit1.style.background = 'none';
-  reason1.style.display = 'none';
-});
+// box1.addEventListener('mouseout', () => {
+//   edit1.style.background = 'none';
+//   reason1.style.display = 'none';
+// });
 
 // Box 2:  
 
-const box2 = document.querySelector('.box2');
-const edit2 = document.querySelector('.box2-edit');
-const reason2 = document.querySelector('.box2-reason');
+// const box2 = document.querySelector('.box2');
+// const edit2 = document.querySelector('.box2-edit');
+// const reason2 = document.querySelector('.box2-reason');
 
-box2.addEventListener('mouseover', () => {
-  edit2.style.background = 'navy';
-  reason2.style.display = 'block';
-  reason2.style.color = 'black';
-  reason2.style.border = '1px solid black';
-  reason2.style.padding = '1%';
-  reason2.style.background = 'white';
-});
+// box2.addEventListener('mouseover', () => {
+//   edit2.style.background = 'navy';
+//   reason2.style.display = 'block';
+//   reason2.style.color = 'black';
+//   reason2.style.border = '1px solid black';
+//   reason2.style.padding = '1%';
+//   reason2.style.background = 'white';
+// });
 
-box2.addEventListener('mouseout', () => {
-  edit2.style.background = 'none';
-  reason2.style.display = 'none';
-});
+// box2.addEventListener('mouseout', () => {
+//   edit2.style.background = 'none';
+//   reason2.style.display = 'none';
+// });
 
 // Box 3:
 
-const box3 = document.querySelector('.box3');
-const edit3 = document.querySelector('.box3-edit');
-const reason3 = document.querySelector('.box3-reason');
+// const box3 = document.querySelector('.box3');
+// const edit3 = document.querySelector('.box3-edit');
+// const reason3 = document.querySelector('.box3-reason');
 
-box3.addEventListener('mouseover', () => {
-  edit3.style.background = 'navy';
-  reason3.style.display = 'block';
-  reason3.style.color = 'black';
-  reason3.style.border = '1px solid black';
-  reason3.style.padding = '1%';
-  reason3.style.background = 'white';
-});
+// box3.addEventListener('mouseover', () => {
+//   edit3.style.background = 'navy';
+//   reason3.style.display = 'block';
+//   reason3.style.color = 'black';
+//   reason3.style.border = '1px solid black';
+//   reason3.style.padding = '1%';
+//   reason3.style.background = 'white';
+// });
 
-box3.addEventListener('mouseout', () => {
-  edit3.style.background = 'none';
-  reason3.style.display = 'none';
-});
+// box3.addEventListener('mouseout', () => {
+//   edit3.style.background = 'none';
+//   reason3.style.display = 'none';
+// });
 
 
 // Box 4:
 
-const box4 = document.querySelector('.box4');
-const edit4 = document.querySelector('.box4-edit');
-const reason4 = document.querySelector('.box4-reason');
+// const box4 = document.querySelector('.box4');
+// const edit4 = document.querySelector('.box4-edit');
+// const reason4 = document.querySelector('.box4-reason');
 
-box4.addEventListener('mouseover', () => {
-  edit4.style.background = 'navy';
-  reason4.style.display = 'block';
-  reason4.style.color = 'black';
-  reason4.style.border = '1px solid black';
-  reason4.style.padding = '1%';
-  reason4.style.background = 'white';
-});
+// box4.addEventListener('mouseover', () => {
+//   edit4.style.background = 'navy';
+//   reason4.style.display = 'block';
+//   reason4.style.color = 'black';
+//   reason4.style.border = '1px solid black';
+//   reason4.style.padding = '1%';
+//   reason4.style.background = 'white';
+// });
 
-box4.addEventListener('mouseout', () => {
-  edit4.style.background = 'none';
-  reason4.style.display = 'none';
-});
+// box4.addEventListener('mouseout', () => {
+//   edit4.style.background = 'none';
+//   reason4.style.display = 'none';
+// });
 
-// Loop through boxes 1-16:
+// Loop through boxes 1 to 16:
 
 for (let i = 1; i <= 16; i++) {
   const box = document.querySelector(`.box${i}`);
-  const edit = document.querySelector(`.box${i}-edit`);
   const reason = document.querySelector(`.box${i}-reason`);
-  const instructions = document.querySelector('.instructions');
+  const editHover = document.querySelector(`.box${i}-edit`);
+  // const instructions = document.querySelector('.instructions');
   const instructionsBox = document.querySelector('.box1');
+  // const boxEditHover = document.querySelector('.box2-edit'); 
 
   box.addEventListener('mouseover', () => {
     // edit.style.background = '#B450B0';
     // edit.style.background = 'rgba(180, 80, 176, 0.25)';
-    edit.style.background = 'rgba(180, 80, 176, 0.1)';
+    
+    // TOGGLED CLASSES BELOW INSTEAD
+    // edit.style.background = 'rgba(180, 80, 176, 0.1)';
+    // edit.style.color = '#B450B0';
+    // edit.style.fontWeight = 'bold';
+    // END
+    editHover.classList.add('edit-hover'); // Add the class 'highlight' to box2-edit when hovering over box2
     // edit.style.background = 'rgba(1, 1, 1, 0.025)';
-    edit.style.color = '#B450B0';
     // edit.style.fontFamily = 'cambria';
-    edit.style.fontWeight = 'bold';
     // edit.style.fontSize = '1.1rem';
     // edit.style.border = '3px solid black';
     // edit.style.color = 'black';
@@ -204,7 +209,7 @@ for (let i = 1; i <= 16; i++) {
     reason.style.border = '1px solid black';
     reason.style.padding = '1%';
     reason.style.background = 'white';
-    instructions.style.opacity = '0.75';
+    // instructions.style.opacity = '0.75';
     // reason.style.transition = 'all 10s ease-out';
     // transition: all 2s ease-out;
     // transition: all 0.3s ease-in;
@@ -212,11 +217,14 @@ for (let i = 1; i <= 16; i++) {
     // transition: transform 0.3s;
   });
 
-  box.addEventListener('mouseout', () => {
-    edit.style.background = 'none';
-    edit.style.color = '#7C7C81';
+  box.addEventListener('mouseout', () => { 
+    // TOGGLED CLASSES BELOW INSTEAD
+    // edit.style.background = 'none';
+    // edit.style.color = '#7C7C81';
+    // edit.style.fontWeight = 'normal';
+    // END
+    editHover.classList.remove('edit-hover'); // Remove the class 'highlight' from box2-edit when no longer hovering over box2
     // edit.style.fontFamily = 'monospace';
-    edit.style.fontWeight = 'normal';
     // edit.style.fontSize = '1rem';
     reason.style.display = 'none';
     // instructions.style.opacity = '1';
@@ -239,6 +247,7 @@ for (let i = 1; i <= 16; i++) {
     // instructionsBox.style.writingMode = 'vertical-rl';
       }, 7500); // 7500 milliseconds = 7.5 seconds
   });
+}
 
 //   edit.addEventListener('mouseover', () => {
 //     edit.style.cursor = 'pointer';
@@ -248,4 +257,20 @@ for (let i = 1; i <= 16; i++) {
 //     reason.style.padding = '1%';
 //     reason.style.background = 'white';
 //   });
-}
+
+  
+  // function toggleHoverClass() {
+    // const boxHover = document.querySelector('.box2');
+
+    // boxHover.addEventListener('mouseenter', () => {
+    //    have put action in "for loop"    
+    // });
+
+  //   boxHover.addEventListener('mouseleave', () => {
+  //      have put action in "for loop"
+  //   });
+  // }
+
+  // Call the function to set up the event listeners
+//   toggleHoverClass();
+// }
