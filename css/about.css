@@ -16,7 +16,7 @@
     /* color: black; */
   }
 
-/* Main content and navigation: */
+/* Main contents and navigation: */
 
   .grid-container {
     display: grid;
@@ -50,7 +50,7 @@
 
   #active-page {
     color: #B450B0;
-    opacity: 100%;
+    opacity: 1;
     writing-mode: horizontal-tb;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 2.5vw;
@@ -153,11 +153,12 @@
     grid-area: branding-area;
     display: flex;
     justify-content: space-between;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     /* Responsive with min. size of 22px (16px * 1.375). Used to be 26px. 
     font-size: calc(1.375rem + 0.2vw); */
     writing-mode: vertical-rl;
     margin-right: 10%;
+    margin-bottom: -5vh;
   }
 
   .branding img {
@@ -165,27 +166,55 @@
     height: auto;
   }
 
-  .branding span {  
+  .mode-instruction-text {  
     writing-mode: horizontal-tb;
     text-align: right;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    /* font-size: 1rem; */
     margin-left: -25vw;
     color: #7D8590;
     /* color: #B450B0; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
-  .gradient-text {
-    color: #B450B0;
-    /* background-image: linear-gradient(0deg, fuchsia, #180ACE);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+  .mode-instruction-text-inset {
+    font-family: monospace; 
+    font-size: 0.8rem;
   }
+
+  .mode-on {
+    font-family: monospace;
+    font-size: 1rem;
+    color: #B450B0;
+    writing-mode: horizontal-tb;
+    text-align: right;
+    /* border-top: 1px solid lightgray; */
+  }
+
+  .mode-on:hover {
+    cursor: not-allowed;
+    /* cursor: move; */
+  }
+
+  .mode-on-inset {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .dark-mode-on {
+    color: #7289DA;
+    display: none;
+  }
+
+  /* .gradient-text {
+    color: #B450B0;
+    background-image: linear-gradient(0deg, fuchsia, #180ACE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  } */
 
   .responsive-header {
     display: none;
   }
-
 
 /* Start of code added for About section: */
 
@@ -495,7 +524,7 @@
   }
 }
 
-/* Responsive design - phone:: */
+/* Responsive design - Phone: */
 
   @media screen and (max-width: 576px) {
 
@@ -505,7 +534,7 @@
 
   .container {
     width: 100%;
-    margin-top: 4vh;
+    /* margin-top: 4vh; */
   }
 
   .responsive-header img {

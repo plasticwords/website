@@ -201,10 +201,10 @@
     display: none;
   }
 
-  /* .gradient-text { */
-    /* color: #B450B0; */
-    /* background-image: linear-gradient(0deg, fuchsia, #180ACE); */
-    /* background-image: linear-gradient(0deg, grey, darkgrey);
+  /* .gradient-text {
+    color: #B450B0;
+    background-image: linear-gradient(0deg, fuchsia, #180ACE);
+    background-image: linear-gradient(0deg, grey, darkgrey);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
