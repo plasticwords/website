@@ -6,9 +6,13 @@
 const darkButton = document.querySelector('.dark-mode');
 const darkButtonResponsive = document.querySelector('.dark-mode-responsive');
 const darkBackground = document.querySelector('html');
+const darkMenuText = document.getElementById('active-page');
 const darkTitle = document.querySelector('.title');
 const darkTitleText = document.getElementById('title-text');
 const darkMainText = document.querySelector('.container');
+const darkModeTextCanvas = document.querySelector('.mode-on');
+const lightModeOffText = document.querySelector('.light-mode-on');
+const darkModeOnText = document.querySelector('.dark-mode-on');
 // const darkMainTextBorder = document.querySelector('.text'); // will keep border on footer grid
 const darkFooter = document.querySelector('.footer ');
 const darkResponsiveMenu = document.querySelector('.menu');
@@ -18,15 +22,20 @@ const darkSocial = document.querySelectorAll('.social i'); // only for "Contact"
 const darkBiography = document.querySelectorAll('.biography-container'); // only for "About" page
 const darkBlogName = document.querySelector('.blog-name'); // only for "Blog" page
 const darkBlogSummary = document.querySelector('.blog-summary'); // only for "Blog" page
+// const darkBlogPicture = document.querySelector('.blog-container img'); // only for "Blog" page
 const darkModeInstruct = document.querySelector('.dark-mode-instruct');
 
 // darkButton.addEventListener('click', () => {  
 function enableDarkMode() {
   darkBackground.style.background = '#0D1117'; // dark charcoal black
+  darkMenuText.style.color = '#7289DA'; // pastel/baby blue
   darkTitle.style.background = '#010409'; // very dark navy blue, almost black (was using it for borders)
   darkTitle.style.border = '2px solid rgba(255, 255, 255, 0.075)'; // 7.5% grey
   darkTitleText.style.color = '#7d8590'; // light silver
   darkMainText.style.color = '#7d8590';
+  darkModeTextCanvas.style.color = '#7289DA';
+  lightModeOffText.style.display = 'none';
+  darkModeOnText.style.display = 'block';
   // darkMainTextBorder.style.borderBottom = '2px solid #010409';
   darkFooter.style.borderTop = '1.5px solid rgba(255, 255, 255, 0.075)';
   darkResponsiveMenu.style.background = '#0D1117';
@@ -39,19 +48,21 @@ function enableDarkMode() {
   darkSocial.forEach(icon => { 
       icon.style.color = '#7d8590';
     });  
-  // Loop for line seperating each biography: 
+  // Loop for line seperating each biography:
   darkBiography.forEach(item => {
       // item.style.borderTop = '2px solid #010409';
       item.style.borderTop = '1.5px solid rgba(255, 255, 255, 0.075)';
     });
   // Change colour of anchor link in "Blogs" page:
   darkBlogName.addEventListener('mouseover', () => {
+      // darkBlogName.style.color = '#7289DA'; // I like this a lot, but can't update the colour hover affect on Services page. Same deal with darkBlogPictures below
       darkBlogName.style.color = '#B450B0';
     });
   darkBlogName.addEventListener('mouseout', () => {
       darkBlogName.style.color = '#7d8590';
     });
   darkBlogSummary.addEventListener('mouseover', () => {
+      // darkBlogSummary.style.color = '#7289DA';
       darkBlogSummary.style.color = '#B450B0';
     });
   darkBlogSummary.addEventListener('mouseout', () => {
@@ -60,6 +71,15 @@ function enableDarkMode() {
   darkBlogName.style.color = '#7d8590';
   darkBlogSummary.style.color = '#7d8590';
   darkBlogSummary.style.borderBottom = '1.5px solid rgba(255, 255, 255, 0.075)';
+  // darkBlogPicture.addEventListener('mouseover', () => {
+  //     darkBlogPicture.style.borderBottom = '5px solid #7289DA';
+  //     // darkBlogPicture.style.borderBottom = '5px solid #B450B0';
+  //     darkBlogPicture.style.marginBottom = '-5px';
+  //   });
+  // darkBlogPicture.addEventListener('mouseout', () => {
+  //     darkBlogPicture.style.borderBottom = 'none';
+  //     darkBlogPicture.style.marginBottom = '0';
+  //   });
   }
 
 darkButton.addEventListener('click', enableDarkMode);
@@ -68,6 +88,8 @@ darkButtonResponsive.addEventListener('click', enableDarkMode);
 // Display dark mode instructions:
 darkButton.addEventListener('mouseover', () => {
   darkModeInstruct.style.display = 'inline-block';
+  // darkModeInstruct.style.color = '#7289DA';
+  // darkModeInstruct.style.fontWeight = 'bolder';
 });
 darkButton.addEventListener('mouseout', () => { 
   darkModeInstruct.style.display = 'none';
@@ -85,9 +107,13 @@ darkButton.addEventListener('touchstart', () => {
 const lightButton = document.querySelector('.light-mode');
 const lightButtonResponsive = document.querySelector('.light-mode-responsive');
 const lightBackground = document.querySelector('html');
+const lightMenuText = document.getElementById('active-page');
 const lightTitle = document.querySelector('.title');
 const lightTitleText = document.getElementById('title-text');
 const lightMainText = document.querySelector('.container');
+const lightModeTextCanvas = document.querySelector('.mode-on');
+const lightModeOnText = document.querySelector('.light-mode-on');
+const darkModeOffText = document.querySelector('.dark-mode-on');
 // const lightMainTextBorder = document.querySelector('.text'); // will keep border on footer grid
 const lightFooter = document.querySelector('.footer')
 const lightResponsiveMenu = document.querySelector('.menu');
@@ -97,15 +123,20 @@ const lightSocial = document.querySelectorAll('.social i'); // only for "Contact
 const lightBiography = document.querySelectorAll('.biography-container'); // only for "About" page
 const lightBlogName = document.querySelector('.blog-name'); // only for "Blog" page
 const lightBlogSummary = document.querySelector('.blog-summary'); // only for "Blog" page
+// const lightBlogPicture = document.querySelector('.blog-container img'); // only for "Blog" page
 const lightModeInstruct = document.querySelector('.light-mode-instruct');
 
 // lightButton.addEventListener('click', () => {  
 function enableLightMode() {  
   lightBackground.style.background = '#F3F2EE';
+  lightMenuText.style.color = '#B450B0';
   lightTitle.style.background = 'white';
   lightTitle.style.border = 'lightgray 1px solid';
   lightTitleText.style.color = '#7C7C81';
   lightMainText.style.color = '#7C7C81';
+  lightModeTextCanvas.style.color = '#B450B0';
+  lightModeOnText.style.display = 'block';
+  darkModeOffText.style.display = 'none';
   // lightMainTextBorder.style.borderBottom = 'lightgray 1px solid';
   lightFooter.style.borderTop = 'lightgray 1px solid';
   lightResponsiveMenu.style.background = '#F3F2EE';
@@ -118,19 +149,21 @@ function enableLightMode() {
   lightSocial.forEach(icon => {
       icon.style.color = '#7C7C81';
     });  
-  // Loop for border around biography's: 
+  // Loop for line seperating each biography: 
   lightBiography.forEach(item => {
       // 
       item.style.borderTop = '1px solid lightgray';
     });
   // Change colour of anchor link in "Blogs" page:
   lightBlogName.addEventListener('mouseover', () => {
+      //
       lightBlogName.style.color = '#B450B0';
     });
   lightBlogName.addEventListener('mouseout', () => {
       lightBlogName.style.color = '#7C7C81';
     });
   lightBlogSummary.addEventListener('mouseover', () => {
+      //
       lightBlogSummary.style.color = '#B450B0';
     });
   lightBlogSummary.addEventListener('mouseout', () => {
@@ -139,6 +172,15 @@ function enableLightMode() {
   lightBlogName.style.color = '#7C7C81';
   lightBlogSummary.style.color = '#7C7C81';
   lightBlogSummary.style.borderBottom = '1px solid lightgray';
+  // lightBlogPicture.addEventListener('mouseover', () => {
+  //     lightBlogPicture.style.borderBottom = '5px solid #B450B0';
+  //     //
+  //     lightBlogPicture.style.marginBottom = '-5px';
+  //   });
+  // lightBlogPicture.addEventListener('mouseout', () => {
+  //     lightBlogPicture.style.borderBottom = 'none';
+  //     lightBlogPicture.style.marginBottom = '0';
+  //   });
   }
 
 lightButton.addEventListener('click', enableLightMode);
@@ -147,6 +189,8 @@ lightButtonResponsive.addEventListener('click', enableLightMode);
 // Display light mode instructions:
 lightButton.addEventListener('mouseover', () => {  
   lightModeInstruct.style.display = 'inline-block';
+  // 
+  // 
 });
 lightButton.addEventListener('mouseout', () => {  
   lightModeInstruct.style.display = 'none';
@@ -197,3 +241,17 @@ lightButton.addEventListener('touchstart', () => {
   // word.addEventListener('mouseout', () => {
   //   word.style.color = '#7d8590';
   // });
+
+  // 4. Implement change of dark button colour on hover of corner dark mode Text. Don't like it though
+  
+  // const darkModeCornerText = document.querySelector('.dark-mode-on');
+
+  // Change dark button colour on hover over dark-mode-text
+  // darkModeCornerText.addEventListener('mouseover', () => {
+  //   darkButton.style.color = '#7289DA';
+  //   darkButton.style.opacity = '1';
+  // });
+  // darkModeCornerText.addEventListener('mouseout', () => {
+  //   darkButton.style.color = '#7d8590';
+  // });
+
