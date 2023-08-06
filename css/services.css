@@ -430,9 +430,9 @@
     width: fit-content;
   }
 
-  .active-page-border {
+  /* .active-page-border {
     border-bottom: 1px solid rgba(180, 80, 176, 1);
-  }
+  } */
 
   /* .menu-blnc-elements {
     display: none;

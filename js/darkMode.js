@@ -16,7 +16,7 @@ const darkModeOnText = document.querySelector('.dark-mode-on');
 // const darkMainTextBorder = document.querySelector('.text'); // will keep border on footer grid
 const darkFooter = document.querySelector('.footer ');
 const darkResponsiveMenu = document.querySelector('.menu');
-const darkResponsiveMenuBorder = document.querySelector('.active-page-border');
+// const darkResponsiveMenuBorder = document.querySelector('.active-page-border');
 const darkResponsiveBorder = document.querySelector('.responsive-header');
 const darkMenu = document.querySelectorAll('.menu-link');
 const darkFooterSocial = document.querySelectorAll('.footer-social-link')
@@ -42,7 +42,7 @@ function enableDarkMode() {
   // darkMainTextBorder.style.borderBottom = '2px solid #010409';
   darkFooter.style.borderTop = '1.5px solid rgba(255, 255, 255, 0.075)';
   darkResponsiveMenu.style.background = '#0D1117';
-  darkResponsiveMenuBorder.style.borderBottom = '1.5px solid #7289DA';
+  // darkResponsiveMenuBorder.style.borderBottom = '1.5px solid #7289DA';
   darkResponsiveBorder.style.borderBottom = '1.5px solid rgba(255, 255, 255, 0.075)';
   // Loop for menu items: 
   darkMenu.forEach(menu => {
@@ -136,7 +136,7 @@ const darkModeOffText = document.querySelector('.dark-mode-on');
 // const lightMainTextBorder = document.querySelector('.text'); // will keep border on footer grid
 const lightFooter = document.querySelector('.footer')
 const lightResponsiveMenu = document.querySelector('.menu');
-const lightResponsiveMenuBorder = document.querySelector('.active-page-border');
+// const lightResponsiveMenuBorder = document.querySelector('.active-page-border');
 const lightResponsiveBorder = document.querySelector('.responsive-header');
 const lightMenu = document.querySelectorAll('.menu-link');
 const lightFooterSocial = document.querySelectorAll('.footer-social-link')
@@ -162,7 +162,7 @@ function enableLightMode() {
   // lightMainTextBorder.style.borderBottom = 'lightgray 1px solid';
   lightFooter.style.borderTop = 'lightgray 1px solid';
   lightResponsiveMenu.style.background = '#F3F2EE';
-  lightResponsiveMenuBorder.style.borderBottom = '1px solid rgba(180, 80, 176, 1)';
+  // lightResponsiveMenuBorder.style.borderBottom = '1px solid rgba(180, 80, 176, 1)';
   lightResponsiveBorder.style.borderBottom = '1px solid lightgray';
   // Loop for menu items: 
   lightMenu.forEach(menu => {
