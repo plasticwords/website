@@ -16,9 +16,11 @@ const darkModeOnText = document.querySelector('.dark-mode-on');
 // const darkMainTextBorder = document.querySelector('.text'); // will keep border on footer grid
 const darkFooter = document.querySelector('.footer ');
 const darkResponsiveMenu = document.querySelector('.menu');
+const darkResponsiveMenuBorder = document.querySelector('.active-page-border');
 const darkResponsiveBorder = document.querySelector('.responsive-header');
 const darkMenu = document.querySelectorAll('.menu-link');
 const darkFooterSocial = document.querySelectorAll('.footer-social-link')
+const darkBurgerMenu = document.querySelectorAll('.burger div');
 const darkSocial = document.querySelectorAll('.social i'); // only for "Contact" page
 const darkBiography = document.querySelectorAll('.biography-container'); // only for "About" page
 const darkBlogName = document.querySelector('.blog-name'); // only for "Blog" page
@@ -40,6 +42,7 @@ function enableDarkMode() {
   // darkMainTextBorder.style.borderBottom = '2px solid #010409';
   darkFooter.style.borderTop = '1.5px solid rgba(255, 255, 255, 0.075)';
   darkResponsiveMenu.style.background = '#0D1117';
+  darkResponsiveMenuBorder.style.borderBottom = '1.5px solid #7289DA';
   darkResponsiveBorder.style.borderBottom = '1.5px solid rgba(255, 255, 255, 0.075)';
   // Loop for menu items: 
   darkMenu.forEach(menu => {
@@ -55,6 +58,10 @@ function enableDarkMode() {
   // Loop for social text link in footer:
   darkFooterSocial.forEach(word => {
       word.style.color = '#7d8590';
+    });
+  // Loop for burger menu:
+  darkBurgerMenu.forEach(burger => {
+      burger.style.background = '#7289DA';
     });
   // Loop for social icons:
   darkSocial.forEach(icon => { 
@@ -129,9 +136,11 @@ const darkModeOffText = document.querySelector('.dark-mode-on');
 // const lightMainTextBorder = document.querySelector('.text'); // will keep border on footer grid
 const lightFooter = document.querySelector('.footer')
 const lightResponsiveMenu = document.querySelector('.menu');
+const lightResponsiveMenuBorder = document.querySelector('.active-page-border');
 const lightResponsiveBorder = document.querySelector('.responsive-header');
 const lightMenu = document.querySelectorAll('.menu-link');
 const lightFooterSocial = document.querySelectorAll('.footer-social-link')
+const lightBurgerMenu = document.querySelectorAll('.burger div');
 const lightSocial = document.querySelectorAll('.social i'); // only for "Contact" page
 const lightBiography = document.querySelectorAll('.biography-container'); // only for "About" page
 const lightBlogName = document.querySelector('.blog-name'); // only for "Blog" page
@@ -153,6 +162,7 @@ function enableLightMode() {
   // lightMainTextBorder.style.borderBottom = 'lightgray 1px solid';
   lightFooter.style.borderTop = 'lightgray 1px solid';
   lightResponsiveMenu.style.background = '#F3F2EE';
+  lightResponsiveMenuBorder.style.borderBottom = '1px solid rgba(180, 80, 176, 1)';
   lightResponsiveBorder.style.borderBottom = '1px solid lightgray';
   // Loop for menu items: 
   lightMenu.forEach(menu => {
@@ -169,6 +179,10 @@ function enableLightMode() {
   lightFooterSocial.forEach(word => {
       word.style.color = '#7C7C81';
     });
+  // Loop for burger menu:
+  lightBurgerMenu.forEach(burger => {
+    burger.style.background = '#B450B0';
+  });
   // Loop for social icons:
   lightSocial.forEach(icon => {
       icon.style.color = '#7C7C81';

@@ -554,10 +554,14 @@
   }
 
   #active-page {
-    /* border-bottom: 1px solid rgba(180, 80, 176, 1); I like this, but changing responsive elements to suit Dark Mode is annoiying. Not worth it atm. */
+    /* border-bottom: 1px solid rgba(180, 80, 176, 1); */
     padding-bottom: 1px;
     font-family: monospace;
     width: fit-content;
+  }
+
+  .active-page-border {
+    border-bottom: 1px solid rgba(180, 80, 176, 1);
   }
 
   /* .menu-blnc-elements {
@@ -570,7 +574,7 @@
 
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
-    background: #B450B0;
+    /* background: #B450B0; */
   }
 
   .toggle .line2 {
@@ -579,7 +583,7 @@
 
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-    background: #B450B0;
+    /* background: #B450B0; */
   }
 }
 

@@ -355,6 +355,10 @@
     width: fit-content;
   }
 
+  .active-page-border {
+    border-bottom: 1px solid rgba(180, 80, 176, 1);
+  }
+
   /* .menu-blnc-elements {
     display: none;
   } */
@@ -365,7 +369,7 @@
 
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
-    background: #B450B0;
+    /* background: #B450B0; */
   }
 
   .toggle .line2 {
@@ -374,7 +378,7 @@
 
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-    background: #B450B0;
+    /* background: #B450B0; */
   }
 }
 
