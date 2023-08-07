@@ -182,8 +182,9 @@ button.addEventListener("mouseout", buttonMouseOut);
 
 for (let i = 1; i <= 16; i++) {
   const box = document.querySelector(`.box${i}`);
+  // const boxAnimation = document.querySelector(`.box${i+1}`);
   const reason = document.querySelector(`.box${i}-reason`);
-  const editHover = document.querySelector(`.box${i}-edit`);
+  const edit = document.querySelector(`.box${i}-edit`);
   // const instructions = document.querySelector('.instructions');
   const instructionsBox = document.querySelector('.box1');
   // const boxEditHover = document.querySelector('.box2-edit'); 
@@ -197,7 +198,7 @@ for (let i = 1; i <= 16; i++) {
     // edit.style.color = '#B450B0';
     // edit.style.fontWeight = 'bold';
     // END
-    editHover.classList.add('edit-hover'); // Add the class 'highlight' to box2-edit when hovering over box2
+    edit.classList.add('edit-hover'); // Add the class 'highlight' to box2-edit when hovering over box2
     // edit.style.background = 'rgba(1, 1, 1, 0.025)';
     // edit.style.fontFamily = 'cambria';
     // edit.style.fontSize = '1.1rem';
@@ -223,12 +224,33 @@ for (let i = 1; i <= 16; i++) {
     // edit.style.color = '#7C7C81';
     // edit.style.fontWeight = 'normal';
     // END
-    editHover.classList.remove('edit-hover'); // Remove the class 'highlight' from box2-edit when no longer hovering over box2
+    box.style.transform = 'rotate(135deg)'; // This affects to PW logo, maybe exclude that
+    edit.classList.remove('edit-hover'); // Remove the class 'highlight' from box2-edit when no longer hovering over box2
     // edit.style.fontFamily = 'monospace';
     // edit.style.fontSize = '1rem';
     reason.style.display = 'none';
     // instructions.style.opacity = '1';
   });
+
+// ______________________
+// START OF ANIMATION :
+
+  box.addEventListener('click', () => {
+    // boxAnimation.classList.add('box-transformation');
+    // boxAnimation.classList.add('box-animation');
+    // boxAnimation.addEventListener('animationend', () => {
+    //   boxAnimation.classList.remove('box-animation-after');
+    //   }, { once: true });
+  });
+
+// const element = document.querySelector('.fade-out-element');
+// element.addEventListener('click', () => {
+//   element.classList.add('fade-out'); // Add the fade-out class to trigger the animation
+// });
+
+
+// END OF ANIMATION
+// ______________________
 
   instructionsBox.addEventListener('mouseout', () => {
     setTimeout(() => {
@@ -273,4 +295,13 @@ for (let i = 1; i <= 16; i++) {
 
   // Call the function to set up the event listeners
 //   toggleHoverClass();
+// }
+
+// ___________________________________________
+// Starting working on animation for box+1, but couldn't get it finished:
+
+// if (boxAnimation.style.transform === 'rotate(135deg)') {
+//   console.log("hello world");
+// } else {
+//   console.log("goodbye world");
 // }
