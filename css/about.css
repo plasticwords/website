@@ -315,6 +315,17 @@
     /* font-family: monospace; */
   }
 
+  .biography-link a {
+    text-decoration: underline;
+    font-style: italic;
+    color: #7C7C81;
+    /* font-family: Cambria; */
+  }
+
+  .biography-link a:hover {
+    opacity: 0.5;
+  }
+
   .biography-grid-layout {
     grid-template-areas:
     "picture-area   text-area";  

@@ -25,6 +25,7 @@ const darkSocial = document.querySelectorAll('.social i'); // only for "Contact"
 const darkBiography = document.querySelectorAll('.biography-container'); // only for "About" page
 const darkBlogName = document.querySelector('.blog-name'); // only for "Blog" page
 const darkBlogSummary = document.querySelector('.blog-summary'); // only for "Blog" page
+// const darkBiographyLink = document.querySelector('.biography-link'); // only for "About" page (NOT WORKING BUT NEEDS TO BE ADDED)
 // const darkBlogPicture = document.querySelector('.blog-container img'); // only for "Blog" page
 const darkModeInstruct = document.querySelector('.dark-mode-instruct');
 
@@ -90,6 +91,8 @@ function enableDarkMode() {
   darkBlogName.style.color = '#7d8590';
   darkBlogSummary.style.color = '#7d8590';
   darkBlogSummary.style.borderBottom = '1.5px solid rgba(255, 255, 255, 0.075)';
+  // darkBiographyLink.style.color = 'red'; // NOT WORKING BUT NEEDS TO BE ADDED
+
   // darkBlogPicture.addEventListener('mouseover', () => {
   //     darkBlogPicture.style.borderBottom = '5px solid #7289DA';
   //     // darkBlogPicture.style.borderBottom = '5px solid #B450B0';
