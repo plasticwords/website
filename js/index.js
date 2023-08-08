@@ -187,6 +187,7 @@ for (let i = 1; i <= 16; i++) {
   const edit = document.querySelector(`.box${i}-edit`);
   // const instructions = document.querySelector('.instructions');
   const instructionsBox = document.querySelector('.box1');
+  const logoBox = document.querySelector(`.box16`);
   // const boxEditHover = document.querySelector('.box2-edit'); 
 
   box.addEventListener('mouseover', () => {
@@ -199,6 +200,7 @@ for (let i = 1; i <= 16; i++) {
     // edit.style.fontWeight = 'bold';
     // END
     edit.classList.add('edit-hover'); // Add the class 'highlight' to box2-edit when hovering over box2
+    instructionsBox.style.transform = 'rotate(0deg)';
     // edit.style.background = 'rgba(1, 1, 1, 0.025)';
     // edit.style.fontFamily = 'cambria';
     // edit.style.fontSize = '1.1rem';
@@ -225,6 +227,8 @@ for (let i = 1; i <= 16; i++) {
     // edit.style.fontWeight = 'normal';
     // END
     box.style.transform = 'rotate(135deg)'; // This affects to PW logo, maybe exclude that
+    instructionsBox.style.transform = 'rotate(0deg)';
+    logoBox.style.transform = 'rotate(0deg)';
     edit.classList.remove('edit-hover'); // Remove the class 'highlight' from box2-edit when no longer hovering over box2
     // edit.style.fontFamily = 'monospace';
     // edit.style.fontSize = '1rem';
@@ -266,6 +270,7 @@ for (let i = 1; i <= 16; i++) {
     instructionsBox.style.padding = '0';
     instructionsBox.style.margin = '0';
     instructionsBox.style.textAlign = 'center';
+    // instructionsBox.style.transform = 'rotate(135deg)'
     // instructionsBox.style.writingMode = 'vertical-rl';
       }, 7500); // 7500 milliseconds = 7.5 seconds
   });

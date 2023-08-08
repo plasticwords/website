@@ -395,10 +395,11 @@ _____________________________________ */
   }
 
   .menu a:hover {
-    /* color: #7C7C81; */
-    color: #7289DA;
+    color: #7C7C81;
+    /* color: #7289DA; */
     cursor: pointer;
-    font-weight: bold;
+    opacity: 0.5;
+    /* font-weight: bold; */
   }
 
   .box1-reason {
