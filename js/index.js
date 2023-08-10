@@ -187,6 +187,7 @@ for (let i = 1; i <= 16; i++) {
   const edit = document.querySelector(`.box${i}-edit`);
   // const instructions = document.querySelector('.instructions');
   const instructionsBox = document.querySelector('.box1');
+  const instructions = document.querySelector(`.box1-reason`);
   const logoBox = document.querySelector(`.box16`);
   // const boxEditHover = document.querySelector('.box2-edit'); 
 
@@ -233,6 +234,11 @@ for (let i = 1; i <= 16; i++) {
     // edit.style.fontFamily = 'monospace';
     // edit.style.fontSize = '1rem';
     reason.style.display = 'none';
+    instructions.style.display = 'block';
+    instructions.style.border = 'none';
+    instructions.style.padding = 'calc(1% + 1px)';
+    instructions.style.color = '#7C7C81';
+    instructions.style.background = 'none';
     // instructions.style.opacity = '1';
   });
 
@@ -272,7 +278,7 @@ for (let i = 1; i <= 16; i++) {
     instructionsBox.style.textAlign = 'center';
     // instructionsBox.style.transform = 'rotate(135deg)'
     // instructionsBox.style.writingMode = 'vertical-rl';
-      }, 7500); // 7500 milliseconds = 7.5 seconds
+      }, 4000); // 4000 milliseconds = 4 seconds
   });
 }
 

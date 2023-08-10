@@ -261,13 +261,15 @@ _____________________________________ */
     border: 1px solid black;
     /* color: #F3F2EE; */
     color: #7289DA;
-    transition: all 0.3s;
+    transition: all 0.5s;
+    /* transition: all 0.3s; */
     word-wrap: break-word;
 }
 
 .blue-sq:hover {
     /* transform: scale(1.25); */
-    transform: rotate(45deg) scale(1.125);
+    transform: rotate(135deg) scale(1.125);
+    /* transform: rotate(45deg) scale(1.125); */
     /* transform: rotate(45deg) scale(1.1); */
     /* transform: scale(1.25); */
     cursor: pointer;
