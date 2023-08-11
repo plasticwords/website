@@ -612,6 +612,10 @@
     height: 175px;
   } */
 
+  .blog-summary {
+    text-align: left;
+  }
+
   .footer {
     width: 90%;
     margin: auto;
