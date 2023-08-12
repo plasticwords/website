@@ -1,36 +1,6 @@
-// document.getElementById('test-btn').addEventListener('click', function() {
-//     toggleClass(document.getElementById('test'), 'test-class');
-// });
-
-
-// let isFocused = false;
-//   $('#venn-button').click(function(){
-//     if (isFocused) {
-//       $('#myNumberInput').blur();
-//       isFocused = false;
-//     } else {
-//       $('#myNumberInput').focus();
-//       isFocused = true;
-//     }
-//   });
 
 // document.addEventListener('DOMContentLoaded', function() {
-//     // Get the pink div and pink-text span
-//     const pinkDiv = document.querySelector('.pink-sq');
-//     const pinkText = document.querySelector('.pink-sq-text');
-    
-//     // Add event listener for hover
-//     pinkDiv.addEventListener('mouseover', function() {
-//       // Change the color of pink-text to red
-//       pinkText.style.color = 'red';
-//     });
-    
-//     pinkDiv.addEventListener('mouseout', function() {
-//       // Change the color of pink-text back to the initial color
-//       pinkText.style.color = 'black';
-//     });
-//     }); -->
-
+     
     // maybe way to simplify loops (from services page):
     // window.addEventListener('DOMContentLoaded', () => {
     //   const box2 = document.getElementById('box2');
@@ -40,29 +10,6 @@
     //     detail2.style.display = detail1.style.display === 'none' ? 'block' : 'none';
     //   });
     // });
-
-// 1. COLOUR CHANGE TO ONE DIV: Decision  on JS structure: This works, but loops obfuscate, and right now I need clarity to understand what's going on.
-// const button = document.querySelector('.button'); 
-const button = document.getElementById("hover"); 
-const boxes = document.getElementsByClassName("pink-sq-text");
-
-const buttonPressed = () => {
-  for(const box of boxes) {
-    box.classList.toggle("coloured-text");
-  
-  }
-};
-
-const buttonMouseOut = () => {
-  for (const box of boxes) {
-    box.classList.toggle("coloured-text");
-    
-  }
-};
-
-button.addEventListener("mouseover", buttonPressed);
-button.addEventListener("mouseout", buttonMouseOut);
-
 
 
 // 2. LOOPING OF COLOUR CHANGES, so can do change to multiple divs:
@@ -316,3 +263,24 @@ for (let i = 1; i <= 16; i++) {
 // } else {
 //   console.log("goodbye world");
 // }
+
+
+// let isFocused = false;
+//   $('#venn-button').click(function(){
+//     if (isFocused) {
+//       $('#myNumberInput').blur();
+//       isFocused = false;
+//     } else {
+//       $('#myNumberInput').focus();
+//       isFocused = true;
+//     }
+//   });
+
+
+// const boxes = document.getElementsByClassName("pink-sq-text");
+// const buttonPressed = () => {
+//   for(const box of boxes) {
+//     box.classList.toggle("coloured-text");  
+//   }
+// };
+// button.addEventListener("mouseover", buttonPressed);
