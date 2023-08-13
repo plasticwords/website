@@ -9,14 +9,14 @@ html {
 .container {
     display: flex;
     align-items: center;
-    height: 95vh;
+    /* height: 95vh; */
     font-size: 1rem;
 }
       
 .grid-container {
     display: grid;
     /* Can i just fit the row size to the content? */
-    grid-template-rows: 1fr 3.5fr 0.75fr 0.75fr 1.5fr; 
+    grid-template-rows: 1.1fr 3.25fr 0.75fr 0.75fr 1.25fr; 
     grid-template-areas: 
     "explaining-text"
     "text-area"
@@ -228,8 +228,10 @@ padding-bottom: 2vh;
   .box1-reason {
     display: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    /* font-size: 1.1rem; */
     text-align: justify;
+    height: fit-content;
   }
 
 .edit-hover {
@@ -270,24 +272,6 @@ ANIMATION EFFECTS START
 		transform: scale(0.95) rotate(0deg);
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 	}
-}
-
-.fade-out-element {
-  opacity: 1;
-  transition: opacity 1s ease-out;
-}
-
-.fade-out-element.fade-out {
-  opacity: 0;
-}
-
-@keyframes fadeOutAnimation {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
 }
 
 ANIMATION EFFECTS END

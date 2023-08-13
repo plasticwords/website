@@ -1,129 +1,6 @@
-
-// document.addEventListener('DOMContentLoaded', function() {
-     
-    // maybe way to simplify loops (from services page):
-    // window.addEventListener('DOMContentLoaded', () => {
-    //   const box2 = document.getElementById('box2');
-    //   const detail2 = document.getElementById('detail2');
-
-    //   box2.addEventListener('click', () => {
-    //     detail2.style.display = detail1.style.display === 'none' ? 'block' : 'none';
-    //   });
-    // });
-
-
-// 2. LOOPING OF COLOUR CHANGES, so can do change to multiple divs:
-// window.addEventListener('DOMContentLoaded', () => {
-//   const boxes = document.querySelectorAll('.services-offering > div[class^="box"]');
-//   const details = document.querySelectorAll('.services-detail > div[id^="detail"]');
-
-//   const hideAllDetails = () => {
-//     details.forEach(detail => {
-//       detail.style.display = 'none';
-//     });
-//   };
-
-//   const resetBoxColors = () => {
-//     boxes.forEach(box => {
-//       box.style.color = '#7C7C81';
-//     });
-//   };
-
-//   boxes.forEach((box, index) => {
-//     box.addEventListener('mouseover', () => {
-//       hideAllDetails();
-//       resetBoxColors();
-
-//       box.style.color = '#B450B0';
-//       details[index].style.display = 'block';
-//     });
-//   });
-// });
-
-
-// attempt 3. Decision  on JS structure: This works well, but maybe try simplifying it after you've clarified the html/css and know how you're structuring it.
-
-
-// Box 1: could use click event instead
-
 // const box1 = document.querySelector('.box1');
 // const edit1 = document.querySelector('.box1-edit');
 // const reason1 = document.querySelector('.box1-reason');
-
-// box1.addEventListener('mouseover', () => {
-//   edit1.style.background = 'navy';
-//   reason1.style.display = 'block';
-//   reason1.style.color = 'black';
-//   reason1.style.border = '1px solid black';
-//   reason1.style.padding = '1%';
-//   reason1.style.background = 'white';
-// });
-
-// box1.addEventListener('mouseout', () => {
-//   edit1.style.background = 'none';
-//   reason1.style.display = 'none';
-// });
-
-// Box 2:  
-
-// const box2 = document.querySelector('.box2');
-// const edit2 = document.querySelector('.box2-edit');
-// const reason2 = document.querySelector('.box2-reason');
-
-// box2.addEventListener('mouseover', () => {
-//   edit2.style.background = 'navy';
-//   reason2.style.display = 'block';
-//   reason2.style.color = 'black';
-//   reason2.style.border = '1px solid black';
-//   reason2.style.padding = '1%';
-//   reason2.style.background = 'white';
-// });
-
-// box2.addEventListener('mouseout', () => {
-//   edit2.style.background = 'none';
-//   reason2.style.display = 'none';
-// });
-
-// Box 3:
-
-// const box3 = document.querySelector('.box3');
-// const edit3 = document.querySelector('.box3-edit');
-// const reason3 = document.querySelector('.box3-reason');
-
-// box3.addEventListener('mouseover', () => {
-//   edit3.style.background = 'navy';
-//   reason3.style.display = 'block';
-//   reason3.style.color = 'black';
-//   reason3.style.border = '1px solid black';
-//   reason3.style.padding = '1%';
-//   reason3.style.background = 'white';
-// });
-
-// box3.addEventListener('mouseout', () => {
-//   edit3.style.background = 'none';
-//   reason3.style.display = 'none';
-// });
-
-
-// Box 4:
-
-// const box4 = document.querySelector('.box4');
-// const edit4 = document.querySelector('.box4-edit');
-// const reason4 = document.querySelector('.box4-reason');
-
-// box4.addEventListener('mouseover', () => {
-//   edit4.style.background = 'navy';
-//   reason4.style.display = 'block';
-//   reason4.style.color = 'black';
-//   reason4.style.border = '1px solid black';
-//   reason4.style.padding = '1%';
-//   reason4.style.background = 'white';
-// });
-
-// box4.addEventListener('mouseout', () => {
-//   edit4.style.background = 'none';
-//   reason4.style.display = 'none';
-// });
 
 // Loop through boxes 1 to 16:
 
@@ -189,26 +66,6 @@ for (let i = 1; i <= 16; i++) {
     // instructions.style.opacity = '1';
   });
 
-// ______________________
-// START OF ANIMATION :
-
-  box.addEventListener('click', () => {
-    // boxAnimation.classList.add('box-transformation');
-    // boxAnimation.classList.add('box-animation');
-    // boxAnimation.addEventListener('animationend', () => {
-    //   boxAnimation.classList.remove('box-animation-after');
-    //   }, { once: true });
-  });
-
-// const element = document.querySelector('.fade-out-element');
-// element.addEventListener('click', () => {
-//   element.classList.add('fade-out'); // Add the fade-out class to trigger the animation
-// });
-
-
-// END OF ANIMATION
-// ______________________
-
   instructionsBox.addEventListener('mouseout', () => {
     setTimeout(() => {
     // instructionsBox.style.color = 'rgba(180, 80, 176)';
@@ -229,32 +86,6 @@ for (let i = 1; i <= 16; i++) {
   });
 }
 
-//   edit.addEventListener('mouseover', () => {
-//     edit.style.cursor = 'pointer';
-//     reason.style.display = 'block';
-//     reason.style.color = 'black';
-//     reason.style.border = '1px solid black';
-//     reason.style.padding = '1%';
-//     reason.style.background = 'white';
-//   });
-
-  
-  // function toggleHoverClass() {
-    // const boxHover = document.querySelector('.box2');
-
-    // boxHover.addEventListener('mouseenter', () => {
-    //    have put action in "for loop"    
-    // });
-
-  //   boxHover.addEventListener('mouseleave', () => {
-  //      have put action in "for loop"
-  //   });
-  // }
-
-  // Call the function to set up the event listeners
-//   toggleHoverClass();
-// }
-
 // ___________________________________________
 // Starting working on animation for box+1, but couldn't get it finished:
 
@@ -263,6 +94,15 @@ for (let i = 1; i <= 16; i++) {
 // } else {
 //   console.log("goodbye world");
 // }
+
+
+// ANIMATION:
+// box.addEventListener('click', () => {
+//   boxAnimation.classList.add('box-animation');
+//   boxAnimation.addEventListener('animationend', () => {
+//     boxAnimation.classList.remove('box-animation-after');
+//     }, { once: true });
+// });
 
 
 // let isFocused = false;
@@ -284,3 +124,17 @@ for (let i = 1; i <= 16; i++) {
 //   }
 // };
 // button.addEventListener("mouseover", buttonPressed);
+
+
+// window.addEventListener('DOMContentLoaded', () => {
+//   const box2 = document.getElementById('box2');
+//   const detail2 = document.getElementById('detail2');
+
+//   box2.addEventListener('click', () => {
+//     detail2.style.display = detail1.style.display === 'none' ? 'block' : 'none';
+//   });
+// });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+// window.addEventListener('DOMContentLoaded', () => {     
