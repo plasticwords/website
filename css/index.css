@@ -228,8 +228,9 @@ padding-bottom: 2vh;
   .box1-reason {
     display: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1rem;
+    font-size: 1.05rem;
     /* font-size: 1.1rem; */
+    /* font-size: 1rem; */
     text-align: justify;
     height: fit-content;
   }
