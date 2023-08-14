@@ -240,6 +240,36 @@ padding-bottom: 2vh;
     color: #B450B0;
     font-weight: bold;
 }
+/* _______________________________
+Responsive design - Phone: */
+
+@media screen and (max-width: 992px) {
+
+    .grid-container {
+        grid-template-areas: 
+        "instructions";
+    }
+
+
+.explaining-text {
+    display: none;
+}
+
+.grid-text {
+    display: none;
+}
+
+.grid-pink {
+    display: none;
+}
+
+.grid-blue {
+    display: none;
+}
+}
+
+/* comment out  grid-area: menu-area; */
+
 
 /* _____________________________________
 ANIMATION EFFECTS START
