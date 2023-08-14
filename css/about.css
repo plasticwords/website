@@ -584,6 +584,10 @@
     height: 175px;
   }
 
+  .biography-title {
+    display: block;
+  }
+
   .footer {
     width: 90%;
     margin: auto;
