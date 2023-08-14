@@ -248,6 +248,20 @@ Responsive design - Phone: */
     .grid-container {
         grid-template-areas: 
         "instructions";
+        padding: 0;
+        width: 100vw;
+        /* height: 100vh; */
+    }
+
+    .instructions {
+        border-top: none;
+        justify-content: center;
+        /* align-content: center; */
+        padding: 35% 20% 0 0;
+    }
+
+    .instructions a {
+        font-size: 1.5rem;
     }
 
     .explaining-text {
