@@ -250,22 +250,21 @@ Responsive design - Phone: */
         "instructions";
     }
 
+    .explaining-text {
+        display: none;
+    }
 
-.explaining-text {
-    display: none;
-}
+    .grid-text {
+        display: none;
+    }
 
-.grid-text {
-    display: none;
-}
+    .grid-pink {
+        display: none;
+    }
 
-.grid-pink {
-    display: none;
-}
-
-.grid-blue {
-    display: none;
-}
+    .grid-blue {
+        display: none;
+    }
 }
 
 /* comment out  grid-area: menu-area; */
