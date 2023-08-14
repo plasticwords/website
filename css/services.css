@@ -475,6 +475,14 @@
     height: 6vh;
   }
 
+  .service-intro {
+    text-align: left;
+  }
+
+  .service-detail div {
+    text-align: left;
+  }
+
   .footer {
     width: 90%;
     margin: auto;
