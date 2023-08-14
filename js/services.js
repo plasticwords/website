@@ -128,7 +128,7 @@
         resetServiceTitles();
         serviceTitle[i].style.color = '#B450B0';
         serviceTitle[i].style.opacity = '1';
-        serviceTitle[i].style.fontWeight = 'bold';
+        // serviceTitle[i].style.fontWeight = 'bold';
         serviceDetail[i].style.display = 'block';
         // serviceDetail[i].style.borderLeft = '1px solid #7d8590';
         // serviceDetail[i].style.borderRight = '1px solid #7d8590';
