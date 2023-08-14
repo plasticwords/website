@@ -144,7 +144,8 @@
         // serviceDetail[i].style.color = '#7C7C81';
         // serviceDetail[i].style.color = '#7d8590';
         // serviceDetail[i].style.color = 'black'; 
-        serviceDetail[i].style.padding = '3% 15% 3% 15%'
+        // serviceDetail[i].style.padding = '3% 15% 3% 15%'
+        serviceDetail[i].style.padding = '3% 5% 3% 5%'
         // serviceDetail[i].style.padding = '3%'
         // serviceDetail[i].style.fontWeight = 'bold';    
         // serviceDetail[i].style.borderRadius = '25px'; // loop through elements in NodeList to have this in dark mode
