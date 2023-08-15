@@ -260,12 +260,15 @@ Responsive design - Phone: */
 
     .instructions {
         border-top: 1px solid lightgray;
+        border-top: 2px solid #7289DA;
+        /* border-top: none; */
         border-bottom: 1px solid lightgray;
+        border-bottom: 2px solid #7289DA;
         /* height: fit-content; */
         justify-content: center;
         /* align-content: center; */
         margin: 35% 0 0 0;
-        padding-right: 20%;
+        padding: 40px 25% 45px 0;
     }
 
     .menu img {
@@ -273,7 +276,7 @@ Responsive design - Phone: */
         width: 10vw;
         height: auto;
         float: right;
-        padding-top: 20px;
+        padding-top: 15px;
     }
 
     .instructions a {
