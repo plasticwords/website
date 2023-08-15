@@ -201,7 +201,7 @@ padding-bottom: 2vh;
   } */
 
   .menu {
-    grid-area: menu-area;
+    /* grid-area: menu-area; */
     margin-left: 10%;
     font-size: 1.1rem;
     /* font-size: 1.5rem; */
@@ -225,7 +225,11 @@ padding-bottom: 2vh;
     opacity: 0.5;
   }
 
-  .menu img {
+  .welcome {
+    display: none;
+  }
+
+  .instructions img {
     display: none;
   }
 
@@ -244,8 +248,9 @@ padding-bottom: 2vh;
     color: #B450B0;
     font-weight: bold;
 }
+
 /* _______________________________
-Responsive design - Phone: */
+Responsive design - Tablet: */
 
 @media screen and (max-width: 992px) {
 
@@ -259,17 +264,12 @@ Responsive design - Phone: */
     }
 
     .instructions {
-        border-top: 1px solid lightgray;
-        border-top: 1px solid #7289DA;
         border-top: none;
         /* border-bottom: 1px solid lightgray; */
-        /* border-bottom: 1px solid #7289DA; */
-        /* height: fit-content; */
         justify-content: center;
-        /* align-content: center; */
+        padding-top: 40px;
         margin-top: 15%;
         /* margin-top: 35%; */
-        padding-top: 40px;
         padding-right: 10%;
     }
 
@@ -287,9 +287,10 @@ Responsive design - Phone: */
     }
 
     .welcome {
+        display: block;
         padding-top: 15px;
         writing-mode: vertical-lr; 
-        text-align: right;
+        /* text-align: right; */
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         color: #7289DA;
         font-size: 1rem;
@@ -316,9 +317,6 @@ Responsive design - Phone: */
         display: none;
     }
 }
-
-/* comment out  grid-area: menu-area; */
-
 
 /* _____________________________________
 ANIMATION EFFECTS START
