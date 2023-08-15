@@ -267,12 +267,14 @@ Responsive design - Phone: */
         /* height: fit-content; */
         justify-content: center;
         /* align-content: center; */
-        margin: 35% 0 0 0;
-        padding: 40px 10% 0 0;
+        margin-top: 35%;
+        padding-top: 40px;
+        padding-right: 10%;
     }
 
     .menu {
-        padding-right: 10px;
+        padding-right: 15px;
+        padding-left: 100px;
     }
 
     .instructions img {
@@ -280,7 +282,18 @@ Responsive design - Phone: */
         width: 12vw;
         height: auto;
         /* float: right; */
-        padding: 50% 0 0 10px;
+        padding-top: 50%;
+        padding-left: 15px;
+        
+    }
+
+    .welcome {
+        writing-mode: vertical-rl; 
+        text-align: right;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: #7289DA;
+        font-size: 1.5rem;
+        padding-left: 75px;
     }
 
     .instructions a {
