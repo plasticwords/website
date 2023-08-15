@@ -225,6 +225,10 @@ padding-bottom: 2vh;
     opacity: 0.5;
   }
 
+  .menu img {
+    display: none;
+  }
+
   .box1-reason {
     display: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -250,15 +254,26 @@ Responsive design - Phone: */
         "instructions";
         padding: 0;
         width: 100vw;
-        height: 95vh;
+        /* height: 95vh; */
         /* height: 100vh; */
     }
 
     .instructions {
-        border-top: none;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        /* height: fit-content; */
         justify-content: center;
         /* align-content: center; */
-        padding: 35% 20% 0 0;
+        margin: 35% 0 0 0;
+        padding-right: 20%;
+    }
+
+    .menu img {
+        display: block;
+        width: 10vw;
+        height: auto;
+        float: right;
+        padding-top: 20px;
     }
 
     .instructions a {
