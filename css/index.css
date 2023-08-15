@@ -273,11 +273,12 @@ Responsive design - Phone: */
 
     .instructions img {
         display: block;
-        width: 10vw;
+        width: 12vw;
         height: auto;
         /* float: right; */
         padding-bottom: 15px;
         padding-left: 25px;
+        padding-top: 60%;
     }
 
     .instructions a {
