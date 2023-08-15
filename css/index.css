@@ -271,6 +271,11 @@ Responsive design - Phone: */
         padding: 40px 10% 15px 0;
     }
 
+.menu {
+    border-right: 1px solid lightgray;
+    padding-right: 15px;
+}
+
     .instructions img {
         display: block;
         width: 12vw;
