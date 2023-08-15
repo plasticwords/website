@@ -256,21 +256,19 @@ Responsive design - Phone: */
         width: 100vw;
         height: 95vh;
         /* height: 100vh; */
-        background-color:#7289DA
     }
 
     .instructions {
         border-top: 1px solid lightgray;
-        border-top: 2px solid #7289DA;
+        border-top: 3px solid #7289DA;
         /* border-top: none; */
         border-bottom: 1px solid lightgray;
-        border-bottom: 2px solid #7289DA;
+        border-bottom: 3px solid #7289DA;
         /* height: fit-content; */
         justify-content: center;
         /* align-content: center; */
         margin: 35% 0 0 0;
         padding: 40px 25% 45px 0;
-        background: #F3F2EE;
     }
 
     .menu img {
