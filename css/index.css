@@ -263,20 +263,21 @@ Responsive design - Phone: */
         border-top: 1px solid #7289DA;
         border-top: none;
         border-bottom: 1px solid lightgray;
-        border-bottom: 1px solid #7289DA;
+        /* border-bottom: 1px solid #7289DA; */
         /* height: fit-content; */
         justify-content: center;
         /* align-content: center; */
         margin: 35% 0 0 0;
-        padding: 40px 25% 45px 0;
+        padding: 40px 10% 45px 0;
     }
 
-    .menu img {
+    .instructions img {
         display: block;
         width: 10vw;
         height: auto;
         /* float: right; */
         padding-bottom: 15px;
+        padding-left: 25px;
     }
 
     .instructions a {
