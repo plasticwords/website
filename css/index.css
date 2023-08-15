@@ -267,7 +267,8 @@ Responsive design - Phone: */
         /* height: fit-content; */
         justify-content: center;
         /* align-content: center; */
-        margin-top: 35%;
+        margin-top: 25%;
+        /* margin-top: 35%; */
         padding-top: 40px;
         padding-right: 10%;
     }
@@ -291,7 +292,7 @@ Responsive design - Phone: */
         text-align: right;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         color: #7289DA;
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding-left: 100%;
     }
 
