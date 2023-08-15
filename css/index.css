@@ -256,6 +256,7 @@ Responsive design - Phone: */
         width: 100vw;
         height: 95vh;
         /* height: 100vh; */
+        background-color:#7289DA
     }
 
     .instructions {
@@ -269,6 +270,7 @@ Responsive design - Phone: */
         /* align-content: center; */
         margin: 35% 0 0 0;
         padding: 40px 25% 45px 0;
+        background: #F3F2EE;
     }
 
     .menu img {
