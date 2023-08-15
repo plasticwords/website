@@ -268,11 +268,11 @@ Responsive design - Phone: */
         justify-content: center;
         /* align-content: center; */
         margin: 35% 0 0 0;
-        padding: 40px 10% 15px 0;
+        padding: 40px 10% 15px;
     }
 
 .menu {
-    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
     padding-right: 15px;
 }
 
@@ -284,6 +284,7 @@ Responsive design - Phone: */
         padding-bottom: 15px;
         padding-left: 25px;
         padding-top: 100%;
+        border-right: 1px solid lightgray;
     }
 
     .instructions a {
