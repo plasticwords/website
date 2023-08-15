@@ -274,7 +274,6 @@ Responsive design - Phone: */
 
     .menu {
         padding-right: 15px;
-        padding-left: 100px;
     }
 
     .instructions img {
@@ -284,16 +283,16 @@ Responsive design - Phone: */
         /* float: right; */
         padding-top: 50%;
         padding-left: 15px;
-        
     }
 
     .welcome {
-        writing-mode: vertical-rl; 
+        padding-top: 15px;
+        writing-mode: vertical-lr; 
         text-align: right;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         color: #7289DA;
         font-size: 1.5rem;
-        padding-left: 75px;
+        padding-left: 100%;
     }
 
     .instructions a {
