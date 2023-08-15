@@ -260,10 +260,10 @@ Responsive design - Phone: */
 
     .instructions {
         border-top: 1px solid lightgray;
-        border-top: 3px solid #7289DA;
+        border-top: 1px solid #7289DA;
         /* border-top: none; */
         border-bottom: 1px solid lightgray;
-        border-bottom: 3px solid #7289DA;
+        border-bottom: 1px solid #7289DA;
         /* height: fit-content; */
         justify-content: center;
         /* align-content: center; */
