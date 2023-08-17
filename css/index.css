@@ -249,10 +249,7 @@ padding-bottom: 2vh;
     font-weight: bold;
 }
 
-/* _______________________________
-Responsive design - Tablet: */
-
-@media screen and (max-width: 1500px) {
+/* @media screen and (max-width: 992px) { */
 
     .grid-container {
         grid-template-areas: 
@@ -282,10 +279,10 @@ Responsive design - Tablet: */
 
     .instructions img {
         display: block;
-        width: 12vw;
+        width: 40%;
         height: auto;
         /* float: right; */
-        padding-top: 50%;
+        padding-top: 40%;
         padding-left: 15px;
     }
 
@@ -319,7 +316,7 @@ Responsive design - Tablet: */
     .grid-blue {
         display: none;
     }
-}
+/* } */
 
 /* _____________________________________
 ANIMATION EFFECTS START
