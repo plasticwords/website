@@ -335,6 +335,7 @@
     text-decoration: underline;
     font-style: italic;
     color: #7C7C81;
+    color: #7D8590; /* dark mode default */
     /* font-family: Cambria; */
   }
 
