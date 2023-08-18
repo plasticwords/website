@@ -1,5 +1,6 @@
   html {
     background: #F3F2EE;
+    background: #0D1117; /* dark mode default */
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -13,6 +14,7 @@
     margin-top: 5vh;
     font-family: monospace;
     color: #7C7C81;
+    color: #7D8590; /* dark mode default */
     /* color: black; */
   }
 
@@ -54,6 +56,7 @@
 
   .menu-link:hover {
     color: rgba(180, 80, 176, 0.8);
+    color: #7289DA; /* dark mode default */
     cursor: pointer;
   }
 
@@ -64,6 +67,7 @@
 
   #active-page {
     color: #B450B0;
+    color: #7289DA; /* dark mode default */
     opacity: 1;
     writing-mode: horizontal-tb;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -97,7 +101,6 @@
   }
 
   .title {
-    background-color: white;
     padding-left: 1%;
     padding-top: 0.5%;
     padding-right: 1%;
@@ -105,11 +108,15 @@
     margin-left: -1%;
     margin-right: -1%;
     border-radius: 7.5px;
+    background-color: white;
+    background-color: #010409; /* dark mode default */
     border: lightgray 1px solid;
+    border: 2px solid rgba(255, 255, 255, 0.075); /* dark mode default */
   }
 
   #title-text {
     opacity: 0.65;
+    /* color: no need to change this, will take color from .container */
   }
 
   .mode {
@@ -127,6 +134,7 @@
   .footer {
     font-size: 1rem;
     border-top: 1px solid lightgray;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.075); /* dark mode default */
     grid-area: footer;
     width: 70%;
     margin-top: 5vh;
@@ -140,6 +148,7 @@
   footer a {
     text-decoration: none;
     color: #7C7C81;
+    color: #7D8590; /* dark mode default */
   }
 
   footer a:hover {
@@ -149,6 +158,7 @@
 
   .footer-social-link {
     text-decoration: underline;
+    /* color: have changed in ".foooter a" class  */
   }
 
   .footer-wording {
@@ -198,6 +208,7 @@
     font-family: monospace;
     font-size: 1rem;
     color: #B450B0;
+    color: #7289DA; /* dark mode default */
     writing-mode: horizontal-tb;
     text-align: right;
     /* border-top: 1px solid lightgray; */
@@ -215,6 +226,11 @@
   .dark-mode-on {
     color: #7289DA;
     display: none;
+    display: block; /* dark mode default */
+  }
+
+  .light-mode-on {
+    display: none; /* dark mode default */
   }
 
   /* .gradient-text {
@@ -256,6 +272,7 @@
   .flex-container a {
     text-decoration: none;
     color: #7C7C81;
+    color: #7D8590; /* dark mode default */
   }
 
   /* .about-introduction {
@@ -330,20 +347,23 @@
     text-align: left;
     font-weight: bold;
     font-style: italic;
+    color: #7D8590; /* dark mode default. Don't need this, control via ".flex-container a" */
     /* border-bottom: 1px solid lightgray; 
     padding-bottom: 10px; */
   }
 
   .blog-summary {
     border-bottom: 1px solid lightgray; 
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.075); /* dark mode default */
     padding-bottom: 10px;
     text-align: justify;
+    color: #7D8590; /* dark mode default. Don't need this, control via ".flex-container a" */
   }
 
   .blog-name:hover, .blog-summary:hover {
     cursor: pointer;
     /* opacity: 0.5; */
-    color: #B450B0;
+    color: #B450B0;  /* unchanged in dark mode default. (Have kept hover effects the same in blog-name & blog-summary for default dark mode.) */
   }
 
   .blog-date {
@@ -439,6 +459,7 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid lightgray;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.075); /* dark mode default */
     /* Make header top layer in document:  */
     z-index: 2;
     position: relative;
@@ -453,6 +474,7 @@
     height: 4px;
     margin: 4px;
     background: #B450B0;
+    background: #7289DA; /* dark mode default */
     transition: all 0.3s ease-in;
   }
 
@@ -538,6 +560,7 @@
     width: 100vw;
     /* width: 100%; */
     background-color: #F3F2EE;
+    background-color: #0D1117; /* dark mode default */
     display: flex;
     flex-direction: column;
     justify-content: center;

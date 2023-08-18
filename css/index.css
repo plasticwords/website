@@ -266,7 +266,9 @@ padding-bottom: 2vh;
         border-top: none;
         /* border-bottom: 1px solid lightgray; */
         justify-content: center;
-        padding-top: 5vh;
+        padding-left: 25vw;
+        padding-top: 15vh;
+        /* padding-top: 5vh; */
         /* padding-top: 40px; */
         /* margin-top: 15%; */
         margin-top: 20%;
