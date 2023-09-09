@@ -1,16 +1,42 @@
-// Enable dark (default) mode:
 const darkButton = document.querySelector('.dark-mode');
 const darkButtonResponsive = document.querySelector('.dark-mode-responsive');
 const darkBackground = document.querySelector('html');
 const darkModeInstruct = document.querySelector('.dark-mode-instruct');
+const lightButton = document.querySelector('.light-mode');
+const lightButtonResponsive = document.querySelector('.light-mode-responsive');
+const lightBackground = document.querySelector('html');
+const lightModeInstruct = document.querySelector('.light-mode-instruct');
 
+// Enable dark (default) mode:
 function enableDarkMode() {
     document.body.classList.remove('lightmode');
     darkBackground.style.background = '#0D1117';
+    // Store the user's preference for dark mode
+    localStorage.setItem('darkMode', 'enabled');
+  }
+
+// Enable light mode:
+function enableLightMode() {
+    document.body.classList.add('lightmode');
+    lightBackground.style.background = '#F3F2EE';
+    // Store the user's preference for light mode
+    localStorage.setItem('darkMode', 'disabled');
+  }
+
+// Check if the user has a preference for dark mode and apply it on page load
+const userPreference = localStorage.getItem('darkMode');
+if (userPreference === 'enabled') {
+    enableDarkMode();
+} else {
+    enableLightMode(); // Default to light mode if the preference is not set or set to 'disabled'
 }
 
+// Call the functions:
 darkButton.addEventListener('click', enableDarkMode);
 darkButtonResponsive.addEventListener('click', enableDarkMode);
+lightButton.addEventListener('click', enableLightMode);
+lightButtonResponsive.addEventListener('click', enableLightMode);
+
 
 // Display dark mode instructions:
 darkButton.addEventListener('mouseover', () => {
@@ -26,21 +52,6 @@ darkButton.addEventListener('mouseover', () => {
       darkModeInstruct.style.display = 'none';
     }, 3000); // 3000 milliseconds = 3 seconds
   });
-
-
-// Enable light mode:
-const lightButton = document.querySelector('.light-mode');
-const lightButtonResponsive = document.querySelector('.light-mode-responsive');
-const lightBackground = document.querySelector('html');
-const lightModeInstruct = document.querySelector('.light-mode-instruct');
-
-function enableLightMode() {
-    document.body.classList.add('lightmode');
-    lightBackground.style.background = '#F3F2EE';
-}
-
-lightButton.addEventListener('click', enableLightMode);
-lightButtonResponsive.addEventListener('click', enableLightMode);
 
 // Display light mode instructions:
 lightButton.addEventListener('mouseover', () => {  
