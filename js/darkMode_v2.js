@@ -23,10 +23,10 @@ function enableLightMode() {
     localStorage.setItem('darkMode', 'disabled');
   }
 
-// Check if the user has a preference for dark mode and apply it on page load:
-const userPreference = localStorage.getItem('darkMode');
-if (userPreference === 'enabled' || userPreference === null) {
-    enableDarkMode(); // Default to dark mode if the preference is not set or set to 'enabled'
+// Check if user has dark mode preference and apply on page load:
+const modePreference = localStorage.getItem('darkMode');
+if (modePreference === 'enabled' || modePreference === null) { // Default to dark mode if preference isn't set - i.e. initital visit - or set to 'enabled'
+    enableDarkMode(); 
 } else {
     enableLightMode(); 
 }
