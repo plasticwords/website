@@ -1,6 +1,28 @@
+    :root {
+    --background-color: #0D1117;
+    --text-color: #7D8590;
+    --link-color: #7289DA;
+    --link-color-hover: #7289DA;
+    --borders: 1.5px solid rgba(255, 255, 255, 0.075);
+    --title-background-color: #010409;
+    --title-border: 2px solid rgba(255, 255, 255, 0.075);
+    /* Fixed properties, unchanged in different themes: */
+    --primary-font: monospace;
+    --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .lightmode {
+    --background-color: #F3F2EE;
+    --text-color: #7C7C81;
+    --link-color: #B450B0;
+    --link-color-hover: rgba(180, 80, 176, 0.8);
+    --borders: 1px solid lightgray;
+    --title-background-color: white;
+    --title-border: 1px solid lightgray;
+  }
+  
   html {
-    background: #F3F2EE;
-    background: #0D1117; /* dark mode default */
+    background: #0D1117; /* for different modes, am changing this via javascript, not css properties */
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -12,9 +34,8 @@
     width: 100%;
     max-width: 1500px;
     margin-top: 5vh;
-    font-family: monospace;
-    color: #7C7C81;
-    color: #7D8590; /* dark mode default */
+    font-family: var(--primary-font);
+    color: var(--text-color);
     /* color: black; */
   }
 
@@ -71,8 +92,7 @@
   /* } */
 
   .menu-link:hover {
-    color: rgba(180, 80, 176, 0.8);
-    color: #7289DA; /* dark mode default */
+    color: var(--link-color-hover);
     cursor: pointer;
   }
 
@@ -82,11 +102,10 @@
   } */
 
   #active-page {
-    color: #B450B0;
-    color: #7289DA; /* dark mode default */
+    color: var(--link-color);
     opacity: 1;
     writing-mode: horizontal-tb;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: var(--secondary-font);
     width: 2.5vw;
     text-decoration: none;
   }
@@ -125,10 +144,8 @@
     margin-left: -1%;
     margin-right: -1%;
     border-radius: 7.5px;
-    background-color: white;
-    background-color: #010409; /* dark mode default */
-    border: lightgray 1px solid;
-    border: 2px solid rgba(255, 255, 255, 0.075); /* dark mode default */
+    background-color: var(--title-background-color);
+    border: var(--title-border);
     font-size: 1.25rem;
   }
 
@@ -150,8 +167,7 @@
 
   .footer {
     font-size: 1rem;
-    border-top: 1px solid lightgray;
-    border-top: 1.5px solid rgba(255, 255, 255, 0.075); /* dark mode default */
+    border-top: var(--borders);
     grid-area: footer;
     /* position: absolute;
     bottom: 0; */
@@ -171,8 +187,7 @@
 
   footer a {
     text-decoration: none;
-    color: #7C7C81;
-    color: #7D8590; /* dark mode default */
+    color: var(--text-color);
   }
 
   footer a:hover {
@@ -186,7 +201,7 @@
 
   .footer-wording {
     float: right;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: var(--secondary-font);
   }
 
   .branding {
@@ -211,21 +226,20 @@
     text-align: right;
     font-size: 1.2rem;
     margin-left: -25vw;
-    color: #7D8590;
+    color: var(--text-color);
     /* color: #B450B0; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: var(--secondary-font);
   }
 
   .mode-instruction-text-inset {
-    font-family: monospace; 
+    font-family: var(--primary-font);
     font-size: 0.8rem;
   }
 
   .mode-on {
-    font-family: monospace;
+    font-family: var(--primary-font);
     font-size: 1rem;
-    color: #B450B0;
-    color: #7289DA; /* dark mode default */
+    color: var(--link-color);
     writing-mode: horizontal-tb;
     text-align: right;
     /* border-top: 1px solid lightgray; */
@@ -237,11 +251,11 @@
   }
 
   .mode-on-inset {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: var(--secondary-font);
   }
 
   .dark-mode-on {
-    color: #7289DA;
+    color: var(--link-color);
     display: none;
     display: block; /* dark mode default */
   }
@@ -350,8 +364,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid lightgray;
-    border-bottom: 1.5px solid rgba(255, 255, 255, 0.075); /* dark mode default */
+    border-bottom: var(--borders);
     /* Make header top layer in document:  */
     z-index: 2;
     position: relative;
@@ -365,8 +378,7 @@
     width: 25px;
     height: 4px;
     margin: 4px;
-    background: #B450B0;
-    background: #7289DA; /* dark mode default */
+    background: var(--link-color);
     transition: all 0.3s ease-in;
   }
 
@@ -426,8 +438,7 @@
     /* height: 100%; */
     width: 100vw;
     /* width: 100%; */
-    background-color: #F3F2EE;
-    background-color: #0D1117; /* dark mode default */
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -446,7 +457,7 @@
   #active-page {
     /* border-bottom: 1px solid rgba(180, 80, 176, 1); */
     padding-bottom: 1px;
-    font-family: monospace;
+    font-family: var(--primary-font);
     width: fit-content;
   }
 
