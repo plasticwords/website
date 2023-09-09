@@ -280,8 +280,7 @@
   .biography-container {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
-    border-top: 1px solid lightgray;
-    border-top: 1.5px solid rgba(255, 255, 255, 0.075); /* dark mode default */
+    border-top: var(--borders);
     column-gap: 2.5%;
     padding-top: 2.5vh;
     padding-bottom: 2.5vh;
@@ -332,7 +331,7 @@
   .biography-name {
     font-size: 1.25rem;
     /* font-size: 1.2rem; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: var(--secondary-font);
     text-align: left;
     font-weight: bold;
     font-style: italic;
@@ -348,8 +347,7 @@
   .biography-link a {
     text-decoration: underline;
     font-style: italic;
-    color: #7C7C81;
-    color: #7D8590; /* dark mode default */
+    color: var(--text-color);
     /* font-family: Cambria; */
   }
 

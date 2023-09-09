@@ -147,8 +147,7 @@
   }
 
   .social {
-    color: #7C7C81;
-    color: #7D8590; /* dark mode default */
+    color: var(--text-color);
   }
 
   .footer {

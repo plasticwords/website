@@ -285,8 +285,7 @@
 
   .flex-container a {
     text-decoration: none;
-    color: #7C7C81;
-    color: #7D8590; /* dark mode default */
+    color: var(--text-color);
   }
 
   /* .about-introduction {
@@ -357,21 +356,20 @@
   .blog-name {
     font-size: 1.25rem;
     /* font-size: 1.2rem; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: var(--secondary-font);
     text-align: left;
     font-weight: bold;
     font-style: italic;
-    color: #7D8590; /* dark mode default. Don't need this, control via ".flex-container a" */
+    color: var(--text-color); /* dark mode default. Don't need this, control via ".flex-container a" */
     /* border-bottom: 1px solid lightgray; 
     padding-bottom: 10px; */
   }
 
   .blog-summary {
-    border-bottom: 1px solid lightgray; 
-    border-bottom: 1.5px solid rgba(255, 255, 255, 0.075); /* dark mode default */
+    border-bottom: var(--borders);
     padding-bottom: 10px;
     text-align: justify;
-    color: #7D8590; /* dark mode default. Don't need this, control via ".flex-container a" */
+    color: var(--text-color); /* dark mode default. Don't need this, control via ".flex-container a" */
   }
 
   .blog-name:hover, .blog-summary:hover {
@@ -382,7 +380,7 @@
 
   .blog-date {
     font-size: 0.8rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: var(--secondary-font);
     font-weight: normal;
     /* color: lightgray;
     color: black; */
