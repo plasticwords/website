@@ -9,6 +9,8 @@
     /* Fixed properties, unchanged in different themes: */
     --primary-font: monospace;
     --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* Properties unique to .this page: */
+    --scroll-track-background-color: #010409;
   }
 
   .lightmode {
@@ -19,6 +21,8 @@
     --borders: 1px solid lightgray;
     --title-background-color: white;
     --title-border: 1px solid lightgray;
+    /* Properties unique to .this page: */
+    --scroll-track-background-color: rgba(255, 255, 255, 0.8);
   }
  
   html {  
@@ -300,7 +304,7 @@ Review these seven "mode" classes, not sure which I need to keep: */
   }
 
   .scrollbar-style::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--scroll-track-background-color);
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 10px;
   }
