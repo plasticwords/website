@@ -15,18 +15,17 @@
     --background-color: #F3F2EE;
     --text-color: #7C7C81;
     --link-color: #B450B0;
-    --link-color-hover: rgba(180, 80, 176, 0.8);
+    --link-color-hover: rgba(180, 80, 176, 0.8); /* 80% opacity of #B450B0 */
     --borders: 1px solid lightgray;
     --title-background-color: white;
     --title-border: 1px solid lightgray;
   }
     
   html { 
-    background: #0D1117; /* for different modes, am changing this via javascript, not css properties */
+    background: #0D1117; /* will change main background via javascript, not css properties */
     font-size: 16px;
     margin: 0;
     padding: 0;
-    /* padding-bottom: 4vh; */
   }
   
   .container {
@@ -35,19 +34,18 @@
     max-width: 1500px;
     margin-top: 5vh;
     font-family: var(--primary-font);
-    color: var(--text-color)
+    color: var(--text-color);
     /* color: black; */
   }
 
-/* Main contents and navigation: */
+/* ___________________________________
+   Main contents and navigation: */
 
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 9fr 1.5fr;
     height: 95vh; /* container fills screen without any overflow */
-    /* height: 100vh; */
-    /* margin-top: 5vh; */
     grid-gap: 10px;
     grid-template-areas: 
     "menu-area text-area branding-area"
@@ -59,7 +57,6 @@
     writing-mode: vertical-lr;
     margin-left: 10%;
     font-size: 1.5rem;
-    /* color: rgba(124, 124, 129, 0.5); */
   }
 
   .menu-link {
@@ -67,23 +64,10 @@
     color: rgba(124, 124, 129, 0.25);
   }
 
-  /* .menu a {
-    text-decoration: none;
-    color: rgba(124, 124, 129, 0.25); */
-    /* color: rgba(124, 124, 129, 0.5); */
-    /* color: #7C7C81;
-    opacity: 50%; */
-  /* } */
-
   .menu-link:hover {
     color: var(--link-color-hover);
     cursor: pointer;
   }
-
-  /* .menu a:hover {
-    color: rgba(180, 80, 176, 0.8);
-    cursor: pointer;
-  } */
 
   #active-page {
     color: var(--link-color);
@@ -92,31 +76,13 @@
     font-family: var(--secondary-font);
     width: 2.5vw;
     text-decoration: none;
-    /* font-size: 1.6rem; */
+    font-size: 1.6rem;
   }
-
-  /* .scrambled-menu:hover .original {
-    display: none; 
-  }  
-
-  .scrambled-menu .update {
-    display: none;
-  }
-
-  .scrambled-menu:hover .update {
-    display: inline-block;
-    color: rgba(180, 80, 176, 0.8); */
-    /* color: #B450B0;
-    opacity: 85%; */
-  /* } */
 
   .text {
     grid-area: text-area;
     font-size: 1.25rem;
-    /* font-size: 1rem; */
-    /* border-bottom: lightgray 1px solid; */
     width: 70%;
-    /* width: 75%; */
   }
 
   .title {
@@ -133,7 +99,6 @@
 
   #title-text {
     opacity: 0.65;
-    /* color: no need to change this, will take color from .container */
   }
 
   .mode {
@@ -145,7 +110,6 @@
 
   .mode i:hover {
     opacity: 0.4;
-    /* color: #B450B0; */
   }
 
   .footer {
@@ -156,24 +120,18 @@
     margin-top: 5vh;
   }
 
-  /* .social {
-    color: #7C7C81;
-    font-size: 1.25rem;
-  } */
-
   footer a {
     text-decoration: none;
     color: var(--text-color);
   }
 
   footer a:hover {
-    opacity: 0.5;
-    /* color:#B450B0; I like this a lot tbh, but it's a minor change, and will take too much time to implement in dark mode. */
+    /* opacity: 0.5; */
+    color: var(--link-color);
   }
 
   .footer-social-link {
     text-decoration: underline;
-    /* color: have changed in ".foooter a" class  */
   }
 
   .footer-wording {
@@ -185,9 +143,6 @@
     grid-area: branding-area;
     display: flex;
     justify-content: space-between;
-    /* font-size: 1.5rem; */
-    /* Responsive with min. size of 22px (16px * 1.375). Used to be 26px. 
-    font-size: calc(1.375rem + 0.2vw); */
     writing-mode: vertical-rl;
     margin-right: 10%;
     margin-bottom: -5vh;
@@ -197,6 +152,9 @@
     width: 3vw;
     height: auto;
   }
+
+/* __________________________________________________________________
+Review these seven "mode" classes, not sure which I need to keep: */
 
   .mode-instruction-text {  
     writing-mode: horizontal-tb;
@@ -247,40 +205,17 @@
     display: none; /* dark mode default */
   }
 
-  /* .gradient-text {
-    color: #B450B0;
-    background-image: linear-gradient(0deg, fuchsia, #180ACE);
-    background-image: linear-gradient(0deg, grey, darkgrey);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #7C7C81;
-  } */
-
-  /* .branding-words img {
-    width: 9vw;
-    height: auto;
-    transform: rotate(90deg);
-    opacity: 0.65;
-    opacity: 0.8;
-    opacity: 0.2;
-    border-bottom: 1px solid #B450B0;
-    padding-bottom: 5vw;
-  }   */
-
   .responsive-header {
     display: none;
   }
 
-/* Start of code added for About section: */
+/* ____________________________________
+   Code added for About page: */
 
   .flex-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* text-align: justify; */
   }
 
   .flex-container a {
@@ -288,18 +223,10 @@
     color: var(--text-color);
   }
 
-  /* .about-introduction {
-    text-align: justify;
-    font-size: 1rem;
-    padding: 1.5vh 0 2vh 0;
-  } */
-
   .blog-container {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
-    /* border-top: 1px solid lightgray; */
     column-gap: 2.5%;
-    /* padding-top: 2.5vh; */
     padding-bottom: 2.5vh;
   }
 
@@ -316,65 +243,27 @@
 
   .blog-text {  
     font-size: 0.9rem;
-    /* font-size: 0.8rem; */
-    /* font-size: 1rem; */
     align-self: center;   
     margin-left: 1%;
-    /* margin-left: 3%; */
-    /* margin-bottom: 25px; */
     padding: 0 0 0 15px;
-    /* padding: 0 17.5px 0 15px; */
-    /* padding: 0 10px; */
-    /* padding: 0 20px; */
-    /* border-left: 1px solid lightgrey; // not working for dark mode  */
-    /* border-top: 1px solid lightgrey; */
-    /* border-bottom: 1px solid lightgray;  */
   }
-
-  /* .blog-text:hover { */
-    /* cursor: pointer;
-    opacity: 0.5; */
-    /* cursor: grab; */
-    /* cursor: s-resize; */
-    /* margin-right: -17.5vw; */
-    /* transition: all 0.5s ease-in; */
-    /* text-align: justify; */
-    /* background: rgba(0, 0, 0, 0.1); // i like this, but it's not working for dark mode */
-    /* background: rgba(180, 80, 176, 0.15); */
-    /* color: black; */
-    /* padding-top: 1vh; */
-    /* border-radius: 1%; */
-    /* border-radius: 2.5%; */
-    /* border: 2.5px solid #7C7C81; */
-    /* border: 2px solid rgba(180, 80, 176, 0.85); */
-    /* border: 2px solid darkgrey; */
-    /* border: 1px solid black; */
-    /* height: 210px;
-    font-size: 1rem; */
-  /* } */
 
   .blog-name {
     font-size: 1.25rem;
-    /* font-size: 1.2rem; */
     font-family: var(--secondary-font);
     text-align: left;
     font-weight: bold;
     font-style: italic;
-    color: var(--text-color); /* dark mode default. Don't need this, control via ".flex-container a" */
-    /* border-bottom: 1px solid lightgray; 
-    padding-bottom: 10px; */
   }
 
   .blog-summary {
     border-bottom: var(--borders);
     padding-bottom: 10px;
     text-align: justify;
-    color: var(--text-color); /* dark mode default. Don't need this, control via ".flex-container a" */
   }
 
   .blog-name:hover, .blog-summary:hover {
     cursor: pointer;
-    /* opacity: 0.5; */
     color: #B450B0;  /* unchanged in dark mode default. (Have kept hover effects the same in blog-name & blog-summary for default dark mode.) */
   }
 
@@ -382,9 +271,6 @@
     font-size: 0.8rem;
     font-family: var(--secondary-font);
     font-weight: normal;
-    /* color: lightgray;
-    color: black; */
-    /* font-style: italic; */
   }
 
   .blog-grid-layout {
@@ -400,52 +286,13 @@
     grid-area: text-area;
   }
 
-  /* may be able to move these properties to .blog-text & delete this class */
-  /* DELETE THESE CLASSES from <article> in blog.html */
-  /* .scrollbar {
-    float: left;
-    height: 200px; */
-    /* height: 250px; */
-    /* overflow-y: scroll;
-    overflow-x: hidden;
-  } */
-  
-  /* .scrollbar-style::-webkit-scrollbar {
-    width: 12px; */
-    /* width: 8px; */
-    /* background-color: #F5F5F5;
-    background-color: white; */
-  /* } */
-
-  /* .scrollbar-style::-webkit-scrollbar-track { */
-    /* -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3); */
-    /* background: rgba(255, 255, 255, 0.8); */
-    /* background: white; */
-    /* background-color: #F5F5F5; */
-    /* border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 10px;
-  } */
-  
-  /* .scrollbar-style::-webkit-scrollbar-thumb { */
-    /* -webkit-box-shadow: inset 0 0 6px lightgrey; */
-    /* background: rgba(124, 124, 129, 0.75); */
-    /* background: rgba(124, 124, 129, 1); */
-    /* background: rgba(180, 80, 176, 0.5); */
-    /* border: 3px solid transparent;
-    background-clip: content-box;
-    border-radius: 10px; 
-  }  */
-
-/* End of About section */
-
-
-/* Responsive design - Tablet: */
+/* __________________________________
+   Responsive design - Tablet: */
 
   @media screen and (max-width: 992px) {
 
   html {
     overflow-x: hidden;
-    /* overflow-y: hidden; */
   }
   
   .container {
@@ -488,14 +335,6 @@
     transition: all 0.3s ease-in;
   }
 
-  /* .scrambled-menu .update { 
-    display: inline-block;
-  }
-
-  .scrambled-menu .original { 
-    display: none; 
-  }  */
-
   .responsive-mode {
     font-size: 1.25rem;
   }
@@ -517,30 +356,9 @@
     display: none;
   }
 
-/* Start of responsive code added for About section: */
-
-/* .blog-text {
-  padding: 0 5px 0 0;
-} */
-
-/* .blog-text:hover {
-  cursor: auto;
-  margin-right: 0;
-  transition: none;
-  text-align: left;
-  padding-top: 0;
-  border: none;
-  border-radius: 0;
-  height: 175px;
-  font-size: 0.9rem;
-  height: 200px;
-} */
-
 .picture-grid-placement {
   align-self: center; 
 }
-
-/* End of responsive About sections */
 
   .branding {
     display: none;
@@ -549,16 +367,10 @@
   .footer {
     width: 100%;
     padding-bottom: 4vh;
-    /* justify-content: center; */
-    /* display: none; */
   }
 
-  /* .footer-wording {
-    float: left;
-    display: block;
-  }   */
-
-/* Responsive burger menu: */
+/* ____________________
+   Burger menu: */
 
   .menu {
     position: fixed;
@@ -566,9 +378,7 @@
     top: 0;
     z-index: 1;
     height: 100vh;
-    /* height: 100%; */
     width: 100vw;
-    /* width: 100%; */
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -578,7 +388,6 @@
     transition: transform 0.5s ease-in;
     writing-mode: horizontal-tb;
     font-size: 1.75rem;
-    /* margin-top: -7.5vh; */
   }
 
   .menu a {
@@ -586,19 +395,10 @@
   }
 
   #active-page {
-    /* border-bottom: 1px solid rgba(180, 80, 176, 1); */
     padding-bottom: 1px;
     font-family: var(--primary-font);
     width: fit-content;
   }
-
-  /* .active-page-border {
-    border-bottom: 1px solid rgba(180, 80, 176, 1);
-  } */
-
-  /* .menu-blnc-elements {
-    display: none;
-  } */
 
   .nav-active {
     transform: translateX(0%);
@@ -606,7 +406,6 @@
 
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
-    /* background: #B450B0; */
   }
 
   .toggle .line2 {
@@ -615,11 +414,11 @@
 
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-    /* background: #B450B0; */
   }
 }
 
-/* Responsive design - Phone: */
+/* _________________________________
+   Responsive design - Phone: */
 
   @media screen and (max-width: 576px) {
 
@@ -629,7 +428,6 @@
 
   .container {
     width: 100%;
-    /* margin-top: 4vh; */
   }
 
   .responsive-header img {
@@ -640,10 +438,6 @@
     padding: 0 5px 0 0;
   }  
 
-  /* .scrollbar {
-    height: 175px;
-  } */
-
   .blog-summary {
     text-align: left;
   }
@@ -653,12 +447,7 @@
     margin: auto;
   }
 
-  /* .social {
-    font-size: 1.75rem;
-  }  */
-
   .footer-wording {
-    /* float: left; */
     padding-top: 1vh;
   }  
 }
