@@ -236,8 +236,8 @@ Review these seven "mode" classes, not sure which I need to keep: */
   }
 
   .blog-container img:hover {
-    /* border-bottom: 5px solid #B450B0; */
-    border-bottom: 5px solid var(--link-color);
+    border-bottom: 5px solid #B450B0;
+    /* border-bottom: 5px solid var(--link-color); */
     margin-bottom: -5px;
     cursor: pointer;
   }
@@ -265,8 +265,8 @@ Review these seven "mode" classes, not sure which I need to keep: */
 
   .blog-name:hover, .blog-summary:hover {
     cursor: pointer;
-    /* color: #B450B0; */
-    color: var(--link-color);
+    color: #B450B0;
+    /* color: var(--link-color); */
   }
 
   .blog-date {
