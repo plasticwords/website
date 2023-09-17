@@ -67,3 +67,7 @@ lightButton.addEventListener('mouseover', () => {
       lightModeInstruct.style.display = 'none';
     }, 3000); // 3000 milliseconds = 3 seconds
   });
+
+
+  // MAY USE IN FUTURE:
+  // if (darkButton.classList.contains('active'))
