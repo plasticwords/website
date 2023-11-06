@@ -1,0 +1,368 @@
+  :root {
+    --background-color: #0D1117;
+    --text-color: #7D8590;
+    --link-color: #7289DA;
+    --link-color-hover: #7289DA;
+    --borders: 1.5px solid rgba(255, 255, 255, 0.075);
+    --title-background-color: #010409;
+    --title-border: 2px solid rgba(255, 255, 255, 0.075);
+    /* Fixed properties, unchanged in different themes: */
+    --primary-font: monospace;
+    --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .lightmode {
+    --background-color: #F3F2EE;
+    --text-color: #7C7C81;
+    --link-color: #B450B0;
+    --link-color-hover: rgba(180, 80, 176, 0.8); /* 80% opacity of #B450B0 */
+    --borders: 1px solid lightgray;
+    --title-background-color: white;
+    --title-border: 1px solid lightgray;
+  }
+
+  html {
+    background: #0D1117; /* will change main background via javascript, not css properties */
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+    margin-top: 5vh;
+    font-family: var(--primary-font);
+    color: var(--text-color);
+  }
+
+/* ___________________________________
+   Main contents and navigation: */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 9fr 1.5fr;
+    height: 95vh; /* container fills screen without any overflow */
+    grid-gap: 10px;
+    grid-template-areas: 
+    "menu-area text-area branding-area"
+    "...       footer    ...";
+  }
+  
+  .menu {
+    grid-area: menu-area;
+    writing-mode: vertical-lr;
+    margin-left: 10%;
+    font-size: 1.5rem;
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    color: rgba(124, 124, 129, 0.25); /* 25% opacity of #7C7C81; */
+  }
+
+  .menu-link:hover {
+    color: var(--link-color-hover);
+    cursor: pointer;
+  }
+
+  /* .menu a:hover {
+    color: rgba(180, 80, 176, 0.8);
+    cursor: pointer;
+  } */
+
+  #active-page {
+    color: var(--link-color);
+    opacity: 1;
+    writing-mode: horizontal-tb;
+    font-family: var(--secondary-font);
+    width: 2.5vw;
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+
+  .text {
+    grid-area: text-area;
+    font-size: 1.25rem;
+    width: 70%;
+    text-align: justify;
+  }
+
+  .text p, ol {
+    font-family: var(--secondary-font);
+  }
+
+  .title {
+    padding-left: 1%;
+    padding-top: 0.5%;
+    padding-right: 1%;
+    padding-bottom: 0.5%;
+    margin-left: -1%;
+    margin-right: -1%;
+    border-radius: 7.5px;
+    background-color: var(--title-background-color);
+    border: var(--title-border);
+  }
+
+  #title-text {
+    opacity: 0.65;
+  }
+
+  .mode {
+    float: right;
+    cursor: pointer;
+    padding-right: 5px;
+    opacity: 0.8;
+  }
+
+  .mode i:hover {
+    opacity: 0.4;
+  }
+
+  .footer {
+    font-size: 1rem;
+    border-top: var(--borders);
+    grid-area: footer;
+    width: 70%;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  footer a:hover {
+    /* opacity: 0.5; */
+    color: var(--link-color);
+  }
+
+  .footer-social-link {
+    text-decoration: underline;
+  }
+
+  .footer-wording {
+    float: right;
+    font-family: var(--secondary-font);
+  }
+
+  .branding {
+    grid-area: branding-area;
+    display: flex;
+    justify-content: space-between;
+    writing-mode: vertical-rl;
+    margin-right: 10%;
+    margin-bottom: -5vh;
+    height: 87.5vh;
+  }
+
+  .branding img {
+    width: 3vw;
+    height: auto;
+  }
+
+  /* __________________________________________________________________
+  Review these seven "mode" classes, not sure which I need to keep: */
+
+  .mode-instruction-text {  
+    writing-mode: horizontal-tb;
+    text-align: right;
+    font-size: 1.2rem;
+    margin-left: -25vw;
+    color: var(--text-color);
+    /* color: #B450B0; */
+    font-family: var(--secondary-font);
+  }
+
+  .mode-instruction-text-inset {
+    font-family: var(--primary-font);
+    font-size: 0.8rem;
+  }
+
+  .mode-on {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    color: var(--link-color);
+    writing-mode: horizontal-tb;
+    text-align: right;
+    /* border-top: 1px solid lightgray; */
+  }
+
+  .mode-on:hover {
+    cursor: not-allowed;
+    /* cursor: move; */
+  }
+
+  .mode-on-inset {
+    font-family: var(--secondary-font);
+  }
+
+  .dark-mode-on {
+    color: var(--link-color);
+    display: none;
+    display: block; /* dark mode default */
+  }
+
+  .light-mode-on {
+    display: none; /* dark mode default */
+  }
+
+  .responsive-header {
+    display: none;
+  }
+
+/* __________________________________
+   Responsive design - Tablet: */
+
+  @media screen and (max-width: 992px) {
+
+  html {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    width: 80%;
+  }
+
+  .grid-container {
+    width: 100%;
+    height: 85vh;
+    padding-top: 3vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+      "text-area"
+      "footer";
+  }
+
+  .responsive-header {
+    width: 92.5%;
+    padding-left: 7.5%;
+    padding-bottom: 1.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--borders);
+    /* Make header top layer in document:  */
+    z-index: 2;
+    position: relative;
+  }
+
+  .responsive-logo {
+    padding-right: 7.5%;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 4px;
+    margin: 4px;
+    background: var(--link-color);
+    transition: all 0.3s ease-in;
+  }
+
+  .responsive-mode {
+    font-size: 1.25rem;
+  }
+
+  .responsive-header img {
+    height: 4vh;
+    width: auto;
+  }
+
+  .text {
+    width: 90%;
+    margin: 0 auto;
+    z-index: 0;
+    position: relative;
+    padding-bottom: 5vh;
+  }
+
+  .mode {
+    display: none;
+  }
+
+  .branding {
+    display: none;
+  }
+
+  .footer {
+    width: 100%;
+    padding-bottom: 4vh;
+  }
+
+/* ____________________
+   Burger menu: */
+
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    writing-mode: horizontal-tb;
+    font-size: 1.75rem;
+  }
+
+  .menu a {
+    color: rgba(124, 124, 129, 1);
+  }
+
+  #active-page {
+    padding-bottom: 1px;
+    font-family: var(--primary-font);
+    width: fit-content;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* _________________________________
+   Responsive design - Phone: */
+
+  @media screen and (max-width: 576px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .responsive-header img {
+    height: 6vh;
+  }
+
+
+  .footer {
+    width: 90%;
+    margin: auto;
+  }
+
+  .footer-wording {
+    padding-top: 1vh;
+  }  
+}

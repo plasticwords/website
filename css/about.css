@@ -1,0 +1,504 @@
+   :root {
+    --background-color: #0D1117;
+    --text-color: #7D8590;
+    --link-color: #7289DA;
+    --link-color-hover: #7289DA;
+    --borders: 1.5px solid rgba(255, 255, 255, 0.075);
+    --title-background-color: #010409;
+    --title-border: 2px solid rgba(255, 255, 255, 0.075);
+    /* Fixed properties, unchanged in different themes: */
+    --primary-font: monospace;
+    --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* Properties unique to .this page: */
+    --scroll-track-background-color: #010409;
+  }
+
+  .lightmode {
+    --background-color: #F3F2EE;
+    --text-color: #7C7C81;
+    --link-color: #B450B0;
+    --link-color-hover: rgba(180, 80, 176, 0.8); /* 80% opacity of #B450B0 */
+    --borders: 1px solid lightgray;
+    --title-background-color: white;
+    --title-border: 1px solid lightgray;
+    /* Properties unique to .this page: */
+    --scroll-track-background-color: rgba(255, 255, 255, 0.8);
+  }
+ 
+  html {  
+    background: #0D1117; /* will change main background via javascript, not css properties */
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+    margin-top: 5vh;
+    font-family: var(--primary-font);
+    color: var(--text-color);
+  }
+ 
+/* ___________________________________
+   Main contents and navigation: */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 9fr 1.5fr;
+    height: 95vh; /* container fills screen without any overflow */
+    grid-gap: 10px;
+    grid-template-areas: 
+    "menu-area text-area branding-area"
+    "...       footer    ...";
+  }
+  
+  .menu {
+    grid-area: menu-area;
+    writing-mode: vertical-lr;
+    margin-left: 10%;
+    font-size: 1.5rem;
+  }
+
+  .menu-link {
+    text-decoration: none;
+    color: rgba(124, 124, 129, 0.25); /* 25% opacity of #7C7C81; */
+  }
+
+  .menu-link:hover {
+    color: var(--link-color-hover);
+    cursor: pointer;
+  }
+
+  #active-page {
+    color: var(--link-color);
+    opacity: 1;
+    writing-mode: horizontal-tb;
+    font-family: var(--secondary-font);
+    width: 2.5vw;
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+
+  .text {
+    grid-area: text-area;
+    font-size: 1.25rem;
+    width: 70%;
+  }
+
+  .title {
+    padding-left: 1%;
+    padding-top: 0.5%;
+    padding-right: 1%;
+    padding-bottom: 0.5%;
+    margin-left: -1%;
+    margin-right: -1%;
+    border-radius: 7.5px;
+    background-color: var(--title-background-color);
+    border: var(--title-border);
+  }
+
+  #title-text {
+    opacity: 0.65;
+  }
+
+  .mode {
+    float: right; /* this is causing <i> to go onto the next line */
+    cursor: pointer;
+    padding-right: 5px;
+    opacity: 0.8;
+  }
+
+  .mode i:hover {
+    opacity: 0.4;
+  }
+
+  .footer {
+    font-size: 1rem;
+    border-top: var(--borders);
+    grid-area: footer;
+    width: 70%;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  footer a:hover {
+    /* opacity: 0.5; */
+    color: var(--link-color);
+  }
+
+  .footer-social-link {
+    text-decoration: underline;
+  }
+
+  .footer-wording {
+    float: right;
+    font-family: var(--secondary-font);
+  }
+
+  .branding {
+    grid-area: branding-area;
+    display: flex;
+    justify-content: space-between;
+    writing-mode: vertical-rl;
+    margin-right: 10%;
+    margin-bottom: -5vh;
+    height: 87.5vh;
+  }
+
+  .branding img {
+    width: 3vw;
+    height: auto;
+  }
+
+/* __________________________________________________________________
+Review these seven "mode" classes, not sure which I need to keep: */
+
+  .mode-instruction-text {  
+    writing-mode: horizontal-tb;
+    text-align: right;
+    font-size: 1.2rem;
+    /* font-size: 1rem; */
+    margin-left: -25vw;
+    color: var(--text-color);
+    /* color: #B450B0; */
+    font-family: var(--secondary-font);
+  }
+
+  .mode-instruction-text-inset {
+    font-family: var(--primary-font);
+    font-size: 0.8rem;
+  }
+
+  .mode-on {
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    color: var(--link-color);
+    writing-mode: horizontal-tb;
+    text-align: right;
+    /* border-top: 1px solid lightgray; */
+  }
+
+  .mode-on:hover {
+    cursor: not-allowed;
+    /* cursor: move; */
+  }
+
+  .mode-on-inset {
+    font-family: var(--secondary-font);
+  }
+
+  .dark-mode-on {
+    color: var(--link-color);
+    display: none;
+    display: block; /* dark mode default */
+  }
+
+  .light-mode-on {
+    display: none; /* dark mode default */
+  }
+
+  .responsive-header {
+    display: none;
+  }
+
+/* ____________________________________
+   Code added for About page: */
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .about-introduction {
+    text-align: justify;
+    font-size: 1rem;
+    padding: 1.5vh 0 2vh 0;
+  }
+
+  .biography-container {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    border-top: var(--borders);
+    column-gap: 2.5%;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+  }
+
+  .biography-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .biography-text {  
+    font-size: 0.9rem;
+    align-self: center;   
+    margin-left: 1%;
+    padding: 0 17.5px 0 15px;
+    /* Scrollbar: */
+    float: left;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .biography-text:hover {
+    cursor: s-resize;
+    margin-right: -17.5vw;
+    transition: all 0.5s ease-in;
+    text-align: justify;
+    padding-top: 1vh;
+    border-radius: 1%;
+    /* maybe change borders for dark/light mode: */
+    border: 2.5px solid var(--text-color);
+    height: 210px;
+    font-size: 1rem;
+    /* background: rgba(0, 0, 0, 0.1); 
+    color: black; */
+  }
+
+  .biography-name {
+    font-size: 1.25rem;
+    font-family: var(--secondary-font);
+    text-align: left;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .biography-title {
+    font-size: 0.9rem;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .biography-link a {
+    text-decoration: underline;
+    font-style: italic;
+    color: var(--text-color);
+  }
+
+  .biography-link a:hover {
+    opacity: 0.5;
+  }
+
+  .biography-grid-layout {
+    grid-template-areas:
+    "picture-area   text-area";  
+  }
+
+  .picture-grid-placement {
+    grid-area: picture-area;
+  }
+
+  .text-grid-placement {
+    grid-area: text-area;
+  }
+  
+  .scrollbar-style::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .scrollbar-style::-webkit-scrollbar-track {
+    background: var(--scroll-track-background-color);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+  
+  .scrollbar-style::-webkit-scrollbar-thumb {
+    background: rgba(124, 124, 129, 0.75);
+    border: 3px solid transparent;
+    background-clip: content-box;
+    border-radius: 10px; 
+  }
+
+/* __________________________________
+   Responsive design - Tablet: */
+
+  @media screen and (max-width: 992px) {
+
+  html {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    width: 80%;
+  }
+
+  .grid-container {
+    width: 100%;
+    height: 85vh;
+    padding-top: 3vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+      "text-area"
+      "footer";
+  }
+
+  .responsive-header {
+    width: 92.5%;
+    padding-left: 7.5%;
+    padding-bottom: 1.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--borders);
+    /* Make header top layer in document:  */
+    z-index: 2;
+    position: relative;
+  }
+
+  .responsive-logo {
+    padding-right: 7.5%;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 4px;
+    margin: 4px;
+    background: var(--link-color);
+    transition: all 0.3s ease-in;
+  }
+
+  .responsive-mode {
+    font-size: 1.25rem;
+  }
+
+  .responsive-header img {
+    height: 4vh;
+    width: auto;
+  }
+
+  .text {
+    width: 90%;
+    margin: 0 auto;
+    z-index: 0;
+    position: relative;
+    padding-bottom: 5vh;
+  }
+
+  .mode {
+    display: none;
+  }
+
+  .biography-text:hover {
+    cursor: auto;
+    margin-right: 0;
+    transition: none;
+    text-align: left;
+    padding-top: 0;
+    border: none;
+    border-radius: 0;
+    font-size: 0.9rem;
+    height: 200px;
+  }
+
+  .picture-grid-placement {
+    align-self: center; 
+  }
+
+  .branding {
+    display: none;
+  }
+
+  .footer {
+    width: 100%;
+    padding-bottom: 4vh;
+  }
+
+/* ____________________
+   Burger menu: */
+
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    writing-mode: horizontal-tb;
+    font-size: 1.75rem;
+  }
+
+  .menu a {
+    color: rgba(124, 124, 129, 1);
+  }
+
+  #active-page {
+    padding-bottom: 1px;
+    font-family: var(--primary-font);
+    width: fit-content;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* _________________________________
+   Responsive design - Phone: */
+
+  @media screen and (max-width: 576px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .responsive-header img {
+    height: 6vh;
+  }
+
+  .biography-text {
+    padding: 0 5px 0 0;
+  }  
+
+  .scrollbar {
+    height: 175px;
+  }
+
+  .biography-text:hover {
+    height: 175px;
+  }
+
+  .biography-title {
+    display: block;
+  }
+
+  .footer {
+    width: 90%;
+    margin: auto;
+  }
+
+  .footer-wording {
+    padding-top: 1vh;
+  }  
+}
