@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="css/blog.css" />
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+    integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158044403-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-158044403-1");
+    </script>
+    <!-- Favicon: -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  </head>
+
+  <body class="container">
+
+    <!-- Responsive header: -->
+    <header class="responsive-header">
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <div class="responsive-mode">
+        <span class="light-mode-responsive"><i class="fas fa-star"></i></span> | <span class="dark-mode-responsive"><i class="fas fa-moon"></i></span>
+      </div>
+      <div class="responsive-logo"><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></a></div>
+    </header>
+
+    <!-- Main contents and navigation: -->
+    <div class="grid-container">
+
+      <nav class="menu">
+        <a href="index.html" class="menu-link">home</a>
+        <a href="blog.html" id="active-page">blog</a>
+        <a href="about.html" class="menu-link">about</a>
+        <a href="services.html" class="menu-link">services</a>
+        <a href="contact.html" class="menu-link">contact</a>
+      </nav>
+
+      <main class="text">
+        <div class="title">
+          <span id="title-text">ponderings, mutterings, meditations from the lair</span>
+          <span class="mode"><span class="light-mode"><i class="fas fa-star"></i></span> | <span class="dark-mode"><i class="fas fa-moon"></i></span></span>
+        </div>
+        
+        <section class="flex-container">
+          <p></p>
+          <!-- Blog 2: -->
+          <article class="blog-container blog-grid-layout">
+            <div class="picture-grid-placement"><a href="blog-nimbus.html"><img src="img/nimbusFinal.jpg" alt="blog-nimbus"></a></div>
+            <div class="blog-text text-grid-placement">
+              <a href="blog-nimbus.html">
+              <div class="blog-name">The nimbus Story</div>
+              
+              <p class="blog-summary">Throughout 2023, Plastic Words was fortunate to work with nimbus, an Australian technology company offering Work Force Optimisation (WFO) systems in the enterprise space.</p>
+              </a>
+              
+              <div class="blog-date">06/11/2023</div>
+            </div>
+          </article>
+
+          <!-- Blog 1: -->
+          <article class="blog-container blog-grid-layout">
+            <div class="picture-grid-placement"><a href="blog-corporatenarratives.html"><img src="img/oceanMirrorFinal.jpg" alt="blog-corporatenarratives"></a></div>
+            <div class="blog-text text-grid-placement">
+              <a href="blog-corporatenarratives.html">
+              <div class="blog-name">Corporate Narratives</div>
+              
+              <p class="blog-summary">Like a reliable watering hole, your company story should be the source of your brand and service messaging. Being able to confidently return to it makes such messaging a smooth task and ensures consistency.</p>
+              </a>
+              
+              <div class="blog-date">01/08/2023</div>
+            </div>
+          </article>
+
+          <!-- Blog template: -->
+          <!-- <article class="blog-container blog-grid-layout">
+            <div class="picture-grid-placement"><img src="img/oceanMirror.jpg" alt=""></div>
+            <div class="blog-text text-grid-placement">
+              <div class="blog-name"><strong>Lorem ipsum dolor sit amet</strong></div>
+            </div>
+          </article> -->   
+        </section>
+      </main>
+
+      <section class="branding">
+        <div><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></a></div>
+        <div class="dark-mode-instruct mode-instruction-text" style="display: none;">there creeps thy lunar darkness<br>as if illumined by the blazing night<br><span class="mode-instruction-text-inset">_aka DARK MODE</span></div>
+        <div class="light-mode-instruct mode-instruction-text" style="display: none;">whilst the starry sun grows mild<br>such a vista shalt dazzle and shimmer<br><span class="mode-instruction-text-inset">_aka LIGHT MODE</span></div>
+        <div class="mode-on">
+          <span class="mode-on-inset"></span>
+          <!-- our canvas in<br> -->
+          <div class="light-mode-on"></div>
+          <!-- _LIGHT <i style="padding-top: 3px;" class="fas fa-star"></i> MODE -->
+          <div class="dark-mode-on"></div>
+          <!-- _DARK <i style="padding-top: 5px;" class="fas fa-moon"></i> MODE -->
+          <!-- style="color: #7C7C81;"  -->
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p><a href="https://www.linkedin.com/company/plastic-words-australia/" target="_blank"><span class="footer-social-link">@Plastic</span>\/\<span class="footer-social-link">Words</span></a><span class="footer-wording">…where ecbole is destroyed.</span></p>
+      </footer>
+
+    </div>
+
+    <script type="text/javascript" src="js/burger.js"></script>
+    <!-- <script type="text/javascript" src="js/darkMode.js"></script> -->
+    <script type="text/javascript" src="js/darkMode_v2.js"></script>
+      
+  </body>
+</html>
+
+
+<!-- Run through semantic HTML markup list on each page when done. Will probably use:
+<figure> and <footer> in "about"
+<details> in "services"
+<article> in "blog." -->
