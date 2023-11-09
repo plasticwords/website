@@ -154,7 +154,7 @@
   }
 
 /* __________________________________________________________________
-Review these seven "mode" classes, not sure which I need to keep: */
+Have reviewed and culled, move me upwards in css:  */
 
   .mode-instruction-text {  
     writing-mode: horizontal-tb;
@@ -175,34 +175,6 @@ Review these seven "mode" classes, not sure which I need to keep: */
   .mode-instruction-text-inset {
     font-family: var(--primary-font);
     font-size: 0.8rem;
-  }
-
-  .mode-on {
-    font-family: var(--primary-font);
-    font-size: 1rem;
-    color: var(--link-color);
-    writing-mode: horizontal-tb;
-    text-align: right;
-    /* border-top: 1px solid lightgray; */
-  }
-
-  .mode-on:hover {
-    cursor: not-allowed;
-    /* cursor: move; */
-  }
-
-  .mode-on-inset {
-    font-family: var(--secondary-font);
-  }
-
-  .dark-mode-on {
-    color: var(--link-color);
-    display: none;
-    display: block; /* dark mode default */
-  }
-
-  .light-mode-on {
-    display: none; /* dark mode default */
   }
 
   .responsive-header {
