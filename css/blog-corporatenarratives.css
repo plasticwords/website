@@ -68,11 +68,6 @@
     cursor: pointer;
   }
 
-  /* .menu a:hover {
-    color: rgba(180, 80, 176, 0.8);
-    cursor: pointer;
-  } */
-
   #active-page {
     color: var(--link-color);
     opacity: 1;
@@ -121,6 +116,21 @@
     opacity: 0.4;
   }
 
+  .mode-instruction-text {  
+    writing-mode: horizontal-tb;
+    text-align: right;
+    font-size: 1.2rem;
+    margin-left: -25vw;
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+    padding-top: 3vh;
+  }
+
+  .mode-instruction-text-inset {
+    font-family: var(--primary-font);
+    font-size: 0.9rem;
+  }
+
   .footer {
     font-size: 1rem;
     border-top: var(--borders);
@@ -134,7 +144,6 @@
   }
 
   footer a:hover {
-    /* opacity: 0.5; */
     color: var(--link-color);
   }
 
@@ -160,24 +169,6 @@
   .branding img {
     width: 3vw;
     height: auto;
-  }
-
-  /* __________________________________________________________________
-  Have reviewed and culled, move me upwards in css: */
-
-  .mode-instruction-text {  
-    writing-mode: horizontal-tb;
-    text-align: right;
-    font-size: 1.2rem;
-    margin-left: -25vw;
-    color: var(--text-color);
-    /* color: #B450B0; */
-    font-family: var(--secondary-font);
-  }
-
-  .mode-instruction-text-inset {
-    font-family: var(--primary-font);
-    font-size: 0.8rem;
   }
 
   .responsive-header {

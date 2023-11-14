@@ -112,6 +112,21 @@
     opacity: 0.4;
   }
 
+  .mode-instruction-text {  
+    writing-mode: horizontal-tb;
+    text-align: right;
+    font-size: 1.2rem;
+    margin-left: -25vw;
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+    padding-top: 3vh;
+  }
+
+  .mode-instruction-text-inset {
+    font-family: var(--primary-font);
+    font-size: 0.9rem;
+  }
+
   .social {
     color: var(--text-color);
   }
@@ -130,7 +145,6 @@
   }
 
   footer a:hover {
-    /* opacity: 0.5; */
     color: var(--link-color);
   }
 
@@ -155,24 +169,6 @@
   .branding img {
     width: 3vw;
     height: auto;
-  }
-
-/* __________________________________________________________________
-Have reviewed and culled, move me upwards in css: */
-
-  .mode-instruction-text {  
-    writing-mode: horizontal-tb;
-    text-align: right;
-    font-size: 1.2rem;
-    margin-left: -25vw;
-    color: var(--text-color);
-    /* color: #B450B0; */
-    font-family: var(--secondary-font);
-  }
-
-  .mode-instruction-text-inset {
-    font-family: var(--primary-font);
-    font-size: 0.8rem;
   }
 
   .responsive-header {
@@ -325,8 +321,6 @@ Have reviewed and culled, move me upwards in css: */
 
   .social {
     font-size: 1.5rem;
-    /* font-size: 1.75rem; */
-    /* font-family: Glamour Absolute; */
   } 
 
   .footer {
