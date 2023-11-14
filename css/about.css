@@ -9,7 +9,7 @@
     /* Fixed properties, unchanged in different themes: */
     --primary-font: monospace;
     --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* Properties unique to .this page: */
+    /* Properties unique to this page: */
     --scroll-track-background-color: #010409;
   }
 
@@ -21,7 +21,7 @@
     --borders: 1px solid lightgray;
     --title-background-color: white;
     --title-border: 1px solid lightgray;
-    /* Properties unique to .this page: */
+    /* Properties unique to this page: */
     --scroll-track-background-color: rgba(255, 255, 255, 0.8);
   }
  
@@ -39,6 +39,7 @@
     margin-top: 5vh;
     font-family: var(--primary-font);
     color: var(--text-color);
+    /* color: black; */
   }
  
 /* ___________________________________
@@ -115,6 +116,21 @@
     opacity: 0.4;
   }
 
+  .mode-instruction-text {  
+    writing-mode: horizontal-tb;
+    text-align: right;
+    font-size: 1.2rem;
+    margin-left: -25vw;
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+    padding-top: 3vh;
+  }
+
+  .mode-instruction-text-inset {
+    font-family: var(--primary-font);
+    font-size: 0.9rem;
+  }
+
   .footer {
     font-size: 1rem;
     border-top: var(--borders);
@@ -128,7 +144,6 @@
   }
 
   footer a:hover {
-    /* opacity: 0.5; */
     color: var(--link-color);
   }
 
@@ -156,31 +171,11 @@
     height: auto;
   }
 
-/* __________________________________________________________________
-Have reviewed and culled, move me upwards in css:  */
-
-  .mode-instruction-text {  
-    writing-mode: horizontal-tb;
-    text-align: right;
-    font-size: 1.2rem;
-    /* font-size: 1rem; */
-    margin-left: -25vw;
-    color: var(--text-color);
-    /* color: #B450B0; */
-    font-family: var(--secondary-font);
-  }
-
-  .mode-instruction-text-inset {
-    font-family: var(--primary-font);
-    font-size: 0.8rem;
-  }
-
   .responsive-header {
     display: none;
   }
 
-/* ____________________________________
-   Code added for About page: */
+/* New code for About page: */
 
   .flex-container {
     display: flex;
@@ -227,12 +222,9 @@ Have reviewed and culled, move me upwards in css:  */
     text-align: justify;
     padding-top: 1vh;
     border-radius: 1%;
-    /* maybe change borders for dark/light mode: */
     border: 2.5px solid var(--text-color);
     height: 210px;
     font-size: 1rem;
-    /* background: rgba(0, 0, 0, 0.1); 
-    color: black; */
   }
 
   .biography-name {

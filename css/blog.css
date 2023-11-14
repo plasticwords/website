@@ -35,7 +35,6 @@
     margin-top: 5vh;
     font-family: var(--primary-font);
     color: var(--text-color);
-    /* color: black; */
   }
 
 /* ___________________________________
@@ -112,6 +111,21 @@
     opacity: 0.4;
   }
 
+  .mode-instruction-text {  
+    writing-mode: horizontal-tb;
+    text-align: right;
+    font-size: 1.2rem;
+    margin-left: -25vw;
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+    padding-top: 3vh;
+  }
+
+  .mode-instruction-text-inset {
+    font-family: var(--primary-font);
+    font-size: 0.9rem;
+  }
+
   .footer {
     font-size: 1rem;
     border-top: var(--borders);
@@ -126,7 +140,6 @@
   }
 
   footer a:hover {
-    /* opacity: 0.5; */
     color: var(--link-color);
   }
 
@@ -153,36 +166,11 @@
     height: auto;
   }
 
-/* __________________________________________________________________
-Have reviewed and culled, move me upwards in css:  */
-
-  .mode-instruction-text {  
-    writing-mode: horizontal-tb;
-    text-align: right;
-    font-size: 1.2rem;
-    margin-left: -25vw;
-    /* opacity: 0.8; */
-    color: var(--text-color);
-    /* color: #B450B0; */
-    font-family: var(--secondary-font);
-    /* border-bottom: 1px solid #B450B0;
-    padding-bottom: 10px; */
-    /* font-weight: bolder; */
-    /* padding-top: 80%; */
-    /* font-weight: bolder; */
-  }
-
-  .mode-instruction-text-inset {
-    font-family: var(--primary-font);
-    font-size: 0.8rem;
-  }
-
   .responsive-header {
     display: none;
   }
 
-/* ____________________________________
-   Code added for About page: */
+/* New code for Blog page: */
 
   .flex-container {
     display: flex;
@@ -209,7 +197,6 @@ Have reviewed and culled, move me upwards in css:  */
 
   .blog-container img:hover {
     border-bottom: 5px solid #B450B0;
-    /* border-bottom: 5px solid var(--link-color); */
     margin-bottom: -5px;
     cursor: pointer;
   }
@@ -235,10 +222,16 @@ Have reviewed and culled, move me upwards in css:  */
     text-align: justify;
   }
 
-  .blog-name:hover, .blog-summary:hover {
-    cursor: pointer;
+  .blog-name:hover {
     color: #B450B0;
-    /* color: var(--link-color); */
+    cursor: pointer;
+  }
+
+  .blog-summary:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #B450B0, #7289DA);
+    -webkit-background-clip: text; /* for Safari/Chrome */
+    color: transparent;
   }
 
   .blog-date {
