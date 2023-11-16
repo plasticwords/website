@@ -1,0 +1,338 @@
+html {
+    background-color: #F3F2EE;
+    font-size: 16px;
+    font-family: monospace;
+    /* color: gray; */
+    color: #7C7C81;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    height: 95vh;
+}
+
+.grid-container {
+    display: grid;
+    /* Can i just fit the row size to the content? */
+    grid-template-rows: 1.1fr 3.25fr 0.75fr 0.75fr 1.25fr; 
+    grid-template-areas: 
+    "explaining-text"
+    "text-area"
+    "pink-sq"
+    "blue-sq"
+    "instructions";
+    padding: 0 15% 0 15%;
+    /* padding: 0 10% 0 10%; */
+    /* row-gap: 3vh; */
+}
+
+.instructions {
+    grid-area: instructions;
+    border-top: 1px solid gray;
+    /* border-bottom: 1px solid gray; */
+    padding: 1%;
+    padding-top: 1.5vh;
+    font-size: 1rem;
+    /* font-size: 1.25rem; */
+    display: flex;
+    justify-content: end;
+}
+
+.explaining-text {
+    grid-area: explaining-text;
+    align-self: end;
+    padding-bottom: 2vh;
+    /* margin-top: 5vh; */
+    /* height: 1px; */
+    /* height: 5vh; */
+    }
+    
+    .explaining-text span {
+        display: none;
+    }
+
+    .grid-text {
+        grid-area: text-area;
+        align-self: end;
+        padding-bottom: 3vh;
+        /* padding-bottom: 5%; */
+    }
+
+    .text {
+        display: flex;
+        justify-content: space-between;
+        text-align: justify;
+        align-items: end;
+        border-top: 1px solid grey;
+        padding-top: 30px;
+        /* padding-top: 20px; */
+        /* padding-top: 50px; */
+        border-bottom: 1px solid grey;
+        padding-bottom: 30px; /* this is affecting the instructions box @ bottom. don't know why. */
+        /* padding-bottom: 20px; */
+        /* padding-bottom: 50px; */
+        font-size: 1rem;
+    }
+    
+    .text div {
+        width: 50%;
+    }
+
+    .before {
+        margin-right: 3.5%;
+        /* margin-right: 2.5%; */
+    }
+    
+    .after {
+        margin-left: 3.5%;
+        /* margin-left: 2.5%; */
+    }
+
+    .grid-pink {
+        grid-area: pink-sq;
+        padding-bottom: 3vh;
+    }
+    
+    .pink {
+        display: flex;  
+        justify-content: space-between;   
+    }
+
+
+    .pink-sq {
+        background-color: #B450B0;
+        height: 60px;
+        width: 60px;
+        opacity: 0.65;
+        /* opacity: 0.8; */
+        border: 1px solid black;
+        color: #B450B0;
+        transition: all 0.5s;
+        /* word-wrap: break-word; There shouldnt be any text in these boxes */
+        /* responsive squares:
+        height: 50%;
+        height: 5%
+        width: 5%; Set the width to 50% of the viewport width
+        padding-bottom: 5%;  Set the padding-bottom to 50% of the viewport width to maintain a square shape */
+    }
+    
+    .pink-sq:hover {
+        transform: rotate(135deg) scale(1.125);
+        /* transform: rotate(45deg) scale(1.1); */
+        /* transform: scale(1.25); */
+        cursor: pointer;
+        color: black;
+    }
+
+    .grid-blue {
+        grid-area: blue-sq;
+        padding-bottom: 3vh;
+    }
+    
+    .blue {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .blue-sq {
+        background-color: #7289DA;
+        height: 60px;
+        width: 60px;
+        border: 1px solid black;
+        transition: all 0.5s;
+        /* transition: all 0.3s; */
+        /* word-wrap: break-word; */
+        color: #7289DA;
+    }
+    
+    .blue-sq:hover {
+        transform: rotate(135deg) scale(1.125);
+        /* transform: rotate(45deg) scale(1.125); */
+        /* transform: rotate(45deg) scale(1.1); */
+        /* transform: scale(1.25); */
+        /* transform: rotate(90deg); */
+        cursor: pointer;
+        color: black;
+    }
+
+    .box1 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: black; 
+        background-color: white; 
+        font-size: 1.5rem; 
+        opacity: 1; 
+        text-align: left; 
+        font-weight: bold; 
+        padding: 15px; 
+        margin: 0 -30px -15px 0;
+        display: block;
+    }
+
+    .box16 {
+        height: 60px;
+        width: 60px;
+      }
+      
+      .box16 img {
+        height: 65px;
+        /* height: 3vh; */
+        width: auto;
+        justify-self: center;
+        align-items: center;
+      }
+      
+       /* .test {
+          background-color: #f7bfbe;
+          background-color: #AA98A9;
+          opacity: 1; 
+          background-color: #efbbcc;
+          background-color: #2A3439;
+          background-color: #4C516D;
+          background-color: lightgray;
+          background-color: gray;
+          background-color: black;
+       } */
+      
+        /* .coloured-text {
+          color:#B450B0; 
+          opacity: 1; 
+          display: inline;
+        } */
+
+.menu {
+    /* grid-area: menu-area; */
+    margin-left: 10%;
+    font-size: 1.1rem;
+    /* font-size: 1.5rem; */
+    text-align: right;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #B450B0;
+    /* color: #7289DA; */
+    /* color: #7C7C81; */
+    /* color: rgba(124, 124, 129, 0.25); */
+    /* color: rgba(124, 124, 129, 0.5); */
+    /* color: rgba(180, 80, 176, 0.8); */
+}
+
+.menu a:hover {
+    color: #7289DA;
+    /* color: #7C7C81; */
+    cursor: pointer;
+    /* opacity: 0.5; */
+}
+
+.instructions img {
+    display: none;
+  }
+
+.box1-reason {
+    display: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.05rem;
+    /* font-size: 1.1rem; */
+    /* font-size: 1rem; */
+    text-align: justify;
+    height: fit-content;
+  }
+
+.edit-hover {
+    background-color: rgba(180, 80, 176, 0.1);
+    color: #B450B0;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+
+.grid-container {
+    /* grid-template-areas: 
+    "instructions";
+    padding: 0;
+    width: 100vw;
+    height: 80vh; */
+    /* height: 95vh;
+    height: 100vh; */
+}
+.instructions {
+    /* border-bottom: 1px solid lightgray; */
+    /* border-top: none;
+    justify-content: center;
+    padding-left: 25vw;
+    padding-top: 15vh;
+    margin-top: 20%; */
+}
+
+/* .menu {
+    padding-right: 15px;
+} */
+
+.instructions img {
+    /* display: block;
+    width: 45%;
+    height: auto;
+    float: right;
+    padding-bottom: 20px; */
+}
+
+.instructions a {
+    font-size: 1.5rem;
+}
+
+.explaining-text {
+    display: none;
+}
+
+.grid-text {
+    display: none;
+}
+
+.grid-pink {
+    display: none;
+}
+
+.grid-blue {
+    display: none;
+}
+}
+
+
+/* _____________________________________
+ANIMATION EFFECTS START
+
+ .box-transformation {
+    transform: rotate(135deg);
+    transform: rotate(720deg);
+    transform: skew(50deg);
+    transform: scale(1) rotate(45deg);
+    transition: all 2s;
+    animation-fill-mode: forwards;
+ }
+
+.box-animation {
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	animation: pulse 0.75s 3;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95) rotate(0deg);
+        box-shadow: 0 0 0 0 rgba(180, 80, 176, 0.7);
+	}
+
+	70% {
+		transform: scale(1) rotate(0deg);
+		box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95) rotate(0deg);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+ANIMATION EFFECTS END
+_____________________________________ */
