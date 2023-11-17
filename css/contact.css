@@ -9,6 +9,8 @@
     /* Fixed properties, unchanged in different themes: */
     --primary-font: monospace;
     --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* CORPORATE CHANGE:
+    --font-size: 16px; */
   }
 
   .lightmode {
@@ -20,10 +22,23 @@
     --title-background-color: white;
     --title-border: 1px solid lightgray;
   }  
+
+  /* CORPORATE CHANGE:
+  .corporate {
+    --background-color: white;
+    --text-color: black;
+    --link-color: black;
+    --primary-font: Georgia;
+    --secondary-font: Georgia;
+    --font-size: 20px;
+    --title-border: none;
+  } */
   
   html {
     background: #0D1117; /* will change main background via javascript, not css properties */
     font-size: 16px;
+    /* CORPORATE CHANGE:
+    font-size: var(--font-size); */
     margin: 0;
     padding: 0;
   }
@@ -54,13 +69,21 @@
   .menu {
     grid-area: menu-area;
     writing-mode: vertical-lr;
+    /* CORPORATE CHANGE:
+    wri`ting-mode: horizontal-tb; */
     margin-left: 10%;
     font-size: 1.5rem;
+    /* CORPORATE CHANGE:
+    font-size: 1.25rem; */
   }
 
   .menu-link {
     text-decoration: none;
     color: rgba(124, 124, 129, 0.25); /* 25% opacity of #7C7C81; */
+    /* CORPORATE CHANGE:
+    color: rgba(124, 124, 129, 0.35); /* 25% opacity of #7C7C81;
+    display: block; 
+    font-family: monospace; */
   }
 
   .menu-link:hover {
@@ -70,12 +93,20 @@
 
   #active-page {
     color: var(--link-color);
+    /* CORPORATE CHANGE:
+    color: rgba(124, 124, 129, 0.35);  25% opacity of #7C7C81; 
+    color: black; */
     opacity: 1;
+    /* CORPORATE CHANGE:
+    opacity: 0.6; */
     writing-mode: horizontal-tb;
     font-family: var(--secondary-font);
     width: 2.5vw;
     text-decoration: none;
     font-size: 1.6rem;
+    /* CORPORATE CHANGE:
+    font-size: 1.36rem; */
+    
   }
 
   .text {
@@ -131,6 +162,8 @@
   }
 
   .footer {
+    /* CORPORATE CHANGE:
+    display: none; */
     font-size: 1rem;
     border-top: var(--borders);
     grid-area: footer;
