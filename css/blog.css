@@ -6,11 +6,18 @@
     --borders: 1.5px solid rgba(255, 255, 255, 0.075);
     --title-background-color: #010409;
     --title-border: 2px solid rgba(255, 255, 255, 0.075);
+    --active-page-fontsize: 1.6rem;
     /* Fixed properties, unchanged in different themes: */
     --primary-font: monospace;
     --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* Properties unique to this page: */
+    --blog-name-color-hover: #B450B0;
+    --grid-layout: "picture-area text-area";
+    --grid-images: block;
+    --grid-images-margin: 1%;
+    --grid-images-padding: 0 0 0 15px;
   }
-
+  
   .lightmode {
     --background-color: #F3F2EE;
     --text-color: #7C7C81;
@@ -19,6 +26,37 @@
     --borders: 1px solid lightgray;
     --title-background-color: white;
     --title-border: 1px solid lightgray;
+    --active-page-fontsize: 1.6rem;
+    /* Properties unique to this page: */
+    --blog-name-color-hover: #B450B0;
+    --grid-layout: "picture-area text-area";
+    --grid-images: block;
+    --grid-images-margin: 1%;
+    --grid-images-padding: 0 0 0 15px;
+  }
+
+  .corporatemode {
+    --background-color: white;
+    --text-color: black;
+    /* confirm me: */
+    --link-color: rgba(0, 0, 0, 0.65);
+    /* --link-color: grey; */
+    /* --link-color: black; */
+    --link-color-hover: black;
+    --borders: 1px solid lightgray;
+    --title-background-color: white;
+    --title-border: none;
+    /* confirm me: */
+    --active-page-fontsize: 1.35rem;
+    /* confirm me: */
+    --primary-font: Georgia;
+    --secondary-font: Georgia;
+    /* Properties unique to this page: */
+    --blog-name-color-hover: rgba(0, 0, 0, 0.4);
+    --grid-layout: "text-area text-area";
+    --grid-images: none;
+    --grid-images-margin: none;
+    --grid-images-padding: none;
   }
     
   html { 
@@ -76,7 +114,7 @@
     font-family: var(--secondary-font);
     width: 2.5vw;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: var(--active-page-fontsize);
   }
 
   .text {
@@ -99,6 +137,10 @@
 
   #title-text {
     opacity: 0.65;
+  }
+
+  #title-text-corporate {
+    font-size: 1.35rem;
   }
 
   .mode {
@@ -206,8 +248,8 @@
   .blog-text {  
     font-size: 0.9rem;
     align-self: center;   
-    margin-left: 1%;
-    padding: 0 0 0 15px;
+    margin-left: var(--grid-images-margin);
+    padding: var(--grid-images-padding);
   }
 
   .blog-name {
@@ -225,7 +267,7 @@
   }
 
   .blog-name:hover {
-    color: #B450B0;
+    color: var(--blog-name-color-hover);
     cursor: pointer;
   }
 
@@ -236,6 +278,11 @@
     color: transparent;
   }
 
+  .corporatemode .blog-summary:hover {
+    background: none;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
   .blog-date {
     font-size: 0.8rem;
     font-family: var(--secondary-font);
@@ -243,12 +290,12 @@
   }
 
   .blog-grid-layout {
-    grid-template-areas:
-    "picture-area   text-area";  
+    grid-template-areas: var(--grid-layout);
   }
 
   .picture-grid-placement {
     grid-area: picture-area;
+    display: var(--grid-images);
   }
 
   .text-grid-placement {

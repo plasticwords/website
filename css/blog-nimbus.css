@@ -6,9 +6,12 @@
     --borders: 1.5px solid rgba(255, 255, 255, 0.075);
     --title-background-color: #010409;
     --title-border: 2px solid rgba(255, 255, 255, 0.075);
+    --active-page-fontsize: 1.6rem;
     /* Fixed properties, unchanged in different themes: */
     --primary-font: monospace;
     --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* Properties unique to this page: */
+    --blog-subtitle-color: #7289DA;
   }
 
   .lightmode {
@@ -19,6 +22,29 @@
     --borders: 1px solid lightgray;
     --title-background-color: white;
     --title-border: 1px solid lightgray;
+    --active-page-fontsize: 1.6rem;
+    /* Properties unique to this page: */
+    --blog-subtitle-color: #B450B0;
+  }
+
+  .corporatemode {
+    --background-color: white;
+    --text-color: black;
+    /* confirm me: */
+    --link-color: rgba(0, 0, 0, 0.65);
+    /* --link-color: grey; */
+    /* --link-color: black; */
+    --link-color-hover: black;
+    --borders: 1px solid lightgray;
+    --title-background-color: white;
+    --title-border: none;
+    /* confirm me: */
+    --active-page-fontsize: 1.35rem;
+    /* confirm me: */
+    --primary-font: Georgia;
+    --secondary-font: Georgia;
+    /* Properties unique to this page: */
+    --blog-subtitle-color: black;
   }
 
   html {
@@ -75,7 +101,7 @@
     font-family: var(--secondary-font);
     width: 2.5vw;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: var(--active-page-fontsize);
   }
 
   .text {
@@ -105,6 +131,10 @@
     opacity: 0.65;
   }
 
+  #title-text-corporate {
+    font-size: 1.35rem;
+  }
+
   .mode {
     float: right;
     cursor: pointer;
@@ -132,7 +162,7 @@
   }
 
   .blog-subtitle {
-    color: var(--link-color);
+    color: var(--blog-subtitle-color);
     font-weight: bold;
     text-align: center;
   }

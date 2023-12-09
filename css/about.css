@@ -6,11 +6,14 @@
     --borders: 1.5px solid rgba(255, 255, 255, 0.075);
     --title-background-color: #010409;
     --title-border: 2px solid rgba(255, 255, 255, 0.075);
+    --active-page-fontsize: 1.6rem;
     /* Fixed properties, unchanged in different themes: */
     --primary-font: monospace;
     --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     /* Properties unique to this page: */
     --scroll-track-background-color: #010409;
+    --grid-layout: "picture-area text-area";
+    --grid-images: block;
   }
 
   .lightmode {
@@ -21,8 +24,33 @@
     --borders: 1px solid lightgray;
     --title-background-color: white;
     --title-border: 1px solid lightgray;
+    --active-page-fontsize: 1.6rem;
     /* Properties unique to this page: */
     --scroll-track-background-color: rgba(255, 255, 255, 0.8);
+    --grid-layout: "picture-area text-area";
+    --grid-images: block;
+  }
+
+  .corporatemode {
+    --background-color: white;
+    --text-color: black;
+    /* confirm me: */
+    --link-color: rgba(0, 0, 0, 0.65);
+    /* --link-color: grey; */
+    /* --link-color: black; */
+    --link-color-hover: black;
+    --borders: 1px solid lightgray;
+    --title-background-color: white;
+    --title-border: none;
+    /* confirm me: */
+    --active-page-fontsize: 1.35rem;
+    /* confirm me: */
+    --primary-font: Georgia;
+    --secondary-font: Georgia;
+    /* Properties unique to this page: */
+    --scroll-track-background-color: rgba(255, 255, 255, 0.8);
+    --grid-layout: "text-area text-area";
+    --grid-images: none;
   }
  
   html {  
@@ -80,7 +108,7 @@
     font-family: var(--secondary-font);
     width: 2.5vw;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: var(--active-page-fontsize);
   }
 
   .text {
@@ -103,6 +131,10 @@
 
   #title-text {
     opacity: 0.65;
+  }
+
+  #title-text-corporate {
+    font-size: 1.35rem;
   }
 
   .mode {
@@ -203,15 +235,29 @@
     height: auto;
   }
 
-  .biography-text {  
+  .biography-text { 
     font-size: 0.9rem;
-    align-self: center;   
+    align-self: center;
+    text-align: left;
     margin-left: 1%;
     padding: 0 17.5px 0 15px;
     /* Scrollbar: */
     float: left;
     height: 200px;
     overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .corporatemode .biography-text {
+    font-size: 0.9rem;
+    align-self: center;
+    text-align: justify;
+    margin-left: 0;
+    padding: 0;
+    /* Scrollbar: */
+    float: left;
+    height: fit-content;
+    overflow-y: visible;
     overflow-x: hidden;
   }
 
@@ -225,6 +271,18 @@
     border: 2.5px solid var(--text-color);
     height: 210px;
     font-size: 1rem;
+  }
+
+  .corporatemode .biography-text:hover {
+    cursor: auto;
+    margin-right: 0;
+    transition: none;
+    text-align: justify;
+    padding-top: 0;
+    border-radius: 0;
+    border: none;
+    height: fit-content; 
+    font-size: 0.9rem;
   }
 
   .biography-name {
@@ -252,12 +310,12 @@
   }
 
   .biography-grid-layout {
-    grid-template-areas:
-    "picture-area   text-area";  
+    grid-template-areas: var(--grid-layout);
   }
 
   .picture-grid-placement {
     grid-area: picture-area;
+    display: var(--grid-images);
   }
 
   .text-grid-placement {

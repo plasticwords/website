@@ -46,15 +46,41 @@
     font-size: 16px;
     margin: 0;
     padding: 0;
+    height: 100vh;
   }
   
   .container {
     margin: 0 auto;
     width: 100%;
     max-width: 1500px;
-    margin-top: 5vh;
+    margin-top: 10vh;
     font-family: var(--primary-font);
     color: var(--text-color);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    /* font-style: italic; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    border: 1px solid #FFA2F3;
+    padding: 10%;
+  }
+  
+  .grid-container a {
+    color: #FFA2F3;
+    text-decoration: none;
+  }
+  
+  .grid-container a:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .svg {
+    fill: #7C7C81;
   }
 
 /* ___________________________________
@@ -62,13 +88,18 @@
 
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 9fr 1.5fr;
-    height: 95vh; /* container fills screen without any overflow */
-    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    /* height: 50vh; */
+    height: 65vh;
+    width: 50vw;
     grid-template-areas: 
-    "menu-area text-area branding-area"
-    "...       footer    ...";
+    "text-area text-area"
+    "menu-area branding-area"
+    "footer      footer";
+    margin: auto;
+    padding-top: 7.5vh;
+    /* border: 1px solid yellow */
   }
   
   .menu {
@@ -80,6 +111,7 @@
 
   .menu-link {
     text-decoration: none;
+    /* confirm me, maybe change to variable: */
     color: rgba(124, 124, 129, 0.25); /* 25% opacity of #7C7C81; */
   }
 
@@ -114,6 +146,7 @@
     border-radius: 7.5px;
     background-color: var(--title-background-color);
     border: var(--title-border);
+    margin-bottom: 1vh;
   }
 
   #title-text {
@@ -183,8 +216,9 @@
   .branding {
     grid-area: branding-area;
     display: flex;
+    height: fit-content;
     justify-content: space-between;
-    writing-mode: vertical-rl;
+    /* writing-mode: vertical-rl; */
     margin-right: 10%;
     margin-bottom: -5vh;
   }
@@ -299,6 +333,7 @@
   }
 
   .menu a {
+    /* confirm me, maybe change to variable: */
     color: rgba(124, 124, 129, 1);
   }
 
