@@ -52,6 +52,7 @@
   .container {
     margin: 0 auto;
     width: 100%;
+    /* Contrain container size: */
     max-width: 1500px;
     margin-top: 10vh;
     font-family: var(--primary-font);
@@ -70,8 +71,14 @@
   }
   
   .grid-container a {
-    color: #FFA2F3;
+    /* color: #FFA2F3; */
+    color: var(--text-color);
     text-decoration: none;
+    /* background: linear-gradient(to right, #B450B0, #7289DA);
+    -webkit-background-clip: text;
+    color: transparent; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.65rem;
   }
   
   .grid-container a:hover {
@@ -83,14 +90,34 @@
     fill: #7C7C81;
   }
 
+  .title i {
+    font-size: 1.5rem;
+  }
+
+  /* .light-mode i {
+    color: #B450B0;
+  }
+
+  .corporate-mode i {
+    color: var(--text-color)
+  } */
+
+  .dark-mode i {
+    color: var(--link-color);
+  }
+
+  section {
+    margin-bottom: 6vh;
+  }
+
 /* ___________________________________
    Main contents and navigation: */
 
-  .grid-container {
+   /* OLD LAYOUT:> */
+  /* .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 8fr 1fr;
-    /* height: 50vh; */
     height: 65vh;
     width: 50vw;
     grid-template-areas: 
@@ -99,28 +126,40 @@
     "footer      footer";
     margin: auto;
     padding-top: 7.5vh;
-    /* border: 1px solid yellow */
-  }
+  } */
   
-  .menu {
+
+  .grid-container {
+    height: 65vh;
+    width: 40vw;
+    margin: auto;
+    display: flex;
+    /* padding-right: 10vw; */
+    padding: 2.5vh 10vw 0 0;
+    align-items: center;
+    align-self: center;
+  }
+
+
+  /* .menu {
     grid-area: menu-area;
     writing-mode: vertical-lr;
     margin-left: 10%;
     font-size: 1.5rem;
-  }
+  } */
 
-  .menu-link {
-    text-decoration: none;
+  /* .menu-link {
+    text-decoration: none; */
     /* confirm me, maybe change to variable: */
-    color: rgba(124, 124, 129, 0.25); /* 25% opacity of #7C7C81; */
-  }
+    /* color: rgba(124, 124, 129, 0.25);  25% opacity of #7C7C81; */
+  /* } */
 
-  .menu-link:hover {
+  /* .menu-link:hover {
     color: var(--link-color-hover);
     cursor: pointer;
-  }
+  } */
 
-  #active-page {
+  /* #active-page {
     color: var(--link-color);
     opacity: 1;
     writing-mode: horizontal-tb;
@@ -128,12 +167,12 @@
     width: 2.5vw;
     text-decoration: none;
     font-size: var(--active-page-fontsize);
-  }
+  } */
 
   .text {
-    grid-area: text-area;
+    /* grid-area: text-area; */
     font-size: 1.25rem;
-    width: 70%;
+    width: 100%;
   }
 
   .title {
@@ -150,7 +189,10 @@
   }
 
   #title-text {
-    opacity: 0.65;
+    /* opacity: 0.65; */
+    background: linear-gradient(to right, #B450B0, #7289DA);
+    -webkit-background-clip: text; /* for Safari/Chrome */
+    color: transparent;
   }
 
   #title-text-corporate {
@@ -158,17 +200,18 @@
   }
 
   .mode {
-    float: right;
+    /* float: right; */
+    padding-left: 49%;
     cursor: pointer;
     padding-right: 5px;
-    opacity: 0.8;
+    /* opacity: 0.8; */
   }
 
   .mode i:hover {
     opacity: 0.4;
   }
 
-  .mode-instruction-text {  
+  /* .mode-instruction-text {  
     writing-mode: horizontal-tb;
     text-align: right;
     font-size: 1.2rem;
@@ -176,26 +219,30 @@
     color: var(--text-color);
     font-family: var(--secondary-font);
     padding-top: 3vh;
-  }
+  } */
 
-  .mode-instruction-text-inset {
+  /* .mode-instruction-text-inset {
     font-family: var(--primary-font);
     font-size: 0.9rem;
-  }
+  } */
 
-  .social {
+  /* .social {
     color: var(--text-color);
-  }
+  } */
 
-  .footer {
+  /* moved to footer-wording */
+  /* .footer {
     font-size: 1rem;
     border-top: var(--borders);
     grid-area: footer;
     width: 70%;
     margin-top: 5vh;
-  }
+    background: linear-gradient(to right, #B450B0, #7289DA);
+    -webkit-background-clip: text;
+    color: transparent;
+  } */
 
-  footer a {
+  /* footer a {
     text-decoration: none;
     color: var(--text-color);
   }
@@ -206,40 +253,52 @@
 
   .footer-social-link {
     text-decoration: underline;
-  }
+  } */
 
   .footer-wording {
-    float: right;
-    font-family: var(--secondary-font);
+    /* float: right; */
+    font-family: var(--primary-font);
+
+    padding-top: 10px;
+    font-size: 1rem;
+    border-top: var(--borders);
+    /* grid-area: footer; */
+    width: 100%;
+    margin-top: 8vh;
+    /* margin-top: 5vh; */
+    background: linear-gradient(to right, #B450B0, #7289DA);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: right;
   }
 
-  .branding {
+  /* .branding {
     grid-area: branding-area;
     display: flex;
     height: fit-content;
-    justify-content: space-between;
+    justify-content: space-between; */
     /* writing-mode: vertical-rl; */
-    margin-right: 10%;
+    /* margin-right: 10%;
     margin-bottom: -5vh;
-  }
+  } */
 
-  .branding img {
+  /* .branding img {
     width: 3vw;
     height: auto;
-  }
+  } */
 
-  .responsive-header {
+  /* .responsive-header {
     display: none;
-  }
+  } */
 
 /* __________________________________
    Responsive design - Tablet: */
 
   @media screen and (max-width: 992px) {
 
-  html {
+  /* html {
     overflow-x: hidden;
-  }
+  } */
   
   .container {
     width: 80%;
@@ -256,20 +315,20 @@
       "footer";
   }
 
-  .responsive-header {
+  /* .responsive-header {
     width: 92.5%;
     padding-left: 7.5%;
     padding-bottom: 1.5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: var(--borders);
+    border-bottom: var(--borders); */
     /* Make header top layer in document:  */
-    z-index: 2;
+    /* z-index: 2;
     position: relative;
-  }
+  } */
 
-  .responsive-logo {
+  /* .responsive-logo {
     padding-right: 7.5%;
   }
 
@@ -288,7 +347,7 @@
   .responsive-header img {
     height: 4vh;
     width: auto;
-  }
+  } */
 
   .text {
     width: 90%;
@@ -298,7 +357,7 @@
     padding-bottom: 5vh;
   }
 
-  .mode {
+  /* .mode {
     display: none;
   }
 
@@ -309,12 +368,12 @@
   .footer {
     width: 100%;
     padding-bottom: 4vh;
-  }
+  } */
 
 /* ____________________
    Burger menu: */
 
-  .menu {
+  /* .menu {
     position: fixed;
     right: 0;
     top: 0;
@@ -330,14 +389,14 @@
     transition: transform 0.5s ease-in;
     writing-mode: horizontal-tb;
     font-size: 1.75rem;
-  }
+  } */
 
-  .menu a {
+  /* .menu a { */
     /* confirm me, maybe change to variable: */
-    color: rgba(124, 124, 129, 1);
-  }
+    /* color: rgba(124, 124, 129, 1);
+  } */
 
-  #active-page {
+  /* #active-page {
     padding-bottom: 1px;
     font-family: var(--primary-font);
     width: fit-content;
@@ -357,7 +416,7 @@
 
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-  }
+  } */
 }
 
 /* _________________________________
@@ -373,7 +432,7 @@
     width: 100%;
   }
 
-  .responsive-header img {
+  /* .responsive-header img {
     height: 6vh;
   }
 
@@ -388,5 +447,33 @@
 
   .footer-wording {
     padding-top: 1vh;
-  }  
+  }   */
 }
+
+
+
+/* FINISH MEEEE:
+- Try centering the grid-container (maybe after cleaned code)
+- Footer. Spacing between all 4 “sections” should be the same
+- clean code and push
+- probably push Corporate mode first as is mostly done
+*/
+
+
+
+
+/*
+color: #FFA2F3;
+border: 1.5px solid #7A5CCC;
+background-color: #0b0f22;
+color: white;
+color: black;
+ background-color: #0D1117;
+background-color: #25367c;
+linear-gradient(black, #25367c)
+background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 33%, rgba(0,0,0,0.6) 66%, rgba(0,0,0,0.8) 83%, #000 88%, #000 100%);
+font-family: garamond;
+background: linear-gradient(black, #25367c);
+justify-content: end; /* Align items along the main axis
+/* align-items: center; /* Align items along the cross axis
+*/

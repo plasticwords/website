@@ -39,7 +39,7 @@
         <div class="line3"></div>
       </div>
       <div class="responsive-mode">
-        <span class="light-mode-responsive"><i class="fas fa-star"></i></span> | <span class="dark-mode-responsive"><i class="fas fa-moon"></i></span>
+        <span class="light-mode-responsive"><i class="fas fa-star"></i></span> | <span class="dark-mode-responsive"><i class="fas fa-moon"></i></span> | <span class="corporate-mode-responsive"><i class="fas fa-square"></i></span>
       </div>
       <div class="responsive-logo"><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></a></div>
     </header>
@@ -57,10 +57,20 @@
 
       <main class="text">
         <div class="title">
-          <span id="title-text">write, email, connect, stalk</span><span id="title-text-corporate"><b>Contact</b></span>
-          <span class="mode">
-            <span class="corporate-mode"><i class="fas fa-sun"></i></span> | <span class="light-mode"><i class="fas fa-star"></i></span> | <span class="dark-mode"><i class="fas fa-moon"></i></span>
-          </span>
+          <div class="title-text">
+            <span id="title-text">write, email, connect, stalk</span>
+            <span id="title-text-corporate"><b>Contact</b></span>
+          </div>
+          <div class="mode">
+            <div class="dropdown">
+              <button class="fas fa-moon"></button>
+              <div class="dropdown-content">
+                <span class="light-mode"><i class="fas fa-star"></i></span><br>
+                <span class="dark-mode" id="dropdown-dark-mode"><i class="fas fa-moon"></i></span><br>
+                <span class="corporate-mode"><i class="fas fa-square"></i></span>
+              </div>
+            </div>
+          </div>
         </div>
         <p>E: create@plasticwords.com.au</p> 
         <p>Connect with us here: 

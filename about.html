@@ -39,7 +39,7 @@
         <div class="line3"></div>
       </div>
       <div class="responsive-mode">
-        <span class="light-mode-responsive"><i class="fas fa-star"></i></span> | <span class="dark-mode-responsive"><i class="fas fa-moon"></i></span>
+        <span class="light-mode-responsive"><i class="fas fa-star"></i></span> | <span class="dark-mode-responsive"><i class="fas fa-moon"></i></span> | <span class="corporate-mode-responsive"><i class="fas fa-square"></i></span>
       </div>
       <div class="responsive-logo"><a href="index.html"><img src="img/plasticWordsLogo.png" alt="Plastic Words logo"></a></div>
     </header>
@@ -57,12 +57,22 @@
 
       <main class="text">
         <div class="title">
-          <span id="title-text">adventurers, philosophers, dreamers, artists</span><span id="title-text-corporate"><b>About</b></span>
-          <span class="mode">
-            <span class="corporate-mode"><i class="fas fa-sun"></i></span> | <span class="light-mode"><i class="fas fa-star"></i></span> | <span class="dark-mode"><i class="fas fa-moon"></i></span>
-          </span>
-        </div>
-        
+          <div class="title-text">
+            <span id="title-text">adventurers, philosophers, dreamers, artists</span>
+            <span id="title-text-corporate"><b>About</b></span>
+          </div>  
+            <div class="mode">
+              <div class="dropdown">
+                <button class="fas fa-moon"></button>
+                <div class="dropdown-content">
+                  <span class="light-mode"><i class="fas fa-star"></i></span><br>
+                  <span class="dark-mode" id="dropdown-dark-mode"><i class="fas fa-moon"></i></span><br>
+                  <span class="corporate-mode"><i class="fas fa-square"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         <section class="flex-container">
 
           <p class="about-introduction">Who are Plastic Words? A team of professional writers and editors creating strategic digital assets for big-thinking organisations. We’ll immerse ourselves in your business and discover the story that best projects who you are, what you do, and why people should engage with you. We get under the hood to see how everything works. We’ll review your customer-facing materials, including websites, social media, and communications.</p>
