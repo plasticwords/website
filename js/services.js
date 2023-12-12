@@ -6,7 +6,7 @@ const serviceTitleBorder = document.querySelector('.service-title');
 function resetServiceTitles() {
   serviceTitle.forEach(title => {
     title.style.color = 'var(--text-color)';
-    title.style.opacity = '0.6';
+    title.style.opacity = 'var(--service-title-opacity)';
   });
   serviceDetail.forEach(detail => {
     detail.style.display = 'none';
@@ -17,7 +17,7 @@ function resetServiceTitles() {
 // Display and style service offerings detail, call prior function:    
 function displayServiceOfferings(i) {
   resetServiceTitles();
-    serviceTitle[i].style.color = '#B450B0';
+    serviceTitle[i].style.color = 'var(--service-title)';
     serviceTitle[i].style.opacity = '1';
     serviceDetail[i].style.display = 'block';
     serviceDetail[i].style.padding = '3% 5% 3% 5%'

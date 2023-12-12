@@ -6,54 +6,100 @@ const lightButton = document.querySelector('.light-mode');
 const lightButtonResponsive = document.querySelector('.light-mode-responsive');
 const lightBackground = document.querySelector('html');
 const lightModeInstruct = document.querySelector('.light-mode-instruct');
-// CORPORATE CHANGE:
-// const corporateButton = document.querySelector('.corporate-mode');
-// const corporateModeTextCHange1 = document.getElementById('title-text')
+const corporateButton = document.querySelector('.corporate-mode');
+const titleText = document.getElementById('title-text');
+const titleTextCorporate = document.getElementById('title-text-corporate');
+
+// DLETE FOOTER SHIZ:
+const footerText = document.querySelector('.footer-wording');
 
 // Enable dark (default) mode:
 function enableDarkMode() {
     document.body.classList.remove('lightmode');
+    document.body.classList.remove('corporatemode');
     darkBackground.style.background = '#0D1117';
-    // Store the user's preference for dark mode
-    localStorage.setItem('darkMode', 'enabled');
+    // Change title text:
+    titleText.style.display = 'inline-block';
+    titleTextCorporate.style.display = 'none';
+    footerText.style.display = 'inline-block';
+    // Store the user's preference:
+    localStorage.setItem('websiteMode', 'dark');
   }
 
 // Enable light mode:
 function enableLightMode() {
     document.body.classList.add('lightmode');
+    document.body.classList.remove('corporatemode');
     lightBackground.style.background = '#F3F2EE';
-    // Store the user's preference for light mode
-    localStorage.setItem('darkMode', 'disabled');
+    // Change title text:
+    titleText.style.display = 'inline-block';
+    titleTextCorporate.style.display = 'none';
+    footerText.style.display = 'inline-block';
+    // Store the user's preference:
+    localStorage.setItem('websiteMode', 'light');
   }
 
-// CORPORATE CHANGE:
 // Enable corporate mode:
-// function enableCorporateMode() {
-//   document.body.classList.add('corporate');
-//   lightBackground.style.background = 'white';
-//   // text updates:
-//   corporateModeTextCHange1.innerText = 'Contact';
-//   corporateModeTextCHange1.style.fontWeight = 'bold';
-//   corporateModeTextCHange1.style.fontSize = '1.35rem';
-//   // Store the user's preference for light mode
-//   localStorage.setItem('darkMode', 'disabled');
-// }
-
-// Check if user has dark mode preference and apply on page load:
-const modePreference = localStorage.getItem('darkMode');
-if (modePreference === 'enabled' || modePreference === null) { // Default to dark mode if preference isn't set - i.e. initital visit - or set to 'enabled'
-    enableDarkMode(); 
-} else {
-    enableLightMode(); 
+function enableCorporateMode() {
+    document.body.classList.add('corporatemode');
+    document.body.classList.remove('lightmode');
+    lightBackground.style.background = 'white';
+    // Change title text:
+    titleText.style.display = 'none';
+    titleTextCorporate.style.display = 'inline-block';
+    footerText.style.display = 'none';
+    // Store the user's preference:
+    localStorage.setItem('websiteMode', 'corporate');
 }
 
-// Call the functions:
+
+
+// // DELETE THIS FUNCTIOB:
+
+// Check IF user has dark mode preference and apply on page load:
+// const modePreference = localStorage.getItem('darkMode');
+// if (modePreference === 'enabled' || modePreference === null) { // Default to dark mode if preference isn't set - i.e. initital visit - or set to 'enabled'
+//     enableDarkMode(); 
+// } else {
+//     enableLightMode(); 
+// }
+
+
+// Using key-value pairs in local storage, check if the user has selected a mode and apply on page load. Default to dark mode if none chosen:
+document.addEventListener('DOMContentLoaded', function () {
+  const savedMode = localStorage.getItem('websiteMode');
+  if (savedMode === 'corporate') {
+      enableCorporateMode();
+  } else if (savedMode === 'light') {
+      enableLightMode();
+  } else {
+      enableDarkMode();
+  }
+});
+
+
+// // DELETE MEEEE:
+
+// const darkModePreference = localStorage.getItem('darkMode');
+// const lightModePreference = localStorage.getItem('lightMode');
+// const corporateModePreference = localStorage.getItem('corporateMode');
+
+// if (corporateModePreference === 'enabled') {
+//   enableCorporateMode();
+// } else if (darkModePreference === 'enabled') {
+//   enableDarkMode();
+// } else {
+//   enableLightMode();
+// }
+
+
+// Call the functions - i.e. event listeners for mode buttonsss:
+
 darkButton.addEventListener('click', enableDarkMode);
 darkButtonResponsive.addEventListener('click', enableDarkMode);
 lightButton.addEventListener('click', enableLightMode);
 lightButtonResponsive.addEventListener('click', enableLightMode);
-// CORPORATE CHANGE:
-// corporateButton.addEventListener('click', enableCorporateMode);
+corporateButton.addEventListener('click', enableCorporateMode);
 
 
 // Display dark mode instructions:
@@ -85,7 +131,3 @@ lightButton.addEventListener('mouseover', () => {
       lightModeInstruct.style.display = 'none';
     }, 3000); // 3000 milliseconds = 3 seconds
   });
-
-
-  // MAY USE IN FUTURE:
-  // if (darkButton.classList.contains('active'))
