@@ -1,6 +1,7 @@
    :root {
     --background-color: #0D1117;
     --text-color: #7D8590;
+    --text-color: red;
     --link-color: #7289DA;
     --link-color-hover: #7289DA;
     --borders: 1.5px solid rgba(255, 255, 255, 0.075);
