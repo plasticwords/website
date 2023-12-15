@@ -4,7 +4,6 @@
     --link-color: #7289DA;
     --link-color-hover: #7289DA;
     --borders: 1.5px solid rgba(255, 255, 255, 0.075);
-    --borders-outline: 4.5px solid rgba(255, 255, 255, 0.075);
     --title-background-color: #010409;
     --title-border: 2px solid rgba(255, 255, 255, 0.075);
     /* Fixed properties, unchanged in different themes: */
@@ -18,7 +17,6 @@
     --link-color: #B450B0;
     --link-color-hover: rgba(180, 80, 176, 0.8);  /* 80% opacity of #B450B0 */
     --borders: 1px solid lightgray;
-    --borders-outline: 3.5px solid lightgray;
     --title-background-color: white;
     --title-border: 1px solid lightgray;
   }  
@@ -32,7 +30,6 @@
     /* --link-color: black; */
     --link-color-hover: black;
     --borders: 1px solid lightgray;
-    --borders-outline: 3.5px solid lightgray;
     --title-background-color: white;
     --title-border: none;
     /* confirm me: */
@@ -61,7 +58,7 @@
     color: var(--text-color);
     height: 80vh;
     border-radius: 200px;
-    border: var(--borders-outline);
+    border: var(--borders);
   }
 
   .grid-container {
@@ -73,7 +70,6 @@
     font-size: 1.25rem;
     align-items: center; /* Aul gn items along the cross axis */
     justify-content: center; /* Align items along the main axis */
-    border-radius: 200px;
   }
 
   section {
