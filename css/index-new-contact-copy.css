@@ -51,14 +51,15 @@
   .container {
     margin: 0 auto;
     width: 85%;
-    margin-top: 7.5vh;
+    margin-top: 10vh;
+    /* margin-top: 7.5vh; */
     /* Contrain container size: */
     max-width: 1500px;
     font-family: var(--primary-font);
     color: var(--text-color);
     height: 80vh;
-    border-radius: 200px;
-    border: var(--borders);
+    /* border: var(--borders);
+    border-radius: 200px; */
   }
 
   .grid-container {
