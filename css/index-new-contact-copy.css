@@ -4,9 +4,9 @@
     --link-color: #7289DA;
     --link-color-hover: #7289DA;
     --borders: 1.5px solid rgba(255, 255, 255, 0.075);
+    --borders-outline: 4.5px solid rgba(255, 255, 255, 0.075);
     --title-background-color: #010409;
     --title-border: 2px solid rgba(255, 255, 255, 0.075);
-    --active-page-fontsize: 1.6rem;
     /* Fixed properties, unchanged in different themes: */
     --primary-font: monospace;
     --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -18,9 +18,9 @@
     --link-color: #B450B0;
     --link-color-hover: rgba(180, 80, 176, 0.8);  /* 80% opacity of #B450B0 */
     --borders: 1px solid lightgray;
+    --borders-outline: 3.5px solid lightgray;
     --title-background-color: white;
     --title-border: 1px solid lightgray;
-    --active-page-fontsize: 1.6rem;
   }  
 
   .corporatemode {
@@ -32,15 +32,17 @@
     /* --link-color: black; */
     --link-color-hover: black;
     --borders: 1px solid lightgray;
+    --borders-outline: 3.5px solid lightgray;
     --title-background-color: white;
     --title-border: none;
-    /* confirm me: */
-    --active-page-fontsize: 1.35rem;
     /* confirm me: */
     --primary-font: Georgia;
     --secondary-font: Georgia;
   }
-  
+
+/* ___________________________________
+   Main contents and navigation: */
+
   html {
     background: #0D1117; /* will change main background via javascript, not css properties */
     font-size: 16px;
@@ -51,128 +53,31 @@
   
   .container {
     margin: 0 auto;
-    width: 100%;
+    width: 85%;
+    margin-top: 7.5vh;
     /* Contrain container size: */
     max-width: 1500px;
-    margin-top: 10vh;
     font-family: var(--primary-font);
     color: var(--text-color);
+    height: 80vh;
+    border-radius: 200px;
+    border: var(--borders-outline);
   }
 
-  ul {
-    list-style: none;
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    /* font-style: italic; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.5rem;
-    border: 1px solid #FFA2F3;
-    padding: 10%;
-  }
-  
-  .grid-container a {
-    /* color: #FFA2F3; */
-    color: var(--text-color);
-    text-decoration: none;
-    /* background: linear-gradient(to right, #B450B0, #7289DA);
-    -webkit-background-clip: text;
-    color: transparent; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.65rem;
-  }
-  
-  .grid-container a:hover {
-    color: white;
-    cursor: pointer;
-  }
-
-  .svg {
-    fill: #7C7C81;
-  }
-
-  .title i {
-    font-size: 1.5rem;
-  }
-
-  /* .light-mode i {
-    color: #B450B0;
-  }
-
-  .corporate-mode i {
-    color: var(--text-color)
-  } */
-
-  .dark-mode i {
-    color: var(--link-color);
+  .grid-container {
+    /* width: 40vw; */
+    display: flex;
+    height: 100%;
+    /* padding: 0 10vw 5vh 10vw; */
+    margin: 1vh 15vw 0 5vw;
+    font-size: 1.25rem;
+    align-items: center; /* Aul gn items along the cross axis */
+    justify-content: center; /* Align items along the main axis */
+    border-radius: 200px;
   }
 
   section {
-    margin-bottom: 6vh;
-  }
-
-/* ___________________________________
-   Main contents and navigation: */
-
-   /* OLD LAYOUT:> */
-  /* .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 8fr 1fr;
-    height: 65vh;
-    width: 50vw;
-    grid-template-areas: 
-    "text-area text-area"
-    "menu-area branding-area"
-    "footer      footer";
-    margin: auto;
-    padding-top: 7.5vh;
-  } */
-  
-
-  .grid-container {
-    height: 65vh;
-    width: 40vw;
-    margin: auto;
-    display: flex;
-    /* padding-right: 10vw; */
-    padding: 2.5vh 10vw 0 0;
-    align-items: center;
-    align-self: center;
-  }
-
-
-  /* .menu {
-    grid-area: menu-area;
-    writing-mode: vertical-lr;
-    margin-left: 10%;
-    font-size: 1.5rem;
-  } */
-
-  /* .menu-link {
-    text-decoration: none; */
-    /* confirm me, maybe change to variable: */
-    /* color: rgba(124, 124, 129, 0.25);  25% opacity of #7C7C81; */
-  /* } */
-
-  /* .menu-link:hover {
-    color: var(--link-color-hover);
-    cursor: pointer;
-  } */
-
-  /* #active-page {
-    color: var(--link-color);
-    opacity: 1;
-    writing-mode: horizontal-tb;
-    font-family: var(--secondary-font);
-    width: 2.5vw;
-    text-decoration: none;
-    font-size: var(--active-page-fontsize);
-  } */
-
-  .text {
-    /* grid-area: text-area; */
-    font-size: 1.25rem;
-    width: 100%;
+    margin-bottom: 7vh;
   }
 
   .title {
@@ -188,81 +93,45 @@
     margin-bottom: 1vh;
   }
 
-  #title-text {
-    /* opacity: 0.65; */
+  .welcome-text {
     background: linear-gradient(to right, #B450B0, #7289DA);
     -webkit-background-clip: text; /* for Safari/Chrome */
     color: transparent;
   }
 
-  #title-text-corporate {
+  .welcome-text-corporate {
     font-size: 1.35rem;
   }
 
   .mode {
-    /* float: right; */
-    padding-left: 49%;
     cursor: pointer;
-    padding-right: 5px;
-    /* opacity: 0.8; */
+    padding: 0 5px 0 0;
+    text-align: right;
   }
 
   .mode i:hover {
     opacity: 0.4;
   }
 
-  /* .mode-instruction-text {  
-    writing-mode: horizontal-tb;
-    text-align: right;
-    font-size: 1.2rem;
-    margin-left: -25vw;
-    color: var(--text-color);
-    font-family: var(--secondary-font);
-    padding-top: 3vh;
-  } */
-
-  /* .mode-instruction-text-inset {
-    font-family: var(--primary-font);
-    font-size: 0.9rem;
-  } */
-
-  /* .social {
-    color: var(--text-color);
-  } */
-
-  /* moved to footer-wording */
-  /* .footer {
-    font-size: 1rem;
-    border-top: var(--borders);
-    grid-area: footer;
-    width: 70%;
-    margin-top: 5vh;
-    background: linear-gradient(to right, #B450B0, #7289DA);
-    -webkit-background-clip: text;
-    color: transparent;
-  } */
-
-  /* footer a {
+  .section-three a {
     text-decoration: none;
-    color: var(--text-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.65rem;
+    background: linear-gradient(to right, #B450B0, #7289DA);
+    -webkit-background-clip: text; /* for Safari/Chrome */
+    color: transparent;
+    /* color: var(--text-color); */
   }
 
-  footer a:hover {
+  .section-three a:hover {
     color: var(--link-color);
+    opacity: 0.65;
   }
-
-  .footer-social-link {
-    text-decoration: underline;
-  } */
-
-  .footer-wording {
-    /* float: right; */
+  
+  .footer-text {
     font-family: var(--primary-font);
-
     padding-top: 10px;
-    font-size: 1rem;
     border-top: var(--borders);
-    /* grid-area: footer; */
     width: 100%;
     margin-top: 8vh;
     /* margin-top: 5vh; */
@@ -270,35 +139,22 @@
     -webkit-background-clip: text;
     color: transparent;
     text-align: right;
+    font-size: 1rem;
+    /* font-size: 1.25rem;
+    font-family: var(--secondary-font); */
   }
 
-  /* .branding {
-    grid-area: branding-area;
-    display: flex;
-    height: fit-content;
-    justify-content: space-between; */
-    /* writing-mode: vertical-rl; */
-    /* margin-right: 10%;
-    margin-bottom: -5vh;
-  } */
-
-  /* .branding img {
-    width: 3vw;
-    height: auto;
-  } */
-
-  /* .responsive-header {
-    display: none;
-  } */
+  .mode-text {
+    text-align: right;
+    font-family: var(--secondary-font);
+    padding-right: 10px;
+    font-size: 1.25rem;
+  }
 
 /* __________________________________
    Responsive design - Tablet: */
 
   @media screen and (max-width: 992px) {
-
-  /* html {
-    overflow-x: hidden;
-  } */
   
   .container {
     width: 80%;
@@ -308,115 +164,9 @@
     width: 100%;
     height: 85vh;
     padding-top: 3vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-      "text-area"
-      "footer";
-  }
-
-  /* .responsive-header {
-    width: 92.5%;
-    padding-left: 7.5%;
-    padding-bottom: 1.5vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: var(--borders); */
-    /* Make header top layer in document:  */
-    /* z-index: 2;
-    position: relative;
-  } */
-
-  /* .responsive-logo {
-    padding-right: 7.5%;
-  }
-
-  .burger div {
-    width: 25px;
-    height: 4px;
-    margin: 4px;
-    background: var(--link-color);
-    transition: all 0.3s ease-in;
-  }
-
-  .responsive-mode {
-    font-size: 1.25rem;
-  }
-
-  .responsive-header img {
-    height: 4vh;
-    width: auto;
-  } */
-
-  .text {
     width: 90%;
     margin: 0 auto;
-    z-index: 0;
-    position: relative;
-    padding-bottom: 5vh;
   }
-
-  /* .mode {
-    display: none;
-  }
-
-  .branding {
-    display: none;
-  }
-
-  .footer {
-    width: 100%;
-    padding-bottom: 4vh;
-  } */
-
-/* ____________________
-   Burger menu: */
-
-  /* .menu {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-    writing-mode: horizontal-tb;
-    font-size: 1.75rem;
-  } */
-
-  /* .menu a { */
-    /* confirm me, maybe change to variable: */
-    /* color: rgba(124, 124, 129, 1);
-  } */
-
-  /* #active-page {
-    padding-bottom: 1px;
-    font-family: var(--primary-font);
-    width: fit-content;
-  }
-
-  .nav-active {
-    transform: translateX(0%);
-  }
-
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .toggle .line2 {
-    opacity: 0;
-  }
-
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  } */
 }
 
 /* _________________________________
@@ -430,50 +180,15 @@
 
   .container {
     width: 100%;
-  }
-
-  /* .responsive-header img {
-    height: 6vh;
-  }
-
-  .social {
-    font-size: 1.5rem;
-  } 
-
-  .footer {
-    width: 90%;
-    margin: auto;
+    border: none;
   }
 
   .footer-wording {
     padding-top: 1vh;
-  }   */
+  }   
 }
 
-
-
-/* FINISH MEEEE:
-- Try centering the grid-container (maybe after cleaned code)
-- Footer. Spacing between all 4 “sections” should be the same
-- clean code and push
-- probably push Corporate mode first as is mostly done
-*/
-
-
-
-
-/*
-color: #FFA2F3;
-border: 1.5px solid #7A5CCC;
-background-color: #0b0f22;
-color: white;
-color: black;
- background-color: #0D1117;
-background-color: #25367c;
-linear-gradient(black, #25367c)
-background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 33%, rgba(0,0,0,0.6) 66%, rgba(0,0,0,0.8) 83%, #000 88%, #000 100%);
-font-family: garamond;
-background: linear-gradient(black, #25367c);
-justify-content: end; /* Align items along the main axis
-/* align-items: center; /* Align items along the cross axis
+/* 
+- check: tablet, phone
+- Add Hover text for corporate mode “Just the facts ma’am, beauty is for the sullen.” Aka…
 */

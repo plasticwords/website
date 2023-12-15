@@ -1,4 +1,3 @@
-const backgroundColor = document.querySelector('html');
 // Dark:
 const darkButton = document.querySelector('.dark-mode');
 const darkButtonResponsive = document.querySelector('.dark-mode-responsive');
@@ -12,17 +11,26 @@ const corporateButton = document.querySelector('.corporate-mode');
 const corporateButtonResponsive = document.querySelector('.corporate-mode-responsive');
 const titleText = document.getElementById('title-text');
 const titleTextCorporate = document.getElementById('title-text-corporate');
+// Other:
+const backgroundColor = document.querySelector('html');
+const modeText = document.querySelector('.mode-text');
 
 // Enable dark (default) mode:
 function enableDarkMode() {
     document.body.classList.remove('lightmode');
     document.body.classList.remove('corporatemode');
     backgroundColor.style.background = '#0D1117';
+    // Change button colours:
+    darkButton.style.color = '#FFA2F3';
+    lightButton.style.color = 'var(--text-color)';
+    corporateButton.style.color = 'var(--text-color)';
     // Change title text:
     titleText.style.display = 'inline-block';
     titleTextCorporate.style.display = 'none';
     // Store the user's preference:
     localStorage.setItem('websiteMode', 'dark');
+    // Change mode text on home page:
+    modeText.innerText = '_dark mode';
   }
 
 // Enable light mode:
@@ -30,11 +38,17 @@ function enableLightMode() {
     document.body.classList.add('lightmode');
     document.body.classList.remove('corporatemode');
     backgroundColor.style.background = '#F3F2EE';
+    // Change button colours:
+    darkButton.style.color = 'var(--text-color)';
+    lightButton.style.color = '#7289DA';
+    corporateButton.style.color = 'var(--text-color)';
     // Change title text:
     titleText.style.display = 'inline-block';
     titleTextCorporate.style.display = 'none';
     // Store the user's preference:
     localStorage.setItem('websiteMode', 'light');
+    // Change mode text on home page:
+    modeText.innerText = '_light mode';
   }
 
 // Enable corporate mode:
@@ -42,11 +56,17 @@ function enableCorporateMode() {
     document.body.classList.add('corporatemode');
     document.body.classList.remove('lightmode');
     backgroundColor.style.background = 'white';
+    // Change button colours:
+    darkButton.style.color = 'var(--text-color)';
+    lightButton.style.color = 'var(--text-color)';
+    corporateButton.style.color = 'var(--text-color)';
     // Change title text:
     titleText.style.display = 'none';
     titleTextCorporate.style.display = 'inline-block';
     // Store the user's preference:
     localStorage.setItem('websiteMode', 'corporate');
+    // Change mode text on home page:
+    modeText.innerText = '_corporate mode';
 }
 
 // DELETE ME:
