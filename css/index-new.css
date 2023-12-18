@@ -180,6 +180,10 @@
     border: none;
   }
 
+  section {
+    margin-bottom: 0;
+  }
+
   .footer-wording {
     padding-top: 1vh;
   }   
