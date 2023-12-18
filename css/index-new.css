@@ -178,11 +178,12 @@
   .container {
     width: 100%;
     border: none;
-    margin-top: 2vh;
+    margin-top: 5vh;
   }
 
   .grid-container {
     padding: 0;
+    height: fit-content;
   }
 
   section {
