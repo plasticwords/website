@@ -178,10 +178,15 @@
   .container {
     width: 100%;
     border: none;
+    margin-top: 2vh;
+  }
+
+  .grid-container {
+    padding: 0;
   }
 
   section {
-    margin-bottom: 0;
+    margin-bottom: 2;
   }
 
   .footer-wording {
