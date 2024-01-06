@@ -29,8 +29,3 @@ serviceTitle.forEach((detail, i) => {
     displayServiceOfferings(i);
   });
 });
-
-// window.addEventListener('DOMContentLoaded', () => {
-// detail1.style.display = detail1.style.display === 'none' ? 'block' : 'none';
-// const serviceTitle = document.querySelector(`.title${i}`);
-// for (let j = 1; j <= 6; j++) {

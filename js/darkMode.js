@@ -70,16 +70,6 @@ function enableCorporateMode() {
     modeText.innerText = '_corporate mode';
 }
 
-// DELETE ME:
-
-// Check IF user has dark mode preference and apply on page load:
-// const modePreference = localStorage.getItem('darkMode');
-// if (modePreference === 'enabled' || modePreference === null) { // Default to dark mode if preference isn't set - i.e. initital visit - or set to 'enabled'
-//     enableDarkMode(); 
-// } else {
-//     enableLightMode(); 
-// }
-
 // Using key-value pairs in local storage, check if the user has selected a mode and apply on page load. Default to dark mode if none chosen:
 document.addEventListener('DOMContentLoaded', function () {
   const savedMode = localStorage.getItem('websiteMode');
@@ -92,22 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// // DELETE ME:
-
-// const darkModePreference = localStorage.getItem('darkMode');
-// const lightModePreference = localStorage.getItem('lightMode');
-// const corporateModePreference = localStorage.getItem('corporateMode');
-
-// if (corporateModePreference === 'enabled') {
-//   enableCorporateMode();
-// } else if (darkModePreference === 'enabled') {
-//   enableDarkMode();
-// } else {
-//   enableLightMode();
-// }
-
-// Call the functions - i.e. event listeners for mode buttonsss:
-
+// Call the functions - i.e. event listeners for mode buttons:
 darkButton.addEventListener('click', enableDarkMode);
 darkButtonResponsive.addEventListener('click', enableDarkMode);
 lightButton.addEventListener('click', enableLightMode);
