@@ -114,6 +114,8 @@
     text-decoration: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.65rem;
+    /* mobile: */
+    font-size: 1.35rem;
     background: linear-gradient(to right, #B450B0, #7289DA);
     -webkit-background-clip: text; /* for Safari/Chrome */
     color: transparent;
