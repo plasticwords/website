@@ -6,6 +6,7 @@
     --borders: 1.5px solid rgba(255, 255, 255, 0.075);
     --title-background-color: #010409;
     --title-border: 1.5px solid rgba(255, 255, 255, 0.075);
+    --footer-colour: transparent;
     /* Fixed properties, unchanged in different themes: */
     --primary-font: monospace;
     --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -19,6 +20,7 @@
     --borders: 1.5px solid lightgray;
     --title-background-color: white;
     --title-border: 1.5px solid lightgray;
+    --footer-colour: transparent;
   }  
 
   .corporatemode {
@@ -32,6 +34,7 @@
     --borders: 1px solid lightgray;
     --title-background-color: white;
     --title-border: none;
+    --footer-colour: black;
     /* confirm me: */
     --primary-font: Georgia;
     --secondary-font: Georgia;
@@ -134,7 +137,7 @@
     /* margin-top: 5vh; */
     background: linear-gradient(to right, #B450B0, #7289DA);
     -webkit-background-clip: text;
-    color: transparent;
+    color: var(--footer-colour);
     text-align: right;
     font-size: 1rem;
     /* font-size: 1.25rem;
