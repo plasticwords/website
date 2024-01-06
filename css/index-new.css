@@ -46,6 +46,8 @@
     margin: 0;
     padding: 0;
     height: 100vh;
+    /* mobile: */
+    height: 80vh;
   }
   
   .container {
