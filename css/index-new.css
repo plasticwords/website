@@ -45,9 +45,7 @@
     font-size: 16px;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    /* mobile: */
-    height: 80vh;
+    height: 100vh; 
   }
   
   .container {
@@ -116,8 +114,6 @@
     text-decoration: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.65rem;
-    /* mobile: */
-    font-size: 1.35rem;
     background: linear-gradient(to right, #B450B0, #7289DA);
     -webkit-background-clip: text; /* for Safari/Chrome */
     color: transparent;
@@ -177,6 +173,7 @@
 
   html {
     font-size: 14px;
+    height: 80vh;
   }
 
   .container {
@@ -190,9 +187,13 @@
     height: fit-content;
   }
 
-  /* section {
-    margin-bottom: 0;
-  } */
+  .mode-text {
+    display: none;
+  }
+
+  .section-three a {
+    font-size: 1.35rem;
+  }
 
   .footer-wording {
     padding-top: 1vh;
