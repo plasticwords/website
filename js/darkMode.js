@@ -21,7 +21,7 @@ function enableDarkMode() {
     document.body.classList.remove('corporatemode');
     backgroundColor.style.background = '#0D1117';
     // Change button colours:
-    darkButton.style.color = '#FFA2F3';
+    darkButton.style.color = '#7289DA';
     lightButton.style.color = 'var(--text-color)';
     corporateButton.style.color = 'var(--text-color)';
     // Change title text:
@@ -40,7 +40,7 @@ function enableLightMode() {
     backgroundColor.style.background = '#F3F2EE';
     // Change button colours:
     darkButton.style.color = 'var(--text-color)';
-    lightButton.style.color = '#7289DA';
+    lightButton.style.color = 'rgba(180, 80, 176, 0.7)'; /* 70% opacity of #B450B0 */
     corporateButton.style.color = 'var(--text-color)';
     // Change title text:
     titleText.style.display = 'inline-block';
