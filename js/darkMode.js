@@ -9,6 +9,7 @@ const lightModeInstruct = document.querySelector('.light-mode-instruct');
 // Corporate:
 const corporateButton = document.querySelector('.corporate-mode');
 const corporateButtonResponsive = document.querySelector('.corporate-mode-responsive');
+const corporateModeInstruct = document.querySelector('.corporate-mode-instruct');
 const titleText = document.getElementById('title-text');
 const titleTextCorporate = document.getElementById('title-text-corporate');
 // Other:
@@ -143,3 +144,18 @@ lightButton.addEventListener('mouseover', () => {
       lightModeInstruct.style.display = 'none';
     }, 3000); // 3000 milliseconds = 3 seconds
   });
+
+// Display corporate mode instructions:
+corporateButton.addEventListener('mouseover', () => {  
+  corporateModeInstruct.style.display = 'inline-block';
+});
+corporateButton.addEventListener('mouseout', () => {  
+  corporateModeInstruct.style.display = 'none';
+});
+// Touch event for tablet touchscreen:
+corporateButton.addEventListener('touchstart', () => {
+  corporateModeInstruct.style.display = 'inline-block';
+  setTimeout(() => {
+    corporateModeInstruct.style.display = 'none';
+  }, 3000); // 3000 milliseconds = 3 seconds
+});

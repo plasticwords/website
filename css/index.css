@@ -55,25 +55,22 @@
     margin: 0 auto;
     width: 85%;
     margin-top: 10vh;
-    /* margin-top: 7.5vh; */
-    /* Contrain container size: */
     max-width: 1500px;
     font-family: var(--primary-font);
     color: var(--text-color);
     height: 80vh;
+    /* game controller: */
     /* border: var(--borders);
     border-radius: 200px; */
   }
 
   .grid-container {
-    /* width: 40vw; */
     display: flex;
     height: 100%;
-    /* padding: 0 10vw 5vh 10vw; */
     margin: 1vh 15vw 0 5vw;
     font-size: 1.25rem;
-    align-items: center; /* Aul gn items along the cross axis */
-    justify-content: center; /* Align items along the main axis */
+    align-items: center; /* align along cross axis */
+    justify-content: center; /* align along main axis */
   }
 
   section {
@@ -120,7 +117,6 @@
     background: linear-gradient(to right, #B450B0, #7289DA);
     -webkit-background-clip: text; /* for Safari/Chrome */
     color: transparent;
-    /* color: var(--text-color); */
   }
 
   .section-three a:hover {
@@ -134,14 +130,11 @@
     border-top: var(--borders);
     width: 100%;
     margin-top: 8vh;
-    /* margin-top: 5vh; */
     background: linear-gradient(to right, #B450B0, #7289DA);
     -webkit-background-clip: text;
     color: var(--footer-colour);
     text-align: right;
     font-size: 1rem;
-    /* font-size: 1.25rem;
-    font-family: var(--secondary-font); */
   }
 
   .mode-text {
@@ -202,7 +195,3 @@
     padding-top: 1vh;
   }   
 }
-
-/* 
-- Add Hover text for corporate mode “Just the facts ma’am, beauty is for the sullen.” Aka…
-*/
