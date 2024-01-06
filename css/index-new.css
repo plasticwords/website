@@ -33,7 +33,7 @@
     --link-color-hover: black;
     --borders: 1px solid lightgray;
     --title-background-color: white;
-    --title-border: 1px solid black;
+    --title-border: 0.5px solid black;
     --footer-colour: black;
     /* confirm me: */
     --primary-font: Georgia;
@@ -120,8 +120,6 @@
     background: linear-gradient(to right, #B450B0, #7289DA);
     -webkit-background-clip: text; /* for Safari/Chrome */
     color: transparent;
-    /* mobile: */
-    font-weight: bold;
     /* color: var(--text-color); */
   }
 
