@@ -1,0 +1,112 @@
+html {
+    background: #0D1117;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+      
+.grid-container {
+    display: grid;
+}
+
+.instructions {
+    grid-area: instructions;
+    padding: 1%;
+    padding-top: 1.5vh;
+    font-size: 1rem;
+    display: flex;
+    justify-content: end;
+}
+
+  .menu {
+    /* grid-area: menu-area; */
+    margin-left: 10%;
+    font-size: 1.1rem;
+    /* font-size: 1.5rem; */
+    text-align: right;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color:#B450B0;
+    /* color: #7289DA; */
+    /* color: #7C7C81; */
+    /* color: rgba(124, 124, 129, 0.25); */
+    /* color: rgba(124, 124, 129, 0.5); */
+    /* color: rgba(180, 80, 176, 0.8); */
+  }
+
+  .menu a:hover {
+    color: #7289DA;
+    /* color: #7C7C81; */
+    cursor: pointer;
+    /* opacity: 0.5; */
+  }
+
+  .welcome {
+    display: none;
+  }
+
+  .instructions img {
+    display: none;
+  }
+
+/* @media screen and (max-width: 992px) { */
+
+    .grid-container {
+        grid-template-areas: 
+        "instructions";
+        padding: 0;
+        width: 100vw;
+        height: 80vh;
+    }
+
+    .instructions {
+        border-top: none;
+        justify-content: center;
+        padding-left: 25vw;
+        padding-top: 15vh;
+        /* padding-top: 5vh; */
+        /* padding-top: 40px; */
+        /* margin-top: 15%; */
+        margin-top: 20%;
+        /* margin-top: 25%; */
+        /* margin-top: 35%; */
+        /* padding-right: 10%; */
+    }
+
+    /* .menu {
+        padding-right: 15px;
+    } */
+
+    .instructions img {
+        display: block;
+        width: 45%;
+        height: auto;
+        float: right;
+        padding-bottom: 20px;
+        /* padding-top: 40%; */
+        /* padding-left: 15px; */
+    }
+
+    .welcome {
+        display: block;
+        padding-top: 15px;
+        writing-mode: vertical-lr; 
+        /* text-align: right; */
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: #7289DA;
+        font-size: 1.1rem;
+        padding-left: 100%;
+    }
+
+    .instructions a {
+        font-size: 1.5rem;
+    }
+    
+/* } */
