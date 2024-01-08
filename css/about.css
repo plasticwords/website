@@ -34,6 +34,10 @@
   .corporatemode {
     --background-color: white;
     --text-color: black;
+    /* quick temp text change: */
+    /* --text-color: #240730; */
+    --text-color: #2b0939;
+    /* finish of quick */
     /* confirm me: */
     --link-color: rgba(0, 0, 0, 0.65);
     /* --link-color: grey; */
