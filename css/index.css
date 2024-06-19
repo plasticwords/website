@@ -67,7 +67,7 @@
   .grid-container {
     display: flex;
     height: 100%;
-    margin: 1vh 15vw 0 5vw;
+    margin: 1vh 17.5vw 0 5vw; /* control margins around container */
     font-size: 1.25rem;
     align-items: center; /* align along cross axis */
     justify-content: center; /* align along main axis */
