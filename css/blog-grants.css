@@ -1,0 +1,440 @@
+  :root {
+    --background-color: #0D1117;
+    --text-color: #7D8590;
+    --link-color: #7289DA;
+    --link-color-hover: #7289DA;
+    --borders: 1.5px solid rgba(255, 255, 255, 0.075);
+    --title-background-color: #010409;
+    --title-border: 2px solid rgba(255, 255, 255, 0.075);
+    --active-page-fontsize: 1.6rem;
+    /* Fixed properties, unchanged in different themes: */
+    --primary-font: monospace;
+    --secondary-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* Properties unique to this page: */
+    --blog-subtitle-color: #7289DA;
+  }
+
+  .lightmode {
+    --background-color: #F3F2EE;
+    --text-color: #7C7C81;
+    --link-color: #B450B0;
+    --link-color-hover: rgba(180, 80, 176, 0.8); /* 80% opacity of #B450B0 */
+    --borders: 1px solid lightgray;
+    --title-background-color: white;
+    --title-border: 1px solid lightgray;
+    --active-page-fontsize: 1.6rem;
+    /* Properties unique to this page: */
+    --blog-subtitle-color: #B450B0;
+  }
+
+  .corporatemode {
+    --background-color: white;
+    --text-color: black;
+    /* confirm me: */
+    --link-color: rgba(0, 0, 0, 0.65);
+    /* --link-color: grey; */
+    /* --link-color: black; */
+    --link-color-hover: black;
+    --borders: 1px solid lightgray;
+    --title-background-color: white;
+    --title-border: none;
+    /* confirm me: */
+    --active-page-fontsize: 1.35rem;
+    /* confirm me: */
+    --primary-font: Georgia;
+    --secondary-font: Georgia;
+    /* Properties unique to this page: */
+    --blog-subtitle-color: black;
+  }
+
+  html {
+    background: #0D1117; /* will change main background via javascript, not css properties */
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1500px;
+    margin-top: 5vh;
+    font-family: var(--primary-font);
+    color: var(--text-color);
+  }
+
+/* ___________________________________
+   Main contents and navigation: */
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 9fr 1.5fr;
+    height: 95vh; /* container fills screen without any overflow */
+    grid-gap: 10px;
+    grid-template-areas: 
+    "menu-area text-area branding-area"
+    "...       footer    ...";
+  }
+  
+  .menu {
+    grid-area: menu-area;
+    writing-mode: vertical-lr;
+    margin-left: 10%;
+    font-size: 1.5rem;
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    color: rgba(124, 124, 129, 0.25); /* 25% opacity of #7C7C81; */
+  }
+
+  .menu-link:hover {
+    color: var(--link-color-hover);
+    cursor: pointer;
+  }
+
+  #active-page {
+    color: var(--link-color);
+    opacity: 1;
+    writing-mode: horizontal-tb;
+    font-family: var(--secondary-font);
+    width: 2.5vw;
+    text-decoration: none;
+    font-size: var(--active-page-fontsize);
+  }
+
+  .text {
+    grid-area: text-area;
+    font-size: 1.25rem;
+    width: 70%;
+    text-align: justify;
+  }
+
+  .text p, ol {
+    font-family: var(--secondary-font);
+  }
+
+  .title {
+    padding-left: 1%;
+    padding-top: 0.5%;
+    padding-right: 1%;
+    padding-bottom: 0.5%;
+    margin-left: -1%;
+    margin-right: -1%;
+    border-radius: 7.5px;
+    background-color: var(--title-background-color);
+    border: var(--title-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #title-text {
+    opacity: 0.65;
+  }
+
+  #title-text-corporate {
+    font-size: 1.35rem;
+  }
+
+/* .mode {
+    cursor: pointer;
+    float: right;
+    padding-right: 5px;
+  } */
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown button {
+    border: 1px solid var(--text-color);
+    border-radius: 50px;
+    width: 3vw;
+    background-color: var(--link-color);
+    color: var(--title-background-color);
+    opacity: 0.7;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 3px 0 2px 0;
+  }
+
+  .lightmode .dropdown button {
+    background-color: var(--title-background-color);
+    color: var(--link-color);
+    border: 1px solid var(--link-color);
+  }
+
+  .dropdown i {
+    padding: 10px;
+    /* padding: 10px 7.5px 10px 7.5px; */
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .corporatemode .dropdown i {
+    opacity: 0.6;
+  }
+
+  .dropdown i:hover {
+    opacity: 0.4;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: fit-content;
+    background-color: var(--background-color);
+    box-shadow: 0 8px 16px var(--text-color);
+    /* box-shadow: 0 8px 16px rgba(1, 1, 1, 0.2);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); */
+    border-radius: 15px;
+    border: 1px solid var(--text-color);
+    z-index: 1;
+    text-align: center;
+    /* Centre the dropdown menu contents below mode button: */
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #dropdown-dark-mode {
+    padding: 10px;
+    /* padding: 10px 7.5px 10px 7.5px; */
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+  } 
+
+  .mode-instruction-text {  
+    writing-mode: horizontal-tb;
+    text-align: right;
+    font-size: 1.2rem;
+    margin-left: -25vw;
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+    padding-top: 3vh;
+  }
+
+  .mode-instruction-text-inset {
+    font-family: var(--primary-font);
+    font-size: 0.9rem;
+  }
+
+  .blog-subtitle {
+    color: var(--blog-subtitle-color);
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .blog-quotes {
+    text-align: center;
+    padding: 2% 10% 2% 10%;
+    border-top: 1px solid var(--link-color);
+    border-bottom: 1px solid var(--link-color);
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 1rem;
+    border-top: var(--borders);
+    grid-area: footer;
+    width: 70%;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  footer a:hover {
+    color: var(--link-color);
+  }
+
+  .footer-social-link {
+    text-decoration: underline;
+  }
+
+  .footer-wording {
+    float: right;
+    font-family: var(--secondary-font);
+  }
+
+  .branding {
+    grid-area: branding-area;
+    display: flex;
+    justify-content: space-between;
+    writing-mode: vertical-rl;
+    margin-right: 10%;
+    margin-bottom: -5vh;
+    height: 87.5vh;
+  }
+
+  .branding img {
+    width: 3vw;
+    height: auto;
+  }
+
+  .responsive-header {
+    display: none;
+  }
+
+/* __________________________________
+   Responsive design - Tablet: */
+
+  @media screen and (max-width: 992px) {
+
+  html {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    width: 80%;
+  }
+
+  .grid-container {
+    width: 100%;
+    height: 85vh;
+    padding-top: 3vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+      "text-area"
+      "footer";
+  }
+
+  .responsive-header {
+    width: 92.5%;
+    padding-left: 7.5%;
+    padding-bottom: 1.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--borders);
+    /* Make header top layer in document:  */
+    z-index: 2;
+    position: relative;
+  }
+
+  .responsive-logo {
+    padding-right: 7.5%;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 4px;
+    margin: 4px;
+    background: var(--link-color);
+    transition: all 0.3s ease-in;
+  }
+
+  .responsive-mode {
+    font-size: 1.25rem;
+  }
+
+  .responsive-header img {
+    height: 4vh;
+    width: auto;
+  }
+
+  .text {
+    width: 90%;
+    margin: 0 auto;
+    z-index: 0;
+    position: relative;
+    padding-bottom: 5vh;
+  }
+
+  .mode {
+    display: none;
+  }
+
+  .branding {
+    display: none;
+  }
+
+  .footer {
+    width: 100%;
+    padding-bottom: 4vh;
+  }
+
+/* ____________________
+   Burger menu: */
+
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    writing-mode: horizontal-tb;
+    font-size: 1.75rem;
+  }
+
+  .menu a {
+    color: rgba(124, 124, 129, 1);
+  }
+
+  #active-page {
+    padding-bottom: 1px;
+    font-family: var(--primary-font);
+    width: fit-content;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* _________________________________
+   Responsive design - Phone: */
+
+  @media screen and (max-width: 576px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .responsive-header img {
+    height: 6vh;
+  }
+
+
+  .footer {
+    width: 90%;
+    margin: auto;
+  }
+
+  .footer-wording {
+    padding-top: 1vh;
+  }  
+}
