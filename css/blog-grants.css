@@ -114,7 +114,7 @@
   .text p, ol {
     font-family: var(--secondary-font);
   }
-
+  
   .title {
     padding-left: 1%;
     padding-top: 0.5%;
@@ -232,12 +232,25 @@
     text-align: center;
   }
 
-  .blog-quotes {
+  /* .blog-quotes {
     text-align: center;
     padding: 2% 10% 2% 10%;
     border-top: 1px solid var(--link-color);
     border-bottom: 1px solid var(--link-color);
     font-size: 1rem;
+  } */
+
+  .blog-link a {
+    text-decoration: underline;
+    color: var(--text-color);
+  }
+
+  .blog-link a:hover {
+    opacity: 0.5;
+  }
+
+  ol {
+    list-style-type: circle;
   }
 
   .footer {
