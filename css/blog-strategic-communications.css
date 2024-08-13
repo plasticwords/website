@@ -232,6 +232,10 @@
     text-align: center;
   }
 
+  .blog-text-styling {
+    font-weight: 900;
+  }
+
   /* .blog-quotes {
     text-align: center;
     padding: 2% 10% 2% 10%;
@@ -240,7 +244,7 @@
     font-size: 1rem;
   } */
 
-  .blog-link a {
+  /* .blog-link a {
     text-decoration: underline;
     color: var(--text-color);
   }
@@ -251,7 +255,7 @@
 
   ol {
     list-style-type: circle;
-  }
+  } */
 
   .footer {
     font-size: 1rem;
