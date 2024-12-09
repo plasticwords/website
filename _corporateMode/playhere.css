@@ -1,0 +1,314 @@
+html {
+    /* background-color: whitesmoke; */
+    /* background-color: rgba(180, 80, 176, 0.1); */
+    /* background-color: rgba(100, 1, 1, 0.1); */
+    /* background-color: rgba(1, 1, 1, 0.1); */
+    /* background-color: rgba(1, 1, 1, 0.05); */
+    /* background-color: rgba(114, 137, 218, 0.3); */
+    /* background-color: rgba(180, 80, 176, 0.1); */
+    background-color: rgba(1, 1, 1, 0.075);
+    font-family: helvetica;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+/* ___________________________________
+   Main contents and navigation: */
+
+   .grid-container {
+    display: grid;
+    grid-template-columns: auto 10fr;
+    grid-template-rows: auto 10fr;
+    height: 95vh; /* container fills screen without any overflow */
+    height: 100vh;
+    width: 100vw;
+    grid-template-areas:
+    "area1   menu-area   branding-area"
+    "area1   text-area   branding-area"
+    "footer   footer     branding-area";
+    /* Margin around grid: */
+    margin: -10px;
+    /* grid-gap: 10px; */
+  }
+  
+  .menu {
+    grid-area: menu-area;
+    /* writing-mode: vertical-lr; */
+    /* margin-left: 10%; */
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+    text-align: right;
+    padding: 9px 0 9px 0;
+    margin: 0;
+    /* background-color: rgba(114, 137, 218, 0.2); */
+    background-color: rgba(180, 80, 176, 0.2);
+  }
+
+  .area1 {
+    grid-area: area1;
+    /* border-left: 1px solid gray; */
+    border-right: 1px solid gray;
+    width: 60px;
+    /* background-color: rgba(180, 80, 176, 0.2); */
+    background-color: rgba(114, 137, 218, 0.2);
+  }
+
+  
+
+  .text {
+    grid-area: text-area;
+    font-size: 8rem;
+    font-family: palatino;
+    text-align: center;
+    /* Organise elements: */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* gap: 70px; */
+    align-items: start; /* Align items at the top */
+    /* width: 70%; */
+    /* border: 1px solid black; */
+    width: 65%;
+    padding-top: 2%;
+  }
+  
+  .footer {
+    font-size: 1rem;
+    /* border-top: var(--borders); */
+    grid-area: footer;
+    /* width: 70%;
+    margin-top: 5vh; */
+    /* border: 1px solid black; */
+    height: 40px;
+    background-color: rgba(114, 137, 218, 0.2);
+    border-top: 1px solid gray;
+  }
+
+  .branding {
+    grid-area: branding-area;
+    background-color: rgba(180, 80, 176, 0.2);
+    display: flex;
+    justify-content: space-between;
+    /* writing-mode: vertical-rl; */
+    /* margin-right: 10%;
+    margin-bottom: -5vh; */
+    border-left: 1px solid black;
+    /* border-right: 1px solid black; */
+  }
+
+  #active-page {
+    /* text-align: left; */
+    float: left;
+    /* border-right: 1px solid black; */
+    height: fit-content;
+    /* padding: 10px 32px 10px 32px; */
+    padding: 8px 10px 10px 10px;
+    /* display: block; */
+    display: flex; /* Use flexbox for vertical centering */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Optional: centers content horizontally */
+    text-align: center; /* Ensures text alignment inside the flex container */
+    /* background: linear-gradient(to right, #B450B0, #7289DA); */
+    /* -webkit-background-clip: text;  for Safari/Chrome */
+    /* color: transparent; */
+    /* background-color: #B450B0;
+    background-color: rgba(180, 80, 176, 0.7); */
+    text-decoration: none;
+    color: white;
+    font-size: 2.25rem;
+    color: rgba(1, 1, 1, 0.8);
+    /* background-color: #7289DA;
+    background-color: rgba(114, 137, 218, 0.7);
+    background-color: rgba(180, 80, 176, 0.7); */
+    /* color: rgba(114, 137, 218, 0.1); */
+    background-color: #B450B0;
+    background-color: rgba(180, 80, 176, 0.7);
+    font-weight: bold;
+    border-bottom: 1px solid gray;
+    /* color: rgba(1, 1, 1, 0.001); */
+    /* color: rgba(180, 80, 176, 0.7); */
+  }
+
+  .menu-link {
+    /* font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: palatino; */
+    border-left: 1px solid black;
+    height: 100%;
+    float: left;
+    float: right;
+    padding: 0px 15px 0px 15px;
+    display: flex; /* Use flexbox for vertical centering */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Optional: centers content horizontally */
+    text-align: center; /* Ensures text alignment inside the flex container */
+    /* colour text: */
+    /* cursor: pointer; */
+    /* background: linear-gradient(to right, #B450B0, #7289DA); */
+    /* -webkit-background-clip: text;  for Safari/Chrome */
+    /* color: transparent; */
+    color: black;
+    text-decoration: none;
+    font-size: 2.2rem;
+    /* font-size: 2.5rem; */
+    color: rgba(1, 1, 1, 0.8);
+    font-weight: bold;
+    /* text outlined:  
+            font-weight: bold;
+            color: white; /* Text color inside the outline */
+            
+            /* color: rgba(1, 1, 1, 0.005); */
+            /* text-shadow:  */
+              /* Bottom-right shadow: */
+              /* 1px 1px 0 black,   */
+              /* Top-left shadow: */
+              /* -1px -1px 0 black,  */
+              /* Top-right shadow: */
+              /* 1px -1px 0 black,  */
+              /* Bottom-left shadow: */
+              /* -1px 1px 0 black;  */
+  }
+
+  .bio-box {
+    /* width: 75%;
+    padding: 5% 0 0 12.5%; */
+    font-size: 4rem;
+    padding: 5% 0;
+    /* padding-right: 20%; */
+    margin-top: -10.5%;
+    padding-left: 55%;
+    width: auto; /* Adjust to fit content */
+    text-align: left;
+    text-align: center;
+    margin-right: 100px;
+    margin-bottom: 75px;
+    align-self: center;
+    justify-self: end;
+    /* opacity: .4;
+    opacity: .15; */
+    opacity: 0.75;
+    /* border-left: 1px solid black; */
+    /* text outlined:   */
+      /* font-weight: bold; */
+      color: white; /* Text color inside the outline */
+      /* color: rgba(180, 80, 176, 1); */
+      text-shadow: 
+      /* Bottom-right shadow: */
+      3px 3px 0 black, 
+      /* Top-left shadow: */
+      -1px -1px 0 black,
+      /* Top-right shadow: */
+      1px -1px 0 black,
+      /* Bottom-left shadow: */
+      -1px 1px 0 black; 
+    text-shadow: none;
+    color: black;
+  }
+
+  .name-link:hover {
+    /* background: linear-gradient(to right, #B450B0, #7289DA); */
+    /* -webkit-background-clip: text;   for Safari/Chrome  */
+    /* color: transparent; */
+    color: #B450B0; 
+    cursor: grab;
+    opacity: 1;
+    font-weight: lighter;
+    text-shadow: none;
+  }
+
+  .about-text {
+    /* font-size: 2.27rem; */
+    /* font-size: 2rem; */
+    font-size: 1.8rem;
+    /* font-family: monospace; */
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10% 0px 0px 10%;
+    /* width: 50%; */
+    /* text-align: right; */
+    text-align: left;
+    width: auto; /* Adjust to fit content */
+    width: 70%;
+    margin-right: -20%;
+  }
+
+  .social-link {
+    font-size: 2rem;
+    /* background-color: lightgray;
+    background-color: #7289DA;
+    background-color: rgba(114, 137, 218, 0.7);
+    background-color: rgba(1, 1, 1, 0.25); */
+    /* padding-top: 80%; */
+    padding: 18px 31px 18px 31px;
+    margin: 2px 0 0px 0;
+    margin-bottom: -2px;
+    height: fit-content;
+    display: inline;
+    font-family: 'Courier New', Courier, monospace;   
+    grid-area: branding-area;
+    justify-self: flex-start;
+    align-self: end;
+    margin-left: -90px;
+    border-top: 1px solid gray;
+    /* writing-mode: vertical-rl; */
+    /* margin-left: -105px; */
+    /* transform: rotate(180deg); */
+  }
+
+  #test {
+    /*   */
+    /* font-family: palatino; */
+    font-size: 1.5rem;
+    font-size: 2rem;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .test-1 {
+    /* font-family: palatino; */
+    background-color: rgba(180, 80, 176, 0.7);
+    background-color: rgba(114, 137, 218, 0.7);
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(114, 137, 218, 0.27);
+    background-color: rgba(180, 80, 176, 0.25);
+  }
+  
+  .test4 {
+    color:#B450B0;
+    color: #7289DA;
+  }
+
+
+  /*  
+    color: rgba(1, 1, 1, 0.001);
+    background-color: rgba(114, 137, 218, 0.7);
+    background-color: #B450B0;
+    background-color: rgba(180, 80, 176, 0.7);
+    .test-2
+    .last
+    border-left: 1px solid black;
+    border-left: 1px solid black;
+    font-family: 'Courier New', Courier, monospace; 
+    padding-top: 88vh;
+    color: #7289DA;
+    .social-area
+    grid-area: social-area;
+  ----------
+    "menu-area text-area branding-area"
+    "...       footer    ...";
+  ----------
+    "branding-area   menu-area   area1"
+    "branding-area   text-area   area1"
+    "branding-area   footer      area1";
+
+  */
+
+  /* DELETE BELOW: */
+
+  
+
+  
