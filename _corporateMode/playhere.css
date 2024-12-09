@@ -1,3 +1,10 @@
+/* ___________________________________
+   Variables & container: */
+
+  :root {
+    --pink-70: #0D1117;
+   }
+
 html {
     /* background-color: whitesmoke; */
     /* background-color: rgba(180, 80, 176, 0.1); */
@@ -5,7 +12,6 @@ html {
     /* background-color: rgba(1, 1, 1, 0.1); */
     /* background-color: rgba(1, 1, 1, 0.05); */
     /* background-color: rgba(114, 137, 218, 0.3); */
-    /* background-color: rgba(180, 80, 176, 0.1); */
     background-color: rgba(1, 1, 1, 0.075);
     font-family: helvetica;
     font-size: 12px;
@@ -20,20 +26,19 @@ html {
     display: grid;
     grid-template-columns: auto 10fr;
     grid-template-rows: auto 10fr;
-    height: 95vh; /* container fills screen without any overflow */
+    /* Move h/w to main container: */
     height: 100vh;
     width: 100vw;
     grid-template-areas:
-    "area1   menu-area   branding-area"
-    "area1   text-area   branding-area"
-    "footer   footer     branding-area";
-    /* Margin around grid: */
+    "border-area   menu       branding"
+    "border-area   text       branding"
+    "footer        footer     branding";
     margin: -10px;
     /* grid-gap: 10px; */
   }
   
   .menu {
-    grid-area: menu-area;
+    grid-area: menu;
     /* writing-mode: vertical-lr; */
     /* margin-left: 10%; */
     font-size: 1.5rem;
@@ -45,19 +50,47 @@ html {
     background-color: rgba(180, 80, 176, 0.2);
   }
 
-  .area1 {
-    grid-area: area1;
-    /* border-left: 1px solid gray; */
-    border-right: 1px solid gray;
-    width: 60px;
-    /* background-color: rgba(180, 80, 176, 0.2); */
-    background-color: rgba(114, 137, 218, 0.2);
+  .menu-link {
+    /* font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: palatino; */
+    border-left: 1px solid black;
+    height: 100%;
+    float: left;
+    float: right;
+    padding: 0px 15px 0px 15px;
+    display: flex; /* Use flexbox for vertical centering */
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Optional: centers content horizontally */
+    text-align: center; /* Ensures text alignment inside the flex container */
+    /* colour text: */
+    /* cursor: pointer; */
+    /* background: linear-gradient(to right, #B450B0, #7289DA); */
+    /* -webkit-background-clip: text;  for Safari/Chrome */
+    /* color: transparent; */
+    color: black;
+    text-decoration: none;
+    font-size: 2.2rem;
+    /* font-size: 2.5rem; */
+    color: rgba(1, 1, 1, 0.8);
+    font-weight: bold;
+    /* text outlined:  
+            font-weight: bold;
+            color: white; /* Text color inside the outline */
+            
+            /* color: rgba(1, 1, 1, 0.005); */
+            /* text-shadow:  */
+              /* Bottom-right shadow: */
+              /* 1px 1px 0 black,   */
+              /* Top-left shadow: */
+              /* -1px -1px 0 black,  */
+              /* Top-right shadow: */
+              /* 1px -1px 0 black,  */
+              /* Bottom-left shadow: */
+              /* -1px 1px 0 black;  */
   }
 
-  
-
-  .text {
-    grid-area: text-area;
+  .main-text {
+    grid-area: text;
     font-size: 8rem;
     font-family: palatino;
     text-align: center;
@@ -72,21 +105,9 @@ html {
     width: 65%;
     padding-top: 2%;
   }
-  
-  .footer {
-    font-size: 1rem;
-    /* border-top: var(--borders); */
-    grid-area: footer;
-    /* width: 70%;
-    margin-top: 5vh; */
-    /* border: 1px solid black; */
-    height: 40px;
-    background-color: rgba(114, 137, 218, 0.2);
-    border-top: 1px solid gray;
-  }
 
   .branding {
-    grid-area: branding-area;
+    grid-area: branding;
     background-color: rgba(180, 80, 176, 0.2);
     display: flex;
     justify-content: space-between;
@@ -130,49 +151,70 @@ html {
     /* color: rgba(180, 80, 176, 0.7); */
   }
 
-  .menu-link {
-    /* font-family: Georgia, 'Times New Roman', Times, serif;
-    font-family: palatino; */
-    border-left: 1px solid black;
-    height: 100%;
-    float: left;
-    float: right;
-    padding: 0px 15px 0px 15px;
-    display: flex; /* Use flexbox for vertical centering */
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Optional: centers content horizontally */
-    text-align: center; /* Ensures text alignment inside the flex container */
-    /* colour text: */
-    /* cursor: pointer; */
-    /* background: linear-gradient(to right, #B450B0, #7289DA); */
-    /* -webkit-background-clip: text;  for Safari/Chrome */
-    /* color: transparent; */
-    color: black;
-    text-decoration: none;
-    font-size: 2.2rem;
-    /* font-size: 2.5rem; */
-    color: rgba(1, 1, 1, 0.8);
-    font-weight: bold;
-    /* text outlined:  
-            font-weight: bold;
-            color: white; /* Text color inside the outline */
-            
-            /* color: rgba(1, 1, 1, 0.005); */
-            /* text-shadow:  */
-              /* Bottom-right shadow: */
-              /* 1px 1px 0 black,   */
-              /* Top-left shadow: */
-              /* -1px -1px 0 black,  */
-              /* Top-right shadow: */
-              /* 1px -1px 0 black,  */
-              /* Bottom-left shadow: */
-              /* -1px 1px 0 black;  */
+  .social {
+    font-size: 2rem;
+    font-size: 1.5rem;
+    font-size: 2rem;
+    /* background-color: lightgray;
+    background-color: #7289DA;
+    background-color: rgba(114, 137, 218, 0.7);
+    background-color: rgba(1, 1, 1, 0.25); */
+    /* padding-top: 80%; */
+    padding: 18px 31px 18px 31px;
+    margin: 2px 0 0px 0;
+    margin-bottom: -2px;
+    height: fit-content;
+    display: inline;
+    font-family: 'Courier New', Courier, monospace;   
+    /* grid-area: branding-area; */
+    justify-self: flex-start;
+    align-self: end;
+    margin-left: -90px;
+    border-top: 1px solid gray;
+    /* writing-mode: vertical-rl; */
+    /* margin-left: -105px; */
+    /* transform: rotate(180deg); */
   }
 
-  .bio-box {
+  .social a {
+    /*   */
+    /* font-family: palatino; */
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-decoration: none;
+    color: black;
+  }
+
+  .border-area {
+    /* CHANGE NAME OF GRID AREA: */
+    grid-area: border-area;
+    width: 60px;
+    /* border-left: 1px solid gray; */
+    /* background-color: rgba(180, 80, 176, 0.2); */
+    background-color: rgba(114, 137, 218, 0.2);
+    border-right: 1px solid gray;
+  }
+  
+  .footer {
+    grid-area: footer;
+    height: 40px;
+    /* font-size: 1rem; */
+    /* border-top: var(--borders); */
+    /* width: 70%;
+    margin-top: 5vh; */
+    /* border: 1px solid black; */
+    background-color: rgba(114, 137, 218, 0.2);
+    border-top: 1px solid gray;
+  }
+
+/* __________________________________
+   New code for About page: */
+
+  .biography-name {
     /* width: 75%;
     padding: 5% 0 0 12.5%; */
     font-size: 4rem;
+    /* font-size: 6rem; */
     padding: 5% 0;
     /* padding-right: 20%; */
     margin-top: -10.5%;
@@ -205,7 +247,7 @@ html {
     color: black;
   }
 
-  .name-link:hover {
+  .name:hover {
     /* background: linear-gradient(to right, #B450B0, #7289DA); */
     /* -webkit-background-clip: text;   for Safari/Chrome  */
     /* color: transparent; */
@@ -216,7 +258,12 @@ html {
     text-shadow: none;
   }
 
-  .about-text {
+  .name-feature {
+    color:#B450B0;
+    color: #7289DA;
+  }
+
+  .plastic-words-about {
     /* font-size: 2.27rem; */
     /* font-size: 2rem; */
     font-size: 1.8rem;
@@ -231,44 +278,7 @@ html {
     margin-right: -20%;
   }
 
-  .social-link {
-    font-size: 2rem;
-    /* background-color: lightgray;
-    background-color: #7289DA;
-    background-color: rgba(114, 137, 218, 0.7);
-    background-color: rgba(1, 1, 1, 0.25); */
-    /* padding-top: 80%; */
-    padding: 18px 31px 18px 31px;
-    margin: 2px 0 0px 0;
-    margin-bottom: -2px;
-    height: fit-content;
-    display: inline;
-    font-family: 'Courier New', Courier, monospace;   
-    grid-area: branding-area;
-    justify-self: flex-start;
-    align-self: end;
-    margin-left: -90px;
-    border-top: 1px solid gray;
-    /* writing-mode: vertical-rl; */
-    /* margin-left: -105px; */
-    /* transform: rotate(180deg); */
-  }
-
-  #test {
-    /*   */
-    /* font-family: palatino; */
-    font-size: 1.5rem;
-    font-size: 2rem;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-
-  .test-1 {
+  .plastic-words-about-feature {
     /* font-family: palatino; */
     background-color: rgba(180, 80, 176, 0.7);
     background-color: rgba(114, 137, 218, 0.7);
@@ -276,14 +286,23 @@ html {
     background-color: rgba(114, 137, 218, 0.27);
     background-color: rgba(180, 80, 176, 0.25);
   }
+   
+
+/* __________________________________
+   Responsive design - Tablet: */
+
+/* ____________________
+   Burger menu: */
+
+/* _________________________________
+   Responsive design - Phone: */
+
   
-  .test4 {
-    color:#B450B0;
-    color: #7289DA;
-  }
-
-
-  /*  
+  
+  
+   /* DELETE BELOW: */
+  
+   /*  
     color: rgba(1, 1, 1, 0.001);
     background-color: rgba(114, 137, 218, 0.7);
     background-color: #B450B0;
@@ -297,6 +316,8 @@ html {
     color: #7289DA;
     .social-area
     grid-area: social-area;
+    color: #B450B0;
+    color: #7289DA;
   ----------
     "menu-area text-area branding-area"
     "...       footer    ...";
@@ -307,7 +328,8 @@ html {
 
   */
 
-  /* DELETE BELOW: */
+
+
 
   
 
