@@ -2,6 +2,7 @@
    Variables & container: */
 
   :root {
+    /* Colours: */
     --pink: #B450B0;
     --pink-20: rgba(180, 80, 176, 0.2);
     --pink-70: rgba(180, 80, 176, 0.7);
@@ -11,19 +12,31 @@
     --black: black;
     --black-07: rgba(1, 1, 1, 0.075);
     --black-80: rgba(1, 1, 1, 0.8);
-    /* BORDERS, ??font-size?? */
+    /* Fonts: */
     --san-serif: helvetica;
     --serif: palatino;
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     --monospace: 'Courier New', Courier, monospace;
+    /* Borders: */
+    --borders-black: 1px solid black;
+    --borders-grey: 1px solid gray;
    }
 
 html {
-    background-color: var(--black-07);
-    font-family: var(--san-serif);
-    font-size: 12px;
-    padding: 0;
+    background-color: var(--black-07);   
+    font-size: 16px;
     margin: 0;
+    padding: 0;
+}
+
+.container {
+  /* These layout margins are causing problems: */
+  /* margin: 0 auto;
+  width: 100%;
+  max-width: 1500px; */
+  /* margin-top: 5vh; */
+  font-family: var(--san-serif);
+  /* color: var(--text-color); */
 }
 
 /* ___________________________________
@@ -37,63 +50,38 @@ html {
     height: 100vh;
     width: 100vw;
     grid-template-areas:
-    "border-area   menu       branding"
-    "border-area   text       branding"
-    "footer        footer     branding";
+    "border-area   menu        menu"
+    "border-area   main-text   branding"
+    "footer        footer      branding";
     /* FIX ME: */
     margin: -10px;
-    
   }
   
   .menu {
     grid-area: menu;
-    font-size: 1.5rem;
-    border-bottom: 1px solid black;
-    text-align: right;
+    font-size: 1.15rem;
+    border-bottom: var(--borders-black);
     padding: 9px 0 9px 0;
     margin: 0;
     background-color: var(--pink-20);
   }
 
   .menu-link {
-    border-left: 1px solid black;
+    border-left: var(--borders-black);
     height: 100%;
-    float: left;
+    /* Can I get ride of this float: */
     float: right;
     padding: 0px 15px 0px 15px;
     display: flex; /* Use flexbox for vertical centering */
     align-items: center; /* Centers content vertically */
     justify-content: center; /* Optional: centers content horizontally */
     text-align: center; /* Ensures text alignment inside the flex container */
-    color: var(--black);
     color: var(--black-80);
+    /* color: var(--black); */
     text-decoration: none;
-    font-size: 2.2rem;
+    font-size: 1.65rem;
     /* font-size: 2.5rem; */
     font-weight: bold;
-    /* DO I NEED cursor:? */
-    cursor: pointer; 
-  }
-
-  .main-text {
-    grid-area: text;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: start; /* Align items at the top */
-    font-size: 8rem;
-    font-family: var(--serif);
-    text-align: center;
-    width: 65%;
-    /* width: 70%; */
-    padding-top: 2%;
-  }
-
-  .branding {
-    grid-area: branding;
-    background-color: var(--pink-20);
-    display: flex;
-    justify-content: space-between;
-    border-left: 1px solid black;
   }
 
   #active-page {
@@ -104,28 +92,46 @@ html {
     justify-content: center; /* Optional: centers content horizontally */
     /* NOT SURE IF NEED THIS alignment: */
     text-align: center; /* Ensures text alignment inside the flex container */
-    border-bottom: 1px solid gray;
+    border-bottom: var(--borders-grey);
     color: var(--black-80);
     background-color: var(--pink-70);
     /* PUT NO DECORATION & text styling ONTO MENU LINKS A */
     text-decoration: none;
-    font-size: 2.25rem;
+    font-size: 1.7rem;
     font-weight: bold;
   }
 
+  .main-text {
+    grid-area: main-text;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 70px; */
+    align-items: start; /* Align items at the top */
+    font-size: 6rem;
+    font-family: var(--serif);
+    text-align: center;
+    width: 65%;
+    padding-top: 2%;
+  }
+
+  .branding {
+    grid-area: branding;
+    background-color: var(--pink-20);
+    display: flex;
+    justify-content: space-between;
+    border-left: var(--borders-black);
+  }
+
   .social {
-    /* font-size: 2rem;
-    font-size: 1.5rem; */
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-family: var(--monospace);
+    border-top: var(--borders-grey);
+    /* layout */
     padding: 18px 31px 18px 31px;
     margin: 2px 0 -2px 0;
-    /* GAP ON RIGHT FROM this margin: */
-    margin-left: -90px;
     height: fit-content;
-    font-family: var(--monospace);
     justify-self: flex-start;
     align-self: end;
-    border-top: 1px solid gray;
   }
 
   .social a {
@@ -139,7 +145,7 @@ html {
     grid-area: border-area;
     width: 60px;
     background-color: var(--blue-20);
-    border-right: 1px solid gray;
+    border-right: var(--borders-grey);
     
   }
   
@@ -147,8 +153,7 @@ html {
     grid-area: footer;
     height: 40px;
     background-color: var(--blue-20);
-    /* border-top: var(--borders); */
-    border-top: 1px solid gray;
+    border-top: var(--borders-grey);
   }
 
 /* __________________________________
@@ -157,7 +162,7 @@ html {
   .biography-name {
     /* width: 75%;
     padding: 5% 0 0 12.5%; */
-    font-size: 4rem;
+    font-size: 3rem;
     /* font-size: 6rem; */
     padding: 5% 0;
     /* padding-right: 20%; */
@@ -222,7 +227,7 @@ html {
   .plastic-words-about {
     /* font-size: 2.27rem; */
     /* font-size: 2rem; */
-    font-size: 1.8rem;
+    font-size: 1.35rem;
     /* font-family: monospace; */
     font-family: Arial, Helvetica, sans-serif;
     padding: 10% 0px 0px 10%;
@@ -241,7 +246,6 @@ html {
     /* background-color: rgba(114, 137, 218, 0.7); */
     /* background-color: rgba(180, 80, 176, 0.7); */
   }
-   
 
 /* __________________________________
    Responsive design - Tablet: */
@@ -252,74 +256,18 @@ html {
 /* _________________________________
    Responsive design - Phone: */
 
-  
-  
-  
-   /* DELETE BELOW: */
-
-   1. Push to github
-   2. delete list .below
-   3. delete all green (or most)
-   4. clean up padding and make final decisions (There's only ten of them)
-   5. Check variables at top
-      6. Push to github again
-  7... Do responsive menu/html
+/* DO ME:::: */
+   /* 1. delete all green (or most)
+   2. clean up padding/margins/sizing and make final decisions (There's only ten of them)
+      3. Push to github again
+  4. Do responsive menu/html */
    
   
-   /*  
-    color: rgba(180, 80, 176, 0.1);
-
-    color: white;
-    color: bisque;
-    color: lightgray;
-    color: whitesmoke;
-    
-    color: rgba(114, 137, 218, 0.1);
-    color: rgba(114, 137, 218, 0.3);
-    
-    color: rgba(1, 1, 1, 0.001);
-    color: rgba(1, 1, 1, 0.25);
-    color: rgba(1, 1, 1, 0.1);
-    color: rgba(1, 1, 1, 0.05);
-    color: rgba(100, 1, 1, 0.1);
-    
-    #0D1117;
-
-    .test-2
-    .last
-    .social-area
-    
-    
-
-    padding-top: 88vh;
-    width: 70%;
-    margin-top: 5vh;
-    gap: 70px;
-    margin-left: 10%;
-    grid-gap: 10px;
-    float: left;
-
-    border-left: 1px solid black;
-    display: inline;
-    display: block;
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    grid-area: social-area;
-
-    ------------
+  /*  
     gradient text:
       background: linear-gradient(to right, #B450B0, #7289DA);
       -webkit-background-clip: text; [for Safari/Chrome]
       color: transparent;
-
-    ----------
-    "menu-area text-area branding-area"
-    "...       footer    ...";
-    ----------
-    "branding-area   menu-area   area1"
-    "branding-area   text-area   area1"
-    "branding-area   footer      area1";
-
   */
 
 
