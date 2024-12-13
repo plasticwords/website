@@ -23,20 +23,19 @@
    }
 
 html {
-    background-color: var(--black-07);   
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-  /* These layout margins are causing problems: */
+  margin: 0;
+  padding: 0;
   /* margin: 0 auto;
   width: 100%;
   max-width: 1500px; */
-  /* margin-top: 5vh; */
-  font-family: var(--san-serif);
-  /* color: var(--text-color); */
+  background-color: var(--black-07); 
+  font-size: 16px;
 }
 
 /* ___________________________________
@@ -46,92 +45,56 @@ html {
     display: grid;
     grid-template-columns: auto 10fr;
     grid-template-rows: auto 10fr;
-    /* Move h/w to main container: */
     height: 100vh;
     width: 100vw;
     grid-template-areas:
     "border-area   menu        menu"
     "border-area   main-text   branding"
     "footer        footer      branding";
-    /* FIX ME: */
-    margin: -10px;
   }
   
   .menu {
     grid-area: menu;
     font-size: 1.15rem;
     border-bottom: var(--borders-black);
-    padding: 9px 0 9px 0;
-    margin: 0;
     background-color: var(--pink-20);
+    text-align: right;
+    padding: 8px 0px 10px 10px; /* Same vertical padding as .menu-link */
   }
+  
 
   .menu-link {
     border-left: var(--borders-black);
-    height: 100%;
-    /* Can I get ride of this float: */
-    float: right;
-    padding: 0px 15px 0px 15px;
-    display: flex; /* Use flexbox for vertical centering */
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Optional: centers content horizontally */
-    text-align: center; /* Ensures text alignment inside the flex container */
-    color: var(--black-80);
-    /* color: var(--black); */
+    padding: 8px 115px 10px 115px;
+    /* padding: 8px 15px 10px 15px; */
     text-decoration: none;
     font-size: 1.65rem;
-    /* font-size: 2.5rem; */
+    /* font-size: 1.05rem; */
+    /* font-size: 1.7rem; */
     font-weight: bold;
+    color: var(--black-80);
+    /* color: var(--black); */
+    font-family: var(--san-serif);
   }
 
   #active-page {
-    height: fit-content;
-    padding: 8px 10px 10px 10px;
-    display: flex; /* Use flexbox for vertical centering */
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Optional: centers content horizontally */
-    /* NOT SURE IF NEED THIS alignment: */
-    text-align: center; /* Ensures text alignment inside the flex container */
-    border-bottom: var(--borders-grey);
-    color: var(--black-80);
     background-color: var(--pink-70);
-    /* PUT NO DECORATION & text styling ONTO MENU LINKS A */
-    text-decoration: none;
-    font-size: 1.7rem;
-    font-weight: bold;
-  }
-
-  .main-text {
-    grid-area: main-text;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* gap: 70px; */
-    align-items: start; /* Align items at the top */
-    font-size: 6rem;
-    font-family: var(--serif);
-    text-align: center;
-    width: 65%;
-    padding-top: 2%;
   }
 
   .branding {
     grid-area: branding;
     background-color: var(--pink-20);
     display: flex;
-    justify-content: space-between;
     border-left: var(--borders-black);
   }
 
   .social {
     font-size: 1.5rem;
-    font-family: var(--monospace);
     border-top: var(--borders-grey);
-    /* layout */
-    padding: 18px 31px 18px 31px;
-    margin: 2px 0 -2px 0;
-    height: fit-content;
-    justify-self: flex-start;
+    padding: 20px 31px 18px 31px;
+    /* padding: 20px 5px 18px 5px; */
     align-self: end;
+    /* width: 40px; */ /* Maybe inherit width from #active-page. Put this div in html in branding section: <div class="menu-link"></div> */
   }
 
   .social a {
@@ -139,11 +102,13 @@ html {
     transform: rotate(180deg);
     text-decoration: none;
     color: var(--black);
+    font-family: var(--monospace);
   }
 
   .border-area {
     grid-area: border-area;
     width: 60px;
+    /* width: 30px; */
     background-color: var(--blue-20);
     border-right: var(--borders-grey);
     
@@ -158,6 +123,18 @@ html {
 
 /* __________________________________
    New code for About page: */
+
+   .main-text {
+    grid-area: main-text;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 70px; */
+    /* align-items: center; */
+    font-size: 6rem;
+    font-family: var(--serif);
+    width: 65%;
+    color: var(--black)
+  }
 
   .biography-name {
     /* width: 75%;
@@ -257,10 +234,10 @@ html {
    Responsive design - Phone: */
 
 /* DO ME:::: */
-   /* 1. delete all green (or most)
-   2. clean up padding/margins/sizing and make final decisions (There's only ten of them)
+   /* 
       3. Push to github again
   4. Do responsive menu/html */
+  /* 5. Check "boilerplate" code to ensure you can copy across site && make final decisions. */
    
   
   /*  
