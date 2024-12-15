@@ -16,6 +16,7 @@
     --san-serif: helvetica;
     --serif: palatino;
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    /* font-family: Arial, Helvetica, sans-serif; */
     --monospace: 'Courier New', Courier, monospace;
     /* Borders: */
     --borders-black: 1px solid black;
@@ -153,7 +154,7 @@ html {
   }
 
   /* __________________________________
-   New code - About page: */
+   New code - Contact page: */
 
    .main-text {
     grid-area: main-text;
@@ -167,31 +168,19 @@ html {
     color: var(--black)
   }
 
-  .biography-name {
-    /* width: 75%;
-    padding: 5% 0 0 12.5%; */
-    font-size: 3rem;
-    /* font-size: 6rem; */
-    padding: 5% 0;
-    /* padding-right: 20%; */
-    margin-top: -10.5%;
-    padding-left: 55%;
-    width: auto; /* Adjust to fit content */
-    text-align: left;
-    text-align: center;
-    margin-right: 100px;
-    margin-bottom: 75px;
-    align-self: center;
-    justify-self: end;
-    /* opacity: .4;
-    opacity: .15; */
-    opacity: 0.75;
-    /* border-left: 1px solid black; */
-    /* text outlined:   */
-      /* font-weight: bold; */
+   .contact-form {
+    border: 1px solid black;
+    border-radius: 10px;
+    /* width: 75%; */
+    /* width: auto; Adjust to fit content */
+    /* opacity: 0.75; */
+    /* font-weight: bold; */
+    /* --- text outlined:   */
       color: white; /* Text color inside the outline */
       /* color: rgba(180, 80, 176, 1); */
-      text-shadow: 
+      /* color: rgba(1, 1, 1, 0.005); */
+      /* color: black;  */
+      text-shadow:
       /* Bottom-right shadow: */
       3px 3px 0 black, 
       /* Top-left shadow: */
@@ -200,60 +189,7 @@ html {
       1px -1px 0 black,
       /* Bottom-left shadow: */
       -1px 1px 0 black; 
-    text-shadow: none;
-    color: black;
-   /* TEXT OUTLINED:  
-            color: white; /* Text color inside the outline */
-            /* color: rgba(1, 1, 1, 0.005); */
-            /* text-shadow:  */
-              /* Bottom-right shadow: */
-              /* 1px 1px 0 black,   */
-              /* Top-left shadow: */
-              /* -1px -1px 0 black,  */
-              /* Top-right shadow: */
-              /* 1px -1px 0 black,  */
-              /* Bottom-left shadow: */
-              /* -1px 1px 0 black;  */
-  }
-
-  .name:hover {
-    /* background: linear-gradient(to right, #B450B0, #7289DA); */
-    /* -webkit-background-clip: text;   for Safari/Chrome  */
-    /* color: transparent; */
-    color: #B450B0; 
-    cursor: grab;
-    opacity: 1;
-    font-weight: lighter;
-    text-shadow: none;
-  }
-
-  .name-feature {
-    color:#B450B0;
-    color: #7289DA;
-  }
-
-  .plastic-words-about {
-    /* font-size: 2.27rem; */
-    /* font-size: 2rem; */
-    font-size: 1.35rem;
-    /* font-family: monospace; */
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10% 0px 0px 10%;
-    /* width: 50%; */
-    /* text-align: right; */
-    text-align: left;
-    width: auto; /* Adjust to fit content */
-    width: 70%;
-    margin-right: -20%;
-  }
-
-  .plastic-words-about-feature {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgba(180, 80, 176, 0.25);
-    /* background-color: rgba(114, 137, 218, 0.27); */
-    /* background-color: rgba(114, 137, 218, 0.7); */
-    /* background-color: rgba(180, 80, 176, 0.7); */
-  }
+   }
 
 /* __________________________________
    Responsive design - Tablet: */
