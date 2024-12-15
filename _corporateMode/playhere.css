@@ -43,6 +43,7 @@ html {
 
    .grid-container {
     display: grid;
+    /* Can I make this layout more explicit: */
     grid-template-columns: auto 10fr;
     grid-template-rows: auto 10fr;
     height: 100vh;
@@ -55,17 +56,21 @@ html {
   
   .menu {
     grid-area: menu;
-    font-size: 1.15rem;
+    /* font-size: 1.15rem; */
     border-bottom: var(--borders-black);
     background-color: var(--pink-20);
     text-align: right;
     padding: 8px 0px 10px 10px; /* Same vertical padding as .menu-link */
+    /* padding: 8px 0px 10px 0px; */
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
   }
   
-
   .menu-link {
     border-left: var(--borders-black);
-    padding: 8px 115px 10px 115px;
+    padding: 8px 6.8vw 10px 6.8vw;
+    /* padding: 8px 115px 10px 115px; */
+    /* padding: 8px 5vw 10px 5vw; */
     /* padding: 8px 15px 10px 15px; */
     text-decoration: none;
     font-size: 1.65rem;
@@ -77,6 +82,32 @@ html {
     font-family: var(--san-serif);
   }
 
+  /* CHAT GPT'S SOLUTION TO MENU PROBLEM, PRETTY GOOD. I THINK I JUST WANT DYNAMIC PADDING THOUGH
+
+  .menu {
+    grid-area: menu;
+    font-size: 1.15rem;
+    border-bottom: var(--borders-black);
+    background-color: var(--pink-20);
+    text-align: right;
+    padding: 8px 0px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .menu-link {
+    padding: 8px 6.8vw 10px 6.8vw;
+    text-decoration: none;
+    font-size: 1.65rem;
+    font-weight: bold;
+    color: var(--black-80);
+    font-family: var(--san-serif);
+  }
+
+  END */
+  
   #active-page {
     background-color: var(--pink-70);
   }
@@ -121,8 +152,8 @@ html {
     border-top: var(--borders-grey);
   }
 
-/* __________________________________
-   New code for About page: */
+  /* __________________________________
+   New code - About page: */
 
    .main-text {
     grid-area: main-text;
@@ -227,29 +258,45 @@ html {
 /* __________________________________
    Responsive design - Tablet: */
 
+   @media screen and (max-width: 992px) {
+   
+    html {
+      /* font-size in container?? */
+    }
+  
+    .menu {
+      padding: 5px 0px 5px 0px; /* Same vertical padding as .menu-link */
+    }
+
+    .menu-link {
+      padding: 5px 4.8vw 5px 4.8vw;
+      font-size: 1.2rem;
+    }
+
+    .social {
+      font-size: 1rem;
+      padding: 20px 7px 18px 7px;
+    }
+
+    .border-area {
+      width: 30px;
+    }
+
+    .footer {
+      height: 20px;
+    }
+  }
+
 /* ____________________
    Burger menu: */
 
 /* _________________________________
    Responsive design - Phone: */
 
-/* DO ME:::: */
-   /* 
-      3. Push to github again
-  4. Do responsive menu/html */
-  /* 5. Check "boilerplate" code to ensure you can copy across site && make final decisions. */
-   
-  
-  /*  
-    gradient text:
-      background: linear-gradient(to right, #B450B0, #7289DA);
-      -webkit-background-clip: text; [for Safari/Chrome]
-      color: transparent;
-  */
+   @media screen and (max-width: 576px) {
 
+    .container {
+      font-size: 14px;
+    }
 
-
-
-  
-
-  
+   }
