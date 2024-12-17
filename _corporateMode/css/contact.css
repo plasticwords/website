@@ -316,6 +316,8 @@ html {
       width: 100%;
       margin: 0;
       padding: 0 10px;
+      height: 100vh;
+      align-content: center; 
       box-sizing: border-box;
       /* END */
       /* font-size: 1rem; */
@@ -325,8 +327,8 @@ html {
       grid-template-areas:
       "contact-blurb";
       color: purple;
-      color: red;
       color: green;
+      color: red;
       /* margin: 0;
       padding: 0; */
     }
@@ -339,8 +341,9 @@ html {
       /* height: fit-content; */
       /* align-self: flex-start; */
       /* CHECK ME: */
-      margin: 10px 0; 
-      width: 70%;
+      /* margin: 10px 0;  */
+      width: 100%;
+      text-align: center;
     }
 
     .contact-blurb-feature-01 {
@@ -410,7 +413,8 @@ html {
     align-items: center; */
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
-    font-size: 1.75rem;
+    font-size: 3rem;
+    /* font-size: 1.75rem; */
     background-color: lightgray;
     /* background-color: var(--black-07); */
     /* background-color: #01010113; */
