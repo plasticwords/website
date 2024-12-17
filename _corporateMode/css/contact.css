@@ -264,10 +264,10 @@ html {
    @media screen and (max-width: 576px) {
 
     html {
-      overflow: hidden;
+      /* overflow: hidden; */
       /* margin: 0;
       padding: 0; */
-      background-color: var(--pink-20);
+      /* background-color: var(--pink-20); */
     }
 
     .container {
@@ -275,8 +275,9 @@ html {
       /* CHECK ME: */
       overflow: auto;
       width: 100vw;
-      height: 100vh; /* CHECK ME */
-      height: 80vh; /* CHECK ME */
+      /* CHECK ME */
+      /* height: 100vh;
+      height: 80vh; */
     }
 
     .grid-container {
@@ -284,6 +285,7 @@ html {
       width: 50vw;
       width: 100%;
       margin: 0;
+      padding: 0;
       box-sizing: border-box;
       /* END  */
       /* height: fit-content; CHECK ME */
@@ -294,16 +296,27 @@ html {
       /* "border-area   main-text   footer" */
       /* height: 100%; CHECK ME */
       background-color: rgba(230, 230, 230, 1);
+      /* THIS HEIGHT IS THE INE THAT MATTERS */
+      height: 93vh;
+      /* border: 2px solid red; */
+      box-sizing: border-box;
     }
 
     .branding {
       /* height: 7.5vh; */
       background-color: transparent;
       border-top: var(--borders-grey);
+      margin: 0 3.75% 0 3.75%;
+      /* padding: 0;
+      margin: 0; */
+      width: 92.5%;
+      border-left: none;
+      justify-content: center;
     }
 
     .social {
       border: none;
+      font-size: 1.5rem;
     }
 
     .social a {
@@ -345,17 +358,13 @@ html {
       /* width: 50vw; */
       grid-template-areas:
       "contact-blurb";
-      
       color: #B450B0;
-      color: red;
-      
-      
-      
       color: purple;
-      
       color: green;
-      color: var(--black-80);
+      
       color: blue;
+      color: var(--black-80);
+      color: red;
       /* margin: 0;
       padding: 0; */
     }
@@ -389,7 +398,8 @@ html {
    Burger menu: (CHECK ME) */
 
    .responsive-header {
-    width: 92.5%;
+    width: 100%;
+    /* width: 92.5%; */
     padding-left: 7.5%;
     padding-bottom: 1.5vh;
     display: flex;
@@ -399,8 +409,10 @@ html {
     z-index: 2; /* Make header top layer in document */
     position: relative;
     /* background-color: var(--black-07); */
-    height: 5vh;
+    height: 7vh;
     background-color: var(--pink-20);
+    /* border: 2px solid yellow; */
+    box-sizing: border-box;
   }
 
   .burger div {
