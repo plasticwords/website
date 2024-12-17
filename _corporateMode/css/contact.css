@@ -264,11 +264,10 @@ html {
    @media screen and (max-width: 576px) {
 
     html {
-      /* overflow: hidden; */
+      overflow: hidden;
       /* margin: 0;
       padding: 0; */
-      /* background-color: var(--pink-20); */
-      /* background-color: var(--pink-20); */
+      background-color: var(--pink-20);
     }
 
     .container {
@@ -277,7 +276,7 @@ html {
       overflow: auto;
       width: 100vw;
       height: 100vh; /* CHECK ME */
-      height: 90vh; /* CHECK ME */
+      height: 80vh; /* CHECK ME */
     }
 
     .grid-container {
@@ -350,12 +349,13 @@ html {
       color: #B450B0;
       color: red;
       
-      color: blue;
+      
       
       color: purple;
       
       color: green;
       color: var(--black-80);
+      color: blue;
       /* margin: 0;
       padding: 0; */
     }
