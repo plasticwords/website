@@ -324,9 +324,9 @@ html {
       /* width: 50vw; */
       grid-template-areas:
       "contact-blurb";
-      color: green;
       color: purple;
       color: red;
+      color: green;
       /* margin: 0;
       padding: 0; */
     }
@@ -338,7 +338,17 @@ html {
       /* border: 1px solid blue; */
       /* height: fit-content; */
       /* align-self: flex-start; */
-      margin: 10px 0; /* CHECK ME */
+      /* CHECK ME: */
+      margin: 10px 0; 
+      width: 70%;
+    }
+
+    .contact-blurb-feature-01 {
+      font-size: 2rem;
+    }
+
+    .contact-blurb-feature-02 {
+      font-size: 2rem;
     }
 
     .contact-feature-text {
