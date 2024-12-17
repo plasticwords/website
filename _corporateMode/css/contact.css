@@ -273,7 +273,7 @@ html {
       overflow: auto;
       width: 100vw;
       height: 100vh; /* CHECK ME */
-      height: 90vh; /* CHECK ME */
+      height: 92.5vh; /* CHECK ME */
     }
 
     .grid-container {
@@ -336,9 +336,10 @@ html {
       grid-template-areas:
       "contact-blurb";
       color: purple;
-      color: green;
       color: #B450B0;
       color: red;
+      color: green;
+      color: blue;
       /* margin: 0;
       padding: 0; */
     }
@@ -382,7 +383,7 @@ html {
     z-index: 2; /* Make header top layer in document */
     position: relative;
     /* background-color: var(--black-07); */
-    height: 5vh;
+    height: 7.5vh;
   }
 
   .burger div {
