@@ -255,8 +255,6 @@ html {
 
     .footer {
       height: 20px;
-      height: fit-content;
-      height: 5vh;
     }
   }
 
@@ -266,8 +264,10 @@ html {
    @media screen and (max-width: 576px) {
 
     html {
-      border: 2px solid green;
-      overflow: hidden;
+      /* overflow: hidden; */
+      /* margin: 0;
+      padding: 0; */
+      background-color: var(--pink-20);
     }
 
     .container {
@@ -276,8 +276,7 @@ html {
       overflow: auto;
       width: 100vw;
       height: 100vh; /* CHECK ME */
-      height: 93.5vh; /* CHECK ME */
-      border: 2px solid red;
+      height: 92.5vh; /* CHECK ME */
     }
 
     .grid-container {
@@ -294,10 +293,12 @@ html {
       "branding";
       /* "border-area   main-text   footer" */
       height: 100%; /* CHECK ME */
+      background-color: rgba(230, 230, 230, 1)
     }
 
     .branding {
-      background-color: var(--blue-20);
+      background-color: var(--pink-20);
+      height: 7.5vh;
     }
 
     .social a {
@@ -344,8 +345,9 @@ html {
       color: red;
       color: green;
       color: blue;
-      color: var(--black-80);
+      
       color: purple;
+      color: var(--black-80);
       /* margin: 0;
       padding: 0; */
     }
