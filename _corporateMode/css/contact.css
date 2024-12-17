@@ -273,7 +273,7 @@ html {
       overflow: auto;
       width: 100vw;
       height: 100vh; /* CHECK ME */
-      height: 92.5vh; /* CHECK ME */
+      height: 95vh; /* CHECK ME */
     }
 
     .grid-container {
@@ -322,12 +322,12 @@ html {
       display: block;
       width: 100%;
       margin: 0;
-      padding: 0 10px;
-      height: 70%;
+      /* padding: 0 10px; */
+      height: 90%;
       /* height: 100vh; */
       align-content: center; 
       box-sizing: border-box;
-      border: 1px solid blue;
+      /* border: 1px solid blue; */
       /* END */
       /* font-size: 1rem; */
       grid-template-columns: 1fr;
@@ -340,6 +340,7 @@ html {
       color: red;
       color: green;
       color: blue;
+      color: var(--black-80);
       /* margin: 0;
       padding: 0; */
     }
@@ -383,7 +384,7 @@ html {
     z-index: 2; /* Make header top layer in document */
     position: relative;
     /* background-color: var(--black-07); */
-    height: 7.5vh;
+    height: 5vh;
   }
 
   .burger div {
