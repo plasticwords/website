@@ -353,8 +353,9 @@ html {
       color: blue;
       
       color: purple;
-      color: var(--black-80);
+      
       color: green;
+      color: var(--black-80);
       /* margin: 0;
       padding: 0; */
     }
@@ -398,7 +399,7 @@ html {
     z-index: 2; /* Make header top layer in document */
     position: relative;
     /* background-color: var(--black-07); */
-    height: 10vh;
+    height: 5vh;
     background-color: var(--pink-20);
   }
 
