@@ -272,6 +272,7 @@ html {
 
     .grid-container {
       width: 80%; /* CHECK ME */
+      height: fit-content; /* CHECK ME */
       grid-template-areas:
       "menu"
       "main-text"
@@ -306,19 +307,23 @@ html {
     .main-text {
       /* font-size: 1rem; */
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 1fr;
       /* width: 50vw; */
       grid-template-areas:
-      "contact-blurb"
-      "contact-feature-text";
+      "contact-blurb";
       color: red;
       color: green;
+      color: purple;
+      /* margin: 0;
+      padding: 0; */
     }
 
     .contact-blurb {
       margin: 0;
       padding: 0;
       border: 1px solid blue;
+      /* height: fit-content; */
+      /* align-self: flex-start; */
     }
 
     .contact-feature-text {
