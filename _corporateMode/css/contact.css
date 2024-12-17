@@ -267,11 +267,16 @@ html {
       font-size: 14px;
       /* CHECK ME: */
       overflow: auto;
-      width: 95vw;
+      width: 100vw;
     }
 
     .grid-container {
-      width: 80%; /* CHECK ME */
+       /* CHECK ME: */
+      width: 50vw;
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+      /* END  */
       height: fit-content; /* CHECK ME */
       grid-template-areas:
       "menu"
@@ -305,15 +310,23 @@ html {
     New code - Contact page, responsive Phone: CHANGE TITLE */
 
     .main-text {
+      /* CHECK ME: */
+      grid-area: main-text;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0 10px;
+      box-sizing: border-box;
+      /* END */
       /* font-size: 1rem; */
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       /* width: 50vw; */
       grid-template-areas:
       "contact-blurb";
-      color: red;
       color: green;
       color: purple;
+      color: red;
       /* margin: 0;
       padding: 0; */
     }
@@ -321,9 +334,11 @@ html {
     .contact-blurb {
       margin: 0;
       padding: 0;
-      border: 1px solid blue;
+      font-size: 2rem;
+      /* border: 1px solid blue; */
       /* height: fit-content; */
       /* align-self: flex-start; */
+      margin: 10px 0; /* CHECK ME */
     }
 
     .contact-feature-text {
