@@ -265,7 +265,7 @@ html {
 
     .container {
       font-size: 14px;
-      overflow: auto;
+      overflow-x: hidden;
       /* width: 100vw; */
     }
 
