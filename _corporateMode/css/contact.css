@@ -265,7 +265,7 @@ html {
 
     .container {
       font-size: 14px;
-      overflow-x: hidden;
+      overflow: hidden;
       /* width: 100vw; */
     }
 
@@ -309,6 +309,7 @@ html {
       grid-template-areas:
       "contact-blurb"
       "contact-feature-text";
+      color: red;
     }
 
 /* ____________________
