@@ -263,9 +263,9 @@ html {
 
    @media screen and (max-width: 576px) {
 
-    html {
-      height: 100vh; /* CHECK ME */
-    }
+    /* html {
+      
+    } */
 
     .container {
       font-size: 14px;
@@ -273,6 +273,7 @@ html {
       overflow: auto;
       width: 100vw;
       height: 100vh; /* CHECK ME */
+      height: 90vh; /* CHECK ME */
     }
 
     .grid-container {
@@ -381,6 +382,7 @@ html {
     z-index: 2; /* Make header top layer in document */
     position: relative;
     /* background-color: var(--black-07); */
+    height: 5vh;
   }
 
   .burger div {
