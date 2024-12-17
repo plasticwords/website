@@ -322,10 +322,11 @@ html {
       width: 100%;
       margin: 0;
       padding: 0 10px;
-      height: 100%; /* CHECK ME */
+      height: 70%;
       /* height: 100vh; */
       align-content: center; 
       box-sizing: border-box;
+      border: 1px solid blue;
       /* END */
       /* font-size: 1rem; */
       grid-template-columns: 1fr;
