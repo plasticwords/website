@@ -265,11 +265,13 @@ html {
 
     .container {
       font-size: 14px;
-      overflow: hidden;
-      /* width: 100vw; */
+      /* CHECK ME: */
+      overflow: auto;
+      width: 95vw;
     }
 
     .grid-container {
+      width: 80%; /* CHECK ME */
       grid-template-areas:
       "menu"
       "main-text"
@@ -310,6 +312,17 @@ html {
       "contact-blurb"
       "contact-feature-text";
       color: red;
+      color: green;
+    }
+
+    .contact-blurb {
+      margin: 0;
+      padding: 0;
+      border: 1px solid blue;
+    }
+
+    .contact-feature-text {
+      display: none;
     }
 
 /* ____________________
