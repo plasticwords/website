@@ -273,7 +273,7 @@ html {
       overflow: auto;
       width: 100vw;
       height: 100vh; /* CHECK ME */
-      height: 95vh; /* CHECK ME */
+      height: 92.5vh; /* CHECK ME */
     }
 
     .grid-container {
@@ -335,12 +335,13 @@ html {
       /* width: 50vw; */
       grid-template-areas:
       "contact-blurb";
-      color: purple;
+      
       color: #B450B0;
       color: red;
       color: green;
       color: blue;
       color: var(--black-80);
+      color: purple;
       /* margin: 0;
       padding: 0; */
     }
@@ -426,7 +427,7 @@ html {
     align-items: center; */
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
-    font-size: 3rem;
+    /* font-size: 10rem; */
     /* font-size: 1.75rem; */
     background-color: lightgray;
     /* background-color: var(--black-07); */
@@ -439,6 +440,7 @@ html {
     padding: 0 0 0 20vw;
     /* PUT INTO ROOT IF YOU USE THIS COLOUR: */
     color: rgba(124, 124, 129, 1);
+    font-size: 4rem;
   }
 
   .menu-link::first-letter {
