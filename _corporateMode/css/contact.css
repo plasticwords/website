@@ -255,6 +255,8 @@ html {
 
     .footer {
       height: 20px;
+      height: fit-content;
+      height: 5vh;
     }
   }
 
@@ -263,9 +265,10 @@ html {
 
    @media screen and (max-width: 576px) {
 
-    /* html {
-      
-    } */
+    html {
+      border: 2px solid green;
+      overflow: hidden;
+    }
 
     .container {
       font-size: 14px;
@@ -273,7 +276,8 @@ html {
       overflow: auto;
       width: 100vw;
       height: 100vh; /* CHECK ME */
-      height: 92.5vh; /* CHECK ME */
+      height: 93.5vh; /* CHECK ME */
+      border: 2px solid red;
     }
 
     .grid-container {
@@ -478,4 +482,4 @@ html {
 /* this is not on index.css but IS in index.html (i.e., delete from html)
   #title-text {
     opacity: 0.65;
-  } */
+  }. */
