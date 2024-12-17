@@ -37,10 +37,15 @@ html {
   max-width: 1500px; */
   background-color: var(--black-07); 
   font-size: 16px;
+  overflow: hidden;
 }
 
 /* ___________________________________
    Main contents and navigation: */
+
+   .responsive-header {
+    display: none;
+  }
 
    .grid-container {
     display: grid;
@@ -151,6 +156,8 @@ html {
     height: 40px;
     background-color: var(--blue-20);
     border-top: var(--borders-grey);
+    /* z-index: 4;
+    position: relative; */
   }
 
   /* __________________________________
@@ -161,34 +168,62 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* gap: 70px; */
-    /* align-items: center; */
-    font-size: 6rem;
+    /* background-color: var(--pink-20); */
+    /* background-color: var(--pink-70); */
+    /* background-color: #7289DA; */
+    /* background-color: #B450B0; */
     font-family: var(--serif);
-    width: 65%;
-    color: var(--black)
+    color: var(--black-80);
+    width: 100%;
+    grid-template-areas:
+    /* PROBLEM HERE, get columns down to 1: */
+    "contact-blurb          contact-blurb"
+    "contact-feature-text   contact-feature-text";
+    /* z-index: -1;
+    position: relative; */
   }
 
-   .contact-form {
-    border: 1px solid black;
-    border-radius: 10px;
-    /* width: 75%; */
-    /* width: auto; Adjust to fit content */
-    /* opacity: 0.75; */
+  .contact-blurb {
+    grid-area: contact-blurb;
+    font-size: 4rem;
+    margin: 50px 0 0 50px;
+    padding: 0 10% 5% 10%;
+    align-self: flex-end;
+    height: fit-content;
+  }
+
+  .contact-blurb-feature-01 {
+    font-family: var(--monospace);
+    background-color: var(--pink-20);
+    /* background-color: rgb(255, 220, 255); */
+    padding: 20px;
+    border: 1px solid gray;
+    font-size: 4.5rem;
+  }
+
+  .contact-blurb-feature-02 {
+    font-family: var(--monospace);
+    background-color: var(--blue-20);
+    padding: 20px;
+    border: 1px solid gray;
+    font-size: 3rem;
+  }
+
+  .contact-feature-text {
+    grid-area: contact-feature-text;
+    text-align: center;
+    font-size: 12rem;
+    opacity: 0.25;
+    margin: 130px 0 -900px 0;
+    /* margin: 220px 0 -220px 0; */
+    text-shadow:
+      3px 3px 0 black, /* bottom-right */
+      -1px -1px 0 black, /* top-left */
+      1px -1px 0 black, /* top-right: */
+      -1px 1px 0 black; /* bottom-left: */
+    color: white;
+    /* color: rgba(180, 80, 176, 1); */
     /* font-weight: bold; */
-    /* --- text outlined:   */
-      color: white; /* Text color inside the outline */
-      /* color: rgba(180, 80, 176, 1); */
-      /* color: rgba(1, 1, 1, 0.005); */
-      /* color: black;  */
-      text-shadow:
-      /* Bottom-right shadow: */
-      3px 3px 0 black, 
-      /* Top-left shadow: */
-      -1px -1px 0 black,
-      /* Top-right shadow: */
-      1px -1px 0 black,
-      /* Bottom-left shadow: */
-      -1px 1px 0 black; 
    }
 
 /* __________________________________
@@ -223,9 +258,6 @@ html {
     }
   }
 
-/* ____________________
-   Burger menu: */
-
 /* _________________________________
    Responsive design - Phone: */
 
@@ -233,14 +265,144 @@ html {
 
     .container {
       font-size: 14px;
+      overflow: auto;
+      /* width: 100vw; */
     }
 
-   }
+    .grid-container {
+      grid-template-areas:
+      "menu"
+      "main-text"
+      "branding";
+      /* "border-area   main-text   footer" */
+    }
 
+    .branding {
+      background-color: var(--blue-20);
+    }
 
-/* DO ME:::: */
-/* 4. Continue responsive menu/html (see Sketch for Design) 
-      -- NOTE: probably work on the contact page as "template" cos easier to test */
+    .social a {
+      writing-mode: horizontal-tb;
+    }
+
+    .border-area {
+      /* width: 5px;
+      border: none; */
+      display: none;
+    }
+
+    .footer {
+      /* width: 5px;
+      border: none;
+      height: 100%; */
+      display: none;
+    }
+
+  /* __________________________________
+    New code - Contact page, responsive Phone: CHANGE TITLE */
+
+    .main-text {
+      /* font-size: 1rem; */
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      /* width: 50vw; */
+      grid-template-areas:
+      "contact-blurb"
+      "contact-feature-text";
+    }
+
+/* ____________________
+   Burger menu: (CHECK ME) */
+
+   .responsive-header {
+    width: 92.5%;
+    padding-left: 7.5%;
+    padding-bottom: 1.5vh;
+    display: flex;
+    /* justify-content: space-between;
+    align-items: center; */
+    border-bottom: var(--borders-grey);
+    z-index: 2; /* Make header top layer in document */
+    position: relative;
+    /* background-color: var(--black-07); */
+  }
+
+  .burger div {
+    width: 25px;
+    height: 4px;
+    margin: 4px;
+    /* background-color: var(--pink-70); */
+    /* background: lightgray;  */
+    border: 1px solid var(--pink-70);
+    transition: all 0.3s ease-in;
+    box-sizing: border-box;
+    /* PUT THE MENU TO THE LEFT using flexbox: */
+    /* margin-left: 470px; */
+  }
+  
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: left;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    font-size: 1.75rem;
+    background-color: lightgray;
+    /* background-color: var(--black-07); */
+    /* background-color: #01010113; */
+    padding: 15vh 0 0 0;
+  }
+
+  .menu-link {
+    border-left: none;
+    padding: 0 0 0 20vw;
+    /* PUT INTO ROOT IF YOU USE THIS COLOUR: */
+    color: rgba(124, 124, 129, 1);
+  }
+
+  .menu-link::first-letter {
+    text-transform: uppercase;
+  }
+
+  #active-page {
+    /* FIX ME: */
+    background-color: lightgray;
+  }
+
+  #last-menu-item {
+    border-bottom: 0.5px solid var(--black-80);
+    padding-bottom: 20vh;
+  }
+
+  /* Activate via javascript: */
+  .nav-active {
+    transform: translateX(0%);
+  }   
+
+}
+
+/* DO ME:: */
+/* 4. Finish responsive menu/html (see Sketch for Design)
 /* 5. Check "boilerplate" code to ensure you can copy across site && make final decisions. */
  
 /*  
@@ -249,3 +411,8 @@ html {
     -webkit-background-clip: text; [for Safari/Chrome]
     color: transparent;
 */
+
+/* this is not on index.css but IS in index.html (i.e., delete from html)
+  #title-text {
+    opacity: 0.65;
+  } */
