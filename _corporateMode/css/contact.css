@@ -263,11 +263,16 @@ html {
 
    @media screen and (max-width: 576px) {
 
+    html {
+      height: 100vh; /* CHECK ME */
+    }
+
     .container {
       font-size: 14px;
       /* CHECK ME: */
       overflow: auto;
       width: 100vw;
+      height: 100vh; /* CHECK ME */
     }
 
     .grid-container {
@@ -283,6 +288,7 @@ html {
       "main-text"
       "branding";
       /* "border-area   main-text   footer" */
+      height: 100%; /* CHECK ME */
     }
 
     .branding {
@@ -316,7 +322,8 @@ html {
       width: 100%;
       margin: 0;
       padding: 0 10px;
-      height: 100vh;
+      height: 100%; /* CHECK ME */
+      /* height: 100vh; */
       align-content: center; 
       box-sizing: border-box;
       /* END */
