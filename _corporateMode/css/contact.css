@@ -411,7 +411,7 @@ html {
   .burger div {
     width: 35px;
     /* width: 25px; */
-    height: 9px;
+    height: 7px;
     /* height: 4px; */
     margin: 4px;
     /* margin: 4px; */
@@ -423,8 +423,9 @@ html {
     /* ------------ */
     
     border: 2px groove white;
-    border: 2px ridge white;
+    
     border: 4px double var(--pink);
+    border: 2px solid var(--pink-70);
     /* border: 2px solid white; */
 
     transition: all 0.3s ease-in;
