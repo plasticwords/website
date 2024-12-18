@@ -419,9 +419,9 @@ html {
     /* background: lightgray;  */
     
     border: 3px dotted white;
-    border: 2px dashed white;
-    border: 3px double white;
     
+    border: 3px double white;
+    border: 2px dashed white;
 
     transition: all 0.3s ease-in;
     box-sizing: border-box;
