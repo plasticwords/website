@@ -309,13 +309,15 @@ html {
 
     .social {
       border: none;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       padding: 7px 3.75% 7px 0;
     }
 
     .social a {
       writing-mode: horizontal-tb;
       /* color: #7289DA; */
+      border: 0.25px solid gray;
+      background-color: var(--blue-20);
     }
 
     .border-area {
@@ -363,7 +365,7 @@ html {
     .contact-blurb {
       margin: 0;
       padding: 0;
-      font-size: 2rem;
+      font-size: 4rem;
       /* border: 1px solid blue; */
       /* height: fit-content; */
       /* align-self: flex-start; */
