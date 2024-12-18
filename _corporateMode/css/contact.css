@@ -8,7 +8,7 @@
     --pink-70: rgba(180, 80, 176, 0.7);
     --blue: #7289DA;
     --blue-20: rgba(114, 137, 218, 0.2);    
-    --blue-70: color: rgba(114, 137, 218, 0.7);
+    --blue-70: rgba(114, 137, 218, 0.7);
     --black: black;
     --black-07: rgba(1, 1, 1, 0.075);
     --black-80: rgba(1, 1, 1, 0.8);
@@ -315,7 +315,7 @@ html {
 
     .social a {
       writing-mode: horizontal-tb;
-      color: #7289DA;
+      /* color: #7289DA; */
     }
 
     .border-area {
@@ -403,7 +403,7 @@ html {
     /* background-color: var(--black-07); */
     height: 7vh;
     /* background-color: var(--pink-20); */
-    /* background-color: var(--pink-70); */
+    background-color: var(--pink-70);
     /* border: 2px solid yellow; */
     box-sizing: border-box;
   }
@@ -418,7 +418,7 @@ html {
     /* background-color: var(--pink-70); */
     /* background: lightgray;  */
     border: 4px double var(--pink-70);
-    /* border: 3px dotted var(--pink-70); */
+    border: 3px dotted white;
     transition: all 0.3s ease-in;
     box-sizing: border-box;
     /* PUT THE MENU TO THE LEFT using flexbox: */
