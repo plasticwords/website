@@ -421,9 +421,9 @@ html {
     /* border: 3px dotted white; */
     /* border: 2px dashed white; */
     /* ------------ */
-    border: 2px double white;
-    /* border: 2px groove white; */
-    /* border: 2px ridge white; */
+    /* border: 2px double white; */
+    border: 2px groove white;
+    border: 2px ridge white;
     /* border: 2px solid white; */
 
     transition: all 0.3s ease-in;
