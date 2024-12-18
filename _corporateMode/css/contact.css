@@ -417,8 +417,12 @@ html {
     /* margin: 4px; */
     /* background-color: var(--pink-70); */
     /* background: lightgray;  */
-    border: 4px double var(--pink-70);
+    
     border: 3px dotted white;
+    border: 2px dashed white;
+    border: 3px double white;
+    
+
     transition: all 0.3s ease-in;
     box-sizing: border-box;
     /* PUT THE MENU TO THE LEFT using flexbox: */
