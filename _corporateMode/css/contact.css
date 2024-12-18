@@ -304,20 +304,20 @@ html {
       margin: 0; */
       width: 92.5%;
       border-left: none;
-      justify-content: end;
+      justify-content: flex-start;
     }
 
     .social {
       border: none;
       font-size: 1.2rem;
-      padding: 7px 3.75% 7px 0;
+      padding: 7px 0 7px 3.75%;
     }
 
     .social a {
       writing-mode: horizontal-tb;
       /* color: #7289DA; */
       border: 0.25px solid gray;
-      background-color: var(--blue-20);
+      background-color: var(--pink-20);
     }
 
     .border-area {
@@ -365,7 +365,7 @@ html {
     .contact-blurb {
       margin: 0;
       padding: 0;
-      font-size: 3rem;
+      font-size: 3.2rem;
       /* border: 1px solid blue; */
       /* height: fit-content; */
       /* align-self: flex-start; */
