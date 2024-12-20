@@ -74,7 +74,7 @@ html {
   
   .menu-link {
     border-left: var(--borders-black);
-    padding: 8px 6.8vw 10px 6.8vw;
+    padding: 8px 6.3vw 10px 6.3vw;
     /* padding: 8px 115px 10px 115px; */
     /* padding: 8px 5vw 10px 5vw; */
     /* padding: 8px 15px 10px 15px; */
@@ -114,6 +114,12 @@ html {
 
   END */
   
+  .menu-link-superscript {
+    font-size: 0.7rem;
+    vertical-align: super;
+    margin: 0 0 10px 7px;
+  }
+
   #active-page {
     background-color: var(--pink-70);
   }
@@ -193,6 +199,10 @@ html {
   }
 
   .contact-blurb-feature-01 {
+    font-style: italic;
+  }
+  
+  .contact-blurb-feature-02 {
     font-family: var(--monospace);
     background-color: var(--pink-20);
     /* background-color: rgb(255, 220, 255); */
@@ -201,7 +211,7 @@ html {
     font-size: 4.5rem;
   }
 
-  .contact-blurb-feature-02 {
+  .contact-blurb-feature-03 {
     font-family: var(--monospace);
     background-color: var(--blue-20);
     padding: 20px;
@@ -318,6 +328,7 @@ html {
       /* color: #7289DA; */
       border: 0.25px solid gray;
       background-color: var(--pink-20);
+      /* font-family: var(--san-serif); */
     }
 
     .border-area {
@@ -375,11 +386,11 @@ html {
       text-align: center;
     }
 
-    .contact-blurb-feature-01 {
+    .contact-blurb-feature-02 {
       font-size: 2rem;
     }
 
-    .contact-blurb-feature-02 {
+    .contact-blurb-feature-03 {
       font-size: 2rem;
     }
 
@@ -500,6 +511,12 @@ html {
     background-color: lightgray;
   }
 
+  .menu-link-superscript {
+    font-size: 0.75rem;
+    vertical-align: super;
+    margin: 0 0 10px 7px;
+  }
+
   #last-menu-item {
     /* border-bottom: 0.5px solid var(--black-80);
     padding-bottom: 20vh; */
@@ -513,8 +530,15 @@ html {
 }
 
 /* DO ME:: */
-/* 4. Finish responsive menu/html (see Sketch for Design)
-/* 5. Check "boilerplate" code to ensure you can copy across site && make final decisions. */
+/* 1. Clean up the contact page:
+      - 2. Order of CSS
+      - 3. Detail in CSS
+      - 4. Push to GitHub
+      - 5. Check on all devices (no need to get perfect design though)
+/* 2. Finalise Sketch design file && main sites from Design Brief && Favourites from research */
+/* 3. Check "boilerplate" code to ensure you can copy across site && make final decisions. (Compare to original contact page before copying whole site). "Prettify" the code too. Check section/div/main semantic html. Update nav links */
+/* 4. Do blogs page */
+/* 5. Have markup/styling done by first week of January. Then spend rest of time on home page, javascript, testing */
  
 /*  
   gradient text:
