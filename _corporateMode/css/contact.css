@@ -124,6 +124,26 @@ html {
     background-color: var(--pink-70);
   }
 
+  .main-text {
+    grid-area: main-text;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 70px; */
+    /* background-color: var(--pink-20); */
+    /* background-color: var(--pink-70); */
+    /* background-color: #7289DA; */
+    /* background-color: #B450B0; */
+    font-family: var(--serif);
+    color: var(--black-80);
+    width: 100%;
+    grid-template-areas:
+    /* PROBLEM HERE, get columns down to 1: */
+    "contact-blurb          contact-blurb"
+    "contact-feature-text   contact-feature-text";
+    /* z-index: -1;
+    position: relative; */
+  }
+
   .branding {
     grid-area: branding;
     background-color: var(--pink-20);
@@ -168,26 +188,6 @@ html {
 
   /* __________________________________
    New code - Contact page: */
-
-   .main-text {
-    grid-area: main-text;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* gap: 70px; */
-    /* background-color: var(--pink-20); */
-    /* background-color: var(--pink-70); */
-    /* background-color: #7289DA; */
-    /* background-color: #B450B0; */
-    font-family: var(--serif);
-    color: var(--black-80);
-    width: 100%;
-    grid-template-areas:
-    /* PROBLEM HERE, get columns down to 1: */
-    "contact-blurb          contact-blurb"
-    "contact-feature-text   contact-feature-text";
-    /* z-index: -1;
-    position: relative; */
-  }
 
   .contact-blurb {
     grid-area: contact-blurb;
@@ -304,6 +304,30 @@ html {
       /* "border-area   main-text   footer" */
     }
 
+    .main-text {
+      /* CHECK ME: */
+      grid-area: main-text;
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      /* padding: 0 10px; */
+      align-content: center; 
+      box-sizing: border-box;
+      /* border: 1px solid blue; */
+      /* END */
+      /* font-size: 1rem; */
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      /* width: 50vw; */
+      grid-template-areas:
+      "contact-blurb";
+      color: red;
+      color: var(--black-80);
+      /* margin: 0;
+      padding: 0; */
+    }
+    
     .branding {
       height: fit-content;
       background-color: transparent;
@@ -345,33 +369,7 @@ html {
     }
 
   /* __________________________________
-    New code - Contact page, responsive Phone: CHANGE TITLE */
-
-    .main-text {
-      /* CHECK ME: */
-      grid-area: main-text;
-      display: block;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      /* padding: 0 10px; */
-      
-      
-      align-content: center; 
-      box-sizing: border-box;
-      /* border: 1px solid blue; */
-      /* END */
-      /* font-size: 1rem; */
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      /* width: 50vw; */
-      grid-template-areas:
-      "contact-blurb";
-      color: red;
-      color: var(--black-80);
-      /* margin: 0;
-      padding: 0; */
-    }
+    Responsive design - Phone /// New code - Contact page: */
 
     .contact-blurb {
       margin: 0;
@@ -398,8 +396,8 @@ html {
       display: none;
     }
 
-/* ____________________
-   Burger menu & Responsive header: (CHECK ME) */
+/* __________________________________
+   Burger menu and responsive header: (CHECK ME) */
 
    .responsive-header {
     width: 100%;
