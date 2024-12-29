@@ -302,10 +302,10 @@ html {
       height: 100%;
       box-sizing: border-box;
       /* ADDED: */
-      color: blue;
       color: orange;
       color: aqua;
-      padding: 0 50px 0 50px; /* should this padding go elsewhere? */
+      color: blue;
+       /* padding: 0 50px 0 50px; should this padding go elsewhere? */
       grid-area: main-text; 
       display: block;
       width: 100%;
