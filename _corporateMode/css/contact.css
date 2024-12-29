@@ -277,40 +277,25 @@ html {
     
     .container {
       /* width: 100vw; */ /* probably unnecesary */
+      /* ADDED: */
       overflow: auto;
       width: 100vw;
-      /* TEST: */
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-sizing: border-box;
     }
 
     .grid-container {
       /* width: 100%; */ /* probably unnecesary */
       height: 93vh; /* [+] header height = 100vh */
-      /* FIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEE
-      
-      */
+      /* FIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX */
       grid-template-areas:
       "menu"
       "main-text"
       "branding";
       /* grid-template-rows: 1fr auto;  Main text takes the remaining space, branding adjusts */
-      /* TEST */
+      /* ADDED: */
       width: 100%;
-      height: 100%;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 1fr auto;
-      grid-template-areas:
-        "menu"
-        "main-text"
-        "branding";
     }
 
     .main-text {
@@ -320,14 +305,13 @@ html {
       height: 100%;
       padding: 0 50px 0 50px; /* should this padding go elsewhere? */
       box-sizing: border-box;
-      color: green;
-      /* TEST: */
-      grid-area: main-text;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      color: blue;
+      /* ADDED: */
+       display: block;
+       width: 100%;
+       margin: 0;
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr;
     }
 
     .branding {
@@ -340,15 +324,8 @@ html {
       margin: 0 3.75% 0 3.75%;
       /* justify-content: center; */
       border-left: none;
-      /* TEST: */
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      /* ADDED: */
       height: fit-content;
-      display: flex;
-      justify-content: flex-start;
-      background-color: transparent;
     }
 
     .social {
