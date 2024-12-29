@@ -27,6 +27,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 .container {
@@ -36,7 +37,6 @@ html {
   width: 100%;
   max-width: 1500px; */
   background-color: var(--black-07); 
-  font-size: 16px;
   overflow: hidden;
 }
 
@@ -58,16 +58,15 @@ html {
     "border-area   menu        menu"
     "border-area   main-text   branding"
     "footer        footer      branding";
+    background-color: rgba(230, 230, 230, 1); /* put into root as ~7% black */
   }
   
   .menu {
     grid-area: menu;
-    /* font-size: 1.15rem; */
     border-bottom: var(--borders-black);
     background-color: var(--pink-20);
     text-align: right;
     padding: 8px 0px 10px 10px; /* Same vertical padding as .menu-link */
-    /* padding: 8px 0px 10px 0px; */
     /* white-space: nowrap; */
     /* overflow: hidden; */
   }
@@ -79,7 +78,7 @@ html {
     /* padding: 8px 5vw 10px 5vw; */
     /* padding: 8px 15px 10px 15px; */
     text-decoration: none;
-    font-size: 1.65rem;
+    font-size: 1.65rem; /* Where do the font sizes, typography, colours live? */
     /* font-size: 1.05rem; */
     /* font-size: 1.7rem; */
     font-weight: bold;
@@ -127,8 +126,8 @@ html {
   .main-text {
     grid-area: main-text;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* gap: 70px; */
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 2fr; */
     /* background-color: var(--pink-20); */
     /* background-color: var(--pink-70); */
     /* background-color: #7289DA; */
@@ -137,11 +136,11 @@ html {
     color: var(--black-80);
     width: 100%;
     grid-template-areas:
-    /* PROBLEM HERE, get columns down to 1: */
-    "contact-blurb          contact-blurb"
-    "contact-feature-text   contact-feature-text";
+    "contact-blurb"
+    "contact-feature-text";
     /* z-index: -1;
     position: relative; */
+    /* gap: 70px; */
   }
 
   .branding {
@@ -174,7 +173,6 @@ html {
     /* width: 30px; */
     background-color: var(--blue-20);
     border-right: var(--borders-grey);
-    
   }
   
   .footer {
@@ -194,7 +192,7 @@ html {
     font-size: 4rem;
     margin: 50px 0 0 50px;
     padding: 0 10% 5% 10%;
-    align-self: flex-end;
+    align-self: flex-end; /* centre me */
     height: fit-content;
   }
 
@@ -241,10 +239,10 @@ html {
 
    @media screen and (max-width: 992px) {
    
-    html {
-      /* font-size in container?? */
+    .container {
+      overflow: auto; /* test me, maybe apply to html "class" instead */
     }
-  
+
     .menu {
       padding: 5px 0px 5px 0px; /* Same vertical padding as .menu-link */
     }
@@ -272,73 +270,44 @@ html {
    Responsive design - Phone: */
 
    @media screen and (max-width: 576px) {
-
+    
     html {
-      /* overflow: hidden; */
-      /* margin: 0;
-      padding: 0; */
-      /* background-color: var(--pink-20); */
-    }
-
-    .container {
       font-size: 14px;
-      /* CHECK ME: */
-      overflow: auto;
-      width: 100vw;
     }
-
+    
+    .container {
+      /* width: 100vw; */ /* probably unnecesary */
+    }
+  
     .grid-container {
-       /* CHECK ME: */
-      width: 50vw;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      /* width: 100%; */ /* probably unnecesary */
       height: 93vh; /* [+] header height = 100vh */
-      background-color: rgba(230, 230, 230, 1);
-      /* END  */
       grid-template-areas:
-      "menu"
+      /* "menu" */
       "main-text"
       "branding";
-      /* "border-area   main-text   footer" */
+      grid-template-rows: 1fr auto; /* Main text takes the remaining space, branding adjusts */
     }
 
     .main-text {
-      /* CHECK ME: */
-      grid-area: main-text;
-      display: block;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      /* padding: 0 10px; */
-      align-content: center; 
-      box-sizing: border-box;
-      /* border: 1px solid blue; */
-      /* END */
-      /* font-size: 1rem; */
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      /* width: 50vw; */
       grid-template-areas:
       "contact-blurb";
-      color: red;
-      color: var(--black-80);
-      /* margin: 0;
-      padding: 0; */
+      align-content: center;
+      height: 100%;
+      padding: 0 50px 0 50px; /* should this padding go elsewhere? */
+      box-sizing: border-box;
     }
-    
+
     .branding {
-      height: fit-content;
-      background-color: transparent;
-      border-top: 0.25px solid gray;
+      background-color: transparent; /* put into root */
+      border-top: 1px solid lightgray;
+      /* border-top: 0.25px solid gray; */
       /* border-top: var(--borders-grey); */
-      margin: 0 3.75% 0 3.75%;
-      /* padding: 0;
-      margin: 0; */
       width: 92.5%;
+      /* height: fit-content; */
+      margin: 0 3.75% 0 3.75%;
+      /* justify-content: center; */
       border-left: none;
-      justify-content: flex-start;
     }
 
     .social {
@@ -349,22 +318,19 @@ html {
 
     .social a {
       writing-mode: horizontal-tb;
-      /* color: #7289DA; */
       border: 0.25px solid gray;
+      /* border: 1px solid lightgray; */
+      /* border: var(--borders-grey); */
       background-color: var(--pink-20);
+      /* color: #7289DA; */
       /* font-family: var(--san-serif); */
     }
 
     .border-area {
-      /* width: 5px;
-      border: none; */
       display: none;
     }
 
     .footer {
-      /* width: 5px;
-      border: none;
-      height: 100%; */
       display: none;
     }
 
@@ -374,22 +340,19 @@ html {
     .contact-blurb {
       margin: 0;
       padding: 0;
-      font-size: 3.2rem;
-      /* border: 1px solid blue; */
-      /* height: fit-content; */
-      /* align-self: flex-start; */
-      /* CHECK ME: */
-      /* margin: 10px 0;  */
-      width: 100%;
+      font-size: 3.5rem;
+      width: 100%; /* probably unneeded */
       text-align: center;
     }
 
     .contact-blurb-feature-02 {
-      font-size: 2rem;
+      font-size: 3rem;
+      padding: 12px;
     }
 
     .contact-blurb-feature-03 {
-      font-size: 2rem;
+      font-size: 3rem;
+      padding: 12px;
     }
 
     .contact-feature-text {
@@ -397,13 +360,9 @@ html {
     }
 
 /* __________________________________
-   Burger menu and responsive header: (CHECK ME) */
+   Burger menu and responsive header: */
 
    .responsive-header {
-    width: 100%;
-    /* width: 92.5%; */
-    padding-left: 7.5%;
-    /* padding-bottom: 1.5vh; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -411,42 +370,34 @@ html {
     /* border-bottom: var(--borders-grey); */
     z-index: 2; /* Make header top layer in document */
     position: relative;
-    /* background-color: var(--black-07); */
     height: 7vh;
+    width: 100%;
+    /* width: 92.5%; */
     /* background-color: var(--pink-20); */
     /* background-color: var(--pink-70); */
-    /* border: 2px solid yellow; */
     box-sizing: border-box;
+    padding: 0 0 0 7.5%;
   }
 
   .burger div {
-    width: 35px;
+    width: 42px;
+    /* width: 35px; */
     /* width: 25px; */
-    height: 7px;
+    height: 8px;
+    /* height: 7px; */
     /* height: 4px; */
     margin: 4px;
-    /* margin: 4px; */
+    border: 2px solid var(--pink-70);
+    /* border: 4px double var(--pink); */
     /* background-color: var(--pink-70); */
     /* background: lightgray;  */
-    
-    /* border: 3px dotted white; */
-    /* border: 2px dashed white; */
-    /* ------------ */
-    
-    border: 2px groove white;
-    
-    border: 4px double var(--pink);
-    border: 2px solid var(--pink-70);
-    /* border: 2px solid white; */
-
     transition: all 0.3s ease-in;
     box-sizing: border-box;
-    /* PUT THE MENU TO THE LEFT using flexbox: */
-    /* margin-left: 470px; */
   }
   
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
+    /* transform: scale(1.5); */
   }
 
   .toggle .line2 {
@@ -455,19 +406,16 @@ html {
 
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+    /* transform: scale(1.5); */
   }
 
   .responsive-logo {
-    padding-right: 7.5%;
+    padding: 1% 7.5% 0 0;
   }
   
   .responsive-header img {
     width: auto;
-    /* width: 3vw; */
     height: 5vh;
-    /* height: 4vh; */
-    /* height: 6vh; */
-    /* height: auto; */
   }
 
   .menu {
@@ -484,19 +432,15 @@ html {
     align-items: center; */
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
-    /* font-size: 10rem; */
-    /* font-size: 1.75rem; */
-    background-color: lightgray;
-    /* background-color: var(--black-07); */
-    /* background-color: #01010113; */
+    background-color: lightgray; /* Put into root */
     padding: 15vh 0 0 0;
+    border-bottom: none;
   }
 
   .menu-link {
     border-left: none;
     padding: 0 0 0 20vw;
-    /* PUT INTO ROOT IF YOU USE THIS COLOUR: */
-    color: rgba(124, 124, 129, 1);
+    color: rgba(124, 124, 129, 1); /* PUT INTO ROOT IF YOU USE THIS COLOUR: */
     font-size: 4rem;
   }
 
@@ -505,37 +449,33 @@ html {
   }
 
   #active-page {
-    /* FIX ME: */
-    background-color: lightgray;
+    background-color: lightgray; /* FIX ME, same as background */
   }
 
   .menu-link-superscript {
-    font-size: 0.75rem;
-    vertical-align: super;
-    margin: 0 0 10px 7px;
+    font-size: 1.25rem;
+    /* margin: 0 0 10px 7px; */
   }
 
   #last-menu-item {
-    /* border-bottom: 0.5px solid var(--black-80);
-    padding-bottom: 20vh; */
+    border-bottom: 0.5px solid var(--black-80);
+    padding: 12vh 0 5vh 20vw;
+    transform: rotate(30deg);
   }
-
-  /* Activate via javascript: */
+  
   .nav-active {
     transform: translateX(0%);
   }
 
 }
 
-/* DO ME:: */
-/* 1. Clean up the contact page:
-      - 2. Order of CSS
-      - 3. Detail in CSS
-      - 4. Push to GitHub
-      - 5. Check on all devices (no need to get perfect design though)
-/* 2. Finalise Sketch design file && main sites from Design Brief && Favourites from research */
-/* 3. Check "boilerplate" code to ensure you can copy across site && make final decisions. (Compare to original contact page before copying whole site). "Prettify" the code too. Check section/div/main semantic html. Update nav links */
-/* 4. Do blogs page */
+/* DO ME::::: */
+/* 1. Push to GitHub      
+   2. Check on all devices (no need to get perfect design though)
+/* 3. Check "boilerplate" code to ensure you can copy across site && make final decisions: >>> (Compare to original contact page before copying whole site). "Prettify" the code too. Check section/div/main semantic html. Update nav links */
+/* --------------------- */
+/* 4. Do blogs and services page */
+/* 4. Finalise Sketch design file && main sites from Design Brief && Favourites from research */
 /* 5. Have markup/styling done by first week of January. Then spend rest of time on home page, javascript, testing */
  
 /*  
