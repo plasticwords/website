@@ -277,9 +277,6 @@ html {
     
     .container {
       /* width: 100vw; */ /* probably unnecesary */
-      /* ADDED: */
-      overflow: auto;
-      width: 100vw;
     }
 
     .grid-container {
@@ -290,34 +287,17 @@ html {
       "main-text"
       "branding";
       grid-template-rows: 1fr auto; /* Main text takes the remaining space, branding adjusts */
-      /* ADDED: */
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-
     }
 
     .main-text {
       align-content: center;
       height: 100%;
       box-sizing: border-box;
-      color: blue;
       color: red;
       color: orange;
       color: aqua;
+      color: blue;
       /* padding: 0 50px 0 50px; THIS IS BREAKING THE LAYOUT!!!!!! */
-      /* ADDED: */
-      grid-area: main-text; 
-      display: block;
-      width: 100%;
-      margin: 0;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas:
-      "contact-blurb";
-      /* ADDED 2: */
-      padding: 0;
     }
 
     .branding {
@@ -330,8 +310,6 @@ html {
       margin: 0 3.75% 0 3.75%;
       /* justify-content: center; */
       border-left: none;
-      /* ADDED: */
-      height: fit-content;
     }
 
     .social {
