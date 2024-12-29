@@ -299,19 +299,22 @@ html {
     }
 
     .main-text {
-      grid-template-areas:
-      "contact-blurb";
       align-content: center;
       height: 100%;
-      padding: 0 50px 0 50px; /* should this padding go elsewhere? */
+      
       box-sizing: border-box;
       color: blue;
+      color: orange;
       /* ADDED: */
-       display: block;
-       width: 100%;
-       margin: 0;
+      /* padding: 0 50px 0 50px;  should this padding go elsewhere? */
+      grid-area: main-text; 
+      display: block;
+      width: 100%;
+      margin: 0;
        grid-template-columns: 1fr;
        grid-template-rows: 1fr;
+       grid-template-areas:
+      "contact-blurb";
     }
 
     .branding {

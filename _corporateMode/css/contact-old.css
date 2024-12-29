@@ -6,8 +6,6 @@
     --pink: #B450B0;
     --pink-20: rgba(180, 80, 176, 0.2);
     --pink-70: rgba(180, 80, 176, 0.7);
-    --pink-20: red;
-    --pink-70: red;
     --blue: #7289DA;
     --blue-20: rgba(114, 137, 218, 0.2);    
     --blue-70: rgba(114, 137, 218, 0.7);
@@ -126,6 +124,7 @@ html {
     background-color: var(--pink-70);
   }
 
+  /* HERE */
   .main-text {
     grid-area: main-text;
     display: grid;
