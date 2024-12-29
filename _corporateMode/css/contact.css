@@ -279,6 +279,12 @@ html {
       /* width: 100vw; */ /* probably unnecesary */
       overflow: auto;
       width: 100vw;
+      /* TEST: */
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
     }
 
     .grid-container {
@@ -292,6 +298,19 @@ html {
       "main-text"
       "branding";
       /* grid-template-rows: 1fr auto;  Main text takes the remaining space, branding adjusts */
+      /* TEST */
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "menu"
+        "main-text"
+        "branding";
     }
 
     .main-text {
@@ -301,7 +320,14 @@ html {
       height: 100%;
       padding: 0 50px 0 50px; /* should this padding go elsewhere? */
       box-sizing: border-box;
-      color: red;
+      color: green;
+      /* TEST: */
+      grid-area: main-text;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     .branding {
@@ -314,6 +340,15 @@ html {
       margin: 0 3.75% 0 3.75%;
       /* justify-content: center; */
       border-left: none;
+      /* TEST: */
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: fit-content;
+      display: flex;
+      justify-content: flex-start;
+      background-color: transparent;
     }
 
     .social {
