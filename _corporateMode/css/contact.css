@@ -277,16 +277,21 @@ html {
     
     .container {
       /* width: 100vw; */ /* probably unnecesary */
+      overflow: auto;
+      width: 100vw;
     }
-  
+
     .grid-container {
       /* width: 100%; */ /* probably unnecesary */
       height: 93vh; /* [+] header height = 100vh */
+      /* FIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEEFIX MEEEEEEEEEEEE
+      
+      */
       grid-template-areas:
       "menu"
       "main-text"
       "branding";
-      
+      /* grid-template-rows: 1fr auto;  Main text takes the remaining space, branding adjusts */
     }
 
     .main-text {
@@ -296,6 +301,7 @@ html {
       height: 100%;
       padding: 0 50px 0 50px; /* should this padding go elsewhere? */
       box-sizing: border-box;
+      color: red;
     }
 
     .branding {
