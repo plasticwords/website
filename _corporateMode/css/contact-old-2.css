@@ -277,11 +277,8 @@ html {
     
     .container {
       /* width: 100vw; */ /* probably unnecesary */
-      /* ADDED: */
-      overflow: auto;
-      width: 100vw;
     }
-
+  
     .grid-container {
       /* width: 100%; */ /* probably unnecesary */
       height: 93vh; /* [+] header height = 100vh */
@@ -290,30 +287,15 @@ html {
       "main-text"
       "branding";
       grid-template-rows: 1fr auto; /* Main text takes the remaining space, branding adjusts */
-      /* ADDED: */
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
     .main-text {
-      align-content: center;
-      height: 100%;
-      box-sizing: border-box;
-      /* ADDED: */
-      color: blue;
-      color: orange;
-      color: aqua;
-      padding: 0 50px 0 50px; /* should this padding go elsewhere? */
-      grid-area: main-text; 
-      display: block;
-      width: 100%;
-      margin: 0;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
       grid-template-areas:
       "contact-blurb";
+      align-content: center;
+      height: 100%;
+      padding: 0 50px 0 50px; /* should this padding go elsewhere? */
+      box-sizing: border-box;
     }
 
     .branding {
@@ -326,8 +308,6 @@ html {
       margin: 0 3.75% 0 3.75%;
       /* justify-content: center; */
       border-left: none;
-      /* ADDED: */
-      height: fit-content;
     }
 
     .social {
@@ -490,7 +470,7 @@ html {
 }
 
 /* DO ME::::: */
-/* 
+/* 1. Push to GitHub      
    2. Check on all devices (no need to get perfect design though)
 /* 3. Check "boilerplate" code to ensure you can copy across site && make final decisions: >>> (Compare to original contact page before copying whole site). "Prettify" the code too. Check section/div/main semantic html. Update nav links */
 /* --------------------- */
