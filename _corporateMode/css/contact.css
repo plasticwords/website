@@ -293,20 +293,11 @@ html {
       align-content: center;
       height: 100%;
       box-sizing: border-box;
-      /* ADDED: */
-      color: orange;
       color: aqua;
       color: blue;
       color: red;
-       /* padding: 0 50px 0 50px; THIS IS BREAKING THE LAYOUT!!!!!! */
-      grid-area: main-text; 
-      display: block;
-      width: 100%;
-      margin: 0;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas:
-      "contact-blurb";
+      color: orange;
+      /* padding: 0 50px 0 50px; THIS IS BREAKING THE LAYOUT!!!!!! */
     }
 
     .branding {
@@ -319,8 +310,6 @@ html {
       margin: 0 3.75% 0 3.75%;
       /* justify-content: center; */
       border-left: none;
-      /* ADDED: */
-      height: fit-content;
     }
 
     .social {
