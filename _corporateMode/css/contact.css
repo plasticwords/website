@@ -277,9 +277,6 @@ html {
     
     .container {
       /* width: 100vw; */ /* probably unnecesary */
-      /* ADDED: */
-      overflow: auto;
-      width: 100vw;
     }
 
     .grid-container {
@@ -290,11 +287,6 @@ html {
       "main-text"
       "branding";
       grid-template-rows: 1fr auto; /* Main text takes the remaining space, branding adjusts */
-      /* ADDED: */
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
 
     .main-text {
@@ -305,7 +297,8 @@ html {
       color: orange;
       color: aqua;
       color: blue;
-       /* padding: 0 50px 0 50px; should this padding go elsewhere? */
+      color: red;
+       /* padding: 0 50px 0 50px; THIS IS BREAKING THE LAYOUT!!!!!! */
       grid-area: main-text; 
       display: block;
       width: 100%;
