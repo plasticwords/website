@@ -302,10 +302,10 @@ html {
       align-content: center;
       height: 100%;
       box-sizing: border-box;
-      color: aqua;
       color: blue;
       color: red;
       color: orange;
+      color: aqua;
       /* padding: 0 50px 0 50px; THIS IS BREAKING THE LAYOUT!!!!!! */
       /* ADDED: */
       grid-area: main-text; 
