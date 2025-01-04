@@ -290,14 +290,12 @@ html {
     }
 
     .main-text {
+      /* grid-template-areas:
+      "contact-blurb"; */
       align-content: center;
       height: 100%;
-      box-sizing: border-box;
-      color: red;
-      color: orange;
-      color: aqua;
-      color: blue;
       /* padding: 0 50px 0 50px; THIS IS BREAKING THE LAYOUT!!!!!! */
+      box-sizing: border-box;
     }
 
     .branding {
@@ -391,6 +389,7 @@ html {
     margin: 4px;
     border: 2px solid var(--pink-70);
     /* border: 4px double var(--pink); */
+    /* border: 2px groove white; */
     /* background-color: var(--pink-70); */
     /* background: lightgray;  */
     transition: all 0.3s ease-in;
