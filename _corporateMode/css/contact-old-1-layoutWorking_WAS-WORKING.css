@@ -167,6 +167,7 @@ html {
     text-decoration: none;
     color: var(--black);
     font-family: var(--monospace);
+    color: red;
   }
 
   .border-area {
