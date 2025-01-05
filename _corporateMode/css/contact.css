@@ -36,10 +36,9 @@ html {
   /* margin: 0 auto;
   width: 100%;
   max-width: 1500px; */
-  background-color: var(--black-07); 
-  /* DEBUG */
+  background-color: var(--black-07);
+  overflow: auto;
   /* overflow: hidden; */
-  overflow: auto
 }
 
 /* ___________________________________
@@ -139,6 +138,7 @@ html {
     font-family: var(--serif);
     color: var(--black-80);
     width: 100%;
+    /* height: 100%; */
     grid-template-areas:
     "contact-blurb"
     "contact-feature-text";
@@ -224,10 +224,11 @@ html {
 
   .contact-feature-text {
     grid-area: contact-feature-text;
-    text-align: center;
+    /* width: 100%; */
     font-size: 12rem;
     opacity: 0.25;
-    margin: 130px 0 -900px 0;
+    /* margin: 0 0 -20px 0; */
+    /* margin: 130px 0 -900px 0; */
     /* margin: 220px 0 -220px 0; */
     text-shadow:
       3px 3px 0 black, /* bottom-right */
@@ -237,6 +238,10 @@ html {
     color: white;
     /* color: rgba(180, 80, 176, 1); */
     /* font-weight: bold; */
+    display: flex; /* can i use "vertical-align:" instead here to put text at the baseline */
+    align-items: flex-end;
+    justify-content: center;
+    /* text-align: center; */
    }
 
 /* __________________________________
@@ -258,6 +263,7 @@ html {
       /* DEBUG: */
       background-color: green;
       background-color: blue;
+      background-color: yellow;
     }
 
     .social {
