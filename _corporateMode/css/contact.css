@@ -1,5 +1,4 @@
-/* ___________________________________
-   Variables & container: */
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ VARIABLES & CONTAINER : */
 
   :root {
     /* Colours: */
@@ -21,34 +20,36 @@
     /* Borders: */
     --borders-black: 1px solid black;
     --borders-grey: 1px solid gray;
-   }
+  }
 
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 16px;
-}
+  html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--pink-20);
+  }
 
-.container {
-  margin: 0;
-  padding: 0;
-  /* margin: 0 auto;
-  width: 100%;
-  max-width: 1500px; */
-  background-color: var(--black-07);
-  overflow: auto;
-  /* overflow: hidden; */
-}
+  .container {
+    margin: 0;
+    padding: 0;
+    /* margin: 0 auto;
+    width: 100%;
+    max-width: 1500px; */
+    background-color: var(--black-07);
+    overflow: auto;
+    /* overflow: hidden; */
+    /* border: var(--borders-black);
+    box-sizing: border-box; */
+  }
 
-/* ___________________________________
-   Main contents and navigation: */
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ MAIN CONTENTS & NAVIGATION : */
 
-   .responsive-header {
+  .responsive-header {
     display: none;
   }
 
-   .grid-container {
+  .grid-container {
     display: grid;
     /* Can I make this layout more explicit: */
     grid-template-columns: auto 10fr;
@@ -188,8 +189,7 @@ html {
     position: relative; */
   }
 
-  /* __________________________________
-   New code - Contact page: */
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN MAIN CONTENTS - CONTACT : */
 
   .contact-blurb {
     grid-area: contact-blurb;
@@ -242,12 +242,11 @@ html {
     align-items: flex-end;
     justify-content: center;
     /* text-align: center; */
-   }
+  }
 
-/* __________________________________
-   Responsive design - Tablet: */
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ RESPONSIVE DESIGN - TABLET : */
 
-   @media screen and (max-width: 992px) {
+  @media screen and (max-width: 992px) {
    
     .container {
       overflow: auto; /* test me, maybe apply to html "class" instead */
@@ -260,10 +259,6 @@ html {
     .menu-link {
       padding: 5px 4.8vw 5px 4.8vw;
       font-size: 1.2rem;
-      /* DEBUG: */
-      background-color: green;
-      background-color: blue;
-      background-color: yellow;
     }
 
     .social {
@@ -280,10 +275,9 @@ html {
     }
   }
 
-/* _________________________________
-   Responsive design - Phone: */
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ RESPONSIVE DESIGN - PHONE : */
 
-   @media screen and (max-width: 576px) {
+  @media screen and (max-width: 576px) {
     
     html {
       font-size: 14px;
@@ -348,8 +342,7 @@ html {
       display: none;
     }
 
-  /* __________________________________
-    Responsive design - Phone /// New code - Contact page: */
+    /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN RESPONSIVE DESIGN - CONTACT : */
 
     .contact-blurb {
       margin: 0;
@@ -374,135 +367,135 @@ html {
       display: none;
     }
 
-/* __________________________________
-   Burger menu and responsive header: */
+    /* __________________________________________________________________________________________________________________________________________________________________________-\ BURGER MENU & RESPONSIVE HEADER : */
 
-   .responsive-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 0.25px solid gray;
-    /* border-bottom: var(--borders-grey); */
-    z-index: 2; /* Make header top layer in document */
-    position: relative;
-    height: 7vh;
-    width: 100%;
-    /* width: 92.5%; */
-    /* background-color: var(--pink-20); */
-    /* background-color: var(--pink-70); */
-    box-sizing: border-box;
-    padding: 0 0 0 7.5%;
-  }
+    .responsive-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.25px solid gray;
+      /* border-bottom: var(--borders-grey); */
+      z-index: 2; /* Make header top layer in document */
+      position: relative;
+      height: 7vh;
+      width: 100%;
+      /* width: 92.5%; */
+      /* background-color: var(--pink-20); */
+      /* background-color: var(--pink-70); */
+      box-sizing: border-box;
+      padding: 0 0 0 7.5%;
+    }
 
-  .burger div {
-    width: 42px;
-    /* width: 35px; */
-    /* width: 25px; */
-    height: 8px;
-    /* height: 7px; */
-    /* height: 4px; */
-    margin: 4px;
-    border: 2px solid var(--pink-70);
-    /* border: 4px double var(--pink); */
-    /* border: 2px groove white; */
-    /* background-color: var(--pink-70); */
-    /* background: lightgray;  */
-    transition: all 0.3s ease-in;
-    box-sizing: border-box;
-  }
+    .burger div {
+      width: 42px;
+      /* width: 35px; */
+      /* width: 25px; */
+      height: 8px;
+      /* height: 7px; */
+      /* height: 4px; */
+      margin: 4px;
+      border: 2px solid var(--pink-70);
+      /* border: 4px double var(--pink); */
+      /* border: 2px groove white; */
+      /* background-color: var(--pink-70); */
+      /* background: lightgray;  */
+      transition: all 0.3s ease-in;
+      box-sizing: border-box;
+    }
   
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-    /* transform: scale(1.5); */
+    .toggle .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+      /* transform: scale(1.5); */
+    }
+
+    .toggle .line2 {
+      opacity: 0;
+    }
+
+    .toggle .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+      /* transform: scale(1.5); */
+    }
+
+    .responsive-logo {
+      padding: 1% 7.5% 0 0;
+    }
+    
+    .responsive-header img {
+      width: auto;
+      height: 5vh;
+    }
+
+    .menu {
+      position: fixed;
+      right: 0;
+      top: 0;
+      text-align: left;
+      z-index: 1;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      /* justify-content: center;
+      align-items: center; */
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      background-color: lightgray; /* Put into root */
+      padding: 15vh 0 0 0;
+      border-bottom: none;
+    }
+
+    .menu-link {
+      border-left: none;
+      padding: 0 0 0 20vw;
+      color: rgba(124, 124, 129, 1); /* PUT INTO ROOT IF YOU USE THIS COLOUR: */
+      font-size: 4rem;
+    }
+
+    .menu-link::first-letter {
+      text-transform: uppercase;
+    }
+
+    #active-page {
+      background-color: lightgray; /* FIX ME, same as background */
+    }
+
+    .menu-link-superscript {
+      font-size: 1.25rem;
+      /* margin: 0 0 10px 7px; */
+    }
+
+    #last-menu-item {
+      border-bottom: 0.5px solid var(--black-80);
+      padding: 12vh 0 5vh 20vw;
+      transform: rotate(30deg);
+    }
+    
+    .nav-active {
+      transform: translateX(0%);
+    }
   }
 
-  .toggle .line2 {
-    opacity: 0;
-  }
 
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-    /* transform: scale(1.5); */
-  }
-
-  .responsive-logo {
-    padding: 1% 7.5% 0 0;
-  }
-  
-  .responsive-header img {
-    width: auto;
-    height: 5vh;
-  }
-
-  .menu {
-    position: fixed;
-    right: 0;
-    top: 0;
-    text-align: left;
-    z-index: 1;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    /* justify-content: center;
-    align-items: center; */
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-    background-color: lightgray; /* Put into root */
-    padding: 15vh 0 0 0;
-    border-bottom: none;
-  }
-
-  .menu-link {
-    border-left: none;
-    padding: 0 0 0 20vw;
-    color: rgba(124, 124, 129, 1); /* PUT INTO ROOT IF YOU USE THIS COLOUR: */
-    font-size: 4rem;
-  }
-
-  .menu-link::first-letter {
-    text-transform: uppercase;
-  }
-
-  #active-page {
-    background-color: lightgray; /* FIX ME, same as background */
-  }
-
-  .menu-link-superscript {
-    font-size: 1.25rem;
-    /* margin: 0 0 10px 7px; */
-  }
-
-  #last-menu-item {
-    border-bottom: 0.5px solid var(--black-80);
-    padding: 12vh 0 5vh 20vw;
-    transform: rotate(30deg);
-  }
-  
-  .nav-active {
-    transform: translateX(0%);
-  }
-
-}
-
-/* DO ME::::: */
-/* 
-   2. Check on all devices (no need to get perfect design though)
-/* 3. Check "boilerplate" code to ensure you can copy across site && make final decisions: >>> (Compare to original contact page before copying whole site). "Prettify" the code too. Check section/div/main semantic html. Update nav links */
-/* --------------------- */
-/* 4. Do blogs and services page */
-/* 4. Finalise Sketch design file && main sites from Design Brief && Favourites from research */
-/* 5. Have markup/styling done by first week of January. Then spend rest of time on home page, javascript, testing */
+/* TO DO: */
+/* 0. Boilerplate fimished!! Just compare to original Contact page (both HTML & CSS) before copying across to About / Services pages. */
+/* 1. Push changes to Github */
+/* 2. Do About / Services pages. Can start JS if you want. Can also have a quick look at Design files (see 4.2 below) */
+/* 3. Then Blogs page */
+/* 4. Then either: 
+        - Javascript stuff for About / Services
+        - Finalise Sketch design file && main sites from Design Brief && Favourites from research. Just confirm you've finished the Design. */
+/* 5. Spend rest of time on home page, javascript, testing. */
  
-/*  
+    /*  
   gradient text:
     background: linear-gradient(to right, #B450B0, #7289DA);
     -webkit-background-clip: text; [for Safari/Chrome]
     color: transparent;
-*/
 
-/* this is not on index.css but IS in index.html (i.e., delete from html)
+  this is not on index.css but IS in index.html (i.e., delete from html)
   #title-text {
     opacity: 0.65;
-  }. */
+  }
+    */
