@@ -244,6 +244,8 @@ html {
    
     .container {
       overflow: auto; /* test me, maybe apply to html "class" instead */
+      /* DEBUG: */
+      overflow: hidden;
     }
 
     .menu {
@@ -253,6 +255,7 @@ html {
     .menu-link {
       padding: 5px 4.8vw 5px 4.8vw;
       font-size: 1.2rem;
+      background-color: green
     }
 
     .social {
