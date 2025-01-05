@@ -65,10 +65,12 @@ html {
     grid-area: menu;
     border-bottom: var(--borders-black);
     background-color: var(--pink-20);
-    text-align: right;
-    padding: 8px 0px 10px 10px; /* Same vertical padding as .menu-link */
+    /* text-align: right; */
+    /* padding: 8px 0px 10px 10px; */ /* Same vertical padding as .menu-link, but taken away because of display:flexbox inside .menu */
     /* white-space: nowrap; */
     /* overflow: hidden; */
+    display: flex; /* this fixes the whitespace problem in the html, no more gaps. can also comment out whitespace in the markup. */
+    justify-content: flex-end;
   }
   
   .menu-link {
@@ -194,6 +196,7 @@ html {
     padding: 0 10% 5% 10%;
     align-self: flex-end; /* centre me */
     height: fit-content;
+    /* line-height: 120px; */
   }
 
   .contact-blurb-feature-01 {
@@ -352,7 +355,8 @@ html {
 
     .contact-blurb-feature-03 {
       font-size: 3rem;
-      padding: 12px;
+      /* padding: 12px; */
+      padding: 0;
     }
 
     .contact-feature-text {
