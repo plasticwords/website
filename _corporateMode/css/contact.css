@@ -37,7 +37,9 @@ html {
   width: 100%;
   max-width: 1500px; */
   background-color: var(--black-07); 
-  overflow: hidden;
+  /* DEBUG */
+  /* overflow: hidden; */
+  overflow: auto
 }
 
 /* ___________________________________
@@ -244,8 +246,6 @@ html {
    
     .container {
       overflow: auto; /* test me, maybe apply to html "class" instead */
-      /* DEBUG: */
-      overflow: hidden;
     }
 
     .menu {
@@ -255,7 +255,9 @@ html {
     .menu-link {
       padding: 5px 4.8vw 5px 4.8vw;
       font-size: 1.2rem;
-      background-color: green
+      /* DEBUG: */
+      background-color: green;
+      background-color: blue;
     }
 
     .social {
