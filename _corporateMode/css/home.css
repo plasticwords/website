@@ -1,0 +1,376 @@
+try-0 {
+    /* background-color: brown; */
+    background: linear-gradient(to right, #B450B0, #7289DA);
+    -webkit-background-clip: text; /* [for Safari/Chrome] */
+    color: transparent;
+    font-size: 16px;
+    /* background-color: rgba(230, 230, 230, 1); */
+}
+
+try-1 {
+    background: linear-gradient(to right, #B450B0, #7289DA);
+    background-size: 200% 200%; /* Make it larger for smooth movement */
+    animation: moveGradient 3s linear infinite; /* Infinite loop animation */
+    -webkit-background-clip: text; /* Safari/Chrome text magic */
+    color: transparent; /* Make the text visible only through the gradient */
+  }
+  
+  /* Keyframes for moving the gradient */
+  @keyframes moveGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  try-2 {
+    background: linear-gradient(90deg, #B450B0, #7289DA, #B450B0); /* Base gradient */
+    background-size: 200% 200%; /* Bigger for dynamic motion */
+    animation: moveGradient 10s ease infinite; /* 10s of smooth direction switching */
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  /* Keyframes for dynamic movement */
+  @keyframes moveGradient {
+    0% {
+      background-position: 0% 50%; /* Left to right */
+    }
+    25% {
+      background-position: 50% 100%; /* Bottom-right diagonal */
+    }
+    50% {
+      background-position: 100% 50%; /* Right to left */
+    }
+    75% {
+      background-position: 50% 0%; /* Top-left diagonal */
+    }
+    100% {
+      background-position: 0% 50%; /* Loop back to the start */
+    }
+  }
+  
+
+  try-3 {
+    background: linear-gradient(90deg, #B450B0, #7289DA, #B450B0); /* Gradient setup */
+    background-size: 200% 200%; /* Big canvas for crazy moves */
+    animation: moveGradient 12s ease infinite; /* Smooth 12-second loop */
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  /* Keyframes for diagonal, horizontal, and vertical moves */
+  @keyframes moveGradient {
+    0% {
+      background-position: 0% 50%; /* Left-center (horizontal start) */
+    }
+    20% {
+      background-position: 50% 100%; /* Diagonal bottom-right */
+    }
+    40% {
+      background-position: 100% 50%; /* Right-center */
+    }
+    60% {
+      background-position: 50% 0%; /* Diagonal top-right */
+    }
+    80% {
+      background-position: 0% 50%; /* Left-center */
+    }
+    100% {
+      background-position: 50% 100%; /* Loop back diagonally */
+    }
+  }
+
+  
+
+  html {
+  background: linear-gradient(90deg, #B450B0, #7289DA, #B450B0); /* Gradient setup -- MAYBE LOWER THE OPACITY OF THESE COLOURS, it's quite bright*/
+  background-size: 300% 300%; /* Bigger canvas for smoother motion */
+  animation: moveGradient 12s linear infinite; /* Linear for buttery smoothness */
+  -webkit-background-clip: text;
+  color: transparent;
+  background-color: gray;
+  /* background: rgba(230, 230, 230, 1); */
+}
+
+/* Keyframes with continuous flow */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%; /* Start left-center */
+  }
+  25% {
+    background-position: 50% 100%; /* Diagonal bottom-right */
+  }
+  50% {
+    background-position: 100% 50%; /* Right-center */
+  }
+  75% {
+    background-position: 50% 0%; /* Diagonal top-left */
+  }
+  100% {
+    background-position: 0% 50%; /* Loop seamlessly to the start */
+  }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 10fr 5fr;
+    grid-template-rows: 6fr 17.5fr 31.5fr 45fr;
+    height: 100vh;
+    width: 100vw;
+    grid-template-areas:
+    "one     two"
+    "three   four"
+    "five    six"      
+    "seven   eight";
+  }
+
+.seven {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Helvetica;
+    font-size: 10rem;
+    font-size: 8rem;
+    font-size: 9rem;
+    font-size: 8.5rem;
+    color: black;
+    border: 0.5px solid black;
+    opacity: 0.8;
+    text-align: right;
+    padding: 2vh 2vw 0 0;
+    
+}
+
+.seven-underline {
+    font-family: courier;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    /* border: 0.5px solid black;
+    border-radius: 20px; */
+    width: fit-content;
+    float: right;
+    padding: 15px 25px 15px 25px;
+}
+
+.one, .two, .three, .four, .five, .six, .eight {
+    border: 0.5px solid black;
+  }
+
+.five {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 0 0 100px;
+    /* CHATGPT */
+    justify-content: start; /* Center the circles horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* For positioning child elements */
+    height: 450px; /* Container height to fit circles */
+}
+
+  .circle.one, .circle.two, .circle.three {
+    width: 450px; /* Set the width */
+    height: 400px; /* Set the height (same as width for a circle) */
+    border-radius: 50%; /* Boom! Turns it into a circle */
+    border: 0.5px solid black;
+    border: 1px solid black;
+    /* CHATGPT */
+    width: 300px; /* Circle size */
+    height: 300px; /* Same as width for a perfect circle */
+    position: absolute; /* So they can overlap */
+    /* background-color: darkslategray; */
+  }
+
+
+
+
+  .circle.one {
+    background-color: rgba(180, 80, 176, 0.4); /* Light purple with transparency */
+    background-color: #B450B0;
+    /* Adjust for overlap: */
+    left: 300px;
+    z-index: 1;
+  }
+  
+  .circle.two {
+    z-index: 2;
+    /* Adjust for overlap: */
+    right: 320px; /* Adjust for overlap */
+    /* display: none; */
+    border: 1px solid black;
+    
+  }
+  
+  .circle.three {
+    /* background-color: rgba(120, 200, 120, 0.4); */
+    /* Adjust for overlap: */
+    background-color: rgba(114, 137, 218, 0.4); /* Light blue with transparency */
+    background-color: #7289DA;
+    right: 140px;
+    z-index: 0;
+  }
+  
+
+  /* .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 140px;
+    height: 140px;
+    position: relative;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    transform: rotate(30deg);
+    border: 0.5px solid black;
+  }
+  
+  .square:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  
+  .square:nth-child(2) {
+    top: 0;
+    right: 0;
+  }
+  
+  .square:nth-child(3) {
+    bottom: 0;
+    left: 0;
+  }
+  
+  .square:nth-child(4) {
+    bottom: 0;
+    right: 0;
+  }
+   */
+
+   .six {  
+   
+  }
+
+  .square1 {
+    width: 150px;
+    height: 150px;
+    border: 0.5px solid black;
+  }
+  
+  .square2 {
+    width: 100px;
+    height: 100px;
+    border-right: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+  }
+
+  .square3 {
+    width: 50px;
+    height: 50px;
+    border-right: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+  }
+
+  .square0 {
+    width: 250px;
+    height: 250px;
+    border: 0.5px solid black;
+    border-radius: 20%; /* Boom! Turns it into a circle */
+  }
+  
+
+
+  .six-tried {
+    position: relative;
+    width: 400px; /* Width of the div */
+    height: 100%;
+    background-color: #7289DA; /* Background color for the div */
+    background-color: transparent;
+    border: 1px solid black; /* Optional border for visibility */
+    border: none;
+    overflow: hidden; /* Ensures no part of the line extends outside */
+  }
+  
+  .six-tried::after {
+    content: ''; /* Required for pseudo-element */
+    position: absolute;
+    top: 50;
+    left: 50;
+    right: 100;
+    width: 201%; /* Ensures the line spans the diagonal */
+    height: 1px; /* Thickness of the line */
+    background-color: black; /* Line color */
+    transform: rotate(-45deg); /* Rotates to create the diagonal */
+    transform-origin: center; /* Rotates around the middle of the div */
+  }
+  
+  .six {
+    display: flex;
+    justify-content: space-evenly; /* Evenly space out the lines */
+    align-items: center; /* Center the lines vertically */
+    height: 100%; /* Adjust based on your layout */
+    background-color: transparent; /* Optional */
+    padding-right: 15px;
+  }
+  
+  .line {
+    width: 1px; /* Line thickness */
+    height: 100%; /* Make the lines stretch the full height of the div */
+    background-color: black;
+    
+  }
+  
+
+
+  .menu {
+    grid-area: menu;
+    border-bottom: var(--borders-black);
+    background-color: var(--pink-20);
+    /* text-align: right; */
+    /* padding: 8px 0px 10px 10px; */ /* Same vertical padding as .menu-link, but taken away because of display:flexbox inside .menu */
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: flex-start;
+    
+  }
+  
+  .menu-link {
+    border-left: var(--borders-black);
+    /* border-right: 1px solid black;; */
+    padding: 0 2.3vw 0 1.5vw;
+    margin-top: -15px;
+    /* margin: 0 10vw 0 0; */
+    /* padding: 8px 6.3vw 10px 6.3vw; */
+    /* padding: 8px 115px 10px 115px; */
+    /* padding: 8px 5vw 10px 5vw; */
+    /* padding: 8px 15px 10px 15px; */
+    text-decoration: none;
+    font-size: 2rem; /* Where do the font sizes, typography, colours live? */
+    /* font-size: 1.05rem; */
+    /* font-size: 1.7rem; */
+    
+    font-weight: 570;
+    font-weight: bold;
+    color: var(--black-80);
+    color: black;
+    /* color: var(--black); */
+    font-family: var(--san-serif);
+    font-family: helvetica;
+    height: 100%;
+    text-transform: uppercase;
+  }
+
+
+  
+  .menu-link-superscript {
+    font-size: 0.7rem;
+    vertical-align: super;
+    margin: 0 0 10px 7px;
+    display: none;
+  }
+
+  #active-page {
+    background-color: var(--pink-70);
+  }
