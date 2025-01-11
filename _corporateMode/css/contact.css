@@ -20,6 +20,13 @@
     /* Borders: */
     --borders-black: 1px solid black;
     --borders-grey: 1px solid gray;
+    /* Is it better to put descriptions instead of colours etc.? */
+    /* --background-color:
+    --text-color:
+    --link-color:
+    --link-color-hover:
+    --primary-font:
+    --secondary-font: */
   }
 
   html {
@@ -28,6 +35,7 @@
     box-sizing: border-box;
     font-size: 16px;
     background-color: var(--pink-20);
+    /* overflow: hidden; */
   }
 
   .container {
@@ -38,7 +46,6 @@
     max-width: 1500px; */
     background-color: var(--black-07);
     overflow: auto;
-    /* overflow: hidden; */
     /* border: var(--borders-black);
     box-sizing: border-box; */
   }
@@ -55,6 +62,7 @@
     grid-template-columns: auto 10fr;
     grid-template-rows: auto 10fr;
     height: 100vh;
+    /* height: 95vh; container MAYBE fills screen without any overflow */
     width: 100vw;
     grid-template-areas:
     "border-area   menu        menu"
@@ -86,6 +94,7 @@
     /* font-size: 1.05rem; */
     /* font-size: 1.7rem; */
     font-weight: bold;
+    /* Where does the font family/styling/sizing go? Can you put it in .container so it's more general or is specific good? */
     color: var(--black-80);
     /* color: var(--black); */
     font-family: var(--san-serif);
@@ -123,6 +132,13 @@
     margin: 0 0 10px 7px;
   }
 
+  .menu-link:hover {
+    /* Style the links on hover:
+    opacity: ;
+    color: ; */
+    cursor: pointer;
+  }
+
   #active-page {
     background-color: var(--pink-70);
   }
@@ -153,6 +169,7 @@
     background-color: var(--pink-20);
     display: flex;
     border-left: var(--borders-black);
+    /* width/height: fit-content? Put into .social? Do I need both .social and .social-a? Or put both into .branding? */
   }
 
   .social {
@@ -168,9 +185,14 @@
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     text-decoration: none;
+    /* text-decoration: underline; */
     color: var(--black);
     font-family: var(--monospace);
   }
+
+  /* social a:hover {
+    Style me if needed
+  }  */
 
   .border-area {
     grid-area: border-area;
@@ -386,6 +408,13 @@
       padding: 0 0 0 7.5%;
     }
 
+    .responsive-header img {
+      width: auto;
+      height: 5vh;
+      /* width: 3vw;
+      height: auto; */
+    }
+
     .burger div {
       width: 42px;
       /* width: 35px; */
@@ -421,11 +450,6 @@
       padding: 1% 7.5% 0 0;
     }
     
-    .responsive-header img {
-      width: auto;
-      height: 5vh;
-    }
-
     .menu {
       position: fixed;
       right: 0;
@@ -479,9 +503,8 @@
 
 
 /* TO DO: */
-/* 0. Boilerplate fimished!! Just compare to original Contact page (both HTML & CSS) before copying across to About / Services pages. */
 /* 1. Push changes to Github */
-/* 2. Do About / Services pages. Can start JS if you want. Can also have a quick look at Design files (see 4.2 below) */
+/* 2. Copy Contact (html/css) to About/Services pages. Can start JS if you want. Can also have a quick look at Design files (see 4.2 below) */
 /* 3. Then Blogs page */
 /* 4. Then either: 
         - Javascript stuff for About / Services
