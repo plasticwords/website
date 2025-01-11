@@ -1,5 +1,5 @@
   /* __________________________________________________________________________________________________________________________________________________________________________-\ VARIABLES & CONTAINER : */
-
+   
   :root {
     /* Colours: */
     --pink: #B450B0;
@@ -44,7 +44,7 @@
     /* margin: 0 auto;
     width: 100%;
     max-width: 1500px; */
-    background-color: var(--black-07);
+    background-color: var(--black-07); 
     overflow: auto;
     /* border: var(--borders-black);
     box-sizing: border-box; */
@@ -55,7 +55,7 @@
   .responsive-header {
     display: none;
   }
-
+   
   .grid-container {
     display: grid;
     /* Can I make this layout more explicit: */
@@ -125,7 +125,7 @@
   }
 
   END */
-  
+
   .menu-link-superscript {
     font-size: 0.7rem;
     vertical-align: super;
@@ -138,7 +138,7 @@
     color: ; */
     cursor: pointer;
   }
-
+  
   #active-page {
     background-color: var(--pink-70);
   }
@@ -146,21 +146,17 @@
   .main-text {
     grid-area: main-text;
     display: grid;
-    grid-template-columns: 1fr;
-    /* grid-template-rows: 2fr; */
-    /* background-color: var(--pink-20); */
-    /* background-color: var(--pink-70); */
-    /* background-color: #7289DA; */
-    /* background-color: #B450B0; */
+    grid-template-columns: 1fr 1fr;
+    /* align-items: center; */
+    font-size: 6rem;
     font-family: var(--serif);
     color: var(--black-80);
-    width: 100%;
+    /* color: var(--black) */
+    width: 65%;
     /* height: 100%; */
-    grid-template-areas:
-    "contact-blurb"
-    "contact-feature-text";
-    /* z-index: -1;
-    position: relative; */
+    /* grid-template-areas:
+    "..."
+    "..."; */
     /* gap: 70px; */
   }
 
@@ -211,65 +207,100 @@
     position: relative; */
   }
 
-  /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN MAIN CONTENTS - CONTACT : */
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN MAIN CONTENTS - ABOUT : */
 
-  .contact-blurb {
-    grid-area: contact-blurb;
-    font-size: 4rem;
-    margin: 50px 0 0 50px;
-    padding: 0 10% 5% 10%;
-    align-self: flex-end; /* centre me */
-    height: fit-content;
-    /* line-height: 120px; */
-  }
-
-  .contact-blurb-feature-01 {
-    font-style: italic;
-  }
-  
-  .contact-blurb-feature-02 {
-    font-family: var(--monospace);
-    background-color: var(--pink-20);
-    /* background-color: rgb(255, 220, 255); */
-    padding: 20px;
-    border: 1px solid gray;
-    font-size: 4.5rem;
-  }
-
-  .contact-blurb-feature-03 {
-    font-family: var(--monospace);
-    background-color: var(--blue-20);
-    padding: 20px;
-    border: 1px solid gray;
+  .biography-name {
+    /* width: 75%;
+    padding: 5% 0 0 12.5%; */
     font-size: 3rem;
+    /* font-size: 6rem; */
+    padding: 5% 0;
+    /* padding-right: 20%; */
+    margin-top: -10.5%;
+    padding-left: 55%;
+    width: auto; /* Adjust to fit content */
+    text-align: left;
+    text-align: center;
+    margin-right: 100px;
+    margin-bottom: 75px;
+    align-self: center;
+    justify-self: end;
+    /* opacity: .4;
+    opacity: .15; */
+    opacity: 0.75;
+    /* border-left: 1px solid black; */
+    /* text outlined:   */
+      /* font-weight: bold; */
+      color: white; /* Text color inside the outline */
+      /* color: rgba(180, 80, 176, 1); */
+      text-shadow: 
+      /* Bottom-right shadow: */
+      3px 3px 0 black, 
+      /* Top-left shadow: */
+      -1px -1px 0 black,
+      /* Top-right shadow: */
+      1px -1px 0 black,
+      /* Bottom-left shadow: */
+      -1px 1px 0 black; 
+    text-shadow: none;
+    color: black;
+   /* TEXT OUTLINED:  
+            color: white; /* Text color inside the outline */
+            /* color: rgba(1, 1, 1, 0.005); */
+            /* text-shadow:  */
+              /* Bottom-right shadow: */
+              /* 1px 1px 0 black,   */
+              /* Top-left shadow: */
+              /* -1px -1px 0 black,  */
+              /* Top-right shadow: */
+              /* 1px -1px 0 black,  */
+              /* Bottom-left shadow: */
+              /* -1px 1px 0 black;  */
   }
 
-  .contact-feature-text {
-    grid-area: contact-feature-text;
-    /* width: 100%; */
-    font-size: 12rem;
-    opacity: 0.25;
-    /* margin: 0 0 -20px 0; */
-    /* margin: 130px 0 -900px 0; */
-    /* margin: 220px 0 -220px 0; */
-    text-shadow:
-      3px 3px 0 black, /* bottom-right */
-      -1px -1px 0 black, /* top-left */
-      1px -1px 0 black, /* top-right: */
-      -1px 1px 0 black; /* bottom-left: */
-    color: white;
-    /* color: rgba(180, 80, 176, 1); */
-    /* font-weight: bold; */
-    display: flex; /* can i use "vertical-align:" instead here to put text at the baseline */
-    align-items: flex-end;
-    justify-content: center;
-    /* text-align: center; */
+  .name:hover {
+    /* background: linear-gradient(to right, #B450B0, #7289DA); */
+    /* -webkit-background-clip: text;   for Safari/Chrome  */
+    /* color: transparent; */
+    color: #B450B0; 
+    cursor: grab;
+    opacity: 1;
+    font-weight: lighter;
+    text-shadow: none;
+  }
+
+  .name-feature {
+    color:#B450B0;
+    color: #7289DA;
+  }
+
+  .plastic-words-about {
+    /* font-size: 2.27rem; */
+    /* font-size: 2rem; */
+    font-size: 1.35rem;
+    /* font-family: monospace; */
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10% 0px 0px 10%;
+    /* width: 50%; */
+    /* text-align: right; */
+    text-align: left;
+    width: auto; /* Adjust to fit content */
+    width: 70%;
+    margin-right: -20%;
+  }
+
+  .plastic-words-about-feature {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(180, 80, 176, 0.25);
+    /* background-color: rgba(114, 137, 218, 0.27); */
+    /* background-color: rgba(114, 137, 218, 0.7); */
+    /* background-color: rgba(180, 80, 176, 0.7); */
   }
 
   /* __________________________________________________________________________________________________________________________________________________________________________-\ RESPONSIVE DESIGN - TABLET : */
 
   @media screen and (max-width: 992px) {
-   
+  
     .container {
       overflow: auto; /* test me, maybe apply to html "class" instead */
     }
@@ -300,7 +331,7 @@
   /* __________________________________________________________________________________________________________________________________________________________________________-\ RESPONSIVE DESIGN - PHONE : */
 
   @media screen and (max-width: 576px) {
-    
+
     html {
       font-size: 14px;
     }
@@ -364,30 +395,9 @@
       display: none;
     }
 
-    /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN RESPONSIVE DESIGN - CONTACT : */
+    /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN RESPONSIVE DESIGN - ABOUT : */
 
-    .contact-blurb {
-      margin: 0;
-      padding: 0;
-      font-size: 3.5rem;
-      width: 100%; /* probably unneeded */
-      text-align: center;
-    }
-
-    .contact-blurb-feature-02 {
-      font-size: 3rem;
-      padding: 12px;
-    }
-
-    .contact-blurb-feature-03 {
-      font-size: 3rem;
-      /* padding: 12px; */
-      padding: 0;
-    }
-
-    .contact-feature-text {
-      display: none;
-    }
+    /* EDIT ME */
 
     /* __________________________________________________________________________________________________________________________________________________________________________-\ BURGER MENU & RESPONSIVE HEADER : */
 
@@ -499,27 +509,4 @@
     .nav-active {
       transform: translateX(0%);
     }
-  }
-
-
-/* TO DO: */
-/* 1. Copy Contact across site:
-          - 1. Copy services: html css + update menu
-          - 2. Adapt services page. */
-/* 2. Then Blogs page */
-/* 3. Then either: 
-        - Javascript stuff for About / Services
-        - Finalise Sketch design file && main sites from Design Brief && Favourites from research. Just confirm you've finished the Design. */
-/* 4. Spend rest of time on home page, javascript, testing. */
- 
-    /*  
-  gradient text:
-    background: linear-gradient(to right, #B450B0, #7289DA);
-    -webkit-background-clip: text; [for Safari/Chrome]
-    color: transparent;
-
-  this is not on index.css but IS in index.html (i.e., delete from html)
-  #title-text {
-    opacity: 0.65;
-  }
-    */
+   }
