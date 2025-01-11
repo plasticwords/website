@@ -1,6 +1,5 @@
-/* ___________________________________
-   Variables & container: */
-
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ VARIABLES & CONTAINER : */
+   
   :root {
     /* Colours: */
     --pink: #B450B0;
@@ -8,7 +7,7 @@
     --pink-70: rgba(180, 80, 176, 0.7);
     --blue: #7289DA;
     --blue-20: rgba(114, 137, 218, 0.2);    
-    --blue-70: color: rgba(114, 137, 218, 0.7);
+    --blue-70: rgba(114, 137, 218, 0.7);
     --black: black;
     --black-07: rgba(1, 1, 1, 0.075);
     --black-80: rgba(1, 1, 1, 0.8);
@@ -16,67 +15,86 @@
     --san-serif: helvetica;
     --serif: palatino;
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    /* font-family: Arial, Helvetica, sans-serif; */
     --monospace: 'Courier New', Courier, monospace;
     /* Borders: */
     --borders-black: 1px solid black;
     --borders-grey: 1px solid gray;
-   }
+    /* Is it better to put descriptions instead of colours etc.? */
+    /* --background-color:
+    --text-color:
+    --link-color:
+    --link-color-hover:
+    --primary-font:
+    --secondary-font: */
+  }
 
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--pink-20);
+    /* overflow: hidden; */
+  }
 
-.container {
-  margin: 0;
-  padding: 0;
-  /* margin: 0 auto;
-  width: 100%;
-  max-width: 1500px; */
-  background-color: var(--black-07); 
-  font-size: 16px;
-}
+  .container {
+    margin: 0;
+    padding: 0;
+    /* margin: 0 auto;
+    width: 100%;
+    max-width: 1500px; */
+    background-color: var(--black-07); 
+    overflow: auto;
+    /* border: var(--borders-black);
+    box-sizing: border-box; */
+  }
 
-/* ___________________________________
-   Main contents and navigation: */
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ MAIN CONTENTS & NAVIGATION : */
 
-   .grid-container {
+  .responsive-header {
+    display: none;
+  }
+   
+  .grid-container {
     display: grid;
     /* Can I make this layout more explicit: */
     grid-template-columns: auto 10fr;
     grid-template-rows: auto 10fr;
     height: 100vh;
+    /* height: 95vh; container MAYBE fills screen without any overflow */
     width: 100vw;
     grid-template-areas:
     "border-area   menu        menu"
     "border-area   main-text   branding"
     "footer        footer      branding";
+    background-color: rgba(230, 230, 230, 1); /* put into root as ~7% black */
   }
   
   .menu {
     grid-area: menu;
-    /* font-size: 1.15rem; */
     border-bottom: var(--borders-black);
     background-color: var(--pink-20);
-    text-align: right;
-    padding: 8px 0px 10px 10px; /* Same vertical padding as .menu-link */
-    /* padding: 8px 0px 10px 0px; */
+    /* text-align: right; */
+    /* padding: 8px 0px 10px 10px; */ /* Same vertical padding as .menu-link, but taken away because of display:flexbox inside .menu */
     /* white-space: nowrap; */
     /* overflow: hidden; */
+    display: flex; /* this fixes the whitespace problem in the html, no more gaps. can also comment out whitespace in the markup. */
+    justify-content: flex-end;
   }
   
   .menu-link {
     border-left: var(--borders-black);
-    padding: 8px 6.8vw 10px 6.8vw;
+    padding: 8px 6.3vw 10px 6.3vw;
     /* padding: 8px 115px 10px 115px; */
     /* padding: 8px 5vw 10px 5vw; */
     /* padding: 8px 15px 10px 15px; */
     text-decoration: none;
-    font-size: 1.65rem;
+    font-size: 1.65rem; /* Where do the font sizes, typography, colours live? */
     /* font-size: 1.05rem; */
     /* font-size: 1.7rem; */
     font-weight: bold;
+    /* Where does the font family/styling/sizing go? Can you put it in .container so it's more general or is specific good? */
     color: var(--black-80);
     /* color: var(--black); */
     font-family: var(--san-serif);
@@ -107,9 +125,39 @@ html {
   }
 
   END */
+
+  .menu-link-superscript {
+    font-size: 0.7rem;
+    vertical-align: super;
+    margin: 0 0 10px 7px;
+  }
+
+  .menu-link:hover {
+    /* Style the links on hover:
+    opacity: ;
+    color: ; */
+    cursor: pointer;
+  }
   
   #active-page {
     background-color: var(--pink-70);
+  }
+
+  .main-text {
+    grid-area: main-text;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-items: center; */
+    font-size: 6rem;
+    font-family: var(--serif);
+    color: var(--black-80);
+    /* color: var(--black) */
+    width: 65%;
+    /* height: 100%; */
+    /* grid-template-areas:
+    "..."
+    "..."; */
+    /* gap: 70px; */
   }
 
   .branding {
@@ -117,6 +165,7 @@ html {
     background-color: var(--pink-20);
     display: flex;
     border-left: var(--borders-black);
+    /* width/height: fit-content? Put into .social? Do I need both .social and .social-a? Or put both into .branding? */
   }
 
   .social {
@@ -132,9 +181,14 @@ html {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     text-decoration: none;
+    /* text-decoration: underline; */
     color: var(--black);
     font-family: var(--monospace);
   }
+
+  /* social a:hover {
+    Style me if needed
+  }  */
 
   .border-area {
     grid-area: border-area;
@@ -142,7 +196,6 @@ html {
     /* width: 30px; */
     background-color: var(--blue-20);
     border-right: var(--borders-grey);
-    
   }
   
   .footer {
@@ -150,22 +203,11 @@ html {
     height: 40px;
     background-color: var(--blue-20);
     border-top: var(--borders-grey);
+    /* z-index: 4;
+    position: relative; */
   }
 
-  /* __________________________________
-   New code - About page: */
-
-   .main-text {
-    grid-area: main-text;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* gap: 70px; */
-    /* align-items: center; */
-    font-size: 6rem;
-    font-family: var(--serif);
-    width: 65%;
-    color: var(--black)
-  }
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN MAIN CONTENTS - ABOUT : */
 
   .biography-name {
     /* width: 75%;
@@ -255,15 +297,14 @@ html {
     /* background-color: rgba(180, 80, 176, 0.7); */
   }
 
-/* __________________________________
-   Responsive design - Tablet: */
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ RESPONSIVE DESIGN - TABLET : */
 
-   @media screen and (max-width: 992px) {
-   
-    html {
-      /* font-size in container?? */
-    }
+  @media screen and (max-width: 992px) {
   
+    .container {
+      overflow: auto; /* test me, maybe apply to html "class" instead */
+    }
+
     .menu {
       padding: 5px 0px 5px 0px; /* Same vertical padding as .menu-link */
     }
@@ -287,16 +328,185 @@ html {
     }
   }
 
-/* ____________________
-   Burger menu: */
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ RESPONSIVE DESIGN - PHONE : */
 
-/* _________________________________
-   Responsive design - Phone: */
+  @media screen and (max-width: 576px) {
 
-   @media screen and (max-width: 576px) {
-
-    .container {
+    html {
       font-size: 14px;
     }
+    
+    .container {
+      /* width: 100vw; */ /* probably unnecesary */
+    }
 
+    .grid-container {
+      /* width: 100%; */ /* probably unnecesary */
+      height: 93vh; /* [+] header height = 100vh */
+      grid-template-areas:
+      /* "menu" */
+      "main-text"
+      "branding";
+      grid-template-rows: 1fr auto; /* Main text takes the remaining space, branding adjusts */
+    }
+
+    .main-text {
+      /* grid-template-areas:
+      "contact-blurb"; */
+      align-content: center;
+      height: 100%;
+      /* padding: 0 50px 0 50px; THIS IS BREAKING THE LAYOUT!!!!!! */
+      box-sizing: border-box;
+    }
+
+    .branding {
+      background-color: transparent; /* put into root */
+      border-top: 1px solid lightgray;
+      /* border-top: 0.25px solid gray; */
+      /* border-top: var(--borders-grey); */
+      width: 92.5%;
+      /* height: fit-content; */
+      margin: 0 3.75% 0 3.75%;
+      /* justify-content: center; */
+      border-left: none;
+    }
+
+    .social {
+      border: none;
+      font-size: 1.2rem;
+      padding: 7px 0 7px 3.75%;
+    }
+
+    .social a {
+      writing-mode: horizontal-tb;
+      border: 0.25px solid gray;
+      /* border: 1px solid lightgray; */
+      /* border: var(--borders-grey); */
+      background-color: var(--pink-20);
+      /* color: #7289DA; */
+      /* font-family: var(--san-serif); */
+    }
+
+    .border-area {
+      display: none;
+    }
+
+    .footer {
+      display: none;
+    }
+
+    /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN RESPONSIVE DESIGN - ABOUT : */
+
+    /* EDIT ME */
+
+    /* __________________________________________________________________________________________________________________________________________________________________________-\ BURGER MENU & RESPONSIVE HEADER : */
+
+    .responsive-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.25px solid gray;
+      /* border-bottom: var(--borders-grey); */
+      z-index: 2; /* Make header top layer in document */
+      position: relative;
+      height: 7vh;
+      width: 100%;
+      /* width: 92.5%; */
+      /* background-color: var(--pink-20); */
+      /* background-color: var(--pink-70); */
+      box-sizing: border-box;
+      padding: 0 0 0 7.5%;
+    }
+
+    .responsive-header img {
+      width: auto;
+      height: 5vh;
+      /* width: 3vw;
+      height: auto; */
+    }
+
+    .burger div {
+      width: 42px;
+      /* width: 35px; */
+      /* width: 25px; */
+      height: 8px;
+      /* height: 7px; */
+      /* height: 4px; */
+      margin: 4px;
+      border: 2px solid var(--pink-70);
+      /* border: 4px double var(--pink); */
+      /* border: 2px groove white; */
+      /* background-color: var(--pink-70); */
+      /* background: lightgray;  */
+      transition: all 0.3s ease-in;
+      box-sizing: border-box;
+    }
+  
+    .toggle .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+      /* transform: scale(1.5); */
+    }
+
+    .toggle .line2 {
+      opacity: 0;
+    }
+
+    .toggle .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+      /* transform: scale(1.5); */
+    }
+
+    .responsive-logo {
+      padding: 1% 7.5% 0 0;
+    }
+    
+    .menu {
+      position: fixed;
+      right: 0;
+      top: 0;
+      text-align: left;
+      z-index: 1;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      /* justify-content: center;
+      align-items: center; */
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      background-color: lightgray; /* Put into root */
+      padding: 15vh 0 0 0;
+      border-bottom: none;
+    }
+
+    .menu-link {
+      border-left: none;
+      padding: 0 0 0 20vw;
+      color: rgba(124, 124, 129, 1); /* PUT INTO ROOT IF YOU USE THIS COLOUR: */
+      font-size: 4rem;
+    }
+
+    .menu-link::first-letter {
+      text-transform: uppercase;
+    }
+
+    #active-page {
+      background-color: lightgray; /* FIX ME, same as background */
+    }
+
+    .menu-link-superscript {
+      font-size: 1.25rem;
+      /* margin: 0 0 10px 7px; */
+    }
+
+    #last-menu-item {
+      border-bottom: 0.5px solid var(--black-80);
+      padding: 12vh 0 5vh 20vw;
+      transform: rotate(30deg);
+    }
+    
+    .nav-active {
+      transform: translateX(0%);
+    }
    }
