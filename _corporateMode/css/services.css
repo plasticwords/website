@@ -146,6 +146,8 @@
   .main-text {
     grid-area: main-text;
     display: grid;
+    grid-template-areas:
+    "services-title   services-blurb";
     grid-template-columns: 1fr 1fr;
     /* align-items: center; */
     font-size: 6rem;
@@ -209,7 +211,8 @@
 
   /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN MAIN CONTENTS - ABOUT : */
 
-  .biography-name {
+  .services {
+    grid-area: services-title;
     /* width: 75%;
     padding: 5% 0 0 12.5%; */
     font-size: 3rem;
@@ -258,7 +261,7 @@
               /* -1px 1px 0 black;  */
   }
 
-  .name:hover {
+  .services-title:hover {
     /* background: linear-gradient(to right, #B450B0, #7289DA); */
     /* -webkit-background-clip: text;   for Safari/Chrome  */
     /* color: transparent; */
@@ -269,12 +272,13 @@
     text-shadow: none;
   }
 
-  .name-feature {
+  .services-title-feature {
     color:#B450B0;
     color: #7289DA;
   }
 
-  .plastic-words-about {
+  .services-blurb {
+    grid-area: services-blurb;
     /* font-size: 2.27rem; */
     /* font-size: 2rem; */
     font-size: 1.35rem;
@@ -289,7 +293,7 @@
     margin-right: -20%;
   }
 
-  .plastic-words-about-feature {
+  .services-blurb-feature {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgba(180, 80, 176, 0.25);
     /* background-color: rgba(114, 137, 218, 0.27); */
