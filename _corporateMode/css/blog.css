@@ -159,6 +159,7 @@
     grid-template-areas:
     "contact-blurb"
     "contact-feature-text";
+    height: fit-content; /* I added this height to the blog.css styling */
     /* z-index: -1;
     position: relative; */
     /* gap: 70px; */
@@ -211,7 +212,7 @@
     position: relative; */
   }
 
-  /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN MAIN CONTENTS - CONTACT : */
+  /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN MAIN CONTENTS - BLOG : */
 
   .contact-blurb {
     grid-area: contact-blurb;
@@ -265,6 +266,49 @@
     justify-content: center;
     /* text-align: center; */
   }
+
+  /* ________________________________________________________________________________________________________________________________________________________ DELETE EVRYTHING ABOVE in this section */
+
+  .blog-title { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    font-family: monospace;
+    color: gray;
+    padding: 35px 50px 10px 50px;
+  }
+
+  .blog-content {
+      display: flex;
+      justify-content: space-between;
+      /* border-top: 1px solid black; */
+      border-bottom: 1px solid black;
+      font-family: helvetica;
+      align-items: center;
+      padding: 10px 50px 10px 50px;
+      font-size: 2rem;
+  }
+
+  .blog-content:hover {
+      background-color: #7289DA; /* Default for all blogs */
+      cursor: pointer;
+  }
+
+  .blog-content:nth-child(even):hover {
+      background-color: pink; /* For every second blog */
+      background-color: #B450B0;
+  }
+
+  .blog-content-date {
+      font-size: 1rem;
+      font-family: monospace;
+  }
+
+  .blog-content-name {
+    font-size: 1rem;
+    font-family: monospace;
+}
 
   /* __________________________________________________________________________________________________________________________________________________________________________-\ RESPONSIVE DESIGN - TABLET : */
 
@@ -364,7 +408,7 @@
       display: none;
     }
 
-    /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN RESPONSIVE DESIGN - CONTACT : */
+    /* __________________________________________________________________________________________________________________________________________________________________________-\ UNIQUE CODE IN RESPONSIVE DESIGN - BLOG : */
 
     .contact-blurb {
       margin: 0;
